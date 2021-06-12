@@ -18,3 +18,5 @@ Mi nombre es Franco Daniel Fernandez, Tengo 27 años, vivo en Bs. As Lanús.
 actualmente estudiando y realizando el curso de Digital House de Formar, me gusta mucho el boxeo,los videojuegos y la programación,
 espero poder trabajar de esto y seguir estudiando para adquirir mas conocimientos y sobretodo seguir aprendiendo
 Saludos 🤓🤓🤓
+
+Páginas de referencia:
