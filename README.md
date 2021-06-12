@@ -5,7 +5,7 @@
 accesible precio con varios métodos de pago.
 
 ### Publico objetivo:
- - La pagina creada esta orientada a un publico,
+  La pagina creada esta orientada a un publico,
 pre-adolescente hasta adultos apasionados por el Gaming y la Tecnologia.
 
 ### Integrantes del equipo:
