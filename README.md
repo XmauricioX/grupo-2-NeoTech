@@ -10,7 +10,7 @@ pre-adolescente hasta adultos apasionados por el Gaming y la Tecnologia.
 
 ### Descripción de lo integrantes del equipo:
 
-#### Mauricio:
+Mauricio:
  - Mi nombre es Mauricio Alejandro Maneyro,tengo 21 años, actualmente estoy cursando 6to de secundaria y un curso de desarrollo web fullStack, vivo en Merlo BsAs, me gusta la musica,diseñar y programar.
 
 #### Franco:
