@@ -20,8 +20,8 @@ espero poder trabajar de esto y seguir estudiando para adquirir mas conocimiento
 Saludos 🤓🤓🤓
 
 ### Páginas de referencia:
- 1. 
- 2.
- 3.
- 4.
- 5.
+ 1. https://compragamer.com/
+ 2. https://www.apple.com/la/ipod-touch/
+ 3. https://ar.vsglatam.com/
+ 4. https://www.pcdiga.com/
+ 5. https://www.mexx.com/nl/
