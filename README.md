@@ -10,11 +10,10 @@ pre-adolescente hasta adultos apasionados por el Gaming y la Tecnologia.
 
 Descripción de lo integrantes del equipo:
 
-Descripcion de Mauricio:
-Mi nombre es Mauricio Alejandro Maneyro, actualmente estoy cursando 6to de secundaria y un curso de desarrollo web fullStack, vivo en Merlo BsAs, me gusta la musica,
-diseñar y programar.
+Mauricio:
+Mi nombre es Mauricio Alejandro Maneyro,tengo 21 años, actualmente estoy cursando 6to de secundaria y un curso de desarrollo web fullStack, vivo en Merlo BsAs, me gusta la musica,diseñar y programar.
 
-Descripción de Franco:
+Franco:
 Mi nombre es Franco Daniel Fernandez, Tengo 27 años, vivo en Bs. As Lanús.
 actualmente estudiando y realizando el curso de Digital House de Formar, me gusta mucho el boxeo,los videojuegos y la programación,
 espero poder trabajar de esto y seguir estudiando para adquirir mas conocimientos y sobretodo seguir aprendiendo
