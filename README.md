@@ -20,7 +20,7 @@ espero poder trabajar de esto y seguir estudiando para adquirir mas conocimiento
 Saludos 🤓🤓🤓 
 
 Ariel:
- > Mi nombre es Ariel Andrade, tengo 32 años y soy del barrio de Barracas. Realice servicio de cadeteria por mas de diez años, en bicicleta, a pie y en moto. Hoy en dia intento ampliar mi universo laboral abarcando un rubro nuevototalmente diferente y apasionante.
+ > Mi nombre es Ariel Andrade, tengo 32 años y soy del barrio de Barracas. Realice servicio de cadeteria por mas de diez años, en bicicleta, a pie y en moto. Hoy en dia intento ampliar mi universo laboral abarcando un rubro nuevo, totalmente diferente y apasionante.
 
 ### Páginas de referencia:
  1. https://compragamer.com/
