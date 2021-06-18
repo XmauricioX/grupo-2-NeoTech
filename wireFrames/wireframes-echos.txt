@@ -5,3 +5,4 @@ nav -mauricio
 wireframes de contactos subidos -franco
 detalle de producto -mauricio
 header -mauricio
+editar datos de cuenta -franco
