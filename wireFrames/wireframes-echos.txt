@@ -7,3 +7,4 @@ detalle de producto -mauricio
 header -mauricio
 editar datos de cuenta -franco
 registro -franco
+lista de productos -franco
