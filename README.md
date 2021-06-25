@@ -24,18 +24,18 @@ Ariel:
  > Mi nombre es Ariel Andrade, tengo 32 años y soy del barrio de Barracas. Realice servicio de cadeteria por mas de diez años, en bicicleta, a pie y en moto. Hoy en dia intento ampliar mi universo laboral abarcando un rubro nuevo, totalmente diferente y apasionante.
 
 | Páginas de referencia: |
-| ----- |
+| -----------------------|
+
+
 
 <ul>
-    <li>
-     1. https://compragamer.com/
- 2. la idea de un logo propio
-    <li/>
-    <li><li/>
-    <li><li/>
-    <li><li/>
-    <li><li/>
- <ul/>
+    <li><a href="http://compragamer.com/" target="_blank" rel="noopener noreferrer">Compra Gamer</a>:la idea de un logo propio </li>
+    <li><a href="http://www.apple.com/la/ipod-touch/" target="_blank" rel="noopener noreferrer"></a></li>
+    <li><a href="http://ar.vsglatam.com/" target="_blank" rel="noopener noreferrer"></a></li>
+    <li><a href="http://www.pcdiga.com/" target="_blank" rel="noopener noreferrer"></a></li>
+    <li><a href="http://www.mexx.com/nl/" target="_blank" rel="noopener noreferrer"></a></li>
+</ul>
+
 
  1. https://compragamer.com/
  2. la idea de un logo propio 
