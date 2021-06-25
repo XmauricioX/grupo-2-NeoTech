@@ -3,6 +3,7 @@
 | Developer Team |
 | ------ |
 Nosotros somos un grupo de tres desarrolladores web full stack llamado MULTITUD y fuimos conntratados para construir un Ecomerse llamado Neo Tech.  
+
 | Integrantes del equipo: |
 |------|
 
