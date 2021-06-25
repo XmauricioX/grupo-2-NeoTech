@@ -10,7 +10,14 @@ registro -franco
 lista productos -mauricio
 formulario de compra -ariel
 login -ariel
+vista de usuario -mauricio
 
 FALTA
-vista de usuario
 
+panel del admin
+-general -LISTO
+-editar cuenta -LISTO
+-usuarios
+-editar productos
+-agregar productos
+-ventas y stock
