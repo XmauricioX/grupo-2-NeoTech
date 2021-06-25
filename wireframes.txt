@@ -1,0 +1,15 @@
+home -mauricio
+carrito -mauricio
+footer -mauricio
+nav -mauricio
+contacto -franco
+detalle de producto -mauricio
+header -mauricio
+editar datos de cuenta -franco
+registro -franco
+lista productos -mauricio
+
+FALTA
+formulario de compra
+login
+vista de usuario
