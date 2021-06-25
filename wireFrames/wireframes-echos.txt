@@ -9,9 +9,8 @@ editar datos de cuenta -franco
 registro -franco
 lista productos -mauricio
 formulario de compra -ariel
+login -ariel
 
 FALTA
-
-login
 vista de usuario
 
