@@ -29,7 +29,7 @@ Ariel:
 
 
 <ul>
-    <li><a href="http://compragamer.com/" target="_blank" rel="noopener noreferrer"></a>Compra Gamer:la idea de un logo propio </li>
+    <li><a href="http://compragamer.com/" target="_blank" rel="noopener noreferrer">Compra Gamer</a>:la idea de un logo propio </li>
     <li><a href="http://www.apple.com/la/ipod-touch/" target="_blank" rel="noopener noreferrer"></a></li>
     <li><a href="http://ar.vsglatam.com/" target="_blank" rel="noopener noreferrer"></a></li>
     <li><a href="http://www.pcdiga.com/" target="_blank" rel="noopener noreferrer"></a></li>
