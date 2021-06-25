@@ -34,5 +34,6 @@ Ariel:
     <li><a href="http://ar.vsglatam.com/" target="_blank">VSG Argentina</a>: Esta página fue en la que más nos inspiramos, tanto en el Home como en la paleta de colores y las animaciones.</li>
     <br>
     <li><a href="http://www.pcdiga.com/" target="_blank">PCDIGA</a>: Nos pareció interesante el uso del carrito desplegable que se presenta a la hora de realizar una compra o agregar un producto.</li>
+    <br>
     <li><a href="https://www.mexx.com.ar/" target="_blank">Mexx</a>: De la página sacamos como referencia el banner, el footer y los métodos de pago.</li>
 </ul>
