@@ -15,9 +15,9 @@ vista de usuario -mauricio
 FALTA
 
 panel del admin
--general -LISTO
--editar cuenta -LISTO
--usuarios
--editar productos
--agregar productos
--ventas y stock
+-general -mauricio
+-editar cuenta -mauricio
+-usuarios -mauricio
+-editar productos -mauricio
+-agregar productos -mauricio
+-ventas y stock -mauricio
