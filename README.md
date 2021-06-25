@@ -28,7 +28,7 @@ Ariel:
 
 <ul>
     <li><a href="http://compragamer.com/" target="_blank">Compra Gamer</a>: De esta página tomamos la idea de hacer nuestro propio logo o marca para nuestro proyecto.</li>
-    <li><a href="http://www.apple.com/la/ipod-touch/" target="_blank">Apple</a>: Nos gustó mucho el estilo de mostrar los productos, el detalle de los productos y la idea de presentar una animacion en la página, con el scroll.</li>
+    <li><a href="http://www.apple.com/la/ipod-touch/" target="_blank">Apple</a>: Nos gustó el estilo de mostrar los productos, el detalle de los productos y la idea de presentar una animacion en la página, con el scroll.</li>
     <li><a href="http://ar.vsglatam.com/" target="_blank">VSG Argentina</a>: Esta página fue en la que más nos inspiramos, tanto en el Home como en la paleta de colores y las animaciones.</li>
     <li><a href="http://www.pcdiga.com/" target="_blank">PCDIGA</a>: Nos pareció interesante el uso del carrito desplegable que se presenta a la hora de realizar una compra o agregar un producto.</li>
     <li><a href="https://www.mexx.com.ar/" target="_blank">Mexx</a>: De la página sacamos como referencia el banner, el footer y los métodos de pago.</li>
