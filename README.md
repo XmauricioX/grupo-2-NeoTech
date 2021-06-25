@@ -1,13 +1,8 @@
  # ```  grupo-2-NeoTech  ``` 
-|  Descripción del producto: |
-| ------ |
- - En NeoTech ofrecemos al publico una variada gama de accesorios e insumos Gaming tales como; Teclados mecánicos, Gabinetes con luces RGB y mas .Todo de gran calidad y a un accesible precio con varios métodos de pago. 
 
-| Publico objetivo: |
+| Developer Team |
 | ------ |
-  - La pagina creada esta orientada a un publico,
-pre-adolescente hasta adultos apasionados por el Gaming y la Tecnologia.
-
+Nosotros somos un grupo de tres desarrolladores web full stack llamado MULTITUD y fuimos conntratados para construir un Ecomerse llamado Neo Tech.  
 | Integrantes del equipo: |
 |------|
 
@@ -22,6 +17,16 @@ Saludos 🤓🤓🤓
 
 Ariel:
  > Mi nombre es Ariel Andrade, tengo 32 años y soy del barrio de Barracas. Realice servicio de cadeteria por mas de diez años, en bicicleta, a pie y en moto. Hoy en dia intento ampliar mi universo laboral abarcando un rubro nuevo, totalmente diferente y apasionante.
+
+
+|  Descripción del producto: |
+| ------ |
+ - En NeoTech ofrecemos al publico una variada gama de accesorios e insumos Gaming tales como; Teclados mecánicos, Gabinetes con luces RGB y mas .Todo de gran calidad y a un accesible precio con varios métodos de pago. 
+
+| Publico objetivo: |
+| ------ |
+  - La pagina creada esta orientada a un publico,
+pre-adolescente hasta adultos apasionados por el Gaming y la Tecnologia.
 
 | Páginas de referencia: |
 | -----------------------|
