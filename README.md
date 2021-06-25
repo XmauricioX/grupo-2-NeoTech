@@ -25,8 +25,26 @@ Ariel:
 
 | Páginas de referencia: |
 | ----- |
+
+<ul>
+    <li>
+     1. https://compragamer.com/
+ 2. la idea de un logo propio
+    <li/>
+    <li><li/>
+    <li><li/>
+    <li><li/>
+    <li><li/>
+ <ul/>
+
  1. https://compragamer.com/
- 2. https://www.apple.com/la/ipod-touch/
- 3. https://ar.vsglatam.com/
- 4. https://www.pcdiga.com/
- 5. https://www.mexx.com/nl/
+ 2. la idea de un logo propio 
+ 3. https://www.apple.com/la/ipod-touch/
+ 4. el estilo de mostrar los productos y detalle de producto 
+ 5. https://ar.vsglatam.com/
+ 6. desplegables home paleta de colores
+ 7. https://www.pcdiga.com/
+ 8. De pcdiga sacamos el carrito desplegable
+ 9. https://www.mexx.com/nl/
+ 10. de mexx sacamos el banner 
+
