@@ -2,7 +2,7 @@
 
 | Developer Team |
 | ------ |
-Nosotros somos un grupo de tres desarrolladores web full stack apodado MULTITUD y fuimos contratados para construir un Ecomerse llamado Neo Tech.  
+Fuimos contratados por el departamento de DH Venture Capitals con el propósito de crear un Ecommerce basado en la venta de insumos de pc y accesorios gaming, que se adapte a las necesidades de los clientes, que también sea estéticamente agradable a la vista del usuario y fácil de usar, para eso contamos con un grupo de desarrolladores web full stack para crear la página Neo Tech y ofrecer a las personas una amplia variedad de insumos, de primera calidad y de la ultima tecnología al alcance del usuario con la confianza y garantia de que tendra un excelente servicio en esta página.  
 
 | Integrantes del equipo: |
 |------|
