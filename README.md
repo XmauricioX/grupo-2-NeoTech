@@ -11,9 +11,11 @@ Mauricio:
  > Mi nombre es Mauricio Alejandro Maneyro,tengo 21 años, actualmente estoy cursando 6to de secundaria y un curso de desarrollo web fullStack, vivo en Merlo BsAs, me gusta la musica,diseñar y programar. 
 
 Franco:
- > Mi nombre es Franco Daniel Fernandez, Tengo 27 años, vivo en Bs. As Lanús.
-actualmente estudiando y realizando el curso de Digital House de Formar, me gusta mucho el boxeo,los videojuegos y la programación,
-espero poder trabajar de esto y seguir estudiando para adquirir mas conocimientos y sobretodo seguir aprendiendo
+ > Mi nombre es Franco Daniel Fernandez, Desarrollador Web Full-Stack Jr. Tengo 27 años, de Bs. As Lanús.
+actualmente estudiando y realizando el curso de Digital House de Formar, mis aficiones son la programación, el boxeo y los videojuegos,
+me encuentro desarrollando con mis compañeros un proyecto integrador sobre un Ecommerce, basado en la venta de insumos de tecnología gaming.
+Mi objetivo es poder empezar a trabajar de esto, seguir estudiando programación para adquirir y ampliar mis conocimientos, pero sobre todo aprender todos los días 
+un poco mas.
 Saludos 🤓🤓🤓 
 
 Ariel:
