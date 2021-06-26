@@ -1,6 +1,6 @@
- # ```  grupo-2-NeoTech  ``` 
+ # ```  Grupo-2-NeoTech  ``` 
 
-| Developer Team |
+| <h3>Developer Team</h3> |
 | ------ |
 Fuimos contratados por el departamento de DH Venture Capitals con el propósito de crear un Ecommerce basado en la venta de insumos de pc y accesorios gaming, que se adapte a las necesidades de los clientes, que también sea estéticamente agradable a la vista del usuario y fácil de usar, para eso contamos con un grupo de desarrolladores web full stack para crear la página Neo Tech y ofrecer a las personas una amplia variedad de insumos, de primera calidad y de la ultima tecnología al alcance del usuario con la confianza y garantia de que tendra un excelente servicio en esta página.  
 
