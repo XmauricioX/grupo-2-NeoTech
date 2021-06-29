@@ -8,7 +8,7 @@ Fuimos contratados por el departamento de DH Venture Capitals con el propósito 
 |------|
 
 Mauricio:
- > Mi nombre es Mauricio Alejandro Maneyro,tengo 21 años, actualmente estoy cursando 6to de secundaria y un curso de desarrollo web fullStack, vivo en Merlo BsAs, me gusta la musica,diseñar y programar. 
+ > Mi nombre es Mauricio Alejandro Maneyro,tengo 21 años, soy Web Developer FulStack Jr egresado de Digital House en conjunto con Formar, me gusta mucho la musica, crear, diseñar, programar y trabajar en equipo aunque tambien se trabajar solo, las tecnologias que uso son las siguientes; HTML, CSS , JavaScript, ReactJS, NodeJS, Express, SQL, sequelize , Git y como metodologia Agil uso Scrum. 
 
 Franco:
  > Mi nombre es Franco Daniel Fernandez, Desarrollador Web Full-Stack Jr. Tengo 27 años, de Bs. As Lanús.
