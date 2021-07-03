@@ -18,12 +18,12 @@
 
 <h3>Empezar a Hacer</h3>
 <ul>
+    <li>Ordenarnos mas en las tarjetas de trello</li>
+    <li>Implementar otras formas de conectarnos como zoom/meet/discord, etc</li>
     <li></li>
-    <li>Como equipo debemos estar más organizados en las consignas y en el proyecto</li>
-    <li>Como equipo debemos estar más organizados en las consignas y en el proyecto</li>
-    <li>Como equipo debemos estar más organizados en las consignas y en el proyecto</li>
-    <li>Como equipo debemos estar más organizados en las consignas y en el proyecto</li>
-    <li>Como equipo debemos estar más organizados en las consignas y en el proyecto</li>
+    <li></li>
+    <li></li>
+    <li></li>
 </ul>
 
 
