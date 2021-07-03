@@ -20,10 +20,10 @@
 <ul>
     <li>Ordenarnos mas en las tarjetas de trello</li>
     <li>Implementar otras formas de conectarnos como zoom/meet/discord, etc</li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>Focalizarse mas en las tareas asignadas</li>
+    <li>Repasar las consignas diariamente antes de comenzar a trabajar sobre la tarea asignada</li>
+    <li>Acortar los tiempos de trabajo, para tener mas tiempo en revisar los detalles</li>
+    <li>Tratar de realizar una daily </li>
 </ul>
 
 
