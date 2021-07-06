@@ -1,6 +1,6 @@
 <h2>RETROSPECTIVA DEL SPRINT 1</h2>
 
-<p>Segun la retrospectiva que realizamos en el primer Sprint:</p>
+<p>Segun la retrospectiva que realizamos en el primer Sprint: </p>
 
 <h3>Seguir Haciendo:</h3>
 <ul>
