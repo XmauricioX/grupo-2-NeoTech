@@ -1,10 +1,6 @@
 <h2>RETROSPECTIVA DEL SPRINT 1</h2>
 
-<<<<<<< HEAD
-<p>Segun la retrospectiva que realizamos en el primer Sprint: </p>
-=======
 <p>Según la retrospectiva que realizamos en el primer sprint, estas son las cosas que deberiamos tener en cuenta a la hora de trabajar sobre el segundo sprint</p>
->>>>>>> 871123ba7e161e4644cf7c504134a90da2ad0fd3
 
 <h3>Seguir haciendo:</h3>
 <ul>
