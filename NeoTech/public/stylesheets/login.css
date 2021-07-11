@@ -9,7 +9,7 @@
 
 /* Background body */
 body {
-    background-image: url(/public/img/BG1.jpg);
+    background-image: url(/images/imgs-bg/BG1-login.jpg);
     background-repeat: no-repeat;
     background-position-x: 77%;
     background-position-y: 10%;
@@ -217,7 +217,7 @@ form .container a:hover{
 
 @media (min-width:1024px) {
     body {
-        background-image: url(/public/img/BG2.jpg);
+        background-image: url(/images/imgs-bg/BG2-login.jpg);
         background-size: cover;
     }
 
@@ -279,6 +279,4 @@ form .container a:hover{
         right: 203px;
         width: 32px;
     }
-
-
 }
