@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 /* RUTAS */
 app.get('/', function(req, res,) {
-  res.sendFile(path.join(__dirname, '/views/index.html'))
+  res.sendFile(path.join(__dirname, '/views/home.html'))
 });
 
 app.get('/home', function(req, res,) {
@@ -37,7 +37,7 @@ app.get('/market', function(req, res,) {
 });
 
 app.get('/detalle-producto', function(req, res,) {
-  res.sendFile(path.join(__dirname, '/views/productDetail.html'))
+  res.sendFile(path.join(__dirname, '/views/product-detail.html'))
 });
 
 app.get('/registro', function(req, res,) {

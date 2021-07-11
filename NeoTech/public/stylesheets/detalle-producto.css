@@ -1,0 +1,127 @@
+@import url(./variables-border.css);
+
+body{
+    background-color: var(--color-Dark);
+}
+
+section{
+    margin: 20px;
+}
+body i{
+    color: var(--color-Green);
+    font-size: 30px;
+    position: sticky;
+    left: 20px;
+    top: 20px;
+}
+
+section article{
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+    height: 100vh;
+}
+section article img{
+    background-image: url(./img/bg-product.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    padding: 10px 0;
+    border: var(--color-Green-Old) 2px solid;
+    border-radius: 20%;
+    margin-bottom: 60px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.btn a{
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    color: var(--white);
+    background-color: var(--color-Green-Old);
+    font-size: 45px;
+
+    position: fixed;
+    bottom: 10px;
+    padding: 0px 15px;
+}
+
+.detail{
+    outline: 1px solid var(--color-Green-Old);
+    background-color: var(--color-Dark-Gray);
+    border-radius: 1%;
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: 0px auto 100px;
+}
+.detail h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.detail p{
+    text-align: justify;
+}
+.container-r{
+    margin-top: 200px;
+}
+
+
+@media (min-width: 768px){
+    section{
+        display: inline-flex;
+        flex-wrap: nowrap;
+        height: auto;
+    }
+    section article{
+        width: 60%;
+    }
+    article img{
+        height: auto;
+        width: auto;
+    }
+    .btn a{
+        position:absolute;
+        padding: 0px 15px;
+        font-size: 35px;
+        margin: 0;
+        bottom: -20px;
+    }
+    .container-r .detail{
+        width: 100%;
+        font-size: 15px;
+        height: auto;
+        overflow: scroll;
+    }
+    .container-r{
+        position: relative;
+        margin: 9% 0px 0;
+        width: 25%;
+        height: auto;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1024px){
+    .detail{
+        font-size: 20px;
+    }
+    #arrow{
+        display: none;
+    }
+    section article{
+        width: 50%;
+    }
+    article img{
+        width: 50%;
+        height: 95%;
+    }
+    .container-r{
+        margin:  85px;
+    }
+}

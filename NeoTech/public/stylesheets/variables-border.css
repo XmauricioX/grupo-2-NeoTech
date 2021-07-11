@@ -3,6 +3,7 @@
     --font-Quicksand: 'Quicksand', sans-serif;
     /* COLORS */
     --color-Green:#61ff01;
+    --color-Green-Old: #2EDD02;
     --color-Dark:#242424;
     --color-Dark-Gray:#363636;
     --black: #000000;
@@ -18,3 +19,10 @@ body{
     color: var(--white);
     font-family: var(--font-Quicksand);
 }
+/*
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/d7f2d4eb0a.js" crossorigin="anonymous"></script>
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+ */
