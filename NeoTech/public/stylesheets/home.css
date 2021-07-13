@@ -6,165 +6,21 @@ body{
 }
 main{
     overflow: hidden;
-}
-
-/* SLIDER */
-
-/* slider */
-.slider {
-    border-radius: 5px;
-    box-shadow: 5px 5px hsl(0, 0%, 76%);
-    position: relative;
-}
-
-.slider ul {
-    list-style-type: none;
+    padding: 0;
     margin: 0;
-    padding: 0;    
+    width: 100vw;
 }
-
-.slider ul li  {
-    position: relative;
-    display: none;
-    height:350px;
-}
-
-.slider ul li img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.slider ul li span {
-    position: absolute;
-    bottom: 0;
-    background: hsl(0, 1%, 72%, .1);
-    left: 0;
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    color: #fff;
-}
-/* buttons */
-.slider .buttons  {
-    position: absolute;
-    top: 40%;
-    width:  100%;
-}
-.slider .buttons .next {
-    font-size: 2rem;
-    right: 0;
-    position: absolute;
-    cursor: pointer;
-    width: 50px;
-    text-align: center;
-}    
-.slider .buttons .prev {
-    font-size: 2rem;
-    left: 0;
-    position: absolute;
-    cursor: pointer;
-    width: 50px;
-    text-align: center;
-}   
-.slider .buttons .next:hover {
-    background: hsl(0, 0%, 25%);
-    color: hsl(0, 0%, 93%);
-}
-.slider .buttons .prev:hover {
-    background: hsl(0, 0%, 25%);
-    color: hsl(0, 0%, 93%);
-}
-
-/* slider animation */
-
-/* slider */
-.slider {
-    border-radius: 5px;
-    box-shadow: 5px 5px hsl(0, 0%, 76%);
-    position: relative;
-}
- 
-.slider ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;    
-}
- 
-.slider ul li  {
-    position: relative;
-    display: none;
-    height:350px;
-}
- 
-.slider ul li img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.slider ul li span {
-    position: absolute;
-    bottom: 0;
-    background: hsl(0, 1%, 72%, .1);
-    left: 0;
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    color: #fff;
-}
-/* buttons */
-.slider .buttons  {
-    position: absolute;
-    top: 40%;
-    width:  100%;
-}
-.slider .buttons .next {
-    font-size: 2rem;
-    right: 0;
-    position: absolute;
-    cursor: pointer;
-    width: 50px;
-    text-align: center;
-}    
-.slider .buttons .prev {
-    font-size: 2rem;
-    left: 0;
-    position: absolute;
-    cursor: pointer;
-    width: 50px;
-    text-align: center;
-}   
-.slider .buttons .next:hover {
-    background: hsl(0, 0%, 25%);
-    color: hsl(0, 0%, 93%);
-}
-.slider .buttons .prev:hover {
-    background: hsl(0, 0%, 25%);
-    color: hsl(0, 0%, 93%);
-}
- 
-/* slider animation */
-.slider ul li {
-    animation-name: fade;
-    animation-duration: 2.5s;
-}
-  
-@keyframes fade {
-    from {opacity: .2} 
-    to {opacity: 1}
-}
-/* SLIDER */
 
 .container{
-    height: 100vh;
-    width: 100vw;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     z-index: 0;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
 }
 .text{     
     position: absolute;
@@ -179,6 +35,7 @@ main{
     object-fit: cover;
     align-self: center;
     height: 100%;
+    width: 100vw;
 }
 .container p{
     padding: 15px 30px 0;
@@ -205,18 +62,17 @@ main{
 } 
 #contenedor-4 {
     height: 120vh;
+    width: 100%;
 }
 #container-4 .product{
     flex-direction: column;
     justify-content: space-between;
-    bottom: 0px;
+    bottom: 20px;
     height: max-content;
 }
 #container-4 .product-img{
-    margin-top: 30px;
     z-index: 0;
-    width: max-content;
-    height: max-content;
+    width: 400px;
 }
 #container-4 .text{
     z-index: 1;
@@ -258,15 +114,15 @@ main{
 }
 
 @media (min-width: 768px){
-    .container img{
-        width: min-content;
-    }
     #container-2 .product{
         height: 100vh;
         z-index: 0 ;
     }
     #container-2 .text{
         z-index: 1;
+    }
+    #container-4 .product-img{
+        width: 450px;
     }
 }
 @media (min-width: 1024px){
@@ -280,7 +136,15 @@ main{
     #container-4 {
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end
+        align-items: flex-end;
+    }
+    #container-4 .container-img{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .container{
+        margin: auto;
     }
     #container-4 .product{
         justify-content: center;
@@ -292,6 +156,9 @@ main{
     .text{
         font-size: 20px;
     }
+
+
+
     .grid-container{
         display: grid;
         height: 150vh;
@@ -304,31 +171,54 @@ main{
         grid-gap: 20px;
     }
     #item1,#item2,#item3,#item4,#item5,#item6,#item7{
-        background-color: blanchedalmond;
-        background-image: url(../teclado-original.jpg);
-        background-size: cover;
+        border: 1px solid var(--color-Green);
+        
     }
-    }
+    
     #item1{
         grid-area: a;
+        background-image: url(../images/home/collage/intel-2.webp);
+        background-size: cover;
+        background-position: center;
     }
     #item2{
         grid-area: b;
+        background-image: url(../images/home/collage/amd.jpg);
+        background-position: center;
+        background-size: cover;
     }
     #item3{
         grid-area: c;
+        background-image: url(../images/home/collage/bg-5.jpg);
+        background-size: cover;    
     }
     #item4{
         grid-area: d;
+        background-image: url(../images/home/collage/bg-5.jpg);
+        background-position: center;
+        background-size: cover;
     }
     #item5{
         grid-area: e;
+        background-image: url(../images/home/collage/fdfa44f729f4e32b0f1a7024e60489a4--online-computer-store-acer-aspire.jpg);
+        background-size: cover;
     }
     #item6{
         grid-area: f;
+        background-image: url(../images/home/collage/amd.jpg);
+        background-size: cover;
+        background-position: center;
     }
     #item7{
         grid-area: g;
+        background-image: url(../images/home/collage/bg-5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    }
+
+    .ci{
+        width: fit-content;
     }
 
     #carouselExampleFade{
