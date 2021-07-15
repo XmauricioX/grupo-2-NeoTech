@@ -1,8 +1,4 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+@import url('/stylesheets/variables.css');
+@import url('/stylesheets/login.css');
+@import url('/stylesheets/market.css');
 
-a {
-  color: #00B7FF;
-}

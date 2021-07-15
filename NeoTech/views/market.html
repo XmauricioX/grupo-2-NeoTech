@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font: Quicksand -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/d7f2d4eb0a.js" crossorigin="anonymous"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/market.css">
+    <script src="/js/market.js" defer></script>
+    <!-- Title -->
+    <title>Neo Tech - Carrito</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="user-nav">
+        <!-- icon burguer menu -->
+        <i class="burguer-menu-icon"><img src="/images/icons/burguer-menu-icon.png"></i>
+
+        <!-- input search bar -->
+        <form action="#" class="search-form" id="search">
+            <div class="search-bar">
+                <input type="search" name="busqueda" id="" placeholder="">
+                <button type="submit"><i class="search"><img src="/images/icons/search-icon.png"></i></button>
+            </div>
+        </form>
+        
+        <!-- icon user -->
+        <div class="user-icon">
+            <i class="user-icon"><img src="/images/icons/user-icon.png"></i>
+        </div>
+
+        <!-- icon shopping cart - dropdown menu -->
+        <div class="cart-icon">
+            <!-- logo neotech -->
+            <img src="/images/icons/Neotech-icon.png " alt="logo-neotech">
+
+            <!-- icon open-nav -->
+            <i class="cart-icon"><img src="/images/icons/shopping-cart-icon.png" onclick="openNav()"></i>
+        </div>
+
+    </header>
+    <!-- END NAVBAR -->
+    
+    <!-- CART DROP DOWN MENU -->
+    <div id="myNav" class="overlay">
+        <!-- icon close-nav -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-angle-double-right"></i></a>
+
+        <!-- drop-down menu content -->
+        <ul class="overlay-content">
+            <H4>CARRITO DE COMPRAS</H4>
+            <hr>
+            <li>LISTA DE COMPRAS</li>
+            <li class="empty">vacío</li>
+            <img src="" alt="">
+            <a href="/market-full"><input type="button" class="button-login" value="Agregar Producto"></a>
+        </ul>
+    </div>
+</body>
