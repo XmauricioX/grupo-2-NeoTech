@@ -5,7 +5,7 @@ body{
 }
 
 section{
-    margin: 20px;
+    margin: 0 20px;
 }
 body i{
     color: var(--color-Green);
@@ -17,7 +17,7 @@ body i{
 
 section article{
     width: 80%;
-    margin: 20px auto;
+    margin: 0px auto;
     text-align: center;
     height: 100vh;
 }
@@ -31,7 +31,7 @@ section article img{
     border: var(--color-Green-Old) 2px solid;
     border-radius: 20%;
     margin-bottom: 60px;
-    margin-top: 50px;
+    margin-top: 0px;
     overflow: hidden;
 }
 .btn{
@@ -67,8 +67,8 @@ section article img{
 .detail p{
     text-align: justify;
 }
-.container-r{
-    margin-top: 200px;
+div.container-r{
+    margin-top: 8px;
 }
 
 
@@ -80,28 +80,29 @@ section article img{
     }
     section article{
         width: 60%;
+        margin-left: 0;
     }
     article img{
         height: auto;
         width: auto;
     }
     .btn a{
-        position:absolute;
-        padding: 0px 15px;
-        font-size: 35px;
+        position: static;
+        padding: 0px 20px;
+        font-size: 45px;
         margin: 0;
-        bottom: -20px;
     }
     .container-r .detail{
         width: 100%;
         font-size: 15px;
-        height: auto;
+        height: 70%;
+        margin-bottom: 20px;
         overflow: scroll;
     }
-    .container-r{
+    .container-r{        
         position: relative;
-        margin: 9% 0px 0;
-        width: 25%;
+        margin: 0;
+        width: 35%;
         height: auto;
         padding: 0;
     }
@@ -109,19 +110,22 @@ section article img{
 
 @media (min-width: 1024px){
     .detail{
-        font-size: 20px;
+        font-size: 80px;
+        height: 100%;
     }
     #arrow{
         display: none;
     }
     section article{
-        width: 50%;
+        max-width: 500px;
+        margin: 0 auto;
     }
     article img{
         width: 50%;
         height: 95%;
     }
     .container-r{
-        margin:  85px;
+        margin: 0 85px;
+        height: 650px;
     }
 }
