@@ -36,6 +36,10 @@ app.get('/market', function(req, res,) {
   res.sendFile(path.join(__dirname, '/views/market.html'))
 });
 
+app.get('/market-full', function(req, res,) {
+  res.sendFile(path.join(__dirname, '/views/market-full.html'))
+});
+
 app.get('/detalle-producto', function(req, res,) {
   res.sendFile(path.join(__dirname, '/views/productDetail.html'))
 });
