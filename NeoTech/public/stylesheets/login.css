@@ -1,0 +1,284 @@
+@import url("/stylesheets/variables.css");
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Background body */
+body {
+    background-image: url(/public/img/BG1.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 77%;
+    background-position-y: 10%;
+    font-family:var(--font-Quicksand);
+    text-align: center;
+}
+
+/* Title: Iniciar Sesión */
+body h1 {
+    font-size: 38px;
+    color: var(--color-Green);
+    padding-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* form */
+body form {
+    backdrop-filter: blur(4px);
+    border: 1px solid var(--color-Green);
+    border-radius: 30px;
+    max-width: 320px;
+    /* max-width: 90%; */
+    margin: 0 auto;
+}
+
+form .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 15%;
+}
+
+form .container .email {
+    border: black;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding: 12px 45px 12px 5px;
+    text-align: initial;
+} 
+
+form .container .password {
+    border: black;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding: 12px 45px 12px 5px;
+    text-align: initial;
+}
+/* Buttons: log in & create account */
+.button-login {
+    background-color: var(--color-Dark-Gray);
+    border-color: var(--color-Green);
+    border-radius: 20px;
+    color: white;
+    font-size:23px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    padding: 9px 15px;
+}
+
+.button-login:hover {
+    background-color: var(--color-Green);
+    color: black;
+}
+
+form .container a {
+    color: white;
+    padding-bottom: 9px;
+    text-decoration: none;
+}
+
+form .container a:hover{
+    color: var(--color-Green);
+}
+
+.button-create {
+    background-color: var(--color-Dark-Gray);
+    border-color:var(--color-Dark);
+    border-radius: 20px;
+    color: white;
+    font-size:15px;
+    margin: 12px;
+    padding: 10px 17px;
+}
+.button-create:hover {
+    background-color: var(--color-Green);
+    color: black;
+}
+
+/* social media buttons */
+.networks {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.networks .logo-face {
+    bottom: 40px;
+    position: relative;
+    right: 82px;
+}
+
+.networks .logo-google {
+    bottom: 42px;
+    position: relative;
+    right: 80px;
+    width: 32px;
+}
+
+.button-facebook {
+    background-color: #2b4ca3;
+    border:none;
+    color: white;
+    font-size:13px;
+    font-weight: lighter;
+    margin-top: 25px;
+    padding: 18px 7px 18px 43px;
+    position: relative;
+    
+}
+
+.button-google {
+    background-color: #2095e7;
+    border:none;
+    color: white;
+    font-size:13px;
+    font-weight: lighter;
+    margin-top: -15px;
+    padding: 18px 18px 18px 48px;
+}
+
+
+
+
+
+
+
+/* media queries Tablet */
+
+@media (min-width:768px) {
+    body {
+        background-position-x: 90%;
+        background-position-y: 20%;
+    }
+    
+    body h1 {
+        font-size: 48px;
+        padding-top: 40px;
+        margin-bottom: 15px;
+    }
+    
+    body form {
+        max-width:420px;
+        /* max-width: 60%; */
+    }
+    form .container {
+        padding-top: 10%;
+    }
+    
+    form .container .email {
+        font-size: 23px;
+        margin-bottom: 35px;
+    } 
+    
+    form .container .password {
+        font-size: 23px;
+        margin-bottom: 35px;
+    }
+    .button-login {
+        border-radius: 40px;
+        font-size:24px;
+    }
+    form .container a {
+        font-size: 18px;
+    }
+    /* social media buttons */
+    .networks {
+        align-items: flex-end;
+        flex-direction:row;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    
+    .networks .logo-face {
+        bottom: 10px;
+        right: 187px;
+        margin-left: -15px;
+    }
+    
+    .networks .logo-google {
+        bottom: 10px;
+        right: 203px;
+        width: 32px;
+    }
+}
+
+
+
+
+
+
+/* media queries Desktop */
+
+@media (min-width:1024px) {
+    body {
+        background-image: url(/public/img/BG2.jpg);
+        background-size: cover;
+    }
+
+    body h1 {
+        padding-top: 60px;
+        margin-bottom: 10px;
+    }
+
+    body form {
+        border-radius: 30px;
+        width: 320px;
+    }
+
+    form .container {
+        padding-top: 20%;
+    }
+
+    form .container .email {
+        font-size: 17px;
+        padding: 10px 30px 10px 5px;
+        margin-bottom: 30px;
+    } 
+
+    form .container .password {
+        font-size: 17px;
+        padding: 10px 30px 10px 5px;
+        
+    }
+    .button-login {
+        border-radius: 50px;
+        font-size:20px;
+    }
+
+    .button-login:hover {
+        background-color: var(--color-Green);
+        color: black;
+    }
+
+    form .container a {
+        color: white;
+        padding-bottom: 9px;
+        text-decoration: none;
+    }
+    .networks {
+        align-items: flex-end;
+        flex-direction:row;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    
+    .networks .logo-face {
+        bottom: 10px;
+        right: 187px;
+        margin-left: -15px;
+    }
+    
+    .networks .logo-google {
+        bottom: 10px;
+        right: 203px;
+        width: 32px;
+    }
+
+
+}
