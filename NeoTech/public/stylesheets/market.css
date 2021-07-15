@@ -1,0 +1,266 @@
+@import url("/variables.css");
+
+body {
+    font-family: var(--font-Quicksand);
+    background-color: royalblue;
+}
+
+/* NAVBAR */
+body .user-nav {
+    align-items: center;
+    background-color: var(--color-Dark);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+body .user-nav div .user-icon {
+    display: none;
+}
+
+
+body .user-nav form .search-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.search-form input {
+    border-radius: 50px;
+    flex-grow: 1;
+    padding: 6px 0;
+    padding-left: 26px;
+    margin-bottom: 3px;
+    margin-left: -25px;
+}
+.search-form input:focus {
+   outline: none;
+}
+.search-bar button {
+    border: 0;
+    background-color: transparent;
+    border-radius: 50px 0 0 50px;
+    position: relative;
+    left: 7px;
+}
+
+
+
+
+/* CART DROP DOWN MENU  */
+
+
+/* The Overlay (background) */
+body .overlay {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    background-position-x: 10px;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    overflow-x: hidden; 
+    position:fixed; 
+    transition: 0.3s; 
+    top: 0;
+    width: 0;
+    z-index: 1; 
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: relative;
+    top: 60px;
+    left: 40px;
+    font-size: 40px;
+    color: var(--color-Red);
+    z-index: 2;
+}
+
+
+/* Position the content inside the overlay */
+body .overlay .overlay-content {
+    margin-top: 30px; 
+    position: relative;
+    text-align: center; 
+    top: 12%;
+    width: 100%; 
+}
+
+/* The navigation links inside the overlay */
+body .overlay .overlay-content {
+    color: var(--color-Green);
+    display: block; 
+    font-size: 20px;
+    list-style: none;
+    padding: 8px;
+    text-decoration: none;
+    transition: 0.3s; 
+}
+
+body .overlay .overlay-content li {
+    padding-top: 20px;
+}
+
+.button-shooping {
+    background-color: var(--color-Dark-Gray);
+    border-color: var(--color-Green);
+    border-radius: 50px;
+    color: var(--color-White);
+    font-size: 23px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+    padding: 9px 15px;
+}
+.button-shooping:hover {
+    background-color: var(--color-Green);
+    color: black;
+}
+
+.button-login {
+    background-color: var(--color-Dark-Gray);
+    border-color: var(--color-Green);
+    border-radius: 50px;
+    color: var(--color-White);
+    font-size: 23px;
+    font-weight: lighter;
+    padding: 9px 15px;
+}
+
+.button-login:hover {
+    background-color: var(--color-Green);
+    color: black;
+}
+
+.overlay li:hover, 
+.overlay li:focus {
+    color: var(--color-White);
+}
+
+.overlay-content img {
+    position: relative;
+    width: 30%;
+    top:20px;
+    right: 60px;
+    margin-top: 10px;
+    margin-bottom: -45px;
+}
+
+.overlay-content form .reset {
+    background-color: var(--color-White);
+    color: var(--color-Dark-Gray);
+    font-size: 16px;
+    padding: 5px 16px;
+    border-radius: 5px;
+    /* font-weight: 600; */
+}
+.overlay-content form .reset:hover {
+    background-color: var(--color-Red);
+    color: var(--color-White);
+    border: none;
+}
+
+.overlay-content form .number {
+    padding: 5px;
+    padding-right: inherit;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.container-form {
+    display: flex;
+    flex-direction: column-reverse; 
+    align-items: center;
+    position: relative;
+    left: 20%;
+    bottom: 10px;
+}
+
+hr {
+    background: linear-gradient(100deg, rgb(60, 134, 37), var(--color-Green)) ;
+    height: 4px;
+    width: 55%;
+    margin: 0 auto;
+    border-radius: 100px
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+.empty {
+    margin-bottom: 30px;
+}
+
+
+@media (min-width: 768px) {
+    body .overlay .overlay-content { 
+        top: 8%;
+    }
+    hr {
+        background: linear-gradient(100deg, rgb(60, 134, 37), var(--color-Green)) ;
+        height: 4px;
+        width: 40%;
+        margin: 0 auto;
+        border-radius: 100px
+    }
+    h4  {
+        font-size:30px;
+    }
+    li {
+        font-size:25px;
+    }
+    .container-form {
+        left: 20%;
+        bottom: 34px;
+    }
+    .overlay-content form .number {
+        font-size: 16px;
+        font-weight: 700;
+        padding: 8px;
+        margin-bottom: 20px;
+    }
+    .overlay-content form .reset {
+        font-size: 19px;
+        font-weight: 600;
+        padding: 5px 13px;
+    }
+}
+
+@media (min-width:1024px) {
+    body .overlay .overlay-content { 
+        top: 4%;
+    }
+    hr {
+        background: linear-gradient(100deg, rgb(60, 134, 37), var(--color-Green)) ;
+        height: 5px;
+        width: 20%;
+        border-radius: 120px
+    }
+    h4  {
+        font-size:40px;
+    }
+    li {
+        font-size:30px;
+    }
+    .container-form {
+        left: 20%;
+        bottom: 56px;
+    }
+    .overlay-content form .number {
+        font-size: 20px;
+        font-weight: 700;
+        padding: 8px;
+        margin-bottom: 30px;
+    }
+    .overlay-content form .reset {
+        font-size: 25px;
+        font-weight: 600;
+        padding: 5px 13px;
+    }
+}
+
+
+
+
+

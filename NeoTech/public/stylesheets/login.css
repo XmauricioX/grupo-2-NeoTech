@@ -1,4 +1,4 @@
-@import url("/stylesheets/variables.css");
+@import url("/public/styles/variables.css");
 
 
 * {
@@ -9,7 +9,7 @@
 
 /* Background body */
 body {
-    background-image: url(/images/imgs-bg/BG1-login.jpg);
+    background-image: url(/public/img/BG1-login.jpg);
     background-repeat: no-repeat;
     background-position-x: 77%;
     background-position-y: 10%;
@@ -33,6 +33,7 @@ body form {
     max-width: 320px;
     /* max-width: 90%; */
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.582);
 }
 
 form .container {
@@ -59,6 +60,20 @@ form .container .password {
     padding: 12px 45px 12px 5px;
     text-align: initial;
 }
+input {
+    display: block;
+    padding: 10px 50px;
+    margin: 15px 0;
+    background-color: var(--color-Dark);
+    border-radius: 8px;
+    border: 1px solid black;
+    color: white;
+}
+input:hover {
+    color: var(--color-Green);   
+}
+
+
 /* Buttons: log in & create account */
 .button-login {
     background-color: var(--color-Dark-Gray);
@@ -217,7 +232,7 @@ form .container a:hover{
 
 @media (min-width:1024px) {
     body {
-        background-image: url(/images/imgs-bg/BG2-login.jpg);
+        background-image: url(/public/img/BG2-login.jpg);
         background-size: cover;
     }
 

@@ -9,7 +9,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d7f2d4eb0a.js" crossorigin="anonymous"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/public/styles/login.css">
     <!-- Title -->
     <title>Neo Tech - Login</title>
 </head>
@@ -19,11 +19,14 @@
         <form>
             <nav class="container">
                 <!-- Username -->
-                <label for="username"></label>
-                <input class="email" type="text" placeholder="Ingrese su email">
+                <!-- <label for="username"></label>
+                <input class="email" type="text" placeholder="Ingrese su email"> -->
+                <label for="email"></label>
+                <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
                 <!-- Password -->
                 <label for="password"></label>
-                <input class="password" type="password" placeholder="Ingrese su contraseña">
+                <!-- <input class="password" type="password" placeholder="Ingrese su contraseña"> -->
+                <input class="password" type="password" id="password" placeholder="Ingrese su contraseña">
                 <!-- button log in -->
                 <button class="button-login" type="submit" value="log-in">Iniciar Sesión</button>
                 <!-- password & account -->
@@ -37,10 +40,10 @@
     <div class="networks">
         <!-- button facebook -->
         <button class="button-facebook">Iniciar sesión con Facebook</button>
-        <img class="logo-face" src="/images/icons/logo-face-login.png" alt="logo-face">
+        <img class="logo-face" src="/public/img/logo-face-login.png" alt="logo-face">
         <!-- button google -->
         <button class="button-google">Iniciar sesión con Google</button>
-        <img class="logo-google" src="/images/icons/icon-google-login.png" alt="logo-google">
+        <img class="logo-google" src="/public/img/icon-google-login.png" alt="logo-google">
     </div>
 </body>  
 </html>
