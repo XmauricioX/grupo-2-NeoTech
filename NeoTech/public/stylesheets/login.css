@@ -1,15 +1,10 @@
 @import url("/stylesheets/variables.css");
 
 
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
 
 /* Background body */
 body {
-    background-image: url(/public/img/BG1.jpg);
+    background-image: url(/images/imgs-bg-login/BG1-login.jpg);
     background-repeat: no-repeat;
     background-position-x: 77%;
     background-position-y: 10%;
@@ -22,7 +17,7 @@ body h1 {
     font-size: 38px;
     color: var(--color-Green);
     padding-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 /* form */
@@ -30,23 +25,24 @@ body form {
     backdrop-filter: blur(4px);
     border: 1px solid var(--color-Green);
     border-radius: 30px;
-    max-width: 320px;
+    max-width: 290px;
     /* max-width: 90%; */
     margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.582);
 }
 
 form .container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 15%;
+    padding-top: 5%;
 }
 
 form .container .email {
     border: black;
     border-radius: 10px;
-    font-size: 18px;
-    margin-bottom: 25px;
+    font-size: 16px;
+    margin-bottom: 14px;
     padding: 12px 45px 12px 5px;
     text-align: initial;
 } 
@@ -54,21 +50,35 @@ form .container .email {
 form .container .password {
     border: black;
     border-radius: 10px;
-    font-size: 18px;
-    margin-bottom: 25px;
+    font-size: 16px;
+    margin-bottom: 24px;
     padding: 12px 45px 12px 5px;
     text-align: initial;
 }
+input {
+    display: block;
+    padding: 10px 50px;
+    margin: 15px 0;
+    background-color: var(--color-Dark);
+    border-radius: 8px;
+    border: 1px solid black;
+    color: white;
+}
+input:hover {
+    color: var(--color-Green);   
+}
+
+
 /* Buttons: log in & create account */
 .button-login {
     background-color: var(--color-Dark-Gray);
     border-color: var(--color-Green);
-    border-radius: 20px;
+    border-radius: 25px;
     color: white;
-    font-size:23px;
+    font-size:20px;
     font-weight: lighter;
     margin-bottom: 20px;
-    padding: 9px 15px;
+    padding: 9px 16px;
 }
 
 .button-login:hover {
@@ -78,6 +88,7 @@ form .container .password {
 
 form .container a {
     color: white;
+    font-size: 15px;
     padding-bottom: 9px;
     text-decoration: none;
 }
@@ -91,9 +102,9 @@ form .container a:hover{
     border-color:var(--color-Dark);
     border-radius: 20px;
     color: white;
-    font-size:15px;
-    margin: 12px;
-    padding: 10px 17px;
+    font-size:12px;
+    margin: 5px 0 10px 0;
+    padding: 10px 14px;
 }
 .button-create:hover {
     background-color: var(--color-Green);
@@ -142,8 +153,6 @@ form .container a:hover{
     margin-top: -15px;
     padding: 18px 18px 18px 48px;
 }
-
-
 
 
 
@@ -217,7 +226,7 @@ form .container a:hover{
 
 @media (min-width:1024px) {
     body {
-        background-image: url(/public/img/BG2.jpg);
+        background-image: url(/images/imgs-bg-login/BG2-login.jpg);
         background-size: cover;
     }
 
@@ -279,6 +288,4 @@ form .container a:hover{
         right: 203px;
         width: 32px;
     }
-
-
 }
