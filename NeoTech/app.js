@@ -40,7 +40,7 @@ app.get('/market-full', function(req, res,) {
   res.sendFile(path.join(__dirname, '/views/market-full.html'))
 });
 
-app.get('/detalle-producto', function(req, res,) {
+app.get('/product-detail', function(req, res,) {
   res.sendFile(path.join(__dirname, '/views/product-detail.html'))
 });
 
