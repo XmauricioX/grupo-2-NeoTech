@@ -7,30 +7,31 @@ body{
     margin: 0;
     height: 100vh;
 }
-body div.container{
+body div.container-r{
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
-body div.container header{
+body div.container-r header{
     position: relative;
 }
-body div.container header p{
+body div.container-r header p{
     text-align: center;
     display: inline;
     font-weight:bold;
     font-size: 30px;
 }
-body div.container header i{
+body div.container-r header i{
     left: -50px;    
     top: 10px;
     font-size: 20px;
     position: absolute;
 }
 
-body div.container form{
+body div.container-r form{
     display: flex;
     flex-direction: column;
     border: 1px solid var(--color-Green);
@@ -38,7 +39,7 @@ body div.container form{
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.582);
 }
-body div.container form input{ 
+body div.container-r form input{ 
     display: block;
     padding: 10px 50px;
     margin: 15px 0;
@@ -48,7 +49,7 @@ body div.container form input{
     color: white;
     outline: none;
 }
-body div.container form input.submit{
+body div.container-r form input.submit{
     border: 2px solid var(--color-Green);
     padding: 12px 0;
     border-radius: 20px;
@@ -60,11 +61,11 @@ body div.container form input.submit{
     background-color: var(--color-Green);
     color: black;
 }
-body div.container form input:focus{
+body div.container-r form input:focus{
     border: 1px solid var(--color-Green);
 }
 
-body div.container header{
+body div.container-r header{
     color: var(--color-Green);
     margin: 15px 0;
     font-size: 30px;
