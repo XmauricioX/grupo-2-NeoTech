@@ -10,18 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/product-list.css">
-    <!-- JS -->
-    <script src="/js/product-list.js"></script>
+  
     <title>Lista de productos</title>
 </head>
 <body>
 
-    <form action="" method="">
+<form  action="" method="">
         <input type="search" placeholder="Buscar producto"><i class="fas fa-search"></i>
     </form>
 
     <main id="container">
         
+       
         <div class="card">
             
             <figure class="img-container">
@@ -34,11 +34,16 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
-                <a id="comprar" class="comprar" href="">COMPRAR</a>
+                <a class="mas carrito" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp ">añadir al carrito</p>
+                    </i>
+                </a>
+                <a class="comprar " href="">COMPRAR</a>
             </div>
         </div>
 
+
         <div class="card">
             
             <figure class="img-container">
@@ -51,49 +56,15 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a  class="mas" href="">
-                    <i  class="fas fa-shopping-cart">
-                        <p onmouseover="masp()" id="masp">añadir</p>
+                <a class="carrito mas" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp">añadir al carrito</p>
                     </i>
                 </a>
                 <a class="comprar" href="">COMPRAR</a>
             </div>
         </div>
 
-        <div class="card">
-            
-            <figure class="img-container">
-                <img class="img-0" src="/images/product-list/bg-product.png" alt="background-product">
-                <img class="img-1" src="/images/product-list/auricular.webp" alt="product">
-            </figure>
-            <hr>
-
-            <div class="text-card">
-                <h2 class="name-card">lorem</h2>
-                <h2 class="number-card">$000</h2>
-                <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
-                <a class="comprar" href="">COMPRAR</a>
-            </div>
-        </div>
-
-        <div class="card">
-            
-            <figure class="img-container">
-                <img class="img-0" src="/images/product-list/bg-product.png" alt="background-product">
-                <img class="img-1" src="/images/product-list/auricular.webp" alt="product">
-            </figure>
-            <hr>
-
-            <div class="text-card">
-                <h2 class="name-card">lorem</h2>
-                <h2 class="number-card">$000</h2>
-                <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
-                <a class="comprar" href="">COMPRAR</a>
-            </div>
-        </div>
-       
         
         <div class="card">
             
@@ -107,28 +78,19 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
-                <a class="comprar" href="">COMPRAR</a>
+                <a class="mas carrito" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp ">añadir al carrito</p>
+                    </i>
+                </a>
+                <a class="comprar " href="">COMPRAR</a>
             </div>
         </div>
 
-        
-        <div class="card">
-            
-            <figure class="img-container">
-                <img class="img-0" src="/images/product-list/bg-product.png" alt="background-product">
-                <img class="img-1" src="/images/product-list/auricular.webp" alt="product">
-            </figure>
-            <hr>
 
-            <div class="text-card">
-                <h2 class="name-card">lorem</h2>
-                <h2 class="number-card">$000</h2>
-                <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
-                <a class="comprar" href="">COMPRAR</a>
-            </div>
-        </div>
+
     </main>
+      <!-- JS -->
+      <script src="/js/product-list.js"></script>
 </body>
 </html>

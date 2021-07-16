@@ -113,6 +113,14 @@ main{
     display: none;
 }
 
+#carouselExampleFade{
+    height: 100vh;
+    overflow: hidden;
+}
+.carousel-item img {
+    height: 100vh;
+}
+
 @media (min-width: 768px){
     #container-2 .product{
         height: 100vh;
@@ -215,16 +223,57 @@ main{
         background-size: cover;
         background-position: center;
     }
-    }
-
     .ci{
         width: fit-content;
     }
+}
 
-    #carouselExampleFade{
-        height: 100vh;
-        overflow: hidden;
-    }
-    .carousel-item img {
-        height: 100vh;
-    }
+#black-screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-Dark);
+    z-index: 90;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    animation-name: fondo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+#boton-play{
+    font-size: 100px;
+    color: var(--color-Green);
+    border: 10px solid var(--color-Green);
+    padding: 15px 40px 15px 55px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    animation-name: border-green;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+/* 
+    las animaciones se linkean solas solo basta con llamarlas
+    en un evento y se ejecutan
+*/
+@keyframes fondo{
+    0% {background-color: var(--color-Dark);}
+    50% {background-color: black;}
+    100% {background-color: var(--color-Dark);}
+}
+@keyframes border-green{
+    0% {border-color: var(--color-Green);}
+    50% {border-color: var(--color-Dark);}
+    100% {border-color: var(--color-Green);}
+}
+@keyframes mynewmove{
+    from{opacity: 100%;}
+    to{opacity: 0%;}
+}

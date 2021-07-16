@@ -108,8 +108,15 @@ hr{
     top: 10px;
     left: 15px;
 }
-#masp{
+.masp{
     display: none;
+    color: aliceblue;
+    font-family: var(--font-Quicksand);
+    text-shadow: 10px 10px 5px black;
+    font-size: 20px;
+}
+.carrito{
+    text-shadow: 10px 10px 5px black;
 } 
 .comprar{
     display: block;
@@ -136,5 +143,16 @@ hr{
     }
     #container{
         grid-template-columns: repeat(3,1fr);
+    }
+    .mas:hover .masp{
+        display: inline;
+    }
+    .masp{
+        animation-name: masp;
+        animation-duration: 1s;
+    }
+    @keyframes masp{
+        0% {opacity: 0%;}
+        100% {opacity: 100%;}
     }
 }
