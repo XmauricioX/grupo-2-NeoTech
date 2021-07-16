@@ -4,6 +4,7 @@
 
 /* Background body */
 #login {
+    background-color: #242424;
     background-image: url(/images/imgs-bg-login/BG1-login.jpg);
     background-repeat: no-repeat;
     background-position-x: 77%;
@@ -125,6 +126,7 @@
     display: flex;
     flex-direction: column;
     text-align: end;
+    margin-bottom: 30px
 }
 
 #login .networks .logo-face {
@@ -210,6 +212,7 @@
         flex-direction:row;
         justify-content: center;
         margin-left: 30px;
+        margin-bottom: 50px
     }
     
     #login .networks .logo-face {
@@ -234,6 +237,7 @@
 
 @media (min-width:1024px) {
     #login {
+        background-color: #242424;
         background-image: url(/images/imgs-bg-login/BG2-login.jpg);
         background-size: cover;
     }
@@ -283,6 +287,7 @@
         flex-direction:row;
         justify-content: center;
         margin-left: 30px;
+        margin-bottom: 50px
     }
     
     #login .networks .logo-face {

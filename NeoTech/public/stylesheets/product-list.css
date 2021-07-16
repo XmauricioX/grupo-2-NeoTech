@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: 1fr a 1fr;
     gap: 20px 0;
+    margin-bottom: 60px;
 }
 /* BARRA DE BUSQUEDA */
 form{

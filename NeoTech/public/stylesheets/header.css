@@ -1,11 +1,11 @@
 /* HEADER */
 
-header{background-image: url(/images/imgs-bg/bg\ header.png);
-	background-color: #242424;
+header{
+	background-image: url(/images/imgs-bg/bg\ header.png);
+	background-size: cover;
 }
 
 header .container {
-	background-color: #242424;
     display: flex;
     flex-direction: column;
     text-align: center;

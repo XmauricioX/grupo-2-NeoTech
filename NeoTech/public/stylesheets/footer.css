@@ -1,5 +1,10 @@
 
 footer {
+    /* height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
     height: 500px;
     width: 100%;
     display: flex;
@@ -18,10 +23,12 @@ footer .container{
     height: 400px;
 	padding-bottom: 15px;
 	width: 100%;
+	text-align: center;
+	height: 500px;
 }
 footer .icon{
 	border-radius: 100%;
-	margin: 25px;
+	margin: 10px;
 	height: 50px;
 	width: 50px;
 }
@@ -29,6 +36,7 @@ footer .icon{
 footer .logo{
 	height: 100px;
 	width: 100px;
+	margin: 50px;
 }
 
 footer a{
@@ -46,7 +54,7 @@ footer a:hover{
 	text-decoration: underline;
 }
 
-p{
+.footer-text p {
 	color: white;
 	margin: 15px;
 	text-align: center;
@@ -67,7 +75,7 @@ p{
 	}
 
 	footer .icon-content{
-		display: inline-flex;
+		display: flex;
 		justify-content:center;
 		flex-wrap: wrap;
 	}
@@ -89,3 +97,35 @@ p{
 		min-width: 150px;
 	}
 }
+
+@media(min-width: 1024px) {
+	footer .container{
+		flex-direction: row;
+		justify-content: space-evenly;
+
+	}
+
+	footer .icon-content{
+		display: flex;
+		justify-content:center;
+		flex-wrap: wrap;
+	}
+
+	footer .footer-text{
+		flex-direction: column;
+		text-align: center;	
+	}
+	
+	footer a{
+		display: inline-flex;	
+	}
+
+	footer .qr-code{
+		border: solid 1px black;
+		display: inline-flex;
+		min-height: 150px;
+		margin: 20px;
+		min-width: 150px;
+	}
+}
+
