@@ -1,9 +1,11 @@
 /* HEADER */
 
 header{background-image: url(/images/imgs-bg/bg\ header.png);
+	background-color: #242424;
 }
 
 header .container {
+	background-color: #242424;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -45,7 +47,7 @@ header .icon{
 @media(min-width: 768px){
 	header .container{
 		flex-direction: row;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 	
 	.icon-bank{

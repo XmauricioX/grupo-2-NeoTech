@@ -44,6 +44,9 @@ app.get('/detalle-producto', function(req, res,) {
   res.sendFile(path.join(__dirname, '/views/product-detail.html'))
 });
 
+app.get('/registro-viejo', function(req, res,) {
+  res.sendFile(path.join(__dirname, '/views/REGISTRO-VIEJO.html'))
+});
 app.get('/registro', function(req, res,) {
   res.sendFile(path.join(__dirname, '/views/registro.html'))
 });

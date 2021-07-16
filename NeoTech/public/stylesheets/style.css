@@ -3,3 +3,5 @@
 @import url(nav.css);
 @import url(/stylesheets/footer.css);
 @import url(./home.css);
+@import url(./product-list.css);
+@import url(/stylesheets/login.css)
