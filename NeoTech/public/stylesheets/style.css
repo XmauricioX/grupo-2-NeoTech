@@ -1,5 +1,7 @@
 @import url(general.css);
 @import url(header.css);
 @import url(nav.css);
-@import url(/stylesheets/footer.css);
 @import url(./home.css);
+@import url(./login.css);
+@import url(/stylesheets/footer.css);
+@import url(/stylesheets/product-list.css);
