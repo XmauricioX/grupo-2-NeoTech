@@ -3,7 +3,7 @@
 
 
 /* Background body */
-body {
+#login {
     background-image: url(/images/imgs-bg-login/BG1-login.jpg);
     background-repeat: no-repeat;
     background-position-x: 77%;
@@ -13,7 +13,7 @@ body {
 }
 
 /* Title: Iniciar Sesión */
-body h1 {
+#login h1 {
     font-size: 38px;
     color: var(--color-Green);
     padding-top: 15px;
@@ -21,7 +21,7 @@ body h1 {
 }
 
 /* form */
-body form {
+#login form {
     backdrop-filter: blur(4px);
     border: 1px solid var(--color-Green);
     border-radius: 30px;
@@ -31,14 +31,22 @@ body form {
     background-color: rgba(0, 0, 0, 0.582);
 }
 
-form .container {
+#login form .container {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding-top: 5%;
 }
 
-form .container .email {
+/* #login form .container .text {
+    border: black;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 14px;
+    padding: 12px 45px 12px 5px;
+    text-align: initial;
+}  */
+#login form .container .email {
     border: black;
     border-radius: 10px;
     font-size: 16px;
@@ -47,7 +55,7 @@ form .container .email {
     text-align: initial;
 } 
 
-form .container .password {
+#login form .container .password {
     border: black;
     border-radius: 10px;
     font-size: 16px;
@@ -55,7 +63,7 @@ form .container .password {
     padding: 12px 45px 12px 5px;
     text-align: initial;
 }
-input {
+#login input {
     display: block;
     padding: 10px 50px;
     margin: 15px 0;
@@ -64,13 +72,13 @@ input {
     border: 1px solid black;
     color: white;
 }
-input:hover {
+#login input:hover {
     color: var(--color-Green);   
 }
 
 
 /* Buttons: log in & create account */
-.button-login {
+#login .button-login {
     background-color: var(--color-Dark-Gray);
     border-color: var(--color-Green);
     border-radius: 25px;
@@ -81,23 +89,23 @@ input:hover {
     padding: 9px 16px;
 }
 
-.button-login:hover {
+#login .button-login:hover {
     background-color: var(--color-Green);
     color: black;
 }
 
-form .container a {
+#login form .container a {
     color: white;
     font-size: 15px;
     padding-bottom: 9px;
     text-decoration: none;
 }
 
-form .container a:hover{
+#login form .container a:hover{
     color: var(--color-Green);
 }
 
-.button-create {
+#login .button-create {
     background-color: var(--color-Dark-Gray);
     border-color:var(--color-Dark);
     border-radius: 20px;
@@ -106,33 +114,33 @@ form .container a:hover{
     margin: 5px 0 10px 0;
     padding: 10px 14px;
 }
-.button-create:hover {
+#login .button-create:hover {
     background-color: var(--color-Green);
     color: black;
 }
 
 /* social media buttons */
-.networks {
+#login .networks {
     align-items: center;
     display: flex;
     flex-direction: column;
     text-align: end;
 }
 
-.networks .logo-face {
+#login .networks .logo-face {
     bottom: 40px;
     position: relative;
     right: 82px;
 }
 
-.networks .logo-google {
+#login .networks .logo-google {
     bottom: 42px;
     position: relative;
     right: 80px;
     width: 32px;
 }
 
-.button-facebook {
+#login .button-facebook {
     background-color: #2b4ca3;
     border:none;
     color: white;
@@ -144,7 +152,7 @@ form .container a:hover{
     
 }
 
-.button-google {
+#login .button-google {
     background-color: #2095e7;
     border:none;
     color: white;
@@ -161,56 +169,56 @@ form .container a:hover{
 /* media queries Tablet */
 
 @media (min-width:768px) {
-    body {
+    #login {
         background-position-x: 90%;
         background-position-y: 20%;
     }
     
-    body h1 {
+    #login h1 {
         font-size: 48px;
         padding-top: 40px;
         margin-bottom: 15px;
     }
     
-    body form {
+    #login form {
         max-width:420px;
         /* max-width: 60%; */
     }
-    form .container {
+    #login form .container {
         padding-top: 10%;
     }
     
-    form .container .email {
+    #login form .container .email {
         font-size: 23px;
         margin-bottom: 35px;
     } 
     
-    form .container .password {
+    #login form .container .password {
         font-size: 23px;
         margin-bottom: 35px;
     }
-    .button-login {
+    #login .button-login {
         border-radius: 40px;
         font-size:24px;
     }
-    form .container a {
+    #login form .container a {
         font-size: 18px;
     }
     /* social media buttons */
-    .networks {
+    #login .networks {
         align-items: flex-end;
         flex-direction:row;
         justify-content: center;
         margin-left: 30px;
     }
     
-    .networks .logo-face {
+    #login .networks .logo-face {
         bottom: 10px;
         right: 187px;
         margin-left: -15px;
     }
     
-    .networks .logo-google {
+    #login .networks .logo-google {
         bottom: 10px;
         right: 203px;
         width: 32px;
@@ -225,65 +233,65 @@ form .container a:hover{
 /* media queries Desktop */
 
 @media (min-width:1024px) {
-    body {
+    #login {
         background-image: url(/images/imgs-bg-login/BG2-login.jpg);
         background-size: cover;
     }
 
-    body h1 {
+    #login h1 {
         padding-top: 60px;
         margin-bottom: 10px;
     }
 
-    body form {
+    #login form {
         border-radius: 30px;
         width: 320px;
     }
 
-    form .container {
+    #loginform .container {
         padding-top: 20%;
     }
 
-    form .container .email {
+    #login form .container .email {
         font-size: 17px;
         padding: 10px 30px 10px 5px;
         margin-bottom: 30px;
     } 
 
-    form .container .password {
+    #login form .container .password {
         font-size: 17px;
         padding: 10px 30px 10px 5px;
         
     }
-    .button-login {
+    #login .button-login {
         border-radius: 50px;
         font-size:20px;
     }
 
-    .button-login:hover {
+    #login .button-login:hover {
         background-color: var(--color-Green);
         color: black;
     }
 
-    form .container a {
+    #login form .container a {
         color: white;
         padding-bottom: 9px;
         text-decoration: none;
     }
-    .networks {
+    #login .networks {
         align-items: flex-end;
         flex-direction:row;
         justify-content: center;
         margin-left: 30px;
     }
     
-    .networks .logo-face {
+    #login .networks .logo-face {
         bottom: 10px;
         right: 187px;
         margin-left: -15px;
     }
     
-    .networks .logo-google {
+    #login .networks .logo-google {
         bottom: 10px;
         right: 203px;
         width: 32px;

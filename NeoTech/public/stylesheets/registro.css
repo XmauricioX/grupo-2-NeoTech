@@ -1,45 +1,69 @@
-@import url(variables-border.css);
+@import url("/stylesheets/variables.css");
 
-body{
-    background-image: url(/images/registro/teclado-mobile.jpg);
-    background-size: cover;
+
+
+/* Background body */
+#login {
+    background-image: url(/images/imgs-bg-login/BG1-login.jpg);
     background-repeat: no-repeat;
-    margin: 0;
-    height: 100vh;
-}
-body div.container-r{
+    background-position-x: 77%;
+    background-position-y: 10%;
+    font-family:var(--font-Quicksand);
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
 }
 
-body div.container-r header{
-    position: relative;
-}
-body div.container-r header p{
-    text-align: center;
-    display: inline;
-    font-weight:bold;
-    font-size: 30px;
-}
-body div.container-r header i{
-    left: -50px;    
-    top: 10px;
-    font-size: 20px;
-    position: absolute;
+/* Title: Iniciar Sesión */
+#login h1 {
+    font-size: 38px;
+    color: var(--color-Green);
+    padding-top: 15px;
+    margin-bottom: 15px;
 }
 
-body div.container-r form{
-    display: flex;
-    flex-direction: column;
+/* form */
+#login form {
+    backdrop-filter: blur(4px);
     border: 1px solid var(--color-Green);
-    border-radius: 20px;
-    padding: 20px;
+    border-radius: 30px;
+    max-width: 290px;
+    /* max-width: 90%; */
+    margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.582);
 }
-body div.container-r form input{ 
+
+#login form .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5%;
+}
+
+#login form .container .text {
+    border: black;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 14px;
+    padding: 12px 45px 12px 5px;
+    text-align: initial;
+} 
+#login form .container .email {
+    border: black;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 14px;
+    padding: 12px 45px 12px 5px;
+    text-align: initial;
+} 
+
+#login form .container .password {
+    border: black;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 24px;
+    padding: 12px 45px 12px 5px;
+    text-align: initial;
+}
+#login input {
     display: block;
     padding: 10px 50px;
     margin: 15px 0;
@@ -47,57 +71,76 @@ body div.container-r form input{
     border-radius: 8px;
     border: 1px solid black;
     color: white;
-    outline: none;
 }
-body div.container-r form input.submit{
-    border: 2px solid var(--color-Green);
-    padding: 12px 0;
-    border-radius: 20px;
-    font-size: 18px;
-    width: 120px;
-    margin: 10px auto;
+#login input:hover {
+    color: var(--color-Green);   
 }
-.submit:active{
+
+
+/* Buttons: log in & create account */
+#login .button-login {
+    background-color: var(--color-Dark-Gray);
+    border-color: var(--color-Green);
+    border-radius: 25px;
+    color: white;
+    font-size:20px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    padding: 9px 16px;
+}
+
+#login .button-login:hover {
     background-color: var(--color-Green);
     color: black;
 }
-body div.container-r form input:focus{
-    border: 1px solid var(--color-Green);
+
+#login form .container a {
+    color: white;
+    font-size: 15px;
+    padding-bottom: 9px;
+    text-decoration: none;
 }
 
-body div.container-r header{
+#login form .container a:hover{
     color: var(--color-Green);
-    margin: 15px 0;
-    font-size: 30px;
 }
 
-.redes{
-    background-color: white;
-    color: black;
-    padding: 10px 50px;
-    margin: 30px 0 0;
+#login .button-create {
+    background-color: var(--color-Dark-Gray);
+    border-color:var(--color-Dark);
+    border-radius: 20px;
+    color: white;
+    font-size:12px;
+    margin: 5px 0 10px 0;
+    padding: 10px 14px;
 }
-.networks {
+#login .button-create:hover {
+    background-color: var(--color-Green);
+    color: black;
+}
+
+/* social media buttons */
+#login .networks {
     align-items: center;
     display: flex;
     flex-direction: column;
     text-align: end;
 }
 
-.networks .logo-face {
+#login .networks .logo-face {
     bottom: 40px;
     position: relative;
-    right: 82px;
+    right: 78px;
 }
 
-.networks .logo-google {
+#login .networks .logo-google {
     bottom: 42px;
     position: relative;
-    right: 80px;
+    right: 76px;
     width: 32px;
 }
 
-.button-facebook {
+#login .button-facebook {
     background-color: #2b4ca3;
     border:none;
     color: white;
@@ -106,10 +149,10 @@ body div.container-r header{
     margin-top: 25px;
     padding: 18px 7px 18px 43px;
     position: relative;
-
+    
 }
 
-.button-google {
+#login .button-google {
     background-color: #2095e7;
     border:none;
     color: white;
@@ -119,8 +162,147 @@ body div.container-r header{
     padding: 18px 18px 18px 48px;
 }
 
-@media (min-width: 768px){
-    body{
-        background-image: url(/images/registro/teclado-original.jpg);
+
+
+
+
+/* media queries Tablet */
+
+@media (min-width:768px) {
+    #login {
+        background-position-x: 90%;
+        background-position-y: 20%;
+    }
+    
+    #login h1 {
+        font-size: 48px;
+        padding-top: 40px;
+        margin-bottom: 15px;
+    }
+    
+    #login form {
+        max-width:420px;
+        /* max-width: 60%; */
+    }
+    #login form .container {
+        padding-top: 10%;
+    }
+    
+    #login form .container .text {
+        font-size: 23px;
+        margin-bottom: 20px;
+    } 
+    #login form .container .email {
+        font-size: 23px;
+        margin-bottom: 20px;
+    } 
+    
+    #login form .container .password {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+    #login .button-login {
+        border-radius: 40px;
+        font-size:24px;
+    }
+    #login form .container a {
+        font-size: 18px;
+    }
+    /* social media buttons */
+    #login .networks {
+        align-items: flex-end;
+        flex-direction:row;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    
+    #login .networks .logo-face {
+        bottom: 10px;
+        right: 178px;
+        margin-left: -15px;
+    }
+    
+    #login .networks .logo-google {
+        bottom: 10px;
+        right: 194px;
+        width: 32px;
+    }
+}
+
+
+
+
+
+
+/* media queries Desktop */
+
+@media (min-width:1024px) {
+    #login {
+        background-image: url(/images/imgs-bg-login/BG2-login.jpg);
+        background-size: cover;
+    }
+
+    #login h1 {
+        padding-top: 60px;
+        margin-bottom: 10px;
+    }
+
+    #login form {
+        border-radius: 30px;
+        width: 320px;
+    }
+
+    #loginform .container {
+        padding-top: 20%;
+    }
+
+    #login form .container .text {
+        font-size: 17px;
+        margin-bottom: 20px;
+        padding: 10px 30px 10px 5px;
+    } 
+    #login form .container .email {
+        font-size: 17px;
+        padding: 10px 30px 10px 5px;
+        margin-bottom: 20px;
+    } 
+
+    #login form .container .password {
+        font-size: 17px;
+        padding: 10px 30px 10px 5px;
+        
+    }
+    #login .button-login {
+        border-radius: 50px;
+        font-size:20px;
+    }
+
+    #login .button-login:hover {
+        background-color: var(--color-Green);
+        color: black;
+    }
+
+    #login form .container a {
+        color: white;
+        padding-bottom: 9px;
+        text-decoration: none;
+    }
+    #login .networks {
+        align-items: flex-end;
+        flex-direction:row;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    
+    #login .networks .logo-face {
+        bottom: 10px;
+        right: 178px;
+        margin-left: -15px;
+    }
+    
+    #login .networks .logo-google {
+        bottom: 10px;
+        right: 194px;
+        width: 32px;
     }
 }
