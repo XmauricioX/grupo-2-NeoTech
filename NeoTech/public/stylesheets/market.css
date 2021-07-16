@@ -2,7 +2,6 @@
 
 body {
     font-family: var(--font-Quicksand);
-    background-color: rgb(2, 2, 2);
 }
 
 /* NAVBAR */
@@ -13,6 +12,7 @@ body .user-nav {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
+    background: black;
 }
 
 body .user-nav div .user-icon {

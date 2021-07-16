@@ -1,7 +1,7 @@
 @import url(./variables-border.css);
 
 body{
-    background-color: var(--color-Dark);
+    background-color: var(--color-Dark-Gray);
     
 }
 
@@ -9,9 +9,14 @@ section{
     margin: 50px 20px;
 }
 body i{
-    color: var(--color-Green);
+    /* color: var(--color-Green);
     font-size: 30px;
     position: sticky;
+    left: 20px;
+    top: 20px; */
+    color: var(--color-Green);
+    font-size: 30px;
+    position: relative;
     left: 20px;
     top: 20px;
 }
