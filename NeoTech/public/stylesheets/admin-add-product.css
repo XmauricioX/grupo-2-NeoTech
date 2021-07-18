@@ -1,0 +1,111 @@
+#admin-welcome{
+    position: absolute;
+    top: 0;
+}
+#content{
+    background-image: url(/images/registro/teclado-original.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#top-name{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+#form-add{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-Green);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+#form-add input{
+    padding: 10px 10px;
+    margin: 5px 0;
+    background-color: var(--color-Dark);
+    border-radius: 8px;
+    border: 1px solid black;
+    color: white;
+    outline: none;
+}
+#form-add .submit{
+    border: 2px solid var(--color-Green);
+    padding: 12px 0px;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 120px;
+    margin: 5px auto;
+}
+.submit:active{
+    background-color: var(--color-Green);
+    color: black;
+}
+#form-add input:focus{
+    border: 1px solid var(--color-Green);
+}
+
+.redes{
+    background-color: white;
+    color: black;
+    padding: 10px 50px;
+    margin: 30px 0 0;
+}
+
+.networks {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.networks .logo-face {
+    bottom: 40px;
+    position: relative;
+    right: 82px;
+}
+
+.networks .logo-google {
+    bottom: 42px;
+    position: relative;
+    right: 80px;
+    width: 32px;
+}
+
+.button-facebook {
+    background-color: #2b4ca3;
+    border:none;
+    color: white;
+    font-size:13px;
+    font-weight: lighter;
+    margin-top: 25px;
+    padding: 18px 7px 18px 43px;
+    position: relative;
+}
+
+.button-google {
+    background-color: #2095e7;
+    border:none;
+    color: white;
+    font-size:13px;
+    font-weight: lighter;
+    margin-top: -15px;
+    padding: 18px 18px 18px 48px;
+}
+#description{
+    height: 80px;
+}
+
+@media (min-width: 768px){
+    #content{
+        background-image: url(/images/registro/teclado-original.jpg);
+    }
+}
+@media (min-width: 1024px){
+    #content{
+        background-repeat: no-repeat;
+        background-position: 70px;
+        background-size: 85%;
+        
+    }
+}

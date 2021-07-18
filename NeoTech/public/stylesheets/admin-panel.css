@@ -1,7 +1,3 @@
-/* MASTER CONTAINER */
-#container-admin{
-    
-}
 /* SIDEBAR */
 /* SIDEBAR ANIMATION */
 #bar{
@@ -23,7 +19,7 @@
 
 /* SIDEBAR CROSS */
 #container-admin #sidebar #cross{
-    cursor: pointer;
+    z-index: 20;
     position: absolute;
     right: 20px;
     top: 20px;
@@ -31,6 +27,7 @@
 }
 /* SIDEBAR CONTAINER */
 #container-admin #sidebar{
+    z-index: 10;
     display: none;
     background-color: var(--color-Dark);
     width: 320px;
@@ -86,9 +83,6 @@
     text-decoration: none;
     margin-top: 10px;
 }
-#container-admin #sidebar #index a:hover{
-    text-decoration: underline;
-}
 #container-admin #sidebar #index #cerrar-admin{
     position: absolute;
     bottom: 20px;
@@ -97,7 +91,6 @@
 
 /* CONTENT */
 #container-admin #hamburguer-admin{
-    cursor: pointer;
     margin: 20px 0 0 20px;
     font-size: 20px;
 }
@@ -125,7 +118,7 @@
         display: none;
     }
     #container-admin #hamburguer-admin{
-        display: none;
+        display:none;
     }
     #container-admin{
         display: flex;
@@ -139,4 +132,13 @@
         height: 100vh;
         overflow-y: scroll;
     }
+    #container-admin #sidebar #index a{
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        margin-top: 10px;
+    }
 }
+
+/* IMPORTS */
+@import url(./admin-add-product.css);

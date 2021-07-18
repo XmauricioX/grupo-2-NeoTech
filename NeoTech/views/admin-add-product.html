@@ -12,6 +12,8 @@
       <link rel="stylesheet" href="/stylesheets/variables-border.css">
       <!-- CSS ADMIN-->
       <link rel="stylesheet" href="/stylesheets/admin-panel.css">
+      <link rel="stylesheet" href="/stylesheets/admin-add-product.css">
+
     <title>Admin Add Product</title>
 </head>
 <body>
@@ -28,7 +30,7 @@
             <div id="admin-info">
                 <div id="picture-admin">
                     <img id="admin-pic" src="/images/home/bg-2.png" alt="admin-pic">
-                    <a href="">
+                    <a href="/admin-edit-account">
                         <i id="edit-admin" class="fas fa-pencil-alt"></i>
                     </a>
                 </div>
@@ -51,6 +53,33 @@
             <p id="admin-welcome">
                 Admin Add Product
             </p>
+
+            <div id="container-form">         
+
+                <form id="form-add" action="/registro" method="POST">
+        
+                    <input type="file" id="t-file">
+        
+                    <input type="email" name="" id="" placeholder="Nombre">
+        
+                    <input type="password" name="" id="" placeholder="Precio"> 
+        
+                    <input type="text" name="" id="description" placeholder="Descripción">
+
+                    <input class="submit" type="submit" value="Añadir">
+               
+                </form>
+        
+                <div class="networks">
+                    <!-- button facebook -->
+                    <button class="button-facebook">Iniciar sesión con Facebook</button>
+                    <img class="logo-face" src="/images/registro/logo-face-login.png" alt="logo-face">
+                    <!-- button google -->
+                    <button class="button-google">Iniciar sesión con Google</button>
+                    <img class="logo-google" src="/images/registro/icon-google-login.png" alt="logo-google">
+                </div>
+        
+            </div>
 
         </main>
 

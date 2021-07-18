@@ -62,6 +62,10 @@ app.get("/admin-edit-product", function(req,res){
   res.sendFile(path.join(__dirname, "/views/admin-edit-product.html"))
 });
 
+app.get("/admin-edit-product-form", function (req,res){
+  res.sendFile(path.join(__dirname, "/view/admin-edit-product-form.html"))
+});
+
 app.get("/admin-users", function(req,res){
   res.sendFile(path.join(__dirname, "/views/admin-users.html"))
 });
