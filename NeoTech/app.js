@@ -48,6 +48,10 @@ app.get('/registro', function(req, res,) {
   res.sendFile(path.join(__dirname, '/views/registro.html'))
 });
 
+app.get('/contacto', function(req, res,) {
+  res.sendFile(path.join(__dirname, '/views/contact.html'))
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
