@@ -1,0 +1,18 @@
+#admin-welcome{
+    position: absolute;
+    top: 10px;
+}
+#numbers-admin{
+    background-image: url(../images/imgs-bg/teclado-original.jpg);
+    width: 100%;
+    height: 90%;
+    font-size: 30px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+@media(min-width:1024px){
+    #numbers-admin{
+        margin-top: 40px;
+        width: 80%;
+    }
+}

@@ -6,14 +6,17 @@
 }
 /* CONTENEDOR */
 #container{
-    margin-top: 2500px;
+    margin-top: 2700px;
     display: grid;
     grid-template-columns: 1fr a 1fr;
     gap: 20px 20px;
 }
 /* BARRA DE BUSQUEDA */
-form{
-    margin: 20px auto;
+#form-edit-product{
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    margin: 0px auto;
     width: 80%;
     height: 35px;
     background-color: var(--color-Dark);
@@ -23,7 +26,7 @@ form{
     flex-direction: row;
     justify-content: space-between;
 }
-form input{
+#form-edit-product input{
     background-color: var(--color-Dark);
     outline: none;
     border: none;
@@ -33,7 +36,7 @@ form input{
     padding-left: 10px;
     border-radius: 20px;
 }
-form i{
+#form-edit-product i{
     width: 10%;
     height: auto;
     padding: auto;
@@ -105,23 +108,16 @@ hr{
 #masp{
     display: none;
 } 
-.comprar{
-    display: block;
-    background-color: var(--color-Green-Old);
-    text-align: center;
-    text-decoration: none;
-    width: 90%;
-    border-radius: 50px;
-    height: 50px;
-    color: white;
+#delete-product{
+    position: relative;
+    top: -400px;
+    right: -220px;
     font-size: 40px;
-    font-weight: 500;
-    margin: auto;
-    box-shadow: 0px 0px 2px black;
+    color: var(--color-Green-Old);
 }
 @media (min-width: 768px){
     #container{
-        margin-top: 1000px;
+        margin-top: 1200px;
         grid-template-columns: repeat(2,1fr);
     }
 }
@@ -130,7 +126,7 @@ hr{
         width: 50%;
     }
     #container{
-        margin-top: 500px;
+        margin-top: 700px;
         grid-template-columns: repeat(3,1fr);
     }
 }

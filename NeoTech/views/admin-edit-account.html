@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="/stylesheets/variables-border.css">
       <!-- CSS ADMIN-->
       <link rel="stylesheet" href="/stylesheets/admin-panel.css">
+      <link rel="stylesheet" href="/stylesheets/admin-edit-account.css">
     <title>Admin Edit Account</title>
 </head>
 <body>
@@ -48,9 +49,29 @@
         <i id="hamburguer-admin" class="fas fa-bars"></i>
 
         <main id="content">
-            <p id="admin-welcome">
-                Admin Edit Account
-            </p>
+            <p id="admin-welcome">Admin Edit Account</p>
+                
+                <div id="container-form">         
+
+                    <form id="form-add" action="/registro" method="POST">
+            
+                        <input type="file" id="t-file">
+            
+                        <input type="email" name="" id="" placeholder="Nombre/s">
+            
+                        <input type="password" name="" id="" placeholder="Apellido/s"> 
+            
+                        <input type="text" name="" id="" placeholder="Correo">
+
+                        <input type="text" name="" id="" placeholder="Contraseña">
+    
+                        <input class="submit" type="submit" value="Guardar">
+                   
+                    </form>
+            
+                </div> 
+
+            
 
         </main>
 
