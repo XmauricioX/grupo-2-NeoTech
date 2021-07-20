@@ -23,7 +23,7 @@ header .logo {
 	animation-timing-function:linear;
 	animation-iteration-count: infinite;
 	max-width: 80%;
-	
+	margin-top: 20px;
 }
 
 @keyframes rotation {
