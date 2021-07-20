@@ -7,6 +7,7 @@ body{
 
 section{
     margin: 50px 20px;
+    height: 200vh;
 }
 body i{
     /* color: var(--color-Green);
@@ -22,10 +23,10 @@ body i{
 }
 
 section article{
-    width: 80%;
+    max-width: 300px;
     margin: 0px auto;
     text-align: center;
-    height: 100vh;
+    height: 50vh;
 }
 section article img{
     background-image: url(./img/bg-product.png);
@@ -74,17 +75,20 @@ section article img{
     text-align: justify;
 }
 div.container-r{
-    margin-top: 8px;
+    margin-top: 80px;
 }
 
 
 @media (min-width: 768px){
     section{
+        margin-top: 0%;
+        width: 80%;
         display: inline-flex;
         flex-wrap: nowrap;
-        height: auto;
+        height: 100vh;
     }
     section article{
+        margin-top: 15%;
         width: 60%;
         margin-left: 0;
     }
@@ -112,6 +116,10 @@ div.container-r{
         height: auto;
         padding: 0;
     }
+    #arrow{
+        position: relative;
+        top: -400px;
+    }
 }
 
 @media (min-width: 1024px){
@@ -124,13 +132,13 @@ div.container-r{
     }
     section article{
         max-width: 500px;
-        margin: 0 auto;
+        margin: 80px 20px 0 auto ;
     }
     article img{
         width: 50%;
     }
-    .container-r{
+    /* .container-r{
         margin: 0 85px;
         height: 650px;
-    }
+    } */
 }
