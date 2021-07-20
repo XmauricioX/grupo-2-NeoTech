@@ -4,11 +4,9 @@
 
 /* Background body */
 #login {
-    background-color: #242424;
-    background-image: url(/images/imgs-bg-login/BG1-login.jpg);
+    background-image: url(/images/imgs-bg-login/teclado-original.jpg);
     background-repeat: no-repeat;
-    background-position-x: 77%;
-    background-position-y: 10%;
+    background-position-x: 50%;
     font-family:var(--font-Quicksand);
     text-align: center;
 }
@@ -39,21 +37,14 @@
     padding-top: 5%;
 }
 
-/* #login form .container .text {
-    border: black;
-    border-radius: 10px;
-    font-size: 24px;
-    margin-bottom: 14px;
-    padding: 12px 45px 12px 5px;
-    text-align: initial;
-}  */
 #login form .container .email {
     border: black;
     border-radius: 10px;
     font-size: 16px;
-    margin-bottom: 14px;
-    padding: 12px 45px 12px 5px;
+    margin-bottom: 10px;
+    padding: 12px 5px;
     text-align: initial;
+    width: 85%;
 } 
 
 #login form .container .password {
@@ -61,8 +52,9 @@
     border-radius: 10px;
     font-size: 16px;
     margin-bottom: 24px;
-    padding: 12px 45px 12px 5px;
+    padding: 12px 5px;
     text-align: initial;
+    width: 85%;
 }
 #login input {
     display: block;
@@ -171,11 +163,6 @@
 /* media queries Tablet */
 
 @media (min-width:768px) {
-    #login {
-        background-position-x: 90%;
-        background-position-y: 20%;
-    }
-    
     #login h1 {
         font-size: 48px;
         padding-top: 40px;
@@ -192,7 +179,7 @@
     
     #login form .container .email {
         font-size: 23px;
-        margin-bottom: 35px;
+        margin-bottom: 15px;
     } 
     
     #login form .container .password {
@@ -237,8 +224,6 @@
 
 @media (min-width:1024px) {
     #login {
-        background-color: #242424;
-        background-image: url(/images/imgs-bg-login/BG2-login.jpg);
         background-size: cover;
     }
 
@@ -259,7 +244,7 @@
     #login form .container .email {
         font-size: 17px;
         padding: 10px 30px 10px 5px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     } 
 
     #login form .container .password {
