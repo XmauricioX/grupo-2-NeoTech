@@ -121,8 +121,18 @@ main #carouselExampleFade{
 main .carousel-item img {
     height: 100vh;
 }
+#c-1{
+    display: none;
+}
 
 @media (min-width: 768px){
+    #c-2{
+        display: none;
+    }
+    #c-1{
+        display: block;
+    }
+    
     main #container-2 .product{
         height: 100vh;
         z-index: 0 ;
