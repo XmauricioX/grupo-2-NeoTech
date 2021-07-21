@@ -1,0 +1,8 @@
+ayer hice,hoy voy a hacer ,impedimento?
+21/7
+Mauricio:
+ayer arregle el detalle de producto , hoy voy a arreglar el slider del home, agregar las vistas del admin y arreglar el detalle de producto(faltarond detalles :p xd),impedimento: no
+Ariel:
+ayer hice subi el nav,hoy voy a hacer arreglar las clases del nav,impedimento: problemas con bootstrap 
+Franco:
+ayer arregle la viste de login,registro y margenes,hoy voy a hacer una vista nueva, problemas: no
