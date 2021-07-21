@@ -3,17 +3,16 @@
 
 
 /* Background body */
-#registro {
-    background-image: url(/images/registro/teclado-original.jpg);
+#login {
+    background-image: url(/images/imgs-bg-login/teclado-original.jpg);
     background-repeat: no-repeat;
     background-position-x: 50%;
-    /* background-position-y: 100%; */
     font-family:var(--font-Quicksand);
     text-align: center;
 }
 
 /* Title: Iniciar Sesión */
-#registro h1 {
+#login h1 {
     font-size: 38px;
     color: var(--color-Green);
     padding-top: 15px;
@@ -21,7 +20,7 @@
 }
 
 /* form */
-#registro form {
+#login form {
     backdrop-filter: blur(4px);
     border: 1px solid var(--color-Green);
     border-radius: 30px;
@@ -31,45 +30,33 @@
     background-color: rgba(0, 0, 0, 0.582);
 }
 
-#registro form .container {
+#login form .container {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding-top: 5%;
 }
 
-#registro form .container .text {
+#login form .container .email {
     border: black;
     border-radius: 10px;
     font-size: 16px;
-    margin-bottom: 14px;
-    padding: 12px 5px;
-    text-align: initial;
-    width: 85%;
-    outline: none;
-} 
-#registro form .container .email {
-    border: black;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-bottom: 14px;
-    outline: none;
+    margin-bottom: 10px;
     padding: 12px 5px;
     text-align: initial;
     width: 85%;
 } 
 
-#registro form .container .password {
+#login form .container .password {
     border: black;
     border-radius: 10px;
     font-size: 16px;
     margin-bottom: 24px;
-    outline: none;
     padding: 12px 5px;
     text-align: initial;
     width: 85%;
-} 
-#registro input {
+}
+#login input {
     display: block;
     padding: 10px 50px;
     margin: 15px 0;
@@ -78,13 +65,13 @@
     border: 1px solid black;
     color: white;
 }
-#registro input:hover {
+#login input:hover {
     color: var(--color-Green);   
 }
 
 
 /* Buttons: log in & create account */
-#registro .button-login {
+#login .button-login {
     background-color: var(--color-Dark-Gray);
     border-color: var(--color-Green);
     border-radius: 25px;
@@ -95,23 +82,23 @@
     padding: 9px 16px;
 }
 
-#registro .button-login:hover {
+#login .button-login:hover {
     background-color: var(--color-Green);
     color: black;
 }
 
-#registro form .container a {
+#login form .container a {
     color: white;
     font-size: 15px;
     padding-bottom: 9px;
     text-decoration: none;
 }
 
-#registro form .container a:hover{
+#login form .container a:hover{
     color: var(--color-Green);
 }
 
-#registro .button-create {
+#login .button-create {
     background-color: var(--color-Dark-Gray);
     border-color:var(--color-Dark);
     border-radius: 20px;
@@ -120,13 +107,13 @@
     margin: 5px 0 10px 0;
     padding: 10px 14px;
 }
-#registro .button-create:hover {
+#login .button-create:hover {
     background-color: var(--color-Green);
     color: black;
 }
 
 /* social media buttons */
-#registro .networks {
+#login .networks {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -134,20 +121,20 @@
     margin-bottom: 30px
 }
 
-#registro .networks .logo-face {
+#login .networks .logo-face {
     bottom: 40px;
     position: relative;
-    right: 78px;
+    right: 82px;
 }
 
-#registro .networks .logo-google {
+#login .networks .logo-google {
     bottom: 42px;
     position: relative;
-    right: 76px;
+    right: 80px;
     width: 32px;
 }
 
-#registro .button-facebook {
+#login .button-facebook {
     background-color: #2b4ca3;
     border:none;
     color: white;
@@ -159,7 +146,7 @@
     
 }
 
-#registro .button-google {
+#login .button-google {
     background-color: #2095e7;
     border:none;
     color: white;
@@ -176,42 +163,38 @@
 /* media queries Tablet */
 
 @media (min-width:768px) {
-    #registro h1 {
+    #login h1 {
         font-size: 48px;
         padding-top: 40px;
         margin-bottom: 15px;
     }
     
-    #registro form {
+    #login form {
         max-width:420px;
         /* max-width: 60%; */
     }
-    #registro form .container {
+    #login form .container {
         padding-top: 10%;
     }
     
-    #registro form .container .text {
+    #login form .container .email {
         font-size: 23px;
-        margin-bottom: 20px;
-    } 
-    #registro form .container .email {
-        font-size: 23px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     } 
     
-    #registro form .container .password {
+    #login form .container .password {
         font-size: 23px;
-        margin-bottom: 30px;
+        margin-bottom: 35px;
     }
-    #registro .button-login {
+    #login .button-login {
         border-radius: 40px;
         font-size:24px;
     }
-    #registro form .container a {
+    #login form .container a {
         font-size: 18px;
     }
     /* social media buttons */
-    #registro .networks {
+    #login .networks {
         align-items: flex-end;
         flex-direction:row;
         justify-content: center;
@@ -219,15 +202,15 @@
         margin-bottom: 50px
     }
     
-    #registro .networks .logo-face {
+    #login .networks .logo-face {
         bottom: 10px;
-        right: 178px;
+        right: 187px;
         margin-left: -15px;
     }
     
-    #registro .networks .logo-google {
+    #login .networks .logo-google {
         bottom: 10px;
-        right: 194px;
+        right: 203px;
         width: 32px;
     }
 }
@@ -240,72 +223,67 @@
 /* media queries Desktop */
 
 @media (min-width:1024px) {
-    #registro {
+    #login {
         background-size: cover;
-        /* background-position-x: 0%; */
     }
 
-    #registro h1 {
+    #login h1 {
         padding-top: 60px;
         margin-bottom: 10px;
     }
 
-    #registro form {
+    #login form {
         border-radius: 30px;
         width: 320px;
     }
 
-    #registro form .container {
-        padding-top: 10%;
+    #loginform .container {
+        padding-top: 20%;
     }
 
-    #registro form .container .text {
-        font-size: 17px;
-        margin-bottom: 20px;
-        padding: 10px 30px 10px 5px;
-    } 
-    #registro form .container .email {
+    #login form .container .email {
         font-size: 17px;
         padding: 10px 30px 10px 5px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     } 
 
-    #registro form .container .password {
+    #login form .container .password {
         font-size: 17px;
         padding: 10px 30px 10px 5px;
         
     }
-    #registro .button-login {
+    #login .button-login {
         border-radius: 50px;
         font-size:20px;
     }
 
-    #registro .button-login:hover {
+    #login .button-login:hover {
         background-color: var(--color-Green);
         color: black;
     }
 
-    #registro form .container a {
+    #login form .container a {
         color: white;
         padding-bottom: 9px;
         text-decoration: none;
     }
-    #registro .networks {
+    #login .networks {
         align-items: flex-end;
         flex-direction:row;
         justify-content: center;
         margin-left: 30px;
+        margin-bottom: 50px
     }
     
-    #registro .networks .logo-face {
+    #login .networks .logo-face {
         bottom: 10px;
-        right: 178px;
+        right: 187px;
         margin-left: -15px;
     }
     
-    #registro .networks .logo-google {
+    #login .networks .logo-google {
         bottom: 10px;
-        right: 194px;
+        right: 203px;
         width: 32px;
     }
 }

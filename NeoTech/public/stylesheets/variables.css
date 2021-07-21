@@ -1,0 +1,17 @@
+:root {
+    /* Fonts */
+    --font-Quicksand: 'Quicksand', sans-serif;
+    /* Color */
+    --color-Green:#2EDD02;
+    --color-Dark:#242424;
+    --color-Dark-Gray:#363636;
+    --color-White:#f1f1f1;
+    --color-Red:#ff0000;
+}                                          
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+

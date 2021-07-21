@@ -1,17 +1,18 @@
 @import url(variables-border.css);
 
 body{
-    background-color: var(--black);
+    
     width: 100vw;
 }
-main{
+main {
     overflow: hidden;
     padding: 0;
     margin: 0;
     width: 100vw;
+    background-color: var(--black);
 }
 
-.container{
+main .container{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -22,7 +23,7 @@ main{
     width: 100vw;
     padding: 0;
 }
-.text{     
+main .text{     
     position: absolute;
     background-color: rgba(0, 0, 0, 0.39);
     text-align: center;
@@ -31,16 +32,16 @@ main{
     font-size: 10px;
     margin-bottom: 10%;
 }
-.container img{
+main .container img{
     object-fit: cover;
     align-self: center;
     height: 100%;
     width: 100vw;
 }
-.container p{
+main .container p{
     padding: 15px 30px 0;
 }
-.product{
+main .product{
     position: absolute;
     height: 100%;
     width: 100vw;
@@ -48,36 +49,36 @@ main{
     align-items: center;
     justify-content: center;
 }
-.product img.product-img {
+main .product img.product-img {
     z-index: 2;
     width: min-content;
     height: 100%;
 
 }
-#container-3{
+main #container-3{
     justify-content: center;
     color: var(--color-Green);
     font-size: 30px;
     margin: 0 auto;
 } 
-#contenedor-4 {
+main #contenedor-4 {
     height: 120vh;
     width: 100%;
 }
-#container-4 .product{
+main #container-4 .product{
     flex-direction: column;
     justify-content: space-between;
     bottom: 20px;
     height: max-content;
 }
-#container-4 .product-img{
+main #container-4 .product-img{
     z-index: 0;
     width: 400px;
 }
-#container-4 .text{
+main #container-4 .text{
     z-index: 1;
 }
-#container-2 .product-img{
+main #container-2 .product-img{
     position: relative;
     width: auto;
     height: 100vh;
@@ -85,81 +86,89 @@ main{
     overflow: hidden;
     bottom: 130px;
 }
-#container-2 .text{
+main #container-2 .text{
     top: 20%;
     z-index: 1;
 }
-#container-2 .product{
+main #container-2 .product{
     height: 100vh;
     overflow: hidden;
 }
-#container-2 .product-img{
+main #container-2 .product-img{
     bottom: 0;
 }
-#container-1{
+main #container-1{
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
 }
-#container-1 .container-img{
+main #container-1 .container-img{
     z-index: 0;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.39);
     padding: 40px 20px;
 }
 
-.grid-container{
+main .grid-container{
     display: none;
 }
 
+main #carouselExampleFade{
+    height: 100vh;
+    overflow: hidden;
+}
+main .carousel-item img {
+    height: 100vh;
+}
+
 @media (min-width: 768px){
-    #container-2 .product{
+    main #container-2 .product{
         height: 100vh;
         z-index: 0 ;
     }
-    #container-2 .text{
+    main #container-2 .text{
         z-index: 1;
     }
-    #container-4 .product-img{
+    main #container-4 .product-img{
         width: 450px;
     }
 }
 @media (min-width: 1024px){
-    #container-2 .product{
+    main #container-2 .product{
         height: 100vh;
         z-index: 0;
     }
-    #container-2 .text{
+    main #container-2 .text{
         z-index: 1;
     }
-    #container-4 {
+    main #container-4 {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
     }
-    #container-4 .container-img{
+    main #container-4 .container-img{
         margin: 0;
         padding: 0;
         width: 100%;
     }
-    .container{
+    main .container{
         margin: auto;
     }
-    #container-4 .product{
+    main #container-4 .product{
         justify-content: center;
         right: -200px;
     }
-    #container-4 .text{
+    main #container-4 .text{
         left: 300px;
     }        
-    .text{
+    main .text{
         font-size: 20px;
     }
 
 
 
-    .grid-container{
+    main .grid-container{
         display: grid;
         height: 150vh;
         width: 80vw;
@@ -170,61 +179,102 @@ main{
                             "f f g";
         grid-gap: 20px;
     }
-    #item1,#item2,#item3,#item4,#item5,#item6,#item7{
+    main #item1,#item2,#item3,#item4,#item5,#item6,#item7{
         border: 1px solid var(--color-Green);
         
     }
     
-    #item1{
+    main #item1{
         grid-area: a;
         background-image: url(../images/home/collage/intel-2.webp);
         background-size: cover;
         background-position: center;
     }
-    #item2{
+    main #item2{
         grid-area: b;
         background-image: url(../images/home/collage/amd.jpg);
         background-position: center;
         background-size: cover;
     }
-    #item3{
+    main #item3{
         grid-area: c;
         background-image: url(../images/home/collage/bg-5.jpg);
         background-size: cover;    
     }
-    #item4{
+    main #item4{
         grid-area: d;
         background-image: url(../images/home/collage/bg-5.jpg);
         background-position: center;
         background-size: cover;
     }
-    #item5{
+    main #item5{
         grid-area: e;
         background-image: url(../images/home/collage/fdfa44f729f4e32b0f1a7024e60489a4--online-computer-store-acer-aspire.jpg);
         background-size: cover;
     }
-    #item6{
+    main #item6{
         grid-area: f;
         background-image: url(../images/home/collage/amd.jpg);
         background-size: cover;
         background-position: center;
     }
-    #item7{
+    main #item7{
         grid-area: g;
         background-image: url(../images/home/collage/bg-5.jpg);
         background-size: cover;
         background-position: center;
     }
-    }
-
-    .ci{
+    main .ci{
         width: fit-content;
     }
+}
 
-    #carouselExampleFade{
-        height: 100vh;
-        overflow: hidden;
-    }
-    .carousel-item img {
-        height: 100vh;
-    }
+#black-screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-Dark);
+    z-index: 90;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    
+    animation-name: fondo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+#boton-play{
+    font-size: 100px;
+    color: var(--color-Green);
+    border: 10px solid var(--color-Green);
+    padding: 15px 40px 15px 55px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    animation-name: border-green;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+/* 
+    las animaciones se linkean solas solo basta con llamarlas
+    en un evento y se ejecutan
+*/
+@keyframes fondo{
+    0% {background-color: var(--color-Dark);}
+    50% {background-color: black;}
+    100% {background-color: var(--color-Dark);}
+}
+@keyframes border-green{
+    0% {border-color: var(--color-Green);}
+    50% {border-color: var(--color-Dark);}
+    100% {border-color: var(--color-Green);}
+}
+@keyframes mynewmove{
+    from{opacity: 100%;}
+    to{opacity: 0%;}
+}

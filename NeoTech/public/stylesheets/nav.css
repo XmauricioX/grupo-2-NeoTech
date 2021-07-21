@@ -1,0 +1,266 @@
+@import url(/stylesheets/general.css);
+
+  /* BARRA DE NAVEGCION */
+  .nav-container{
+    align-items: center;
+    background-color: #363636;
+    display: flex;
+    height: 70px;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+/* BURGUER MENU */
+.nav-container .burguer-menu{
+  align-items: center;
+  /* background-color: var(--); */
+  border: solid 1px black;
+  border-radius: 10px;
+  color: greenyellow;
+  display: flex;
+  font-size: 25px;
+  height: 25px;
+  justify-content: center;
+  margin: 10PX;
+  padding: 20px;
+  width: 25px;
+
+}
+
+ .nav-container .burguer-menu:hover {
+  background-color: greenyellow;
+  color: black;
+}
+
+/* MENU DESPLEGABLE MOBILE */
+ .menu-container {
+  background-color: rgb(36, 36,36);
+  margin-left: -100%;
+  position: absolute;
+  transition: all 0.5s;
+  width: 200px;
+  z-index: 10;
+}
+
+.menu__link {
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
+  align-items:center;
+  color: green;
+  font-size: 1.5em;
+  text-decoration: none;
+  border: solid 1px black;
+  
+}
+
+ .menu__link:hover {
+  background-color: greenyellow;
+  color: black;
+}
+
+.submenu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  background-color: #363636;
+}
+
+.mostrar{
+  margin-left: 0px;
+}
+/* FIN MENU DESPLEGABLE MOBILE */
+
+/* BARRA DE BUSQUEDA */
+.search-bar {
+  background-color: #363636;
+  align-items: center;
+  
+  display: flex;
+  
+  justify-content: space-between;
+  height: 30px;
+  padding: 10px;
+  
+  width: 80%;
+}
+
+form{
+  width: 100%;
+  background: #363636;
+  padding: 3px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ .search-bar .input-search {
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #363636;
+  color:aliceblue
+  
+}
+
+.search-bar .btn-search {
+  background-color: #363636;
+  border: none;
+  color: greenyellow;
+  cursor: pointer;
+  margin-right: 10px;
+  
+
+}
+
+/* FIN BARRA DE BUSQUEDA */
+
+/* LOGO */
+.nav-container .logo-nav-container {
+  margin: 10px;
+}
+.nav-container .logo-nav-container .logoNT {
+  height: 50px;
+  width: 50px;
+}
+/* FIN LOGO */
+
+/* CARRITO DE COMPRA */
+/* btn abrir carrito */
+.btn-open-cart {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  margin-right: 10px; 
+  cursor: pointer;
+}
+/* icono de carrito */
+.nav-container .icon-chest {
+  width: 40px;
+  height: 40px;
+}
+/* contenedor de carrito */
+.cart-container{
+  width: 70%;
+  height: auto;
+  
+  background-color: #363636;
+  margin-left:100% ;
+  transition: 1s;
+  z-index: 1000;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 20px;
+  display: none;
+  overflow:inherit ;
+}
+/* btn cerrar carrito */
+.cart-container .btn-close-cart{
+  color: green;
+  font-size: 2em;
+  background: #363636;
+  border:none;
+  cursor: pointer;
+  height: 20px;
+  position: relative;
+  display: flex;
+  top: -20px;
+  align-items: flex-start;
+}
+.cart-container .cdc {
+  border-bottom: solid 3px green;
+  padding-bottom: 5px;
+  color: green;
+  font-size: 1.1em;
+}
+.cart-container .ldc {
+  color: green;
+  font-size: 1em;
+  margin: 0 auto;
+  position: relative;
+  top:10px;
+  padding: 0 5px;
+  background-color: #363636;
+  width: fit-content;
+}
+/* contenedro de productos */
+.cart-container .product-container {
+  border: solid 1px black;
+  padding: 35px 45px ;
+}
+/* carrito abierto */
+.open-cart{
+  margin-left:30%;
+  display: flex;
+  transition: 1s;
+}
+.btn-add{
+  margin-top: 20px;
+}
+
+ul  {
+  padding-left: 0% !important;
+}
+/* no borrar esto evita que se rompa el nav */
+
+@media(min-width:1024px) {
+.nav-container .burguer-menu{
+  display: none;
+}
+.menu-container{
+  margin-left: 0;
+  width: 100%;
+}
+
+  .menu-container .menu{
+    display: flex;
+    width: 100%;
+    background-color: #363636;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: -15px;
+  }
+  .container-submenu{
+    position: relative;
+  }
+  .menu__link{
+    width: 200px;
+    height: 30px;
+    /* margin: 0 50px; */
+    background-color: grey;
+  }
+  
+  .submenu{
+    position:absolute;
+    
+    width: 200px;
+    height: 20px;
+    overflow: visible;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgb(69, 71, 80);
+  }
+  .submenu .menu__link{
+    height: auto;
+  }
+  
+  .container-submenu:hover .submenu{
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .logo-nav-container {
+    order: -1;
+  }
+.open-cart{
+    margin-top: 65px;
+    width: 30%;
+    margin-left: 70%;
+  }
+  .cart-container {
+    margin-top: 65px;
+  }
+}

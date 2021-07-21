@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,15 +9,16 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d7f2d4eb0a.js" crossorigin="anonymous"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/stylesheets/registro.css">
-    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/market.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <script src="/js/market.js" defer></script>
     <!-- Title -->
-    <title>Neo Tech - Registro</title>
+    <title>Neo Tech - Carrito</title>
 </head>
-<body id="registro">
+<body>
 
-
+    <!-- Header -->
     <header>
         <!-- logo -->
         <div class="logo-container">
@@ -45,32 +46,62 @@
     </header>
 
 
-    <div class="login">
-        <h1>Registro</h1>
-        <form>
-            <nav class="container">
-                <!-- name -->
-                <label for="text"></label>
-                <input class="text" type="text" name="text" id="text" placeholder="Nombre Completo">
-                <!-- email -->
-                <label for="email"></label>
-                <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
-                <!-- password -->
-                <label for="password"></label>
-                <input class="password" type="password" id="password" placeholder="Ingrese su contraseña">
-                <!-- button log in -->
-                <button class="button-login" type="submit" value="log-in">Registrarse</button>
-            </nav>
+
+
+    <!-- NAVBAR -->
+    <header class="user-nav">
+        <!-- icon burguer menu -->
+        <i class="burguer-menu-icon"><img src="/images/icons/burguer-menu-icon.png"></i>
+
+        <!-- input search bar -->
+        <form action="#" class="search-form" id="search">
+            <div class="search-bar">
+                <input type="search" name="busqueda" id="" placeholder="">
+                <button type="submit"><i class="search"><img src="/images/icons/search-icon.png"></i></button>
+            </div>
         </form>
+        
+        <!-- icon user -->
+        <div class="user-icon">
+            <i class="user-icon"><img src="/images/icons/user-icon.png"></i>
+        </div>
+
+        <!-- icon shopping cart - dropdown menu -->
+        <div class="cart-icon">
+            <!-- logo neotech -->
+            <img src="/images/icons/Neotech-icon.png " alt="logo-neotech">
+
+            <!-- icon open-nav -->
+            <i class="cart-icon"><img src="/images/icons/shopping-cart-icon.png" onclick="openNav()"></i>
+        </div>
+    </header>
+    <!-- END NAVBAR -->
+    
+    
+    <!-- CART DROP DOWN MENU -->
+    <div id="myNav" class="overlay">
+        <!-- icon close-nav -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-angle-double-right"></i></a>
+
+
+        <!-- drop-down menu content -->
+        <ul class="overlay-content">
+            <H4>CARRITO DE COMPRAS</H4>
+            <hr>
+            <li>LISTA DE COMPRAS</li>
+            <!-- img -->
+            <img src="/images/imgs-product/mouse.png" alt="img-mouse">
+            <form class="container-form">
+                <a href="/market"><input type="button" class="reset" value="Eliminar"></a>
+                <input class="number" type="number" name="number_control" min="1" max="100" value="1" />
+            </form>
+            <!-- buttons -->
+            <li><button class="button-shooping" type="submit" value="log-in">Comprar</button></li>
+            <li><button class="button-login" type="submit" value="log-in">Agregar Producto</button></li>
+        </ul>
+
     </div>
-    <div class="networks">
-        <!-- button facebook -->
-        <button class="button-facebook">Registrarse con Facebook</button>
-        <img class="logo-face" src="/images/icons/logo-face-login.png" alt="logo-face">
-        <!-- button google -->
-        <button class="button-google">Registrarse con Google</button>
-        <img class="logo-google" src="/images/icons/icon-google-login.png" alt="logo-google">
-    </div>
+
 
     <!-- footer -->
     <footer>
@@ -109,5 +140,4 @@
 
     </footer>
 
-</body>   
-</html>
+</body>

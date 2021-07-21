@@ -9,19 +9,48 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="/stylesheets/product-list.css">
-    <!-- JS -->
-    <script src="/js/product-list.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  
     <title>Lista de productos</title>
 </head>
-<body>
+<body id="product-list">
 
-    <form action="" method="">
+
+<!-- header -->
+    <header>
+        <!-- logo -->
+        <div class="logo-container">
+            <img class="logo" src="/images/imgs-logo/LOGO NeoTech.png" alt="">
+        </div>
+
+        <div class="container">
+
+            <div class="icon-bank">
+                <img class="icon" src="/images/icons/iconBank-visa.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-mastercard.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-mercado-pago.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-santander.svg" alt="">
+            </div>
+
+            <div class="icon-social">
+                <img class="icon" src="/images/icons/icons8-whatsapp (1).gif" alt="">
+                <img class="icon" src="/images/icons/icons8-twitter.gif" alt="">
+                <img class="icon" src="/images/icons/icons8-facebook-rodeado-de-círculo.gif" alt="">
+                <img class="icon" src="/images/icons/icons8-instagram.gif" alt="">
+            </div>
+
+        </div>
+
+    </header>
+
+
+<form  action="" method="">
         <input type="search" placeholder="Buscar producto"><i class="fas fa-search"></i>
     </form>
 
     <main id="container">
         
+       
         <div class="card">
             
             <figure class="img-container">
@@ -34,11 +63,16 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
-                <a id="comprar" class="comprar" href="">COMPRAR</a>
+                <a class="mas carrito" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp ">añadir al carrito</p>
+                    </i>
+                </a>
+                <a class="comprar " href="">COMPRAR</a>
             </div>
         </div>
 
+
         <div class="card">
             
             <figure class="img-container">
@@ -51,9 +85,9 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a  class="mas" href="">
-                    <i  class="fas fa-shopping-cart">
-                        <p onmouseover="masp()" id="masp">añadir</p>
+                <a class="carrito mas" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp">añadir al carrito</p>
                     </i>
                 </a>
                 <a class="comprar" href="">COMPRAR</a>
@@ -72,10 +106,15 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
-                <a class="comprar" href="">COMPRAR</a>
+                <a class="mas carrito" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp ">añadir al carrito</p>
+                    </i>
+                </a>
+                <a class="comprar " href="">COMPRAR</a>
             </div>
         </div>
+
 
         <div class="card">
             
@@ -89,11 +128,14 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
+                <a class="carrito mas" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp">añadir al carrito</p>
+                    </i>
+                </a>
                 <a class="comprar" href="">COMPRAR</a>
             </div>
         </div>
-       
         
         <div class="card">
             
@@ -107,12 +149,15 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
+                <a class="carrito mas" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp">añadir al carrito</p>
+                    </i>
+                </a>
                 <a class="comprar" href="">COMPRAR</a>
             </div>
         </div>
 
-        
         <div class="card">
             
             <figure class="img-container">
@@ -125,10 +170,64 @@
                 <h2 class="name-card">lorem</h2>
                 <h2 class="number-card">$000</h2>
                 <p class="description-card">lorem ipsum dolor</p>
-                <a class="mas" href=""><i class="fas fa-shopping-cart"></i></a>
-                <a class="comprar" href="">COMPRAR</a>
+                <a class="mas carrito" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp ">añadir al carrito</p>
+                    </i>
+                </a>
+                <a class="comprar " href="">COMPRAR</a>
             </div>
         </div>
+
+        
     </main>
+
+    <!-- footer -->
+    <footer>
+
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+
+        <div class="container">
+            <div class="logo-cont">
+                <img class="logo" src="/images/imgs-logo/LOGO NeoTech.png" alt="">
+            </div>
+
+            <div class="icon-content">
+                <div class="icon-bank">
+                    <img class="icon" src="/images/icons/iconBank-visa.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-mastercard.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-mercado-pago.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-santander.svg" alt="">
+                </div>
+                <div class="icon-social">
+                    <img class="icon" src="/images/icons/icons8-whatsapp (1).gif" alt="">
+                <img class="icon" src="/images/icons/icons8-twitter.gif" alt="">
+                <img class="icon" src="/images/icons/icons8-facebook-rodeado-de-círculo.gif" alt="">
+                <img class="icon" src="/images/icons/icons8-instagram.gif" alt="">
+                </div>
+
+                <div class="footer-text">
+                    <a class="help" href="#">Ayuda</a>
+                    <a href="#">Sobre Nosotros</a>
+                    <a href="#">Términos y Aviso de privacidad</a>
+                    <p>©Copyright 2021 NeoTech.</p>
+                    <p> Todos los derechos de autor reservados</p>
+                </div>
+            </div>
+            <div class="qr-code">
+                QR
+            </div>
+        </div>
+
+    </footer>
+
+    
+      <!-- JS -->
+      <script src="/js/product-list.js"></script>
 </body>
+
 </html>

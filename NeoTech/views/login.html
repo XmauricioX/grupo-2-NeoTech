@@ -9,14 +9,13 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d7f2d4eb0a.js" crossorigin="anonymous"></script>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/stylesheets/registro.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/header.css">
     <!-- Title -->
-    <title>Neo Tech - Registro</title>
+    <title>Neo Tech - Login</title>
 </head>
-<body id="registro">
-
+<body id="login">
 
     <header>
         <!-- logo -->
@@ -45,30 +44,37 @@
     </header>
 
 
+
+    <!-- login -->
     <div class="login">
-        <h1>Registro</h1>
+        <h1>Iniciar Sesión</h1>
         <form>
             <nav class="container">
-                <!-- name -->
-                <label for="text"></label>
-                <input class="text" type="text" name="text" id="text" placeholder="Nombre Completo">
-                <!-- email -->
+                <!-- Username -->
+                <!-- <label for="username"></label>
+                <input class="email" type="text" placeholder="Ingrese su email"> -->
                 <label for="email"></label>
                 <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
-                <!-- password -->
+                <!-- Password -->
                 <label for="password"></label>
+                <!-- <input class="password" type="password" placeholder="Ingrese su contraseña"> -->
                 <input class="password" type="password" id="password" placeholder="Ingrese su contraseña">
                 <!-- button log in -->
-                <button class="button-login" type="submit" value="log-in">Registrarse</button>
+                <button class="button-login" type="submit" value="log-in">Iniciar Sesión</button>
+                <!-- password & account -->
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <a href="#">¿No tenes una cuenta?</a>
+                <!-- button create account -->
+                <button class="button-create" type="submit" value="create-account">Crea una Cuenta</button>
             </nav>
         </form>
     </div>
     <div class="networks">
         <!-- button facebook -->
-        <button class="button-facebook">Registrarse con Facebook</button>
+        <button class="button-facebook">Iniciar sesión con Facebook</button>
         <img class="logo-face" src="/images/icons/logo-face-login.png" alt="logo-face">
         <!-- button google -->
-        <button class="button-google">Registrarse con Google</button>
+        <button class="button-google">Iniciar sesión con Google</button>
         <img class="logo-google" src="/images/icons/icon-google-login.png" alt="logo-google">
     </div>
 
@@ -109,5 +115,6 @@
 
     </footer>
 
+    
 </body>   
 </html>
