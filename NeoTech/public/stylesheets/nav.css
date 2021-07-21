@@ -207,6 +207,11 @@ form{
   margin-top: 20px;
 }
 
+ul  {
+  padding-left: 0% !important;
+}
+/* no borrar esto evita que se rompa el nav */
+
 @media(min-width:1024px) {
 .nav-container .burguer-menu{
   display: none;
