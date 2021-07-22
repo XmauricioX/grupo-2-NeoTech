@@ -5,4 +5,9 @@ ayer arregle el detalle de producto , hoy voy a arreglar el slider del home, agr
 Ariel:
 ayer hice subi el nav,hoy voy a hacer arreglar las clases del nav,impedimento: problemas con bootstrap 
 Franco:
-ayer arregle la viste de login,registro y margenes,hoy voy a hacer una vista nueva, problemas: no
+ayer arregle la vista de login,registro y margenes,hoy voy a hacer una vista nueva, problemas: no
+
+22/7 
+Franco
+ayer arregle el burguer menu de nav, hoy agregue la vista contacto y modifique el header en la version mobile y tablet, problemas: acomodar la imagen en las distintas vistas
+
