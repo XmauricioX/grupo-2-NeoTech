@@ -117,6 +117,8 @@ form{
   color: greenyellow;
   cursor: pointer;
   margin-right: 10px;
+  
+
 }
 
 /* FIN BARRA DE BUSQUEDA */
@@ -126,8 +128,8 @@ form{
   margin: 10px;
 }
 .nav-container .logo-nav-container .logoNT {
-  margin-bottom: -4px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
 }
 /* FIN LOGO */
 
@@ -205,15 +207,11 @@ form{
   margin-top: 20px;
 }
 
-ul {
-  padding: 0 !important;
-  margin: 0 !important;
+ul  {
+  padding-left: 0% !important;
 }
 /* no borrar esto evita que se rompa el nav */
 
-
-
-/* media queries Desktop */
 @media(min-width:1024px) {
 .nav-container .burguer-menu{
   display: none;
@@ -222,16 +220,6 @@ ul {
   margin-left: 0;
   width: 100%;
 }
-/* FIN BARRA DE BUSQUEDA */
-
-/* LOGO */
-.nav-container .logo-nav-container .logoNT {
-  height: 50px;
-  width: 60px;
-}
-/* FIN LOGO */
-
-/* CARRITO DE COMPRA */
 
   .menu-container .menu{
     display: flex;
@@ -254,6 +242,7 @@ ul {
   
   .submenu{
     position:absolute;
+    
     width: 200px;
     height: 20px;
     overflow: visible;
