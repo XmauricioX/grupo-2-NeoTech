@@ -118,9 +118,6 @@
 /* media queries Tablet */
 
 @media (min-width:768px) {
-    #contact {
-        background-position-y: 12%;
-    }
     #contact h1 {
         font-size: 48px;
         padding-top: 20px;
@@ -172,12 +169,7 @@
 
 @media (min-width:1024px) {
     #contact {
-    background-image: url(/images/imgs-bg-login/teclado-original.jpg);
-    background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 10%;
-    font-family:var(--font-Quicksand);
-    text-align: center;
+    background-position-x: 55%;
     background-size: cover;
 }
 
