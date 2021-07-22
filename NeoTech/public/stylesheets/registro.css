@@ -7,7 +7,7 @@
     background-image: url(/images/registro/teclado-original.jpg);
     background-repeat: no-repeat;
     background-position-x: 50%;
-    /* background-position-y: 100%; */
+    background-position-y: 33%;
     font-family:var(--font-Quicksand);
     text-align: center;
 }
@@ -241,8 +241,8 @@
 
 @media (min-width:1024px) {
     #registro {
+        background-position-x:55%;
         background-size: cover;
-        /* background-position-x: 0%; */
     }
 
     #registro h1 {
