@@ -126,8 +126,9 @@ form{
   margin: 10px;
 }
 .nav-container .logo-nav-container .logoNT {
-  height: 50px;
-  width: 50px;
+  position: relative;
+  top: 2px;
+  width: 36px;
 }
 /* FIN LOGO */
 
@@ -212,13 +213,13 @@ ul  {
 /* no borrar esto evita que se rompa el nav */
 
 @media(min-width:1024px) {
-.nav-container .burguer-menu{
-  display: none;
-}
-.menu-container{
-  margin-left: 0;
-  width: 100vw;
-}
+  .nav-container .burguer-menu{
+    display: none;
+  }
+  .menu-container{
+    margin-left: 0;
+    width: 100vw;
+  }
 
   .menu-container .menu{
     display: flex;
@@ -240,6 +241,12 @@ ul  {
     border-radius: 50px;
   }
   
+  .nav-container .logo-nav-container .logoNT {
+    position: relative;
+    top: 0;
+    width: 60px;
+  }
+
   .submenu{
     position:absolute;
     width: 200px;
@@ -264,7 +271,7 @@ ul  {
   .logo-nav-container {
     order: -1;
   }
-.open-cart{
+  .open-cart{
     margin-top: 65px;
     width: 30%;
     margin-left: 70%;

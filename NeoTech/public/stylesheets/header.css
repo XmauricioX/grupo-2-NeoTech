@@ -49,6 +49,11 @@ header .icon{
 		flex-direction: row;
 		justify-content: space-around;
 	}
+
+	header .logo {
+		max-width: 20%;
+		;
+	}
 	
 	.icon-bank{
 		align-self: center;
