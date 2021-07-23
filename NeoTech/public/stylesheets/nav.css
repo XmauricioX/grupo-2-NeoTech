@@ -208,7 +208,8 @@ form{
 }
 
 ul  {
-  padding-left: 0% !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
 }
 /* no borrar esto evita que se rompa el nav */
 
@@ -271,4 +272,5 @@ ul  {
   .cart-container {
     margin-top: 65px;
   }
+  
 }
