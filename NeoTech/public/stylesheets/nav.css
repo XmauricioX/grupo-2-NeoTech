@@ -128,8 +128,9 @@ form{
   margin: 10px;
 }
 .nav-container .logo-nav-container .logoNT {
-  height: 50px;
-  width: 50px;
+  position: relative;
+  top: 2px;
+  width: 30px;
 }
 /* FIN LOGO */
 
