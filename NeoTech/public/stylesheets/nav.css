@@ -219,7 +219,7 @@ ul  {
 }
 .menu-container{
   margin-left: 0;
-  width: 100%;
+  width: 100vw;
 }
 
   .menu-container .menu{

@@ -8,3 +8,5 @@ boton.onclick = function() {
         pantalla.style.display = "none"
     }, 4000);
 }
+
+window.scroll(0)
