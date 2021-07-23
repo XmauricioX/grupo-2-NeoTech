@@ -130,7 +130,7 @@ form{
 .nav-container .logo-nav-container .logoNT {
   position: relative;
   top: 2px;
-  width: 30px;
+  width: 36px !important;
 }
 /* FIN LOGO */
 
