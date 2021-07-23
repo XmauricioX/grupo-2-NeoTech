@@ -1,10 +1,9 @@
 @import url(/stylesheets/general.css);
-@import url(/variables.css);
 
-  /* BARRA DE NAVEGCION */
+  /* BARRA DE NAVEGACION */
   .nav-container{
     align-items: center;
-    background-color: #363636;
+    background-color: var(--dark-grey);
     display: flex;
     height: 70px;
     justify-content: space-evenly;
@@ -14,10 +13,10 @@
 /* BURGUER MENU */
 .nav-container .burguer-menu{
   align-items: center;
-  /* background-color: var(--); */
-  border: solid 1px black;
+  cursor: pointer;
+  border: solid 1px var(--black);
   border-radius: 10px;
-  color: greenyellow;
+  color: var(--green);
   display: flex;
   font-size: 25px;
   height: 25px;
@@ -25,17 +24,16 @@
   margin: 10PX;
   padding: 20px;
   width: 25px;
-
 }
 
  .nav-container .burguer-menu:hover {
-  background-color: greenyellow;
-  color: black;
+  background-color: var(--green);
+  color: var(--black);
 }
 
 /* MENU DESPLEGABLE MOBILE */
  .menu-container {
-  background-color: rgb(36, 36,36);
+  background-color: var(--dark-grey);
   margin-left: -100%;
   position: absolute;
   transition: all 0.5s;
@@ -51,13 +49,13 @@
   color: var(--green);
   font-size: 1.5em;
   text-decoration: none;
-  border: solid 1px black;
+  border: solid 1px var(--black);
   
 }
 
 .menu-container .menu__link:hover {
-  background-color: greenyellow;
-  color: black;
+  background-color: var(--green);
+  color: var(--black);
 }
 
 .menu-container ul .menu{
@@ -68,7 +66,7 @@
   height: 0;
   overflow: hidden;
   transition: all 0.5s;
-  background-color: #363636;
+  background-color: var(--grey);
 }
 .menu-container ol ul {
   padding: 0;
@@ -81,7 +79,7 @@
 
 /* BARRA DE BUSQUEDA */
 .search-bar {
-  background-color: #363636;
+  background-color: var(--dark-grey);
   align-items: center;
   
   display: flex;
@@ -95,7 +93,7 @@
 
 form{
   width: 100%;
-  background: #363636;
+  background: var(--dark-grey);
   padding: 3px;
   display: flex;
   justify-content: space-around;
@@ -106,15 +104,15 @@ form{
   border: none;
   outline: none;
   width: 100%;
-  background-color: #363636;
-  color:aliceblue
+  background-color: var(--dark-grey);
+  color: var(--white)
   
 }
 
 .search-bar .btn-search {
   background-color:transparent;
   border: none;
-  color: greenyellow;
+  color: var(--green);
   cursor: pointer;
   margin-right: 10px;
   
@@ -151,8 +149,8 @@ form{
 .cart-container{
   width: 70%;
   height: auto;
-  
-  background-color: #363636;
+  z-index: 1000;
+  background-color: var(--dark-grey);
   margin-left:100% ;
   transition: 1s;
   z-index: 1000;
@@ -160,14 +158,14 @@ form{
   justify-content: space-evenly;
   text-align: center;
   padding: 20px;
-  display: none;
+  
   overflow:inherit ;
 }
 /* btn cerrar carrito */
 .cart-container .btn-close-cart{
-  color: green;
+  color: var(--green);
   font-size: 2em;
-  background: #363636;
+  background: var(--grey);
   border:none;
   cursor: pointer;
   height: 20px;
@@ -177,19 +175,19 @@ form{
   align-items: flex-start;
 }
 .cart-container .cdc {
-  border-bottom: solid 3px green;
+  border-bottom: solid 3px var(--green);
   padding-bottom: 5px;
-  color: green;
+  color: var(--green);
   font-size: 1.1em;
 }
 .cart-container .ldc {
-  color: green;
+  color: var(--green);
   font-size: 1em;
   margin: 0 auto;
   position: relative;
   top:10px;
   padding: 0 5px;
-  background-color: #363636;
+  /* background-color: var(--grey); */
   width: fit-content;
 }
 /* contenedro de productos */
@@ -225,7 +223,7 @@ ul  {
   .menu-container .menu{
     display: flex;
     width: 100%;
-    background-color: #363636;
+    background-color: var(--dark-grey);
     justify-content: space-evenly;
     align-items: center;
     padding: 20px 0;
@@ -234,26 +232,28 @@ ul  {
   .container-submenu{
     position: relative;
   }
-  .menu__link{
+   .menu__link{
     width: 200px;
     height: 30px;
-    /* margin: 0 50px; */
-    background-color: grey;
+    margin: 0 50px;
+    background-color: var(--dark-grey);
+    border-radius: 50px;
   }
   
   .submenu{
     position:absolute;
-    
     width: 200px;
     height: 20px;
     overflow: visible;
     z-index: 100;
     opacity: 0;
     visibility: hidden;
-    background-color: rgb(69, 71, 80);
+    background-color: var(--dark-grey);
   }
   .submenu .menu__link{
     height: auto;
+    border-radius: 0;
+    background-color: var(--grey);
   }
   
   .container-submenu:hover .submenu{
