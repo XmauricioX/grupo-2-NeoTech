@@ -10,4 +10,5 @@ ayer arregle la vista de login,registro y margenes,hoy voy a hacer una vista nue
 22/7 
 Franco
 ayer arregle el burguer menu de nav, hoy agregue la vista contacto y modifique el header en la version mobile y tablet, problemas: acomodar la imagen en las distintas vistas
-
+Mauricio
+ayer arregle el detalle de producto,agregue las vistas del panel de admin, hoy hiba a agregar el nav a otras vistas pero no esta terminado,problemas: no puedo usar el nav
