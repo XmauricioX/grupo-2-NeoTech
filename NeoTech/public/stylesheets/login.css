@@ -21,7 +21,7 @@
 }
 
 /* form */
-#login form {
+#login .form-container {
     backdrop-filter: blur(4px);
     border: 1px solid var(--color-Green);
     border-radius: 30px;
@@ -31,43 +31,33 @@
     background-color: rgba(0, 0, 0, 0.582);
 }
 
-#login form .container {
+#login .form-container .container-contact {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding-top: 5%;
 }
 
-#login form .container .email {
-    border: black;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    padding: 12px 5px;
-    text-align: initial;
-    width: 85%;
-} 
-
-#login form .container .password {
-    border: black;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-bottom: 24px;
-    padding: 12px 5px;
-    text-align: initial;
-    width: 85%;
-}
-#login input {
-    display: block;
-    padding: 10px 50px;
-    margin: 15px 0;
+#login .form-container .container-contact .email,
+#login .form-container .container-contact .password {
     background-color: var(--color-Dark);
-    border-radius: 8px;
-    border: 1px solid black;
-    color: white;
+    border: black;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 13px 0;
+    padding: 12px 5px;
+    text-align: initial;
+    width: 85%;
+    outline: none;
 }
-#login input:hover {
-    color: var(--color-Green);   
+#login .email,
+#login .password {
+color: white;
+}
+
+#login .email:hover,
+#login .password:hover {
+    color: var(--color-Green);  
 }
 
 
@@ -79,7 +69,7 @@
     color: white;
     font-size:20px;
     font-weight: lighter;
-    margin-bottom: 20px;
+    margin: 15px 0;
     padding: 9px 16px;
 }
 
@@ -88,14 +78,14 @@
     color: black;
 }
 
-#login form .container a {
+#login .form-container .container-contact a {
     color: white;
     font-size: 15px;
     padding-bottom: 9px;
     text-decoration: none;
 }
 
-#login form .container a:hover{
+#login .form-container .container-contact a:hover{
     color: var(--color-Green);
 }
 
@@ -170,28 +160,28 @@
         margin-bottom: 15px;
     }
     
-    #login form {
+    #login .form-container {
         max-width:420px;
         /* max-width: 60%; */
     }
-    #login form .container {
+    #login .form-container .container-contact {
         padding-top: 10%;
     }
     
-    #login form .container .email {
+    #login .form-container .container-contact .email {
         font-size: 23px;
         margin-bottom: 15px;
     } 
     
-    #login form .container .password {
+    #login .form-container .container-contact .password {
         font-size: 23px;
-        margin-bottom: 35px;
+        margin-bottom: 30px;
     }
     #login .button-login {
         border-radius: 40px;
         font-size:24px;
     }
-    #login form .container a {
+    #login .form-container .container-contact a {
         font-size: 18px;
     }
     /* social media buttons */
@@ -231,32 +221,26 @@
 
     #login h1 {
         padding-top: 60px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
-    #login form {
+    #login .form-container {
         border-radius: 30px;
-        width: 320px;
+        width: 345px;
     }
 
-    #loginform .container {
-        padding-top: 20%;
-    }
 
-    #login form .container .email {
-        font-size: 17px;
-        padding: 10px 30px 10px 5px;
-        margin-bottom: 10px;
+    #login .form-container .container-contact .email {
+        font-size: 20px;
+        margin-bottom: 20px;
     } 
 
-    #login form .container .password {
-        font-size: 17px;
-        padding: 10px 30px 10px 5px;
-        
+    #login .form-container .container-contact .password {
+        font-size: 20px;        
     }
     #login .button-login {
         border-radius: 50px;
-        font-size:20px;
+        font-size:25px;
     }
 
     #login .button-login:hover {
@@ -264,11 +248,6 @@
         color: black;
     }
 
-    #login form .container a {
-        color: white;
-        padding-bottom: 9px;
-        text-decoration: none;
-    }
     #login .networks {
         align-items: flex-end;
         flex-direction:row;
