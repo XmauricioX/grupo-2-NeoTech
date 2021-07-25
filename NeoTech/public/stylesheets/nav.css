@@ -217,7 +217,9 @@ ul  {
   }
   .menu-container{
     margin-left: 0;
-    width: 100vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .menu-container .menu{
@@ -235,7 +237,7 @@ ul  {
    .menu__link{
     width: 200px;
     height: 30px;
-    margin: 0 50px;
+    margin: 0 10px;
     background-color: var(--dark-grey);
     border-radius: 50px;
   }
@@ -276,7 +278,7 @@ ul  {
     margin-left: 70%;
   }
   .cart-container {
-    margin-top: 65px;
+    margin-top: 80px;
   }
   
 }
