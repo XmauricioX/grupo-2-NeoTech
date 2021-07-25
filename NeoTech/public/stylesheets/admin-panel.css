@@ -104,8 +104,13 @@
 #container-admin #content #admin-welcome{
     font-size: 30px;
 }
-
+#navigation{
+    height: 150px
+}
 @media(min-width:1024px){
+    #navigation{
+        height: 150px
+    }
     #bar{
         width: 6px;
         left: 320px;
