@@ -1,6 +1,8 @@
 @import url("/stylesheets/variables.css");
 
-
+.login{
+    margin-top: 20px !important;
+}
 
 /* Background body */
 #registro {
@@ -308,4 +310,8 @@
         right: 194px;
         width: 32px;
     }
+}
+#aver{
+    background-color: var(--color-Dark) !important;
+    border: var(--color-Dark) !important;
 }
