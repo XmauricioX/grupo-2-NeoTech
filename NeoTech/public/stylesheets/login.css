@@ -289,3 +289,7 @@
         width: 32px;
     }
 }
+#aver{
+    background-color: var(--color-Dark) !important;
+    border: var(--color-Dark) !important;
+}
