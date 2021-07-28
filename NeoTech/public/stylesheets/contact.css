@@ -47,7 +47,6 @@
     display: flex;
     flex-direction: column;
     padding-top: 10%;
-    width: 80%; /* agregue esto para que se ensanchen los input, sino quedan pisados los estilos del nav y quedan chicos los input */
 }
 
 #contact input {
@@ -56,7 +55,7 @@
     border: 1px solid black;
     color: white;
     outline: none;
-    width: 100% !important;
+    width: 85%;
 }
 
 #contact form .container-form .email {
