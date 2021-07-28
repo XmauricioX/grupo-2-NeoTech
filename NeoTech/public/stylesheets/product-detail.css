@@ -5,7 +5,7 @@ body{
     
 }
 
-body section{
+section{
     margin: 50px 20px;
     height: auto;
 }
@@ -22,13 +22,13 @@ body i{
     top: 20px;
 }
 
-body section article{
+section article{
     max-width: 300px;
     margin: 0px auto;
     text-align: center;
     height: 50vh;
 }
-body section article img{
+section article img{
     background-image: url(./img/bg-product.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -41,11 +41,11 @@ body section article img{
     margin-top: 0px;
     overflow: hidden;
 }
-body .btn{
+.btn{
     display: flex;
     justify-content: center;
 }
-body .btn a{
+.btn a{
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
@@ -58,7 +58,7 @@ body .btn a{
     padding: 0px 15px;
 }
 
-body .detail{
+.detail{
     outline: 1px solid var(--color-Green-Old);
     background-color: var(--color-Dark-Gray);
     border-radius: 1%;
@@ -67,74 +67,74 @@ body .detail{
     padding: 20px;
     margin: 0px auto 100px;
 }
-body .detail h2{
+.detail h2{
     margin-bottom: 20px;
     text-align: center;
 }
-body .detail p{
+.detail p{
     text-align: justify;
 }
-body div.container-r{
+div.container-r{
     margin-top: 80px;
 }
 
 
 @media (min-width: 768px){
-    body section{
+    section{
         margin-top: 0%;
         width: 80%;
         display: inline-flex;
         flex-wrap: nowrap;
         height: 100vh;
     }
-    body section article{
+    section article{
         margin-top: 15%;
         width: 60%;
         margin-left: 0;
     }
-    body article img{
+    article img{
         height: auto;
         width: auto;
     }
-    body .btn a{
+    .btn a{
         position: static;
         padding: 0px 20px;
         font-size: 45px;
         margin: 0;
     }
-    body .container-r .detail{
+    .container-r .detail{
         width: 100%;
         font-size: 15px;
         height: 70%;
         margin-bottom: 20px;
         overflow: scroll;
     }
-    body .container-r{        
+    .container-r{        
         position: relative;
         margin: 0;
         width: 35%;
         height: auto;
         padding: 0;
     }
-    body #arrow{
+    #arrow{
         position: relative;
         top: -400px;
     }
 }
 
 @media (min-width: 1024px){
-    body .detail{
+    .detail{
         font-size: 80px;
         height: 100%;
     }
-    body #arrow{
+    #arrow{
         display: none;
     }
-    body section article{
+    section article{
         max-width: 500px;
         margin: 80px 20px 0 auto ;
     }
-    body article img{
+    article img{
         width: 50%;
     }
     /* .container-r{

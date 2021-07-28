@@ -10,112 +10,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="/stylesheets/product-detail.css">
-    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <!-- titulo -->
     <title>Product Detail</title>
 </head>
-
-<nav>
-    <div class="nav-container">
-
-        <!-- MENU HAMBURGUESA -->
-        <span class="burguer-menu" id="btnMenu"><i class="fas fa-bars"></i></span>
-
-        <!-- BARRA DE BUSQUEDA -->
-        <div class="search-bar">
-            <form id="aver" action="search">
-                <button class="btn-search">
-                    <i class="fas fa-search"></i>
-                </button>
-                <input type="search" class="input-search" placeholder="busqueda">
-            </form>
-        </div>
-
-        <!-- LOGO DEL NAV -->
-
-        <div class="logo-nav-container">
-            <a href="/home"><img class="logoNT" src="/images/imgs-logo/NT CHICO.svg" alt=""></a>
-        </div>
-
-        <!-- BOTON DE CARRITO -->
-        <button class="btn-open-cart" id="open-cart">
-            <img class="icon-chest" src="/images/icons/Icon-chest.svg" alt="">
-        </button>
-
-
-
-    </div> <!-- cierre nav-container -->
-</nav>
-
-<!-- MENU DESPLEGABLE MOBILE -->
-<div class="menu-container" id="menu">
-    <ul class="menu">
-
-        <li class="menu__item"><a href="" class="menu__link">
-                <i class="far fa-envelope"></i>
-                contacto
-            </a></li>
-
-        <li class="menu__item container-submenu">
-            <a href="#" class="menu__link submenu-btn"> <i class="far fa-folder"></i>
-                marcas </a>
-            <ul class="submenu">
-                <li class="menu__items"><a href="" class="menu__link">marca1</a></li>
-                <li class="menu__items"><a href="" class="menu__link">marca2</a></li>
-                <li class="menu__items"><a href="" class="menu__link">marca3</a></li>
-                <li class="menu__items"><a href="" class="menu__link">marca4</a></li>
-                <li class="menu__items"><a href="" class="menu__link">marca5</a></li>
-            </ul>
-        </li>
-
-        <li class="menu__item container-submenu">
-            <a href="#" class="menu__link submenu-btn">
-                <i class="fas fa-boxes"></i> productos
-            </a>
-            <ul class="submenu">
-                <li class="menu__items"><a href="" class="menu__link"><i class="far fa-keyboard"></i></a></li>
-                <li class="menu__items"><a href="" class="menu__link"><i class="fas fa-mouse"></i></a></li>
-                <li class="menu__items"><a href="" class="menu__link"><i class="fas fa-tv"></i></a></li>
-                <li class="menu__items"><a href="" class="menu__link"><i class="fas fa-gamepad"></i></a></li>
-                <li class="menu__items"><a href="" class="menu__link"><i class="fas fa-headphones"></i></a></li>
-                <li class="menu__items"><a href="" class="menu__link">producto6</a></li>
-            </ul>
-        </li>
-
-        <li class="menu__item container-submenu">
-            <a href="#" class="menu__link submenu-btn">
-                <i class="far fa-user-circle"></i> cuenta
-            </a>
-            <ul class="submenu">
-                <li class="menu__items"><a href="" class="menu__link">iniciar sesion</a></li>
-                <li class="menu__items"><a href="" class="menu__link">crear cuenta</a></li>
-            </ul>
-        </li>
-
-    </ul>
-</div>
-
-<!-- CARRITO DE COMPRAS -->
-<div class="cart-container" id="cart-container">
-    <button class="btn-close-cart" id="close-cart">
-        <i class="fas fa-angle-double-right"></i>
-    </button>
-    <p>
-    <h4 class="cdc">CARRITO DE COMPRAS</h4>
-    </p>
-
-    <div class="ldc">LISTA DE COMPRAS</div>
-
-    <div class="product-container">
-        <p class="empty">vacío</p>
-    </div>
-
-    <a href="/market-full"><input type="button" class="btn-add" value="Agregar Producto"></a>
-</div>
-
-
 <body>
+
+
+    <!-- Header -->
+    <header>
+        <!-- logo -->
+        <div class="logo-container">
+            <img class="logo" src="/images/imgs-logo/LOGO NeoTech.png" alt="">
+        </div>
+
+        <div class="container">
+
+            <div class="icon-bank">
+                <img class="icon" src="/images/icons/iconBank-visa.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-mastercard.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-mercado-pago.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-santander.svg" alt="">
+            </div>
+
+            <div class="icon-social">
+                <img class="icon" src="/images/icons/icons8-whatsapp (1).gif" alt="">
+                <img class="icon" src="/images/icons/icons8-twitter.gif" alt="">
+                <img class="icon" src="/images/icons/icons8-facebook-rodeado-de-círculo.gif" alt="">
+                <img class="icon" src="/images/icons/icons8-instagram.gif" alt="">
+            </div>
+
+        </div>
+
+    </header>
 
     <!-- product detail -->
 
