@@ -134,6 +134,10 @@ hr{
     }
 }
 @media (min-width: 1024px){
+    #aver{
+        margin-top: 100px;
+    }
+
     form{
         width: 50%;
     }
