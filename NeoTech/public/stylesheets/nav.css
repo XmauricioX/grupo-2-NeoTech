@@ -1,7 +1,7 @@
 @import url(/stylesheets/general.css);
 
   /* BARRA DE NAVEGACION */
-  .nav-container{
+  .div__btn {
     align-items: center;
     background-color: var(--dark-grey);
     display: flex;
@@ -11,7 +11,7 @@
   }
 
 /* BURGUER MENU */
-.nav-container .burguer-menu{
+.div__btn__burguer {
   align-items: center;
   cursor: pointer;
   border: solid 1px var(--black);
@@ -26,13 +26,13 @@
   width: 25px;
 }
 
- .nav-container .burguer-menu:hover {
+ .div__btn__burguer:hover {
   background-color: var(--green);
   color: var(--black);
 }
 
 /* MENU DESPLEGABLE MOBILE */
- .menu-container {
+ .div__menu {
   background-color: var(--dark-grey);
   margin-left: -100%;
   position: absolute;
@@ -41,7 +41,7 @@
   z-index: 10;
 }
 
-.menu-container .menu__link {
+.div__menu .menu__link {
   display: flex;
   padding: 20px;
   justify-content: space-evenly;
@@ -53,79 +53,85 @@
   
 }
 
-.menu-container .menu__link:hover {
+.div__menu .menu__link:hover {
   background-color: var(--green);
   color: var(--black);
 }
 
-.menu-container ul .menu{
+.div__menu .div__menu__ul {
   padding: 0;
+  margin: 0;
 }
 
-.submenu {
+.submenu__ul {
   height: 0;
   overflow: hidden;
   transition: all 0.5s;
   background-color: var(--grey);
 }
-.menu-container ol ul {
-  padding: 0;
+
+/* no borrar  */
+ol, ul {
+  padding-left: 0;
 }
 
 .mostrar{
   margin-left: 0px;
+  /* margin-top: 70px; */
 }
+
 /* FIN MENU DESPLEGABLE MOBILE */
 
 /* BARRA DE BUSQUEDA */
-.search-bar {
-  background-color: var(--dark-grey);
+.div__search__bar{
+  /* background-color: var(--dark-grey); */
+  background-color: transparent;
   align-items: center;
-  
   display: flex;
-  
   justify-content: space-between;
   height: 30px;
   padding: 10px;
-  
   width: 80%;
 }
 
-form{
+.div__search__bar__form{
   width: 100%;
   background: var(--dark-grey);
-  padding: 3px;
+  padding: 3px 8px;
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: center;
+  border: solid 2px var(--color-Green);
+  border-radius: 30px;
 }
 
- .search-bar .input-search {
+.div__search__bar .div__search__bar__input {
   border: none;
   outline: none;
   width: 100%;
   background-color: var(--dark-grey);
-  color: var(--white)
-  
+  color: var(--white);
+  margin-right: 3px;
+  padding: 4px 0;
+  font-size: 14px;
+  line-height: 0;
 }
 
-.search-bar .btn-search {
+.div__search__bar .div__search__bar__btn__search {
   background-color:transparent;
   border: none;
   color: var(--green);
   cursor: pointer;
   margin-right: 10px;
-  
-
 }
 
 /* FIN BARRA DE BUSQUEDA */
 
 /* LOGO */
-.nav-container .logo-nav-container {
+.div__logo {
   margin: 10px;
 }
-.nav-container .logo-nav-container .logoNT {
+.div__logo .div__logo__NT {
   position: relative;
   top: 2px;
   width: 36px;
@@ -134,7 +140,7 @@ form{
 
 /* CARRITO DE COMPRA */
 /* btn abrir carrito */
-.btn-open-cart {
+.btn__open__cart {
   background-color: transparent;
   border: none;
   position: relative;
@@ -142,17 +148,17 @@ form{
   cursor: pointer;
 }
 /* icono de carrito */
-.nav-container .icon-chest {
+.div__btn .btn__open__cart__icon__chest {
   width: 40px;
   height: 40px;
 }
 /* contenedor de carrito */
-.cart-container{
+.div__cart {
   width: 300px;
   height: auto;
   background-color: #363636;
   right: 0px;
-  transition: 1s;
+  /* transition: 0.4s; */
   z-index: 1000;
   flex-direction: column;
   justify-content: space-evenly;
@@ -160,9 +166,10 @@ form{
   padding: 20px;
   position:absolute;
   clip-path: inset(0 0 0 100%);
+  /* margin-top: 70px; */
 }
 /* btn cerrar carrito */
-.cart-container .btn-close-cart{
+.div__cart .btn__close__cart{
   color: var(--green);
   font-size: 2em;
   background: transparent;
@@ -171,16 +178,16 @@ form{
   height: 20px;
   position: relative;
   display: flex;
-  top: -20px;
+  bottom: 10px;
   align-items: flex-start;
 }
-.cart-container .cdc {
+.div__cart .cdc {
   border-bottom: solid 3px var(--green);
   padding-bottom: 5px;
   color: var(--green);
   font-size: 1.1em;
 }
-.cart-container .ldc {
+.div__cart .ldc {
   color: var(--green);
   font-size: 1em;
   margin: 0 auto;
@@ -191,41 +198,41 @@ form{
   width: fit-content;
 }
 /* contenedro de productos */
-.cart-container .product-container {
+.div__cart .div__product {
   border: solid 1px black;
   padding: 35px 45px ;
 }
 /* carrito abierto */
-.open-cart{
+.open__cart{
   clip-path: inset(0 0 0 0);
   display: flex;
-  transition: 1s;
+  transition: 0.4s;
 }
-.btn-add{
+.btn__add{
   margin-top: 20px;
   border-radius: 50px;
   border: solid 1px var(--green);
   
 }
 
-ul  {
+/* ul  {
   padding-left: 0 !important;
   margin: 0 !important;
-}
+} */
 /* no borrar esto evita que se rompa el nav */
 
 @media(min-width:1024px) {
-  .nav-container .burguer-menu{
+  .div__btn__burguer {
     display: none;
   }
-  .menu-container{
+  .div__menu {
     margin-left: 0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .menu-container .menu{
+  .div__menu .div__menu__ul{
     display: flex;
     width: 100%;
     background-color: var(--dark-grey);
@@ -234,9 +241,9 @@ ul  {
     padding: 20px 0;
     top: -2px;
     position: absolute;
-
+    /* margin-top: 65px; */
   }
-  .container-submenu{
+  .container__submenu{
     position: relative;
   }
    .menu__link{
@@ -247,13 +254,13 @@ ul  {
     border-radius: 50px;
   }
   
-  .nav-container .logo-nav-container .logoNT {
+  .div__btn .div__logo .div__logo__NT {
     position: relative;
     top: 0;
     width: 60px;
   }
 
-  .submenu{
+  .submenu__ul{
     position:absolute;
     width: 200px;
     height: 20px;
@@ -263,26 +270,39 @@ ul  {
     visibility: hidden;
     background-color: var(--dark-grey);
   }
-  .submenu .menu__link{
+  .submenu__ul .menu__link{
     height: auto;
     border-radius: 0;
     background-color: var(--grey);
   }
   
-  .container-submenu:hover .submenu{
+  .container__submenu:hover .submenu__ul{
     opacity: 1;
     visibility: visible;
   }
 
-  .logo-nav-container {
+  .div__logo {
     order: -1;
-  }
-  .open-cart{
+  } 
+
+  /* .btn__open__cart {
+    position: relative;
     margin-top: 65px;
     width: 30%;
     margin-left: 70%;
+  } */
+
+  .btn__open__cart {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    margin-right: 10px; 
+    cursor: pointer;
+    clip-path: inset(0 0 0 0);
+    display: flex;
+    transition: 0.4s;
   }
-  .cart-container {
+  .div__cart {
     margin-top: 80px;
   }
   

@@ -1,15 +1,15 @@
 @import url(./variables-border.css);
 
 body{
-    background-color: var(--color-Dark-Gray);
+    background-color: black;
     
 }
 
-section{
+.product__section{
     margin: 50px 20px;
     height: auto;
 }
-body i{
+body #arrow{
     /* color: var(--color-Green);
     font-size: 30px;
     position: sticky;
@@ -22,13 +22,13 @@ body i{
     top: 20px;
 }
 
-section article{
+.product__section article{
     max-width: 300px;
     margin: 0px auto;
     text-align: center;
     height: 50vh;
 }
-section article img{
+.product__section article img{
     background-image: url(./img/bg-product.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -80,14 +80,14 @@ div.container-r{
 
 
 @media (min-width: 768px){
-    section{
+    .product__section{
         margin-top: 0%;
         width: 80%;
         display: inline-flex;
         flex-wrap: nowrap;
         height: 100vh;
     }
-    section article{
+    .product__section article{
         margin-top: 15%;
         width: 60%;
         margin-left: 0;
@@ -116,9 +116,9 @@ div.container-r{
         height: auto;
         padding: 0;
     }
-    #arrow{
+    body #arrow{
         position: relative;
-        top: -400px;
+        top: -440px;
     }
 }
 
@@ -130,7 +130,7 @@ div.container-r{
     #arrow{
         display: none;
     }
-    section article{
+    .product__section article{
         max-width: 500px;
         margin: 80px 20px 0 auto ;
     }
