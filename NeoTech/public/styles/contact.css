@@ -1,9 +1,9 @@
-
+@import url('/styles/style.css');
 
 
 /* Background body */
 
-body {
+.body__contact {
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-repeat: no-repeat;
     background-position-x: 50%;
@@ -13,8 +13,9 @@ body {
 }
 
 /* Title: Iniciar Sesión */
-body h1 {
+.container-contact h1 {
     font-size: 38px;
+    font-weight: 700;
     color: var(--green);
     padding-top: 15px;
     margin-bottom: 15px;
@@ -29,22 +30,20 @@ body h1 {
 }
 
 /* form */
-#contact form {
-    background-color: rgba(0, 0, 0, 0.582);
-    backdrop-filter: blur(4px);
-    border: 1px solid var(--green);
-    border-radius: 30px;
-    max-width: 290px;
-    margin: 0 auto;
-    margin-bottom: 30px;
-
-}
 
 #contact .container__form {
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.582);
+    backdrop-filter: blur(4px);
+    border: 2px solid var(--green);
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
-    padding-top: 10%;
+    padding-top: 26px;
+    max-width: 298px;
+    /* max-width: 85%; */
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 #contact input {
@@ -120,7 +119,7 @@ body h1 {
 /* media queries Tablet */
 
 @media (min-width:768px) {
-    #contact h1 {
+    .container-contact h1 {
         font-size: 48px;
         padding-top: 20px;
         margin-bottom: 22px;
@@ -134,28 +133,28 @@ body h1 {
         top: 30px;
     }
 
-    #contact form {
-        max-width:420px;
+    #contact .container__form {
+        max-width:700px;
         /* max-width: 60%; */
     }
 
-    #contact form .container__form {
-        padding-top: 10%;
+    #contact .container__form {
+        padding-top: 30px;
     }
 
-    #contact form .container__form .email {
+    #contact .container__form .email {
         font-size: 23px;
         margin-bottom: 25px;
     } 
     
-    #contact form .container__form .text {
+    #contact .container__form .text {
         font-size: 23px;
         margin-bottom: 25px;
     }
 
     /* message */
 
-    #contact form .container__form .message {
+    #contact .container__form .message {
     
     font-size: 23px;
     margin-bottom: 25px;
@@ -170,12 +169,12 @@ body h1 {
 /* media queries Desktop */
 
 @media (min-width:1024px) {
-    #contact {
+    .body__contact {
     background-position-x: 55%;
     background-size: cover;
 }
 
-    #contact h1 {
+    .container-contact h1 {
         font-size: 60px;
         padding-top: 40px;
         margin-bottom: 35px;
@@ -186,7 +185,7 @@ body h1 {
         display: none;
     }
 
-    #contact form {
+    #contact .container-form {
         /* max-width:700px; */
         max-width: 50%;
     }

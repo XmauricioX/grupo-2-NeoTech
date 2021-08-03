@@ -13,7 +13,7 @@
 
 
     /* FONTS */
-    --quicksand: quicksand;
+    --font-Quicksand: 'Quicksand', sans-serif;
 }
 *{
     box-sizing: border-box;
