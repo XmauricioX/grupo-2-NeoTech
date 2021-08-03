@@ -1,0 +1,274 @@
+
+
+
+
+/* Background body */
+.login {
+    background-image: url(/images/imgs-bg-login/teclado-original.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 33%;
+    font-family:var(--font-Quicksand);
+    text-align: center;
+}
+
+/* Title: Iniciar Sesión */
+.login h1 {
+    font-size: 40px;
+    color: var(--green);
+    margin: 30px;
+    padding: 0;
+}
+
+/* form */
+.login .form-container {
+    backdrop-filter: blur(4px);
+    border: 2px solid var(--green);
+    border-radius: 30px;
+    max-width: 290px;
+    /* max-width: 90%; */
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+.login .form-container .container-contact {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.login .form-container .container-contact .email,
+.login .form-container .container-contact .password {
+    background-color: var(--grey);
+    border: black;
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 15px 0;
+    padding: 10px 5px;
+    text-align: initial;
+    width: 85%;
+    outline: none;
+}
+.login .email,
+.login .password {
+color: white;
+}
+
+.login .email:hover,
+.login .password:hover {
+    color: var(--green);  
+}
+
+
+/* Buttons: log in & create account */
+.login .button-login {
+    background-color: var(--dark-grey);
+    border:solid 2px var(--green);
+    border-radius: 25px;
+    color: white;
+    font-size:20px;
+    font-weight: lighter;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.login .button-login:hover {
+    background-color: var(--green);
+    color: black;
+}
+
+.login .form-container .container-contact a {
+    color: white;
+    font-size: 15px;
+    padding-bottom: 9px;
+    text-decoration: none;
+}
+
+.login .form-container .container-contact a:hover{
+    color: var(--green);
+}
+
+.login .button-create {
+    background-color: var(--dark-grey);
+    border:solid 2px var(--green);
+    border-radius: 20px;
+    color: white;
+    font-size:12px;
+    margin: 15px 0;
+    padding: 10px;
+}
+.login .button-create:hover {
+    background-color: var(--green);
+    color: black;
+}
+
+/* social media buttons */
+.networks {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    margin-bottom: 30px
+}
+
+.networks .logo-face {
+    /* bottom: 40px;
+    right: 82px; */
+    width: 35px;
+}
+
+.networks .logo-google {
+    /* bottom: 42px;
+    
+    right: 80px; */
+    width: 35px;
+}
+
+.button-facebook {
+    background-color: #2b4ca3;
+    border:none;
+    color: white;
+    font-size:19px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+}
+
+.button-google {
+    background-color: #2095e7;
+    border:none;
+    color: white;
+    font-size:19px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+}
+
+/* media queries Tablet */
+
+/* @media (min-width:768px) {
+    .login h1 {
+        font-size: 48px;
+        padding-top: 40px; */
+        /* margin-bottom: 15px; */
+    /* }
+    
+    .login .form-container {
+        max-width:420px; */
+        /* max-width: 60%; */
+    /* }
+    .login .form-container .container-contact {
+        padding-top: 10%;
+    }
+    
+    .login .form-container .container-contact .email {
+        font-size: 23px;
+        margin-bottom: 15px;
+    } 
+    
+    .login .form-container .container-contact .password {
+        font-size: 23px;
+        margin-bottom: 30px;
+    }
+    .login .button-login {
+        border-radius: 40px;
+        font-size:24px;
+    }
+    .login .form-container .container-contact a {
+        font-size: 18px;
+    } */
+    /* social media buttons */
+    /* .login .networks {
+        align-items: flex-end;
+        flex-direction:row;
+        justify-content: center;
+        margin-left: 30px;
+        margin-bottom: 50px
+    }
+    
+    .login .networks .logo-face {
+        bottom: 10px;
+        right: 187px;
+        margin-left: -15px;
+    }
+    
+    .login .networks .logo-google {
+        bottom: 10px;
+        right: 203px;
+        width: 32px;
+    }
+} */
+
+
+
+
+
+
+/* media queries Desktop */
+
+@media (min-width:1024px) {
+    .login {
+        background-position-x:55%;
+        background-size: cover;
+    }
+
+    .login h1 {
+        
+        margin-top: 90px;
+    }
+}
+    /* .login .form-container {
+        border-radius: 30px;
+        width: 345px;
+    }
+
+
+    .login .form-container .container-contact .email {
+        font-size: 20px;
+        margin-bottom: 20px;
+    } 
+
+    .login .form-container .container-contact .password {
+        font-size: 20px;        
+    }
+    .login .button-login {
+        border-radius: 50px;
+        font-size:25px;
+    }
+
+    .login .button-login:hover {
+        background-color: var(--green);
+        color: black;
+    }
+
+    .login .networks {
+        align-items: flex-end;
+        flex-direction:row;
+        justify-content: center;
+        margin-left: 30px;
+        margin-bottom: 50px
+    }
+    
+    .login .networks .logo-face {
+        bottom: 10px;
+        right: 187px;
+        margin-left: -15px;
+    }
+    
+    .login .networks .logo-google {
+        bottom: 10px;
+        right: 203px;
+        width: 32px;
+    }
+} */
