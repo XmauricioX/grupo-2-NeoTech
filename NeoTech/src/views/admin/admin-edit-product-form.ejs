@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- font awesome -->
-      <script src="https://kit.fontawesome.com/d7f2d4eb0a.js" crossorigin="anonymous"></script>
-      <!-- google fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-      <!-- CSS -->
-      <link rel="stylesheet" href="/stylesheets/variables-border.css">
-      <!-- CSS ADMIN-->
-      <link rel="stylesheet" href="/stylesheets/admin-panel.css">
-      <link rel="stylesheet" href="/stylesheets/admin-edit-product-form.css">
-      <link rel="stylesheet" href="/stylesheets/nav.css">
-    <title>Admin Edit Product Form</title>
+    <%- ./partials/head-admin -%>
+    <link rel="stylesheet" href="../../../../styles/admin-edit-product-form.css">
 </head>
 <body>
     
@@ -52,11 +40,6 @@
         </main>
 
     </div>
-<!-- JS -->
-<script src="/js/admin-panel.js"></script>
-<!-- JS CARRITO-->
-<script src="/js/carrito.js"></script>
-<!-- JS NAV  -->
-<Script src="/js/nav.js" > </Script>
+    <%- include("../partials/admin-links") -%>
 </body>
 </html>
