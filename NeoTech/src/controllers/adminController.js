@@ -1,26 +1,24 @@
 module.exports = {
     panel: (req, res) => {
-        res.render('admin/adminPanel', {
-            title: 'NeoTech - Panel General',
-        })
+        res.render('admin/adminPanel', {title: 'NeoTech - Panel General'})
     },
     agregarProducto: (req,res) =>{
-        res.render("admin/admin-add-product")
+        res.render("admin/admin-add-product", {title: 'NeoTech - Agregar Producto'})
     },
     editCuenta: (req,res)=>{
-        res.render("admin/admin-edit-account")
+        res.render("admin/admin-edit-account", {title: 'NeoTech - Editar Cuenta'})
     },
     formEditProducto: (req,res)=>{
-        res.render("admin/admin-edit-product-form")
+        res.render("admin/admin-edit-product-form", {title: 'NeoTech - Editar Producto'})
     },
     editProducto: (req,res)=>{
-        res.render("admin/admin-edit-producto")
+        res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto'})
     },
     ventaStock: (req,res)=>{
-        res.send("admin/admin-sell-stock")
+        res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})
     },
     usuarios: (req,res)=>{
-        res.render("admin/admin-users")
+        res.render("admin/admin-users", {title: 'NeoTech - Usuarios'})
     }
 
     /* contact: (req, res) => {
