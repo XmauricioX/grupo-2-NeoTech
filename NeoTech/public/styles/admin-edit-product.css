@@ -1,8 +1,9 @@
 #admin-welcome{
     position: absolute;
-    top: 0;
+    top: 80px;
 }
 #content{
+    margin-top: -100px;
 }
 /* CONTENEDOR */
 #container{
@@ -11,12 +12,16 @@
     grid-template-columns: 1fr a 1fr;
     gap: 20px 20px;
 }
+#container-admin{
+    color: var(--white);
+}
 /* BARRA DE BUSQUEDA */
 #form-edit-product{
     position: absolute;
     top: 50px;
     z-index: 1;
     margin: 0px auto;
+    margin-top: 80px;
     width: 80%;
     height: 35px;
     background-color: var(--color-Dark);
@@ -85,12 +90,7 @@ hr{
     justify-content: space-between;
     
 }
-.name-card{
-    
-}
-.number-card{
 
-}
 .description-card{
     width: 100%;
     margin-bottom: 20px;
@@ -121,6 +121,14 @@ hr{
         grid-template-columns: repeat(2,1fr);
     }
 }
+@media (min-width: 1024px){
+    #admin-welcome{
+        top: 120px;
+    }
+    #form-edit-product{
+        margin-top: 120px;
+    }
+}
 @media (min-width: 1274px){
     form{
         width: 50%;
@@ -129,4 +137,5 @@ hr{
         margin-top: 700px;
         grid-template-columns: repeat(3,1fr);
     }
+    
 }

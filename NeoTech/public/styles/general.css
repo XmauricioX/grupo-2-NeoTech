@@ -5,6 +5,13 @@
     --dark-grey:#242424;
     --grey:#363636;
     --white:#FFFFFF;
+
+    --color-Green:#61ff01;
+    --color-Green-Old: #2EDD02;
+    --color-Dark:#242424;
+    --color-Dark-Gray:#363636;
+
+
     /* FONTS */
     --quicksand: quicksand;
 }

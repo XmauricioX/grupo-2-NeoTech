@@ -1,9 +1,10 @@
 #admin-welcome{
     position: absolute;
-    top: 10px;
+    top: 100px;
 }
 #numbers-admin{
-    background-image: url(../images/imgs-bg-login/BG2-login.jpg);
+    color: var(--white);
+    background-image: url();
     width: 100%;
     height: 90%;
     font-size: 30px;
@@ -11,6 +12,9 @@
     padding-top: 20px;
 }
 @media(min-width:1024px){
+    #admin-welcome{
+        top: 25px;
+    }
     #numbers-admin{
         margin-top: 40px;
         width: 80%;

@@ -1,6 +1,6 @@
 #admin-welcome{
     position: absolute;
-    top: 0;
+    top: 100px;
 }
 #content{
     background-image: url(/images/registro/teclado-original.jpg);

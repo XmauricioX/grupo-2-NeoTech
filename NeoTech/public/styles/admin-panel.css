@@ -24,6 +24,7 @@
     right: 20px;
     top: 20px;
     font-size: 20px;
+    color: var(--white);
 }
 /* SIDEBAR CONTAINER */
 #container-admin #sidebar{
@@ -52,6 +53,7 @@
 }
 #container-admin #sidebar #admin-name{
     font-size: 20px;
+    color: var(--white);
 }
 #container-admin #sidebar #admin-info #picture-admin{
     margin: 20px;
@@ -93,6 +95,7 @@
 #container-admin #hamburguer-admin{
     margin: 20px 0 0 20px;
     font-size: 20px;
+    color: var(--white);
 }
 #container-admin #content{
     height: 90vh;
@@ -103,6 +106,7 @@
 }
 #container-admin #content #admin-welcome{
     font-size: 30px;
+    color: var(--white);
 }
 #navigation{
     height: 150px
