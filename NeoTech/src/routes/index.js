@@ -5,7 +5,7 @@ let controller = require('../controllers/indexController')
 
 /* GET home page. */
 router.get('/', controller.index)
-/* GET CONTACT PAGE */
+/* GET contact page */
 router.get('/contacto', controller.contact)
 
 

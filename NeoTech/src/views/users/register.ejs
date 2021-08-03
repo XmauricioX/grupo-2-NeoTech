@@ -1,44 +1,45 @@
+<!-- HEAD -->
 <%- include('../partials/head.ejs') %>
 
     <body>
 
         <%- include('../partials/header.ejs') %>
 
-            <%- include('../partials/nav.ejs') %>
+        <%- include('../partials/nav.ejs') %>
 
-                <!-- Registro -->
-                <div id="registro">
-                    <h1>Registro</h1>
-                    <form>
-                        <nav class="container">
-                            <!-- name -->
-                            <label for="text"></label>
-                            <input class="text" type="text" name="text" id="text" placeholder="Nombre Completo">
-                            <!-- email -->
-                            <label for="email"></label>
-                            <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
-                            <!-- password -->
-                            <label for="password"></label>
-                            <input class="password" type="password" id="password" placeholder="Ingrese su contraseña">
-                            <!-- button log in -->
-                            <button class="button-login" type="submit" value="log-in">Registrarse</button>
-                        </nav>
-                    </form>
-                </div>
+            <!-- Registro -->
+            <div id="registro">
+                <h1>Registro</h1>
+                <form>
+                    <nav class="container">
+                        <!-- name -->
+                        <label for="text"></label>
+                        <input class="text" type="text" name="text" id="text" placeholder="Nombre Completo">
+                        <!-- email -->
+                        <label for="email"></label>
+                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
+                        <!-- password -->
+                        <label for="password"></label>
+                        <input class="password" type="password" id="password" placeholder="Ingrese su contraseña">
+                        <!-- button log in -->
+                        <button class="button-login" type="submit" value="log-in">Registrarse</button>
+                    </nav>
+                </form>
+            </div>
 
-                <div class="networks">
-                    <!-- button facebook -->
-                    <button class="button-facebook"><img class="logo-face" src="/images/icons/icon-login-face.png"
-                            alt="logo-face">Registrarse con Facebook</button>
+            <div class="networks">
+                <!-- button facebook -->
+                <button class="button-facebook"><img class="logo-face" src="/images/icons/icon-login-face.png"
+                        alt="logo-face">Registrarse con Facebook</button>
 
-                    <!-- button google -->
-                    <button class="button-google"><img class="logo-google" src="/images/icons/icon-login-google.png"
-                            alt="logo-google">Registrarse con Google</button>
-                </div>
+                <!-- button google -->
+                <button class="button-google"><img class="logo-google" src="/images/icons/icon-login-google.png"
+                        alt="logo-google">Registrarse con Google</button>
+            </div>
 
-                <%- include('../partials/footer.ejs') %>
+        <%- include('../partials/footer.ejs') %>
 
-                    <%- include('../partials/scripts.ejs') %>
+        <%- include('../partials/scripts.ejs') %>
     </body>
 
-    </html>
+</html>

@@ -3,9 +3,8 @@ var router = express.Router();
 let controller = require('../controllers/productController')
 
 
-/* GET product-list. */
+/* GET products page. */
 router.get('/lista-de-productos', controller.productList)
-/* GET product-detail */
 router.get('/detalle-de-productos', controller.productDetail)
 
 

@@ -3,7 +3,7 @@ var router = express.Router();
 let controller = require('../controllers/adminController')
 
 
-
+/* GET admin page. */
 router.get('/panel-general', controller.panel)
 router.get("/agregar-producto", controller.agregarProducto)
 router.get("/editar-cuenta", controller.editCuenta)
