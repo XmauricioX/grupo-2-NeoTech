@@ -129,6 +129,8 @@
         display: flex;
         flex-direction: row;
         position: relative;
+
+        margin-top: 80px;
     }
     #container-admin #content{
         position: absolute;

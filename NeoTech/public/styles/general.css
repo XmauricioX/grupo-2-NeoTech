@@ -1,14 +1,12 @@
 :root{
     /* COLORS */
+    --green:#2EDD02;
     --black:#000000;
     --dark-grey:#242424;
-    --green:#2EDD02;
     --grey:#363636;
     --white:#FFFFFF;
     /* FONTS */
     --quicksand: quicksand;
-
-
 }
 *{
     box-sizing: border-box;
