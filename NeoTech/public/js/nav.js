@@ -10,7 +10,7 @@ btnMenu.addEventListener('click', function () {
 });
 
 //SUBMENU
-const subMenuBtn = document.querySelectorAll(".submenu__btn");
+const subMenuBtn = document.querySelectorAll(".submenu-btn");
 for (let i = 0; i < subMenuBtn.length; i++) {
     subMenuBtn[i].addEventListener("click", function(){
         if(window.innerWidth < 1024){
