@@ -9,41 +9,128 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/d7f2d4eb0a.js" crossorigin="anonymous"></script>
     <!-- Stylesheets -->
-    
-    <link rel="stylesheet" href="/stylesheets/footer.css">
-    <link rel="stylesheet" href="/stylesheets/nav.css">
-    <link rel="stylesheet" href="/stylesheets/login.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <!-- Title -->
     <title>Neo Tech - Login</title>
 </head>
+<body id="login">
 
-<nav>
-    <div class="nav-container">
-
-        <!-- MENU HAMBURGUESA -->
-        <span class="burguer-menu" id="btnMenu"><i class="fas fa-bars"></i></span>
-
-        <!-- BARRA DE BUSQUEDA -->
-        <div class="search-bar">
-            <form id="aver" action="search">
-                <button class="btn-search">
-                    <i class="fas fa-search"></i>
-                </button>
-                <input type="search" class="input-search" placeholder="busqueda">
-            </form>
+    <header>
+        <!-- logo -->
+        <div class="logo-container">
+            <img class="logo" src="/images/imgs-logo/LOGO NeoTech.png" alt="">
         </div>
 
-        <!-- LOGO DEL NAV -->
+        <div class="container">
 
-        <div class="logo-nav-container">
-            <a href=""><img class="logoNT" src="/images/imgs-logo/NT CHICO.svg" alt=""></a>
+            <div class="icon-bank">
+                <img class="icon" src="/images/icons/iconBank-visa.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-mastercard.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-mercado-pago.svg" alt="">
+                <img class="icon" src="/images/icons/iconBank-santander.svg" alt="">
+            </div>
+
+            <div class="icon-social">
+                <img class="icon" src="/images/icons/icons8-whatsapp (1).gif" alt="">
+                <img class="icon" src="/images/icons/icons8-twitter.gif" alt="">
+                <img class="icon" src="/images/icons/icons8-facebook-rodeado-de-círculo.gif" alt="">
+                <img class="icon" src="/images/icons/icons8-instagram.gif" alt="">
+            </div>
+
         </div>
 
-        <!-- BOTON DE CARRITO -->
-        <button class="btn-open-cart" id="open-cart">
-            <img class="icon-chest" src="/images/icons/Icon-chest.svg" alt="">
-        </button>
+    </header>
 
+    <!-- NAV -->
+    <nav class="nav">
+
+        <div class="div__btn">
+    
+            <!-- MENU HAMBURGUESA -->
+            <span class="div__btn__burguer" id="btnMenu"><i class="fas fa-bars"></i></span>
+    
+            <!-- BARRA DE BUSQUEDA -->
+            <div class="div__search__bar">
+                <form class="div__search__bar__form">
+                    <button class="div__search__bar__btn__search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <input type="search" class="div__search__bar__input" placeholder="busqueda">
+                </form>
+            </div>
+    
+            <!-- LOGO DEL NAV -->
+    
+            <div class="div__logo">
+                <a href=""><img class="div__logo__NT" src="/images/imgs-logo/NT CHICO.svg" alt=""></a>
+            </div>
+    
+            <!-- BOTON DE CARRITO -->
+            <button class="btn__open__cart" id="open-cart">
+                <img class="btn__open__cart__icon__chest" src="/images/icons/Icon-chest.svg" alt="">
+            </button>
+    
+        </div> <!-- cierre nav-container -->
+    
+        <!-- MENU DESPLEGABLE MOBILE -->
+        <div class="div__menu" id="menu">
+            <ul class="div__menu__ul">
+    
+                <li class="menu__item__li"><a href="" class="menu__link"><i class="far fa-envelope"></i>contacto</a></li>
+    
+                <li class="menu__item__li container__submenu"><a href="#" class="menu__link submenu__btn"> <i class="far fa-folder"></i> marcas </a>
+                    <ul class="submenu__ul">
+                        <li class="menu__item__li"><a href="" class="menu__link">marca1</a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link">marca2</a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link">marca3</a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link">marca4</a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link">marca5</a></li>
+                    </ul>
+                </li>
+    
+                <li class="menu__item container__submenu"><a href="#" class="menu__link submenu__btn"><i class="fas fa-boxes"></i> productos </a>
+                    <ul class="submenu__ul">
+                        <li class="menu__item__li"><a href="" class="menu__link"><i class="far fa-keyboard"></i></a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link"><i class="fas fa-mouse"></i></a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link"><i class="fas fa-tv"></i></a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link"><i class="fas fa-gamepad"></i></a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link"><i class="fas fa-headphones"></i></a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link">producto6</a></li>
+                    </ul>
+                </li>
+    
+                <li class="menu__item container__submenu"><a href="#" class="menu__link submenu__btn"><i class="far fa-user-circle"></i> cuenta </a>
+                    <ul class="submenu__ul">
+                        <li class="menu__item__li"><a href="" class="menu__link">iniciar sesion</a></li>
+                        <li class="menu__item__li"><a href="" class="menu__link">crear cuenta</a></li>
+                    </ul>
+                </li>
+    
+            </ul>
+        </div>
+    
+        <!-- CARRITO DE COMPRAS -->
+        <div class="div__cart" id="cart-container">
+            <button class="btn__close__cart" id="close-cart">
+                <i class="fas fa-angle-double-right"></i>
+            </button>
+    
+            <p>
+            <h4 class="cdc">CARRITO DE COMPRAS</h4>
+            </p>
+    
+            <div class="div__ldc">LISTA DE COMPRAS</div>
+    
+            <div class="div__product">
+                <p class="empty">vacío</p>
+            </div>
+    
+            <a href="#"><input type="button" class="btn__add" value="Agregar Producto"></a>
+        </div>
+    
+    </nav>
+
+    <!-- FIN NAV -->
 
 
     <!-- login -->
@@ -119,6 +206,7 @@
     <!-- JS CARRITO-->
     <script src="/js/carrito.js"></script>
     <!-- JS NAV  -->
-    <Script src="/js/nav.js" > </Script>
+    <Script src="/js/nav.js"> </Script>
+    
 </body>   
 </html>

@@ -12,14 +12,14 @@
 }
 
 /* CONTENEDOR */
-#container {
+.container__product {
     display: grid;
     grid-template-columns: 1fr a 1fr;
     gap: 20px 0;
     margin-bottom: 60px;
 }
 /* BARRA DE BUSQUEDA */
-form{
+.form__product{
     margin: 20px auto;
     width: 80%;
     height: 35px;
@@ -30,7 +30,7 @@ form{
     flex-direction: row;
     justify-content: space-between;
 }
-form input{
+.form__product input{
     background-color: var(--color-Dark);
     outline: none;
     border: none;
@@ -40,7 +40,7 @@ form input{
     padding-left: 10px;
     border-radius: 20px;
 }
-form i{
+.form__product i{
     width: 10%;
     height: auto;
     padding: auto;
@@ -48,7 +48,7 @@ form i{
     color: var(--color-Green);
 }
 /* PARTE SUPERIOR */
-#container .card {
+.container__product .card {
     margin: auto;
     background-color: var(--color-Dark);
     width: 280px;
@@ -56,19 +56,19 @@ form i{
     box-shadow: 0px 0px 30px black;
     position: relative;
 }
-#container .card .img-container{
+.container__product .card .img-container{
     width: 100%;
     height: 320px;
     z-index: 0;
     position: relative;
 }
-#container .img-container .img-0{
+.container__product .img-container .img-0{
     z-index: 1;
     position: absolute;
     width: 100%;
     height: inherit;
 }
-#container .img-container .img-1{
+.container__product .img-container .img-1{
     height: inherit;
     position: absolute;
     z-index: 2;
@@ -129,19 +129,15 @@ hr{
     box-shadow: 0px 0px 2px black;
 }
 @media (min-width: 768px){
-    #container{
+    .container__product{
         grid-template-columns: repeat(2,1fr);
     }
 }
 @media (min-width: 1024px){
-    #aver{
-        margin-top: 100px;
-    }
-
-    form{
+    .form__product{
         width: 50%;
     }
-    #container{
+    .container__product{
         grid-template-columns: repeat(3,1fr);
     }
     .mas:hover .masp{

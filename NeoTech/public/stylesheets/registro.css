@@ -1,8 +1,6 @@
 @import url("/stylesheets/variables.css");
 
-.login{
-    margin-top: 20px !important;
-}
+
 
 /* Background body */
 #registro {
@@ -23,24 +21,24 @@
 }
 
 /* form */
-#registro form {
+#registro .registro__form {
     backdrop-filter: blur(4px);
     border: 1px solid var(--color-Green);
     border-radius: 30px;
-    max-width: 290px;
+    max-width: 280px;
     /* max-width: 90%; */
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.582);
 }
 
-#registro form .container {
+#registro .registro__form .container {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding-top: 5%;
 }
 
-#registro form .container .text {
+/* #registro .registro__form .container .text {
     border: black;
     border-radius: 10px;
     font-size: 16px;
@@ -50,7 +48,7 @@
     width: 85%;
     outline: none;
 } 
-#registro form .container .email {
+#registro .registro__form .container .email {
     border: black;
     border-radius: 10px;
     font-size: 16px;
@@ -59,19 +57,29 @@
     padding: 12px 5px;
     text-align: initial;
     width: 85%;
-} 
+}  */
 
-#registro form .container .password {
+#registro .registro__form .container .password__registro,
+#registro .registro__form .container .text__registro, 
+#registro .registro__form .container .email__registro {
     border: black;
     border-radius: 10px;
     font-size: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 15px;
     outline: none;
     padding: 12px 5px;
     text-align: initial;
     width: 85%;
-} 
-#registro input {
+}  
+
+
+#registro .registro__form .container .password__registro {
+    margin-bottom: 30px;
+}
+
+#registro .text__registro, 
+#registro .email__registro, 
+#registro .password__registro {
     display: block;
     padding: 10px 50px;
     margin: 15px 0;
@@ -102,14 +110,14 @@
     color: black;
 }
 
-#registro form .container a {
+#registro .registro__form .container a {
     color: white;
     font-size: 15px;
     padding-bottom: 9px;
     text-decoration: none;
 }
 
-#registro form .container a:hover{
+#registro .registro__form .container a:hover{
     color: var(--color-Green);
 }
 
@@ -184,32 +192,29 @@
         margin-bottom: 15px;
     }
     
-    #registro form {
+    #registro .registro__form {
         max-width:420px;
         /* max-width: 60%; */
     }
-    #registro form .container {
+    #registro .registro__form .container {
         padding-top: 10%;
     }
     
-    #registro form .container .text {
-        font-size: 23px;
-        margin-bottom: 20px;
-    } 
-    #registro form .container .email {
-        font-size: 23px;
+    #registro .registro__form .container .text__registro,
+    #registro .registro__form .container .email__registro {
+        font-size: 20px;
         margin-bottom: 20px;
     } 
     
-    #registro form .container .password {
-        font-size: 23px;
+    #registro .registro__form .container .password__registro {
+        font-size: 20px;
         margin-bottom: 30px;
     }
     #registro .button-login {
         border-radius: 40px;
         font-size:24px;
     }
-    #registro form .container a {
+    #registro .registro__form .container a {
         font-size: 18px;
     }
     /* social media buttons */
@@ -252,27 +257,27 @@
         margin-bottom: 10px;
     }
 
-    #registro form {
+    #registro .registro__form {
         border-radius: 30px;
         width: 320px;
     }
 
-    #registro form .container {
+    #registro .registro__form .container {
         padding-top: 10%;
     }
 
-    #registro form .container .text {
+    #registro .registro__form .container .text {
         font-size: 17px;
         margin-bottom: 20px;
         padding: 10px 30px 10px 5px;
     } 
-    #registro form .container .email {
+    #registro .registro__form .container .email {
         font-size: 17px;
         padding: 10px 30px 10px 5px;
         margin-bottom: 20px;
     } 
 
-    #registro form .container .password {
+    #registro .registro__form .container .password {
         font-size: 17px;
         padding: 10px 30px 10px 5px;
         
@@ -287,7 +292,7 @@
         color: black;
     }
 
-    #registro form .container a {
+    #registro .registro__form .container a {
         color: white;
         padding-bottom: 9px;
         text-decoration: none;
@@ -310,8 +315,4 @@
         right: 194px;
         width: 32px;
     }
-}
-#aver{
-    background-color: var(--color-Dark) !important;
-    border: var(--color-Dark) !important;
 }

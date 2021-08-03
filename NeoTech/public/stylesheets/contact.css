@@ -4,7 +4,6 @@
 /* Background body */
 #contact .container-contact {
     margin-bottom: 35px;
-    margin-top: 30px;
 }
 #contact {
     background-image: url(/images/imgs-bg-login/teclado-original.jpg);
@@ -32,7 +31,7 @@
 }
 
 /* form */
-#contact form {
+#contact .contact__form  {
     background-color: rgba(0, 0, 0, 0.582);
     backdrop-filter: blur(4px);
     border: 1px solid var(--color-Green);
@@ -42,24 +41,24 @@
     margin: 0 auto;
 }
 
-#contact form .container-form {
+#contact .contact__form .nav__form {
     align-items: center;
     display: flex;
     flex-direction: column;
     padding-top: 10%;
-    width: 80%; /* agregue esto para que se ensanchen los input, sino quedan pisados los estilos del nav y quedan chicos los input */
 }
 
-#contact input {
+.nav__form .email, 
+.nav__form .message, 
+.nav__form .text {
     display: block;
     background-color: var(--color-Dark);
     border: 1px solid black;
     color: white;
     outline: none;
-    width: 100% !important;
 }
 
-#contact form .container-form .email {
+.email {
     border: black;
     border-radius: 10px;
     font-size: 17px;
@@ -70,7 +69,7 @@
     text-align: initial;
 } 
 
-#contact form .container-form .text {
+.text {
     border: black;
     border-radius: 10px;
     font-size: 17px;
@@ -82,7 +81,7 @@
 
 /* message */
 
-#contact .container-form .message {
+.message {
     background-color: var(--color-Dark);
     border: 1px solid black;
     color: white;
@@ -91,7 +90,7 @@
     resize: none;
 }
 
-#contact form .container-form .message {
+.message {
     border: black;
     border-radius: 10px;
     font-size: 17px;
@@ -138,12 +137,16 @@
         top: 30px;
     }
 
-    #contact form {
+    #contact .contact__form .nav__form {
+        padding-top: 6%;
+    }  
+
+    #contact .contact__form {
         max-width:420px;
         /* max-width: 60%; */
     }
 
-    #contact form .container-form {
+    #contact .contact__form .container-form {
         padding-top: 10%;
     }
 
@@ -189,22 +192,22 @@
         display: none;
     }
 
-    #contact form {
+    #contact .contact__form {
         /* max-width:700px; */
         max-width: 50%;
     }
 
-    #contact form .container-form {
+    #contact .contact__form .container-form {
         padding-top: 5%;
     }
 
-    #contact form .container-form .email {
+    #contact .contact__form .container-form .email {
         font-size: 23px;
         margin-bottom: 25px;
         width: 90%;
     } 
     
-    #contact form .container-form .text {
+    #contact .contact__form .container-form .text {
         font-size: 23px;
         margin-bottom: 25px;
         width: 90%;
@@ -212,7 +215,7 @@
 
     /* message */
 
-    #contact form .container-form .message {
+    #contact .contact__form .container-form .message {
     padding: 8px 8px 280px 6px;
     text-align: initial;
     font-weight:bold;
@@ -221,7 +224,11 @@
 }
 
 
-#aver{
-    background-color: var(--color-Dark) !important;
-    border: var(--color-Dark) !important;
-}
+
+
+
+
+
+
+
+
