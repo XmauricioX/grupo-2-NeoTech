@@ -1,7 +1,7 @@
 module.exports = {
     index: (req, res) => {
         res.render('home', {
-            title: 'NeoTech - Inicio',
+            title: 'NeoTech - Inicio'
         })
     },
     contact: (req, res) => {

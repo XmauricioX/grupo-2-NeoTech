@@ -9,10 +9,12 @@ var adminRouter = require('./routes/admin');
 
 /* VISTAS */
 app.set('view engine', 'ejs');
-app.set('views',(__dirname, 'views/users'));
+app.use(express.static('public'));
+
 /* app.set('views', './views/users'); */
 
 app.use(express.static('public'));
+
 /* RUTAS */
 app.use('/', indexRouter);
 app.use('/cuenta', usersRouter);
@@ -38,11 +40,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 // view engine setup
-
+app.set('views', path.join(__dirname, 'views'));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 
 /* RUTAS */
 

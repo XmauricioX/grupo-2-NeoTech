@@ -1,12 +1,12 @@
 module.exports = {
     login: (req, res) => {
-        res.render('login', {
+        res.render('users/login', {
             title: 'NeoTech - Iniciar Sesion',
         })
     },
     register: (req, res) => {
-        res.render('register', {
-            title: 'NoeTech - registro',
+        res.render('users/register', {
+            title: 'NeoTech - registro',
         })
     }
 }

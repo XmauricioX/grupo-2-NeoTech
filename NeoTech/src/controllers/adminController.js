@@ -1,6 +1,6 @@
 module.exports = {
     panel: (req, res) => {
-        res.render('/admin/adminPanel', {
+        res.render('admin/adminPanel', {
             title: 'NeoTech - Panel General',
         })
     },
