@@ -20,11 +20,11 @@ ayer no pude usar el nav ,hoy lo arregle y voy a ponerlo en otras vistas,problem
 2/8
 Franco
 Ayer estuve revisando las vistas y haciendo pequeños cambios(margin, clases de css), hoy practique rutas y revise las tarjetas de trello y las aignaciones de tareas, problemas no renderizaba el home
-
-2/8
 Ariel
 Ayer implemente las rutas para renderizar los archivos ejs, hoy estuve arreglando las vistas que faltaban, impedimento, problemas con algunas de las rutas y vistas
-
-2/8
 Mauri
 Ayer espere el sprint, hoy ayude a Ariel a arreglar las rutas para que renderizen las vistas, impedimento: arreglar las rutas
+
+4/8
+mauricio:
+ayer hice los partials al admin y arregle los links para el css del amin, hoy voy a arreglar detalles del admin
