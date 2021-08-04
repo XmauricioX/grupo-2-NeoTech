@@ -28,3 +28,7 @@ Ayer espere el sprint, hoy ayude a Ariel a arreglar las rutas para que renderize
 4/8
 mauricio:
 ayer hice los partials al admin y arregle los links para el css del amin, hoy voy a arreglar detalles del admin
+Franco:
+ayer: arregle detalles de la vista contacto y login,hoy agregue los links en el nav e intente hacer una vista dinamica, impedimento: la vista dinamica
+Ariel:
+ayer agrgue las rutas que faltaban para los ejs,hoy estaba revisando el trello,
