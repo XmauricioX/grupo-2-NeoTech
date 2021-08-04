@@ -115,6 +115,7 @@ hr{
     right: -220px;
     font-size: 40px;
     color: var(--color-Green-Old);
+    cursor: pointer;
 }
 @media (min-width: 768px){
     #container{
