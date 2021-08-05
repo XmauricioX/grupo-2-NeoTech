@@ -11,7 +11,7 @@ module.exports = {
         res.render("admin/admin-edit-account", {title: 'NeoTech - Editar Cuenta'})
     },
     formEditProducto: (req,res)=>{
-        res.render("admin/admin-edit-product-form", {title: 'NeoTech - Form Editar Producto', db})
+        res.render("admin/admin-edit-product-form", {title: 'NeoTech - Form Editar Producto'})
     },
     editProducto: (req,res)=>{
         res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto', db})
