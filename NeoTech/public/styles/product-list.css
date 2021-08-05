@@ -1,7 +1,5 @@
 
 #product-list {
-    
-
 }
 
 /* CONTENEDOR */
@@ -137,7 +135,7 @@ hr{
         width: 50%;
     }
     .container__product{
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
     .mas:hover .masp{
         display: inline;
