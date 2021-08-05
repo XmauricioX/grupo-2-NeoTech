@@ -21,15 +21,28 @@
 
             <div id="container-form">         
 
-                <form id="form-add" action="/registro" method="POST">
+                <form id="form-add" action="/administrador/admin-edit-product-form" method="POST">
         
-                    <input type="file" id="t-file">
-        
-                    <input type="email" name="" id="" placeholder="Nombre">
-        
-                    <input type="password" name="" id="" placeholder="Precio"> 
-        
-                    <input type="text" name="" id="description" placeholder="Descripción">
+                    <input type="file" name="" id="t-file">
+                    <input type="text" name="aaa" id="" placeholder="Nombre">
+                    <input type="number" min="0" max="1000000" step="10" name="precio" id="" placeholder="Precio"> 
+                    
+                    <div id="categorias">
+                        
+                        <label id="label-categoria" for="form-add">CATEGORIA</label>
+                        <select name="" id="categorias-select"> 
+                            <option value="gabinete">Gabinete</option>
+                            <option value="monitor">Monitor</option>
+                            <option value="mouse">Mouse</option>
+                            <option value="auricular">Ariculares</option>
+                            <option value="Joystick">Joystick</option>
+                            <option value="Teclado">Teclado</option>
+                        </select>
+                        
+                    </div> 
+                    
+                    <input type="option" name="colores" id="" value="" placeholder="color/es">
+                    <npiut type="text" name="" id="description" placeholder="Descripción"> 
 
                     <input class="submit" type="submit" value="Guardar">
                
