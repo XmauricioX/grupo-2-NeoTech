@@ -44,57 +44,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-/* RUTAS */
-
-
-
-app.get('/market', function(req, res,) {
-  res.sendFile(path.join(__dirname, '/views/market.html'))
-});
-
-app.get('/market-full', function(req, res,) {
-  res.sendFile(path.join(__dirname, '/views/market-full.html'))
-});
-
-app.get('/product-detail', function(req, res,) {
-  res.sendFile(path.join(__dirname, '/views/product-detail.html'))
-});
-
-app.get("/product-list", function (req,res){
-  res.sendFile(path.join(__dirname, "/views/product-list.html"))
-});
-
-
-
-// ADMIN PANEL
-
-app.get("/admin-panel", function(req,res){
-  res.sendFile(path.join(__dirname, "/views/admin-panel.html"))
-});
-
-app.get("/admin-add-product", function(req,res){
-  res.sendFile(path.join(__dirname, "/views/admin-add-product.html"))
-});
-
-app.get("/admin-edit-product", function(req,res){
-  res.sendFile(path.join(__dirname, "/views/admin-edit-product.html"))
-});
-
-app.get("/admin-edit-product-form", function(req,res){
-  res.sendFile(path.join(__dirname, "/views/admin-edit-product-form.html"))
-});
-
-app.get("/admin-users", function(req,res){
-  res.sendFile(path.join(__dirname, "/views/admin-users.html"))
-});
-
-app.get("/admin-sell-stock", function(req,res){
-  res.sendFile(path.join(__dirname, "/views/admin-sell-stock.html"))
-});
-
-app.get("/admin-edit-account", function(req,res){
-  res.sendFile(path.join(__dirname, "/views/admin-edit-account.html"))
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
