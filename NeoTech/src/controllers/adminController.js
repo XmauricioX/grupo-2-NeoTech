@@ -1,3 +1,6 @@
+let db = require("../data/dataBase");
+
+
 module.exports = {
     panel: (req, res) => {
         res.render('admin/adminPanel', {title: 'NeoTech - Panel General'})
@@ -12,7 +15,7 @@ module.exports = {
         res.render("admin/admin-edit-product-form", {title: 'NeoTech - Form Editar Producto'})
     },
     editProducto: (req,res)=>{
-        res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto'})
+        res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto', db })
     },
     ventaStock: (req,res)=>{
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})

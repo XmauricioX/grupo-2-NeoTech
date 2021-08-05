@@ -25,7 +25,8 @@
             </form>
 
             <main id="container">
-        
+
+                <% db.forEach(e => { %>
                 <div class="card">
                     
                     <figure class="img-container">
@@ -35,16 +36,22 @@
                         <!-- IMAGEN DEL PRODUCTO -->
                     </figure>
                     <hr>
-        
-                    <div class="text-card">
-                        <h2 class="name-card">lorem</h2>
-                        <h2 class="number-card">$000</h2>
-                        <p class="description-card">lorem ipsum dolor</p>
+                    
+                    <div <%= e.id %> class="text-card" >
+                        <% array.forEach(e => { %>
+                            <h2 class="name-card"><%= e.categoria.color %></h2>
+                        }); 
+                        %>
+
+                        <h2 class="number-card">$ <%= e.precio %></h2>
+                        <p class="description-card"><%= e.descripcion %></p>
 
                         <a class="mas" href="/"> <i class="fas fa-pencil-alt"></i> </a>
                         <i id="delete-product" class="fas fa-times"></i>
-                    </div>
-                </div>               
+                    </div>      
+
+                </div>    
+                <% }) %>           
                 
             </main>
 
