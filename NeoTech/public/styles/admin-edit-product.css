@@ -3,8 +3,9 @@
     top: 80px;
 }
 #content{
-    margin-top: -80px;
-    height: 110vh !important ;
+    margin-top: -70px;
+    height: 108vh !important ;
+    padding-top: 50%;
 }
 /* CONTENEDOR */
 #container{

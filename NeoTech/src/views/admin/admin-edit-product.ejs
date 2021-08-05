@@ -25,8 +25,8 @@
             </form>
 
             <main id="container">
-
-                <% db.forEach(e => { %>
+        <% db.forEach(element => { %>
+            
                 <div class="card">
                     
                     <figure class="img-container">
@@ -36,20 +36,20 @@
                         <!-- IMAGEN DEL PRODUCTO -->
                     </figure>
                     <hr>
-                    
-                    <div <%= e.id %> class="text-card" >
-                            <h2 class="name-card"><%= e.categoria.color %></h2>
-
-                        <h2 class="number-card">$ <%= e.precio %></h2>
-                        <p class="description-card"><%= e.descripcion %></p>
+        
+                    <div class="text-card">
+                        <h2 class="name-card"><%= element.marca %></h2>
+                        <h2 class="number-card"><%= element.anio %></h2>
+                        <p class="description-card"> Modelo: <%= element.modelo %> <br> Color: <%= element.color %> </p>
 
                         <a class="mas" href="/"> <i class="fas fa-pencil-alt"></i> </a>
                         <i id="delete-product" class="fas fa-times"></i>
-                    </div>      
+                    </div>
+                </div>               
 
-                </div>    
-                <% }) %>           
+        <% }) %>
                 
+
             </main>
 
         </main>

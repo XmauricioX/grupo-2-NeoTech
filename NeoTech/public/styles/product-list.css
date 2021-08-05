@@ -1,17 +1,21 @@
 
 #product-list {
-    background-image: url(/images/imgs-bg/teclado-original.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    
+
 }
 
 /* CONTENEDOR */
 .container__product {
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
     display: grid;
     grid-template-columns: 1fr a 1fr;
     gap: 20px 0;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
+    padding-top: 100px;
 }
 /* BARRA DE BUSQUEDA */
 .form__product{

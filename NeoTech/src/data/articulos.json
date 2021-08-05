@@ -1,172 +1,112 @@
 [
     {
-      "id": "1",
-      "precio": 4500,
-      "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
-      "categoria" : [{
-                "producto": "Joystick",
-                "marca": "Sony",
-                "stock": "27",
-                "color": "Negro",
-                "imagen": "auris.jpg"                    
-            },
-            {
-                "producto": "Joystick",
-                "marca": "Sony",
-                "stock": "27",
-                "color": "Negro",
-                "imagen": "auris.jpg"
-            },
-            {
-                "producto": "Joystick",
-                "marca": "Sony",
-                "stock": "27",
-                "color": "Negro",
-                "imagen": "auris.jpg"
-            },
-            {
-                "producto": "Joystick",
-                "marca": "Sony",
-                "stock": "27",
-                "color": "Negro",
-                "imagen": "auris.jpg"
-            }
-        ]         
-    },
-    {
-        "id": "1",
-        "precio": 4500,
-        "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
-        "categoria" : [{
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"                    
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              }
-          ]         
-      },
-      {
-        "id": "1",
-        "precio": 4500,
-        "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
-        "categoria" : [{
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"                    
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              }
-          ]         
-      },
-      {
-        "id": "1",
-        "precio": 4500,
-        "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
-        "categoria" : [{
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"                    
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              }
-          ]         
-      },
-      {
-        "id": "1",
-        "precio": 4500,
-        "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
-        "categoria" : [{
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"                    
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              },
-              {
-                  "producto": "Joystick",
-                  "marca": "Sony",
-                  "stock": "27",
-                  "color": "Negro",
-                  "imagen": "auris.jpg"
-              }
-          ]         
-      }
+           "id" : 1,
+           "marca": "volkswagen",
+           "modelo": "scirocco",
+           "anio": 2016,
+           "color": "black",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+           
+       },
+       {
+           "id" : 2,
+           "marca": "peugeot",
+           "modelo": "207",
+           "anio": 2020,
+           "color": "red",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 3,
+           "marca": "chevrolet",
+           "modelo": "cruze",
+           "anio": 2020,
+           "color": "white",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 4,
+           "marca": "nissan",
+           "modelo": "x-trail",
+           "anio": 2020,
+           "color": "brown",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 5,
+           "marca": "chevrolet",
+           "modelo": "onix",
+           "anio": 2017,
+           "color": "white",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 6,
+           "marca": "renault",
+           "modelo": "kangoo",
+           "anio": 2016,
+           "color": "black",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 7,
+           "marca": "audi",
+           "modelo": "a3",
+           "anio": 2020,
+           "color": "black",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 8,
+           "marca": "volkswagen",
+           "modelo": "golf",
+           "anio": 2020,
+           "color": "gray",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 9,
+           "marca": "volkswagen",
+           "modelo": "golf",
+           "anio": 2020,
+           "color": "gray",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 10,
+           "marca": "volkswagen",
+           "modelo": "golf",
+           "anio": 2020,
+           "color": "gray",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 11,
+           "marca": "volkswagen",
+           "modelo": "golf",
+           "anio": 2020,
+           "color": "gray",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       },
+       {
+           "id" : 12,
+           "marca": "volkswagen",
+           "modelo": "golf",
+           "anio": 2020,
+           "color": "gray",
+           "sucursal": 1,
+           "imagen": "auto.jpg"
+       }
 ]
+
