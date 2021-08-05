@@ -1,634 +1,252 @@
 [
     {
-           "id" : 1,
-           "marca": "volkswagen",
-           "modelo": "scirocco",
-           "anio": 2016,
-           "color": "black",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-           
-       },
-       {
-           "id" : 2,
-           "marca": "peugeot",
-           "modelo": "207",
-           "anio": 2020,
-           "color": "red",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 3,
-           "marca": "chevrolet",
-           "modelo": "cruze",
-           "anio": 2020,
-           "color": "white",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 4,
-           "marca": "nissan",
-           "modelo": "x-trail",
-           "anio": 2020,
-           "color": "brown",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 5,
-           "marca": "chevrolet",
-           "modelo": "onix",
-           "anio": 2017,
-           "color": "white",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 6,
-           "marca": "renault",
-           "modelo": "kangoo",
-           "anio": 2016,
-           "color": "black",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 7,
-           "marca": "audi",
-           "modelo": "a3",
-           "anio": 2020,
-           "color": "black",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 8,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 9,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 10,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 11,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 12,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 13,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 14,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 1,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 15,
-           "marca": "fiat",
-           "modelo": "toro",
-           "anio": 2019,
-           "color": "black",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 16,
-           "marca": "volkswagen",
-           "modelo": "vento",
-           "anio": 2019,
-           "color": "black",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 17,
-           "marca": "ford",
-           "modelo": "focus",
-           "anio": 2014,
-           "color": "blue",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 18,
-           "marca": "ford",
-           "modelo": "fiesta",
-           "anio": 2010,
-           "color": "white",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 19,
-           "marca": "nissan",
-           "modelo": "x-trail",
-           "anio": 2020,
-           "color": "brown",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 20,
-           "marca": "chevrolet",
-           "modelo": "onix",
-           "anio": 2017,
-           "color": "white",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 21,
-           "marca": "volkswagen",
-           "modelo": "amarok",
-           "anio": 2020,
-           "color": "black",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 22,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 23,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 24,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 25,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 26,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 27,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 2,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 28,
-           "marca": "volkswagen",
-           "modelo": "amarok",
-           "anio": 2019,
-           "color": "white",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 29,
-           "marca": "volkswagen",
-           "modelo": "amarok",
-           "anio": 2010,
-           "color": "gray",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 30,
-           "marca": "audi",
-           "modelo": "tt",
-           "anio": 2019,
-           "color": "white",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 31,
-           "marca": "audi",
-           "modelo": "tt",
-           "anio": 2012,
-           "color": "black",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id" : 32,
-           "marca": "chevrolet",
-           "modelo": "cruze",
-           "anio": 2018,
-           "color": "black",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 33,
-           "marca": "audi",
-           "modelo": "q5",
-           "anio": 2018,
-           "color": "black",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 34,
-           "marca": "audi",
-           "modelo": "q5",
-           "anio": 2015,
-           "color": "blue",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 35,
-           "marca": "chevrolet",
-           "modelo": "camaro",
-           "anio": 2015,
-           "color": "red",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 36,
-           "marca": "renault",
-           "modelo": "captur",
-           "anio": 2020,
-           "color": "orange",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 37,
-           "marca": "fiat",
-           "modelo": "argo",
-           "anio": 2020,
-           "color": "white",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 38,
-           "marca": "renault",
-           "modelo": "duster",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 39,
-           "marca": "renault",
-           "modelo": "sandero",
-           "anio": 2020,
-           "color": "blue",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 40,
-           "marca": "ford",
-           "modelo": "ka",
-           "anio": 2020,
-           "color": "green",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 41,
-           "marca": "peugeot",
-           "modelo": "partner",
-           "anio": 2020,
-           "color": "white",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 42,
-           "marca": "toyota",
-           "modelo": "hilux",
-           "anio": 2020,
-           "color": "white",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 43,
-           "marca": "fiat",
-           "modelo": "cronos",
-           "anio": 2020,
-           "color": "red",
-           "sucursal": 3,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 44,
-           "marca": "chevrolet",
-           "modelo": "camaro",
-           "anio": 20120,
-           "color": "black",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 45,
-           "marca": "nissan",
-           "modelo": "note",
-           "anio": 2020,
-           "color": "white",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 46,
-           "marca": "chevrolet",
-           "modelo": "onix",
-           "anio": 2019,
-           "color": "red",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 47,
-           "marca": "volkswagen",
-           "modelo": "scirocco",
-           "anio": 2015,
-           "color": "white",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 48,
-           "marca": "volkswagen",
-           "modelo": "golf",
-           "anio": 2016,
-           "color": "white",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 49,
-           "marca": "nissan",
-           "modelo": "sentra",
-           "anio": 2017,
-           "color": "black",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 50,
-           "marca": "citroen",
-           "modelo": "c4",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 51,
-           "marca": "citroen",
-           "modelo": "berlingo",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 52,
-           "marca": "peugeot",
-           "modelo": "208",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 53,
-           "marca": "fiat",
-           "modelo": "fiorino",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 54,
-           "marca": "toyota",
-           "modelo": "etios",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 55,
-           "marca": "ford",
-           "modelo": "ecosport",
-           "anio": 2015,
-           "color": "red",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 56,
-           "marca": "chery",
-           "modelo": "tiggo",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 57,
-           "marca": "renault",
-           "modelo": "sandero",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 4,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 58,
-           "marca": "nissan",
-           "modelo": "note",
-           "anio": 2018,
-           "color": "red",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 59,
-           "marca": "chevrolet",
-           "modelo": "camaro",
-           "anio": 2018,
-           "color": "white",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 60,
-           "marca": "chevrolet",
-           "modelo": "onix",
-           "anio": 2016,
-           "color": "gray",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 61,
-           "marca": "honda",
-           "modelo": "civic",
-           "anio": 2020,
-           "color": "black",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 62,
-           "marca": "audi",
-           "modelo": "a6",
-           "anio": 2016,
-           "color": "red",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 63,
-           "marca": "nissan",
-           "modelo": "x-trail",
-           "anio": 2016,
-           "color": "gray",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 64,
-           "marca": "peugeot",
-           "modelo": "2008",
-           "anio": 2020,
-           "color": "green",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 65,
-           "marca": "toyota",
-           "modelo": "hilux",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 66,
-           "marca": "volkswagen",
-           "modelo": "saveiro",
-           "anio": 2020,
-           "color": "blue",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 67,
-           "marca": "fiat",
-           "modelo": "golf",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 68,
-           "marca": "fiat",
-           "modelo": "palio",
-           "anio": 2017,
-           "color": "white",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 69,
-           "marca": "peugeot",
-           "modelo": "307",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       },
-       {
-           "id": 70,
-           "marca": "renault",
-           "modelo": "sandero",
-           "anio": 2020,
-           "color": "gray",
-           "sucursal": 5,
-           "imagen": "auto.jpg"
-       }
+        "id": 1,
+        "marca": "Sony",
+        "descripcion": "Cuenta con Bluetooth. Pantalla táctil. Mando inalámbrico.  Incluye un control. Con sistema de vibración incorporado. Diversión garantizada con tu joystick PlayStation. Diseño ergonómico.",
+        "producto": "Joystick",
+        "precio": 15000,
+        "color": "negro",
+        "categoria": "Videojuegos",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 2,
+        "marca": "Sony",
+        "descripcion": "Cuenta con Bluetooth. Pantalla táctil. Mando inalámbrico.  Incluye un control. Con sistema de vibración incorporado. Diversión garantizada con tu joystick PlayStation. Diseño ergonómico.",
+        "producto": "Joystick",
+        "precio": 15000,
+        "color": "blanco",
+        "categoria": "Videojuegos",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 3,
+        "marca": "Sony",
+        "descripcion": "Incluye control inalámbrico. Resolución de 3840px x 2160px.Memoria RAM de 16GB.Horas de diversión garantizada.Cuenta con: 1 soporte vertical, 1 cable de alimentación ac, 1 cable usb, 1 cable hdmi, 1 guía de inicio rápido, 1 guía de seguridad.",
+        "producto": "Playstation 5",
+        "precio": 190000,
+        "color": "negro",
+        "categoria": "Videojuegos",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 4,
+        "marca": "Sony",
+        "descripcion": "Alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.",
+        "producto": "Auriculares",
+        "precio": 7000,
+        "color": "blanco",
+        "categoria": "Audio",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 5,
+        "marca": "Sony",
+        "descripcion": "Alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.",
+        "producto": "Auriculares",
+        "precio": 7000,
+        "color": "rojo",
+        "categoria": "Audio",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 6,
+        "marca": "HyperX",
+        "descripcion": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore",
+        "producto": "Teclado",
+        "precio": 8000,
+        "color": "black",
+        "categoria": "Perifercos",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 7,
+        "marca": "HyperX",
+        "descripcion": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore",
+        "producto": "Teclado",
+        "precio": 8000,
+        "color": "rojo",
+        "categoria": "Perifercos",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 8,
+        "marca": "HyperX",
+        "descripcion": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore",
+        "producto": "Mouse",
+        "precio": 5500,
+        "color": "rojo",
+        "categoria": "Perifercos",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 9,
+        "marca": "HyperX",
+        "descripcion": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore",
+        "producto": "Auriculares",
+        "precio": 9300,
+        "color": "rojo",
+        "categoria": "Perifercos",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 10,
+        "marca": "HyperX",
+        "descripcion": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "producto": "Mouse",
+        "precio": 5500,
+        "color": "gris",
+        "categoria": "mouse y teclados",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 11,
+        "marca": "Logitech",
+        "descripcion": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "producto": "Parlante",
+        "precio": 3700,
+        "color": "gris",
+        "categoria": "mouse y teclados",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 12,
+        "marca": "Logitech",
+        "descripcion": "scirocco",
+        "producto": "Parlante",
+        "precio": 2500,
+        "color": "gris",
+        "categoria": "mouse y teclados",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 13,
+        "marca": "Logitech",
+        "descripcion": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "producto": "Monitor",
+        "precio": 9000,
+        "color": "blanco",
+        "categoria": "mouse y teclados",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 14,
+        "marca": "Logitech",
+        "descripcion": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "producto": "Monitor",
+        "precio": 11000,
+        "color": "blanco",
+        "categoria": "monitores",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 15,
+        "marca": "Logitech",
+        "descripcion": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "producto": "Parlantes",
+        "precio": 3200,
+        "color": "blanco",
+        "categoria": "monitores",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 16,
+        "marca": "Gigabyte",
+        "descripcion": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "producto": "Placa de video",
+        "precio": 155000,
+        "color": "azul",
+        "categoria": "monitores",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 17,
+        "marca": "Gigabyte",
+        "descripcion": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "producto": "Placa de video",
+        "precio": 157000,
+        "color": "azul",
+        "categoria": "monitores",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 18,
+        "marca": "Gigabyte",
+        "descripcion": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "producto": "Mousepad",
+        "precio": 2000,
+        "color": "azul",
+        "categoria": "placas de video",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 19,
+        "marca": "Gigabyte",
+        "descripcion": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "producto": "Mousepad",
+        "precio": 1800,
+        "color": "amarillo",
+        "categoria": 1,
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 20,
+        "marca": "Gigabyte",
+        "descripcion": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "producto": "Placa de Video",
+        "precio": 195000,
+        "color": "amarillo",
+        "categoria": 1,
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 21,
+        "marca": "Samsung",
+        "descripcion": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "producto": "Monitor",
+        "precio": 35000,
+        "color": "verde",
+        "categoria": 1,
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 22,
+        "marca": "Samsung",
+        "descripcion": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "producto": "Motherboard",
+        "precio": 7700,
+        "color": "verde",
+        "categoria": 1,
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 23,
+        "marca": "Samsung",
+        "descripcion": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "producto": "Motherboard",
+        "precio": 8000,
+        "color": "verde",
+        "categoria": "placas de video",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 24,
+        "marca": "Samsung",
+        "descripcion": "Velocidad en cada lectura Como cuenta con 1920 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa",
+        "producto": "Tv",
+        "precio": 95500,
+        "color": "negro",
+        "categoria": "placas de video",
+        "imagen": "auto.jpg"
+    },
+    {
+        "id": 25,
+        "marca": "Samsung",
+        "descripcion": "Velocidad en cada lectura Como cuenta con 1920 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa",
+        "producto": "Placa de video",
+        "precio": 130000,
+        "color": "negro",
+        "categoria": "placas de video",
+        "imagen": "auto.jpg"
+    }
 ]
-
