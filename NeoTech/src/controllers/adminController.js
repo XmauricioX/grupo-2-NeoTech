@@ -9,7 +9,7 @@ module.exports = {
         res.render("admin/admin-edit-account", {title: 'NeoTech - Editar Cuenta'})
     },
     formEditProducto: (req,res)=>{
-        res.render("admin/admin-edit-product-form", {title: 'NeoTech - Editar Producto'})
+        res.render("admin/admin-edit-product-form", {title: 'NeoTech - Form Editar Producto'})
     },
     editProducto: (req,res)=>{
         res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto'})
@@ -20,10 +20,5 @@ module.exports = {
     usuarios: (req,res)=>{
         res.render("admin/admin-users", {title: 'NeoTech - Usuarios'})
     }
-
-    /* contact: (req, res) => {
-        res.render('contact', {
-            title: 'NoeTech - Contacto',
-        })
-    } */
 }
+

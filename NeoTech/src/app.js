@@ -11,8 +11,6 @@ var adminRouter = require('./routes/admin');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-/* app.set('views', './views/users'); */
-
 
 /* RUTAS */
 app.use('/', indexRouter);
