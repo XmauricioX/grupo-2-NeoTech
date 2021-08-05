@@ -32,3 +32,7 @@ Franco:
 ayer: arregle detalles de la vista contacto y login,hoy agregue los links en el nav e intente hacer una vista dinamica, impedimento: la vista dinamica
 Ariel:
 ayer agrgue las rutas que faltaban para los ejs,hoy estaba revisando el trello,
+
+5/8
+Mauricio:
+ayer arregle el form de admin add product e intente linkear el form para edit product, hoy voy a hacer la logica para agregar productos,problemas? no pude linkear el form de edit product
