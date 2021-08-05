@@ -8,40 +8,33 @@
             <section class="product__section">
 
                 <article>
-                    <img src="/images/imgs-product/auricular.webp" alt="auricular">
+                    <img src="/images/imgs-product/<% productID.imagen %>" alt="auricular">
                 </article>
 
                 <!-- <i class="fal fa-times"></i> -->
 
                 <div class="container-r">
-                    <div class="detail">
-                        <h2>
-                            PRODUCT_NAME
-                        </h2>
-                        <p>
-                            PRODUCT_PRICE : 000$ <br> <br>
-
-                            PRODUCT_COUNT : 0 <br> <br>
-
-                            PRODUCT_COLOR : AAA <br> <br>
-
-                            PRODUCT_CATEGORY : AAA <br> <br>
-
-                            PRODUCT_INFO:
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita beatae, labore delectus
-                            esse error, ad alias voluptas accusantium doloribus reiciendis praesentium culpa! Ipsam ab
-                            laudantium eum vero nobis atque voluptatibus similique possimus velit in voluptate placeat
-                            non doloremque voluptas impedit dolorem, praesentium unde qui deserunt quam mollitia eos
-                            perspiciatis doloribus?
-                        </p>
+                        <div class="detail">
+                            <h2>
+                                <%= productID.marca %>
+                            </h2>
+                            <p>
+                                Color: <br>
+                                <%= productID.color %> <br> <br>
+                                Categoria: <br>
+                                <%= productID.categoria %> <br> <br>
+                                
+                                Descripción: <br>
+                                <%= productID.descripcion %>
+                            </p>
+                        </div>
+                        <div class="btn">
+                            <a href="">COMPRAR</a>
+                        </div>
+                        
                     </div>
-
-                    <div class="btn">
-                        <a href="">COMPRAR</a>
-                    </div>
-                </div>
-            </section>
-        </main>
+                </section>
+            </main>
     </body>
 
     </html>
