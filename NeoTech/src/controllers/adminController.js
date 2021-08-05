@@ -4,8 +4,11 @@ module.exports = {
     panel: (req, res) => {
         res.render('admin/adminPanel', {title: 'NeoTech - Panel General'})
     },
-    agregarProducto: (req,res) =>{
+    formAgregarProducto: (req,res) =>{
         res.render("admin/admin-add-product", {title: 'NeoTech - Agregar Producto'})
+    },
+    agregarProducto: (req,res) =>{ 
+        res.send(req.body)
     },
     editCuenta: (req,res)=>{
         res.render("admin/admin-edit-account", {title: 'NeoTech - Editar Cuenta'})
