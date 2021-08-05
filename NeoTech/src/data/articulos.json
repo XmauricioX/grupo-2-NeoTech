@@ -34,7 +34,7 @@
         ]         
     },
     {
-        "id": "1",
+        "id": "2",
         "precio": 4500,
         "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
         "categoria" : [{
@@ -68,7 +68,7 @@
           ]         
       },
       {
-        "id": "1",
+        "id": "3",
         "precio": 4500,
         "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
         "categoria" : [{
@@ -102,7 +102,7 @@
           ]         
       },
       {
-        "id": "1",
+        "id": "4",
         "precio": 4500,
         "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
         "categoria" : [{
@@ -136,7 +136,7 @@
           ]         
       },
       {
-        "id": "1",
+        "id": "5",
         "precio": 4500,
         "descripcion" : "gdfhdgfrgafygryfgryauiohjoihohouhfygrygfygwyfg",
         "categoria" : [{
