@@ -18,15 +18,15 @@
             <figure class="img-container">
                 <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                 <!-- FONDO -->
-                <img class="img-1" src="/images/imgs-product/auricular.webp" alt="product">
+                <img class="img-1" src="/images/imgs-product/<%- element.imagen %> " alt="product">
                 <!-- PRODUCTO -->
             </figure>
             <hr>
 
             <div class="text-card">
                 <h2 class="name-card"> <%= element.marca %> </h2>
-                <h2 class="number-card"> <%= element.anio %> </h2>
-                <p class="description-card"> Modelo: <%= element.modelo %> <br> Color: <%= element.color %> </p>
+                <h2 class="number-card"> $<%= element.precio %> </h2>
+                <p class="description-card"> Modelo: <%= element.producto %> <br> Color: <%= element.color %> </p>
                 <a class="mas carrito" href="">
                     <i class="fas fa-shopping-cart">
                         <p class="masp ">añadir al carrito</p>
