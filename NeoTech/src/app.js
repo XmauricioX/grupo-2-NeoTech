@@ -1,33 +1,26 @@
+
 var express = require('express');
 var app = express();
 
 /* ENRUTADORES */
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
 var adminRouter = require('./routes/admin');
 
 /* VISTAS */
+
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 
 /* RUTAS */
+
 app.use('/', indexRouter);
 app.use('/cuenta', usersRouter);
 app.use('/producto', productRouter);
 app.use('/administrador', adminRouter);
-
-
-
-
-
-
-
-
-
-
-
 
 ///////////////////////////////////////////////////////////
 
