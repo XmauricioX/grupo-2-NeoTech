@@ -36,3 +36,9 @@ ayer agrgue las rutas que faltaban para los ejs,hoy estaba revisando el trello,
 5/8
 Mauricio:
 ayer arregle el form de admin add product e intente linkear el form para edit product, hoy voy a hacer la logica para agregar productos,problemas? no pude linkear el form de edit product
+
+Ariel:
+ayer organice el trello, hoy agregue la vista del carrito lleno y la vista de error 404. Sin inconvenientes.
+
+Franco.
+ayer hice el JSON de productos y ordene el css del login. hoy hice un forEach y cargue las imagenes a la base de datos para poder verlas por ID.
