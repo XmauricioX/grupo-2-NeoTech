@@ -6,7 +6,7 @@
         "producto": "Joystick",
         "precio": 15000,
         "color": "negro",
-        "categoria": "Videojuegos",
+        "categoria": "Joystick",
         "imagen": "joy.png"
     },
     {
@@ -16,7 +16,7 @@
         "producto": "Joystick",
         "precio": 15000,
         "color": "blanco",
-        "categoria": "Videojuegos",
+        "categoria": "Joystick",
         "imagen": "joy.png"
     },
     {
@@ -26,7 +26,7 @@
         "producto": "Playstation 5",
         "precio": 190000,
         "color": "negro",
-        "categoria": "Videojuegos",
+        "categoria": "Joystick",
         "imagen": "play.png"
     },
     {
@@ -36,7 +36,7 @@
         "producto": "Auriculares",
         "precio": 7000,
         "color": "blanco",
-        "categoria": "Audio",
+        "categoria": "Auriculares",
         "imagen": "auri.png"
     },
     {
@@ -46,7 +46,7 @@
         "producto": "Auriculares",
         "precio": 7000,
         "color": "rojo",
-        "categoria": "Audio",
+        "categoria": "Auriculares",
         "imagen": "auri.png"
     },
     {
@@ -56,7 +56,7 @@
         "producto": "Teclado",
         "precio": 8000,
         "color": "black",
-        "categoria": "Perifercos",
+        "categoria": "Teclado",
         "imagen": "teclado.png"
     },
     {
@@ -66,7 +66,7 @@
         "producto": "Teclado",
         "precio": 8000,
         "color": "rojo",
-        "categoria": "Perifercos",
+        "categoria": "Teclado",
         "imagen": "teclado.png"
     },
     {
@@ -76,7 +76,7 @@
         "producto": "Mouse",
         "precio": 5500,
         "color": "rojo",
-        "categoria": "Perifercos",
+        "categoria": "Mouse",
         "imagen": "mouse.png"
     },
     {
@@ -86,7 +86,7 @@
         "producto": "Auriculares",
         "precio": 9300,
         "color": "rojo",
-        "categoria": "Perifercos",
+        "categoria": "Auriculares",
         "imagen": "auri.png"
     },
     {
@@ -96,7 +96,7 @@
         "producto": "Mouse",
         "precio": 5500,
         "color": "gris",
-        "categoria": "mouse y teclados",
+        "categoria": "Mouse",
         "imagen": "mouse.png"
     },
     {
@@ -106,7 +106,7 @@
         "producto": "Parlante",
         "precio": 3700,
         "color": "gris",
-        "categoria": "mouse y teclados",
+        "categoria": "Monitor",
         "imagen": "parlante.png"
     },
     {
@@ -116,7 +116,7 @@
         "producto": "Parlante",
         "precio": 2500,
         "color": "gris",
-        "categoria": "mouse y teclados",
+        "categoria": "Monitor",
         "imagen": "parlante.png"
     },
     {
@@ -126,7 +126,7 @@
         "producto": "Monitor",
         "precio": 9000,
         "color": "blanco",
-        "categoria": "mouse y teclados",
+        "categoria": "Monitor",
         "imagen": "monitor.png"
     },
     {
@@ -136,7 +136,7 @@
         "producto": "Monitor",
         "precio": 11000,
         "color": "blanco",
-        "categoria": "monitores",
+        "categoria": "Monitor",
         "imagen": "monitor.png"
     },
     {
@@ -146,7 +146,7 @@
         "producto": "Parlantes",
         "precio": 3200,
         "color": "blanco",
-        "categoria": "monitores",
+        "categoria": "Monitor",
         "imagen": "parlante.png"
     },
     {
@@ -156,7 +156,7 @@
         "producto": "Placa de video",
         "precio": 155000,
         "color": "azul",
-        "categoria": "monitores",
+        "categoria": "Monitor",
         "imagen": "placa.png"
     },
     {
@@ -166,7 +166,7 @@
         "producto": "Placa de video",
         "precio": 157000,
         "color": "azul",
-        "categoria": "monitores",
+        "categoria": "Monitor",
         "imagen": "monitor.png"
     },
     {
@@ -176,7 +176,7 @@
         "producto": "Mousepad",
         "precio": 2000,
         "color": "azul",
-        "categoria": "placas de video",
+        "categoria": "Mouse",
         "imagen": "pad.png"
     },
     {
@@ -186,7 +186,7 @@
         "producto": "Mousepad",
         "precio": 1800,
         "color": "amarillo",
-        "categoria": 1,
+        "categoria": "Mouse",
         "imagen": "pad.png"
     },
     {
@@ -196,7 +196,7 @@
         "producto": "Placa de Video",
         "precio": 195000,
         "color": "amarillo",
-        "categoria": 1,
+        "categoria": "Joystick",
         "imagen": "placa.png"
     },
     {
@@ -206,7 +206,7 @@
         "producto": "Monitor",
         "precio": 35000,
         "color": "verde",
-        "categoria": 1,
+        "categoria": "Monitor",
         "imagen": "monitor.png"
     },
     {
@@ -216,7 +216,7 @@
         "producto": "Motherboard",
         "precio": 7700,
         "color": "verde",
-        "categoria": 1,
+        "categoria": "Teclado",
         "imagen": "mother.png"
     },
     {
@@ -226,7 +226,7 @@
         "producto": "Motherboard",
         "precio": 8000,
         "color": "verde",
-        "categoria": "placas de video",
+        "categoria": "Monitor",
         "imagen": "mother.png"
     },
     {
@@ -236,7 +236,7 @@
         "producto": "monitor",
         "precio": 95500,
         "color": "negro",
-        "categoria": "placas de video",
+        "categoria": "Monitor",
         "imagen": "monitor.png"
     },
     {
@@ -246,7 +246,7 @@
         "producto": "Placa de video",
         "precio": 130000,
         "color": "negro",
-        "categoria": "placas de video",
+        "categoria": "Teclado",
         "imagen": "placa.png"
     }
 ]
