@@ -1,0 +1,33 @@
+[
+    {
+        "nombre" : "Ariel",
+        "login" : "",
+        "e-mail" : "ariel@neotech.com",
+        "admin" : "true"
+    },
+    {
+        "nombre" : "franco",
+        "login" : "",
+        "e-mail" : "franco@neotech.com",
+        "admin" : "true"
+    },
+    {
+        "nombre" : "mauricio",
+        "login" : "",
+        "e-mail" : "mauricio@neotech.com",
+        "admin" : "true"
+    },
+    {
+        "nombre" : "mauricio",
+        "login" : "",
+        "e-mail" : "mauricio@neotech.com",
+        "admin" : "true"
+    },
+    {
+        "nombre" : "juan",
+        "login" : "",
+        "e-mail" : "juan@mail.com",
+        "admin" : "false"
+    }
+    
+]

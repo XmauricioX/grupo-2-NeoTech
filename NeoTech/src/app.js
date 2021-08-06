@@ -13,6 +13,8 @@ var adminRouter = require('./routes/admin');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 
 /* RUTAS */
@@ -32,8 +34,6 @@ var logger = require('morgan');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
