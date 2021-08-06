@@ -6,8 +6,8 @@
         "producto": "Joystick",
         "precio": 15000,
         "color": "negro",
-        "categoria": "Videojuegos",
-        "imagen": "auto.jpg"
+        "categoria": "Joystick",
+        "imagen": "joy.png"
     },
     {
         "id": 2,
@@ -16,8 +16,8 @@
         "producto": "Joystick",
         "precio": 15000,
         "color": "blanco",
-        "categoria": "Videojuegos",
-        "imagen": "auto.jpg"
+        "categoria": "Joystick",
+        "imagen": "joy.png"
     },
     {
         "id": 3,
@@ -26,8 +26,8 @@
         "producto": "Playstation 5",
         "precio": 190000,
         "color": "negro",
-        "categoria": "Videojuegos",
-        "imagen": "auto.jpg"
+        "categoria": "Joystick",
+        "imagen": "play.png"
     },
     {
         "id": 4,
@@ -36,8 +36,8 @@
         "producto": "Auriculares",
         "precio": 7000,
         "color": "blanco",
-        "categoria": "Audio",
-        "imagen": "auto.jpg"
+        "categoria": "Auriculares",
+        "imagen": "auri.png"
     },
     {
         "id": 5,
@@ -46,8 +46,8 @@
         "producto": "Auriculares",
         "precio": 7000,
         "color": "rojo",
-        "categoria": "Audio",
-        "imagen": "auto.jpg"
+        "categoria": "Auriculares",
+        "imagen": "auri.png"
     },
     {
         "id": 6,
@@ -56,8 +56,8 @@
         "producto": "Teclado",
         "precio": 8000,
         "color": "black",
-        "categoria": "Perifercos",
-        "imagen": "auto.jpg"
+        "categoria": "Teclado",
+        "imagen": "teclado.png"
     },
     {
         "id": 7,
@@ -66,8 +66,8 @@
         "producto": "Teclado",
         "precio": 8000,
         "color": "rojo",
-        "categoria": "Perifercos",
-        "imagen": "auto.jpg"
+        "categoria": "Teclado",
+        "imagen": "teclado.png"
     },
     {
         "id": 8,
@@ -76,8 +76,8 @@
         "producto": "Mouse",
         "precio": 5500,
         "color": "rojo",
-        "categoria": "Perifercos",
-        "imagen": "auto.jpg"
+        "categoria": "Mouse",
+        "imagen": "mouse.png"
     },
     {
         "id": 9,
@@ -86,8 +86,8 @@
         "producto": "Auriculares",
         "precio": 9300,
         "color": "rojo",
-        "categoria": "Perifercos",
-        "imagen": "auto.jpg"
+        "categoria": "Auriculares",
+        "imagen": "auri.png"
     },
     {
         "id": 10,
@@ -96,8 +96,8 @@
         "producto": "Mouse",
         "precio": 5500,
         "color": "gris",
-        "categoria": "mouse y teclados",
-        "imagen": "auto.jpg"
+        "categoria": "Mouse",
+        "imagen": "mouse.png"
     },
     {
         "id": 11,
@@ -106,8 +106,8 @@
         "producto": "Parlante",
         "precio": 3700,
         "color": "gris",
-        "categoria": "mouse y teclados",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "parlante.png"
     },
     {
         "id": 12,
@@ -116,8 +116,8 @@
         "producto": "Parlante",
         "precio": 2500,
         "color": "gris",
-        "categoria": "mouse y teclados",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "parlante.png"
     },
     {
         "id": 13,
@@ -126,8 +126,8 @@
         "producto": "Monitor",
         "precio": 9000,
         "color": "blanco",
-        "categoria": "mouse y teclados",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "monitor.png"
     },
     {
         "id": 14,
@@ -136,8 +136,8 @@
         "producto": "Monitor",
         "precio": 11000,
         "color": "blanco",
-        "categoria": "monitores",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "monitor.png"
     },
     {
         "id": 15,
@@ -146,8 +146,8 @@
         "producto": "Parlantes",
         "precio": 3200,
         "color": "blanco",
-        "categoria": "monitores",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "parlante.png"
     },
     {
         "id": 16,
@@ -156,8 +156,8 @@
         "producto": "Placa de video",
         "precio": 155000,
         "color": "azul",
-        "categoria": "monitores",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "placa.png"
     },
     {
         "id": 17,
@@ -166,8 +166,8 @@
         "producto": "Placa de video",
         "precio": 157000,
         "color": "azul",
-        "categoria": "monitores",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "monitor.png"
     },
     {
         "id": 18,
@@ -176,8 +176,8 @@
         "producto": "Mousepad",
         "precio": 2000,
         "color": "azul",
-        "categoria": "placas de video",
-        "imagen": "auto.jpg"
+        "categoria": "Mouse",
+        "imagen": "pad.png"
     },
     {
         "id": 19,
@@ -186,8 +186,8 @@
         "producto": "Mousepad",
         "precio": 1800,
         "color": "amarillo",
-        "categoria": 1,
-        "imagen": "auto.jpg"
+        "categoria": "Mouse",
+        "imagen": "pad.png"
     },
     {
         "id": 20,
@@ -196,8 +196,8 @@
         "producto": "Placa de Video",
         "precio": 195000,
         "color": "amarillo",
-        "categoria": 1,
-        "imagen": "auto.jpg"
+        "categoria": "Joystick",
+        "imagen": "placa.png"
     },
     {
         "id": 21,
@@ -206,8 +206,8 @@
         "producto": "Monitor",
         "precio": 35000,
         "color": "verde",
-        "categoria": 1,
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "monitor.png"
     },
     {
         "id": 22,
@@ -216,8 +216,8 @@
         "producto": "Motherboard",
         "precio": 7700,
         "color": "verde",
-        "categoria": 1,
-        "imagen": "auto.jpg"
+        "categoria": "Teclado",
+        "imagen": "mother.png"
     },
     {
         "id": 23,
@@ -226,18 +226,18 @@
         "producto": "Motherboard",
         "precio": 8000,
         "color": "verde",
-        "categoria": "placas de video",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "mother.png"
     },
     {
         "id": 24,
         "marca": "Samsung",
         "descripcion": "Velocidad en cada lectura Como cuenta con 1920 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa",
-        "producto": "Tv",
+        "producto": "monitor",
         "precio": 95500,
         "color": "negro",
-        "categoria": "placas de video",
-        "imagen": "auto.jpg"
+        "categoria": "Monitor",
+        "imagen": "monitor.png"
     },
     {
         "id": 25,
@@ -246,7 +246,7 @@
         "producto": "Placa de video",
         "precio": 130000,
         "color": "negro",
-        "categoria": "placas de video",
-        "imagen": "auto.jpg"
+        "categoria": "Teclado",
+        "imagen": "placa.png"
     }
 ]

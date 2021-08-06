@@ -3,7 +3,8 @@
     top: 0;
 }
 #content{
-    background-image: url(/images/registro/teclado-original.jpg);
+    background-image: url(images/imgs-bg/teclado-original.jpg);
+    /* no me anda la imagen */
     background-size: cover;
     background-position: center;
 }
@@ -37,6 +38,9 @@
     font-size: 18px;
     width: 120px;
     margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .submit:active{
     background-color: var(--color-Green);
@@ -53,6 +57,7 @@
 @media (min-width: 768px){
     #content{
         background-image: url(/images/registro/teclado-original.jpg);
+        /* esta tampoco anda */
     }
 }
 @media (min-width: 1024px){

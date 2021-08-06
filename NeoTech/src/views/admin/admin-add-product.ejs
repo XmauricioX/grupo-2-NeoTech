@@ -22,36 +22,37 @@
 
             <div id="container-form">         
 
-
                 <form id="form-add" action="/administrador/agregar-producto" method="POST">
         
                     <input type="file" name="" id="t-file">
                     <input type="text" name="aaa" id="" placeholder="Nombre">
-                    <input class="submit" type="submit" value="Añadir">
-                    <input type="number" min="0" max="1000000" step="10" name="precio" id="" placeholder="Precio"> 
+
+                    <input type="number" min="0" max="1000000" step="10" name="precio" id="" placeholder="Precio">  -->
                     
                     <div id="categorias">
                         
                         <label id="label-categoria" for="form-add">CATEGORIA</label>
-                        <select name="" id="categorias-select"> 
-                             <option value="gabinete">Gabinete</option>
-                             <option value="monitor">Monitor</option>
-                             <option value="mouse">Mouse</option>
-                             <option value="auricular">Ariculares</option>
-                             <option value="Joystick">Joystick</option>
-                             <option value="Teclado">Teclado</option>
-                        </select>
-
-                    </div> 
                         
-                        <input type="option" name="colores" id="" value="" placeholder="color/es">
-                        <input type="text" name="" id="description" placeholder="Descripción"> 
-
+                        <select name="" id="categorias-select">
+                            <option value="monitor">Monitor</option>
+                            <option value="mouse">Mouse</option>
+                            <option value="auricular">Ariculares</option>
+                            <option value="Joystick">Joystick</option>
+                            <option value="Teclado">Teclado</option>
+                        </select>
+                    </div>
+                    
+                    <input type="option" name="colores" id="" value="" placeholder="color/es">
+                    <input type="text" name="" id="description" placeholder="Descripción"> 
+                    
+                    <input class="submit" type="submit" value="Añadir">
                 </form>
+                
+        
             </div>
-
+            
         </main>
-
+        
     </div>
 <%- include("../partials/admin-links") -%>
 
