@@ -1,7 +1,7 @@
 <!-- HEAD -->
 <%- include('../partials/head.ejs') %>
 
-    <body>
+    <body class="body__register">
 
         <%- include('../partials/header.ejs') %>
 
@@ -10,8 +10,8 @@
             <!-- Registro -->
             <div id="registro">
                 <h1>Registro</h1>
-                <form>
-                    <nav class="container">
+                <form class="register__form">
+                    <nav class="register__container">
                         <!-- name -->
                         <label for="text"></label>
                         <input class="text" type="text" name="text" id="text" placeholder="Nombre Completo">
@@ -22,7 +22,7 @@
                         <label for="password"></label>
                         <input class="password" type="password" id="password" placeholder="Ingrese su contraseña">
                         <!-- button log in -->
-                        <button class="button-login" type="submit" value="log-in">Registrarse</button>
+                        <button class="button-register" type="submit" value="log-in">Registrarse</button>
                     </nav>
                 </form>
             </div>

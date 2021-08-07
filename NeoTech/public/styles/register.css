@@ -1,9 +1,9 @@
-@import url("/stylesheets/variables.css");
+@import url("/stylesheets/style.css");
 
 
 
 /* Background body */
-#registro {
+.body__register {
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-repeat: no-repeat;
     background-position-x: 50%;
@@ -14,60 +14,47 @@
 
 /* Title: Iniciar Sesión */
 #registro h1 {
-    font-size: 38px;
     color: var(--green);
-    padding-top: 15px;
-    margin-bottom: 15px;
+    font-size: 40px;
+    margin: 15px;
+    text-align: center;
+    font-weight: 700;
 }
 
 /* form */
-#registro form {
+#registro .register__form {
+    background-color: rgba(0, 0, 0, 0.582);
     backdrop-filter: blur(4px);
     border: 2px solid var(--green);
     border-radius: 30px;
-    max-width: 290px;
-    /* max-width: 90%; */
     margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.582);
+    max-width: 298px;
+    /* max-width: 90%; */
+    padding-top: 15px;
 }
 
-#registro form .container {
+#registro .register__form .register__container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding-top: 5%;
 }
 
-#registro form .container .text {
+#registro .register__form .register__container .text, 
+#registro .register__form .register__container .email, 
+#registro .register__form .register__container .password {
     border: black;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 14px;
     padding: 12px 5px;
     text-align: initial;
     width: 85%;
     outline: none;
-} 
-#registro form .container .email {
-    border: black;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-bottom: 14px;
-    outline: none;
-    padding: 12px 5px;
-    text-align: initial;
-    width: 85%;
 } 
 
-#registro form .container .password {
-    border: black;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-bottom: 24px;
-    outline: none;
-    padding: 12px 5px;
-    text-align: initial;
-    width: 85%;
+#registro .register__form .register__container .password {
+    margin-bottom: 25px;
+    
 } 
 #registro input {
     display: block;
@@ -84,10 +71,10 @@
 
 
 /* Buttons: log in & create account */
-#registro .button-login {
+#registro .button-register {
     background-color: var(--dark-grey);
     border-color: var(--green);
-    border-radius: 25px;
+    border-radius: 27px;
     color: white;
     font-size:20px;
     font-weight: lighter;
@@ -95,7 +82,7 @@
     padding: 9px 16px;
 }
 
-#registro .button-login:hover {
+#registro .button-register:hover {
     background-color: var(--green);
     color: black;
 }
@@ -111,19 +98,6 @@
     color: var(--green);
 }
 
-#registro .button-create {
-    background-color: var(--dark-grey);
-    border-color:var(--grey);
-    border-radius: 20px;
-    color: white;
-    font-size:12px;
-    margin: 5px 0 10px 0;
-    padding: 10px 14px;
-}
-#registro .button-create:hover {
-    background-color: var(--green);
-    color: black;
-}
 
 /* social media buttons */
 #registro .networks {
@@ -135,23 +109,26 @@
 }
 
 #registro .networks .logo-face {
-    bottom: 40px;
+    /* bottom: 40px; */
     position: relative;
-    right: 78px;
+    /* right: 78px; */
+    right: 8px;
 }
 
 #registro .networks .logo-google {
-    bottom: 42px;
+    /* bottom: 42px; */
     position: relative;
-    right: 76px;
+    /* right: 76px; */
+    /* width: 32px; */
+    right: 12px;
     width: 32px;
 }
 
 #registro .button-facebook {
-    background-color: #2b4ca3;
+    /* background-color: #2b4ca3;
     border:none;
     color: white;
-    font-size:19px;
+    font-size: 14px;
     font-weight: lighter;
     display: flex;
     justify-content: space-between;
@@ -160,17 +137,25 @@
     width: 300px;
     margin: 15px;
     padding: 10px;
-    
+     */
+     background-color: #2b4ca3;
+     border:none;
+     color: white;
+     font-size:14px;
+     font-weight: lighter;
+     margin-top: 15px;
+     padding: 12px 12px 12px 20px;
+     position: relative;
 }
 
 #registro .button-google {
     background-color: #2095e7;
     border:none;
     color: white;
-    font-size:13px;
+    font-size:14px;
     font-weight: lighter;
-    margin-top: -15px;
-    padding: 18px 18px 18px 48px;
+    margin-top: 15px;
+    padding: 11px 24px;
 }
 
 
@@ -182,56 +167,53 @@
 @media (min-width:768px) {
     #registro h1 {
         font-size: 48px;
-        padding-top: 40px;
+        padding-top: 15px 0;
+    }
+    
+    #registro .register__form {
+        max-width:470px;
+    }
+    #registro .register__form .container {
+        padding-top: 8px;
+    }
+    
+    #registro .register__form .container .text {
+        font-size: 23px;
         margin-bottom: 15px;
-    }
-    
-    #registro form {
-        max-width:420px;
-        /* max-width: 60%; */
-    }
-    #registro form .container {
-        padding-top: 10%;
-    }
-    
-    #registro form .container .text {
-        font-size: 23px;
-        margin-bottom: 20px;
     } 
-    #registro form .container .email {
+    #registro .register__form  .container .email {
         font-size: 23px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     } 
     
-    #registro form .container .password {
+    #registro .register__form  .container .password {
         font-size: 23px;
         margin-bottom: 30px;
     }
-    #registro .button-login {
+    #registro .button-register {
         border-radius: 40px;
         font-size:24px;
     }
-    #registro form .container a {
-        font-size: 18px;
-    }
+    
     /* social media buttons */
     #registro .networks {
-        align-items: flex-end;
         flex-direction:row;
         justify-content: center;
         margin-left: 30px;
-        margin-bottom: 50px
+        margin-bottom: 50px;
+        margin-top: 12px;
+
     }
     
     #registro .networks .logo-face {
         bottom: 10px;
-        right: 178px;
+        right: 187px;
         margin-left: -15px;
     }
     
     #registro .networks .logo-google {
         bottom: 10px;
-        right: 194px;
+        right: 203px;
         width: 32px;
     }
 }
@@ -244,72 +226,63 @@
 /* media queries Desktop */
 
 @media (min-width:1024px) {
-    #registro {
+    .body__register {
         background-position-x:55%;
         background-size: cover;
     }
 
     #registro h1 {
-        padding-top: 60px;
-        margin-bottom: 10px;
+        margin-top: 115px;
+
     }
 
-    #registro form {
+    #registro .register__form {
         border-radius: 30px;
-        width: 320px;
+        width: 340px;
+        margin-top: 30px;
     }
 
-    #registro form .container {
-        padding-top: 10%;
-    }
-
-    #registro form .container .text {
-        font-size: 17px;
+    #registro .register__form .container .text {
+        font-size: 20px;
         margin-bottom: 20px;
-        padding: 10px 30px 10px 5px;
     } 
-    #registro form .container .email {
-        font-size: 17px;
-        padding: 10px 30px 10px 5px;
+    #registro .register__form .container .email {
+        font-size: 20px;
         margin-bottom: 20px;
     } 
 
-    #registro form .container .password {
-        font-size: 17px;
-        padding: 10px 30px 10px 5px;
-        
+    #registro .register__form .container .password {
+        font-size: 20px;        
     }
-    #registro .button-login {
+    #registro .button-register {
         border-radius: 50px;
         font-size:20px;
     }
 
-    #registro .button-login:hover {
+    #registro .button-register:hover {
         background-color: var(--green);
         color: black;
     }
 
-    #registro form .container a {
-        color: white;
-        padding-bottom: 9px;
-        text-decoration: none;
-    }
+
     #registro .networks {
-        align-items: flex-end;
-        flex-direction:row;
-        justify-content: center;
-        margin-left: 30px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 50px
     }
+    
     
     #registro .networks .logo-face {
         bottom: 10px;
-        right: 178px;
+        right: 8px;
         margin-left: -15px;
     }
     
     #registro .networks .logo-google {
         bottom: 10px;
-        right: 194px;
+        right: 13px;
         width: 32px;
     }
 }
