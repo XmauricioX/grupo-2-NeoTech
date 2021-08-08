@@ -1,7 +1,7 @@
-body{
+.body__home{
     color: var(--white);
 }
-main {
+.main__home {
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -9,7 +9,7 @@ main {
     background-color: var(--black);
 }
 
-main .container{
+.main__home .container{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ main .container{
     width: 100%;
     padding: 0;
 }
-main .text{     
+.main__home .text{     
     position: absolute;
     background-color: rgba(0, 0, 0, 0.39);
     text-align: center;
@@ -29,16 +29,18 @@ main .text{
     font-size: 10px;
     margin-bottom: 10%;
 }
-main .container img{
+.main__home .container img{
     object-fit: cover;
     align-self: center;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
+    height: 100vh;
+    width: 100vw;
 }
-main .container p{
+.main__home .container p{
     padding: 15px 30px 0;
 }
-main .product{
+.main__home .product{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -46,76 +48,78 @@ main .product{
     align-items: center;
     justify-content: center;
 }
-main .product img.product-img {
+.main__home .product img.product-img {
     z-index: 2;
     width: min-content;
     height: 100%;
 
 }
-main #container-3{
-    justify-content: center;
-    color: var(--color-Green);
-    font-size: 30px;
-    margin: 0 auto;
+.main__home #container-3 .h2_home{
+    /* justify-content: center;
+    /* margin: 0 auto; */
+    color: var(--color-Green); 
+    font-size: 37px;
+    position: relative;
+    bottom: 260px;
 } 
-main #contenedor-4 {
+.main__home #contenedor-4 {
     height: 120vh;
     width: 100%;
 }
-main #container-4 .product{
+.main__home #container-4 .product{
     flex-direction: column;
     justify-content: space-between;
     bottom: 20px;
     height: max-content;
 }
-main #container-4 .product-img{
+.main__home #container-4 .product-img{
     z-index: 0;
     width: 400px;
 }
-main #container-4 .text{
+.main__home #container-4 .text{
     z-index: 1;
 }
-main #container-2 .product-img{
+.main__home #container-2 .product-img{
     position: relative;
     width: auto;
     height: 100vh;
     z-index: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     bottom: 130px;
 }
-main #container-2 .text{
+.main__home #container-2 .text{
     top: 20%;
     z-index: 1;
 }
-main #container-2 .product{
+.main__home #container-2 .product{
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
-main #container-2 .product-img{
+.main__home #container-2 .product-img{
     bottom: 0;
 }
-main #container-1{
+.main__home #container-1{
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: relative;
 }
-main #container-1 .container-img{
+.main__home #container-1 .container-img{
     z-index: 0;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.39);
     padding: 40px 20px;
 }
 
-main .grid-container{
+.main__home .grid-container{
     display: none;
 }
 
-main #carouselExampleFade{
+.main__home #carouselExampleFade{
     height: 100vh;
     overflow: hidden;
 }
-main .carousel-item img {
+.main__home .carousel-item img {
     height: 100vh;
 }
 #c-1{
@@ -130,52 +134,55 @@ main .carousel-item img {
         display: block;
     }
     
-    main #container-2 .product{
+    .main__home #container-2 .product{
         height: 100vh;
         z-index: 0 ;
     }
-    main #container-2 .text{
+    .main__home #container-2 .text{
         z-index: 1;
     }
-    main #container-4 .product-img{
+    .main__home #container-4 .product-img{
         width: 450px;
     }
 }
 @media (min-width: 1024px){
-    main #container-2 .product{
+    .main__home #container-2 .product{
         height: 100vh;
         z-index: 0;
     }
-    main #container-2 .text{
+    .main__home #container-2 .text{
         z-index: 1;
     }
-    main #container-4 {
-        flex-direction: row;
+    .main__home #container-4 {
+        /* flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
-    }
-    main #container-4 .container-img{
-        margin: 0;
-        padding: 0;
+        align-items: flex-end; */
         width: 100%;
     }
-    main .container{
+    .main__home #container-4 .container-img{
+        /* margin: 0;
+        padding: 0;
+        width: 100%; */
+        width: 100vw;
+    }
+    .main__home .container{
         margin: auto;
     }
-    main #container-4 .product{
+    .main__home #container-4 .product{
         justify-content: center;
         right: -200px;
     }
-    main #container-4 .text{
-        left: 300px;
+    .main__home #container-4 .text{
+        /* left: 300px; */
+        left: 25%;
     }        
-    main .text{
+    .main__home .text{
         font-size: 20px;
     }
 
 
 
-    main .grid-container{
+    .main__home .grid-container{
         display: grid;
         height: 150vh;
         width: 80%;
@@ -186,52 +193,52 @@ main .carousel-item img {
                             "f f g";
         grid-gap: 20px;
     }
-    main #item1,#item2,#item3,#item4,#item5,#item6,#item7{
+    .main__home #item1,#item2,#item3,#item4,#item5,#item6,#item7{
         border: 1px solid var(--color-Green);
         
     }
     
-    main #item1{
+    .main__home #item1{
         grid-area: a;
         background-image: url(../images/home/collage/intel-2.webp);
         background-size: cover;
         background-position: center;
     }
-    main #item2{
+    .main__home #item2{
         grid-area: b;
         background-image: url(../images/home/collage/amd.jpg);
         background-position: center;
         background-size: cover;
     }
-    main #item3{
+    .main__home #item3{
         grid-area: c;
         background-image: url(../images/home/collage/bg-5.jpg);
         background-size: cover;    
     }
-    main #item4{
+    .main__home #item4{
         grid-area: d;
         background-image: url(../images/home/collage/bg-5.jpg);
         background-position: center;
         background-size: cover;
     }
-    main #item5{
+    .main__home #item5{
         grid-area: e;
         background-image: url(../images/home/collage/fdfa44f729f4e32b0f1a7024e60489a4--online-computer-store-acer-aspire.jpg);
         background-size: cover;
     }
-    main #item6{
+    .main__home #item6{
         grid-area: f;
         background-image: url(../images/home/collage/amd.jpg);
         background-size: cover;
         background-position: center;
     }
-    main #item7{
+    .main__home #item7{
         grid-area: g;
         background-image: url(../images/home/collage/bg-5.jpg);
         background-size: cover;
         background-position: center;
     }
-    main .ci{
+    .main__home .ci{
         width: fit-content;
     }
 }
