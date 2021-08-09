@@ -1,7 +1,7 @@
 .product__main {
     background-color: var(--grey);
 }
-section{
+.product__section{
     margin: 50px 20px;
     height: auto;
 }
@@ -13,13 +13,13 @@ section{
     top: 20px;
 }
 
-section article{
+.product__section article{
     max-width: 300px;
     margin: 0px auto;
     text-align: center;
     height: 50vh;
 }
-section article img{
+.product__section article img{
     background-image: url(/images/imgs-bg/bg-product.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,14 +72,14 @@ div.container-r{
 
 
 @media (min-width: 768px){
-    section{
+    .product__section{
         margin-top: 0%;
         width: 80%;
         display: inline-flex;
         flex-wrap: nowrap;
         height: 100vh;
     }
-    section article{
+    .product__section article{
         margin-top: 15%;
         width: 60%;
         margin-left: 0;
@@ -123,7 +123,7 @@ div.container-r{
     #arrow{
         display: none;
     }
-    section article{
+    .product__section article{
         max-width: 500px;
         margin: 80px 20px 0 auto ;
     }

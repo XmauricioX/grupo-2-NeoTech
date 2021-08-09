@@ -1,4 +1,5 @@
 let db = require('../data/dataBase')
+let dbu = require('../data/dataBaseUser')
 
 module.exports = {
     panel: (req, res) => {
@@ -23,7 +24,7 @@ module.exports = {
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})
     },
     usuarios: (req,res)=>{
-        res.render("admin/admin-users", {title: 'NeoTech - Usuarios'})
+        res.render("admin/admin-users", {title: 'NeoTech - Usuarios', dbu})
     }
 }
 
