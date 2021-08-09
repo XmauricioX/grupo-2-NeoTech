@@ -1,5 +1,7 @@
 .admin__sell {
-   
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-size: cover;
+    background-position: center;
 }
 #admin-welcome{
     position: absolute;
