@@ -9,7 +9,7 @@
 }
 /* CONTENEDOR */
 #container{
-    margin-top: 2700px;
+    margin-top: 3820px;
     display: grid;
     grid-template-columns: 1fr a 1fr;
     gap: 20px 20px;
@@ -120,7 +120,7 @@ hr{
 }
 @media (min-width: 768px){
     #container{
-        margin-top: 1200px;
+        margin-top: 770%;
         grid-template-columns: repeat(2,1fr);
     }
 }
@@ -137,7 +137,7 @@ hr{
         width: 50%;
     }
     #container{
-        margin-top: 700px;
+        margin-top: 215%;
         grid-template-columns: repeat(3,1fr);
     }
     
