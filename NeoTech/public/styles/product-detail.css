@@ -5,12 +5,7 @@ section{
     margin: 50px 20px;
     height: auto;
 }
-.product__main i{
-    /* color: var(--color-Green);
-    font-size: 30px;
-    position: sticky;
-    left: 20px;
-    top: 20px; */
+.product__main #arrow{
     color: var(--green);
     font-size: 30px;
     position: relative;
@@ -48,7 +43,6 @@ section article img{
     color: var(--white);
     background-color: var(--green);
     font-size: 45px;
-
     position: fixed;
     bottom: 10px;
     padding: 0px 15px;
@@ -66,9 +60,11 @@ section article img{
 .detail h2{
     margin-bottom: 20px;
     text-align: center;
+    color: var(--white);
 }
 .detail p{
     text-align: justify;
+    color: var(--white);
 }
 div.container-r{
     margin-top: 80px;
@@ -112,10 +108,11 @@ div.container-r{
         height: auto;
         padding: 0;
     }
-    #arrow{
-        position: relative;
-        top: -400px;
+    .product__main #arrow{
+        top: -245px;
+        left: 20px;
     }
+    
 }
 
 @media (min-width: 1024px){
