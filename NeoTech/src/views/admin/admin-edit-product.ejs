@@ -6,9 +6,9 @@
 
     <link rel="stylesheet" href="../../../styles/admin-edit-product.css">
 </head>
-<body>
+<body class="body__edit__product">
     
-    <%- include("../partials/nav") -%>
+    <%- include("../admin/admi-nav") -%>
 
     
     <div id="container-admin">
@@ -32,7 +32,7 @@
                     <figure class="img-container">
                         <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                         <!-- FONDO DEL PRODUCTO -->
-                        <img class="img-1" src="/images/imgs-product/auricular.webp" alt="product">
+                        <img class="img-1" src="/images/imgs-product/<%- element.imagen %> " alt="product">
                         <!-- IMAGEN DEL PRODUCTO -->
                     </figure>
                     <hr>
@@ -54,7 +54,7 @@
     </div>
     <%- include("../partials/admin-links") -%>
 
-    <!-- <%- include('../partials/scripts.ejs') %> -->
+    <%- include('../partials/scripts.ejs') %>
 
 </body>
 </html>

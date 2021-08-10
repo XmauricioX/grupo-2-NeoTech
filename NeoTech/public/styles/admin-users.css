@@ -1,3 +1,8 @@
+.admin_user {
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-size: cover;
+    background-position: center;
+}
 #admin-welcome{
     position: absolute;
     top: 80px;
@@ -7,7 +12,7 @@
 }
 /* CONTENEDOR */
 #container{
-    margin-top: 2200px;
+    margin-top: 1750px;
     display: grid;
     grid-template-columns: 1fr a 1fr;
     gap: 20px 20px;
@@ -116,8 +121,12 @@ hr{
     color: var(--color-Green-Old);
 }
 @media (min-width: 768px){
+    .admin_user {
+        background-image: url(/images/imgs-bg/teclado-original.jpg);
+        
+    }
     #container{
-        margin-top: 1000px;
+        margin-top: 900px;
         grid-template-columns: repeat(2,1fr);
     }
 }
@@ -134,7 +143,7 @@ hr{
         width: 50%;
     }
     #container{
-        margin-top: 700px;
+        margin-top: 470px;
         grid-template-columns: repeat(3,1fr);
     }
     

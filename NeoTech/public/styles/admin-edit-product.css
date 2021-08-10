@@ -1,3 +1,8 @@
+.body__edit__product {
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-size: cover;
+    background-position: center;
+}
 #admin-welcome{
     position: absolute;
     top: 80px;
