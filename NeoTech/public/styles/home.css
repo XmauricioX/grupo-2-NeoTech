@@ -114,7 +114,6 @@
 .main__home .grid-container{
     display: none;
 }
-
 .main__home #carouselExampleFade{
     height: 100vh;
     overflow: hidden;
@@ -146,6 +145,10 @@
     }
 }
 @media (min-width: 1024px){
+    
+    #carouselExampleControls{
+        margin-top: 80px;
+    }
     .main__home #container-2 .product{
         height: 100vh;
         z-index: 0;
@@ -264,7 +267,7 @@
     font-size: 100px;
     color: var(--green);
     border: 10px solid var(--green);
-    padding: 15px 40px 15px 55px;
+    padding: 30px 40px 30px 55px;
     border-radius: 50%;
     cursor: pointer;
 
