@@ -1,6 +1,4 @@
 @import url(./general.css);
-#product-list {
-}
 
 /* CONTENEDOR */
 .container__product {
@@ -74,6 +72,8 @@
     z-index: 2;
     width: 90%;
     left: 10px;
+    height: 85%;
+    bottom: 10px;
 }
 hr{
     width: 100%;
