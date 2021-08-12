@@ -1,5 +1,5 @@
 <%- include('../partials/head.ejs') %>
-
+<%- include("../partials/nav") %>
     <body class="product__body">
         
         <main class="product__main">
@@ -21,7 +21,7 @@
                             </h2>
                             <p>
                                 Precio: <br>
-                                <%= productID.precio %> <br> <br>
+                                $<%= productID.precio %> <br> <br>
                                 Color: <br>
                                 <%= productID.color %> <br> <br>
                                 Categoria: <br>
@@ -38,5 +38,5 @@
             </section>
         </main>
     </body>
-
+<%- include("../partials/footer") %>
     </html>

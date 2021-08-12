@@ -117,6 +117,9 @@ div.container-r{
 }
 
 @media (min-width: 1024px){
+    .product__main{
+        padding-top: 50px;
+    }
     .detail{
         font-size: 80px;
         height: 100%;
