@@ -1,6 +1,7 @@
-.product__main {
+.product__body {
     background-color: var(--grey);
 }
+
 .product__section{
     margin: 50px 20px;
     height: auto;
@@ -32,11 +33,11 @@
     margin-top: 0px;
     overflow: hidden;
 }
-.btn{
+.btn__detail{
     display: flex;
     justify-content: center;
 }
-.btn a{
+.btn__detail .a__detail{
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
@@ -88,7 +89,7 @@ div.container-r{
         height: auto;
         width: auto;
     }
-    .btn a{
+    .btn__detail .a__detail{
         position: static;
         padding: 0px 20px;
         font-size: 45px;
