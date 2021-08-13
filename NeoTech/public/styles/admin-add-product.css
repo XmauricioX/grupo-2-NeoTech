@@ -1,0 +1,100 @@
+#admin-welcome{
+    position: absolute;
+    top: 105px;
+}
+.admin__add__product{
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#container-form{
+    width: 60%;
+    margin-top: 0;
+}
+#form-add{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-Green);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.582);
+}
+#form-add input{
+    padding: 10px 10px;
+    margin: 5px 0;
+    background-color: var(--color-Dark);
+    border-radius: 8px;
+    border: 1px solid black;
+    color: white;
+    outline: none;
+}
+#form-add .submit{
+    border: 2px solid var(--color-Green);
+    padding: 12px 0px;
+    border-radius: 20px;
+    font-size: 18px;
+    width: 120px;
+    margin: 5px auto;
+}
+.submit:active{
+    background-color: var(--color-Green);
+    color: black;
+}
+#form-add input:focus{
+    border: 1px solid var(--color-Green);
+}
+
+#description{
+    height: 80px;
+}
+#form-add ::placeholder{
+    font-size: 20px;
+}
+#label-categoria{
+    color: var(--white);
+    padding-left: 3px;
+}
+#categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media (min-width: 768px){
+    .admin__add__product{
+        background-image: url(/images/imgs-bg/teclado-original.jpg);
+        
+    }
+    #admin-welcome{
+        top: 110px;       
+    }
+}
+@media (min-width: 1024px){
+    .admin__add__product{
+        background-repeat: no-repeat;
+        background-position: 70px;
+        background-size: 85%;
+        background-size: cover;
+        
+    }
+    #form-add ::placeholder{
+        font-size: 30px;
+    }
+    #form-add input{
+        height: 60px;
+    }
+    #label-categoria{
+        font-size: 30px
+    }
+    #categorias-select{
+        font-size: 30px;
+        color: var(--white);
+        background-color: var(--color-Dark);
+        border-color: var(--color-Green);
+    }
+    input #description{
+        height: 1000px;
+    }
+    #admin-welcome{
+        top: 5px;
+    }
+}
