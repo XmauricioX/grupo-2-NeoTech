@@ -16,37 +16,44 @@
 
         <main id="content">
             <p id="admin-welcome">
-                Admin Edit Product Form
+                Estas modificando: <%= product.marca %>
             </p>
 
             <div id="container-form">         
 
-                <form id="form-add" action="/administrador/admin-edit-product-form" method="POST">
+                <form id="form-add" action="/administrador/formulario-editar-producto/?_method=PUT" method="POST">
         
                     <input type="file" name="" id="t-file">
-                    <input type="text" name="aaa" id="" placeholder="Nombre">
-                    <input type="number" min="0" max="1000000" step="10" name="precio" id="" placeholder="Precio"> 
+                    <input value="<%= product.marca %>" type="text" name="aaa" id="" placeholder="Nombre">
+
+                    <input value="<%= product.precio %>" type="number" min="0" max="1000000" step="10" name="precio" id="" placeholder="Precio"> 
                     
                     <div id="categorias">
                         
                         <label id="label-categoria" for="form-add">CATEGORIA</label>
-                        <select name="" id="categorias-select"> 
-                            <option value="gabinete">Gabinete</option>
-                            <option value="monitor">Monitor</option>
-                            <option value="mouse">Mouse</option>
-                            <option value="auricular">Ariculares</option>
-                            <option value="Joystick">Joystick</option>
-                            <option value="Teclado">Teclado</option>
-                        </select>
-                        
-                    </div> 
+                            <select name="categoria" id="categorias-select">
+                                <option selected value="">...</option>
+                                <% if(product.categoria == "Joystick"){ %>
+                                        <option selected value="Joystick">Joystick</option>
+                                    <% } else if(product.categoria == "Mouse"){%>
+                                        <option selected value="Mouse">Mouse</option>
+                                    <% } else if(product.categoria == "Monitor"){%>
+                                        <option selected value="Monitor">Monitor</option>
+                                    <% } else if(product.categoria == "Auriculares"){%>
+                                        <option selected value="Auricular">Auricular</option>
+                                    <% } else if(product.categoria == "Teclado"){%>
+                                        <option selected value="Teclado">Teclado</option>
+                                <% } %>
+                                       
+                            </select>
+                    </div>
                     
-                    <input type="option" name="colores" id="" value="" placeholder="color/es">
-                    <npiut type="text" name="" id="description" placeholder="Descripción"> 
-
-                    <input class="submit" type="submit" value="Guardar">
-               
+                    <input value="<%= product.color %>" type="option" name="colores" id="" placeholder="color/es">
+                    <input value="<%= product.descripcion %>" type="text" name="" id="description" placeholder="Descripción"> 
+                    
+                    <input class="submit" type="submit" value="Editar">
                 </form>
+                
         
             </div>
 

@@ -30,15 +30,15 @@ router.post("/agregar-producto", controller.agregarProducto)
 
 // GET EDITAR CUENTA
 router.get("/editar-cuenta", controller.editCuenta)
-// GET EDITAR PRODUCTO FORMULARIO
-router.get("/formulario-editar-producto", controller.formEditProducto)
-// GET PANEL EDITAR PRODUCTO ( LISTADO DE PRODUCTOS )
-router.get("/editar-producto", controller.editProducto)
-// PUT EDITAR UN PRODUCTO           ------------------------------------------
-router.put("/editar-producto/:id", controller.)
+// GET VISTA DEL ADMIN ( LISTADO DE PRODUCTOS )
+router.get("/editar-producto", controller.adminEdit)
+// GET VISTA DEL FORMULARIO
+router.get("/formulario-editar-producto/:id", controller.formEditProducto)
+// PUT EDITAR UN PRODUCTO LOGICA    ------------------------------------------
+router.put("/formulario-editar-producto", controller.editarProducto)
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO ---------------
-router.delete("editar-producto", controller.)
+// router.delete("editar-producto", controller.)
 
 // GET VENTA Y STOCK 
 router.get("/venta-y-stock", controller.ventaStock)
