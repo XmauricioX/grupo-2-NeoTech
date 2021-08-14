@@ -1,21 +1,23 @@
 
 var express = require('express');
 var app = express();
+var path = require('path');
+let methodOverride = require('method-override')
 
 /* ENRUTADORES */
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
 var adminRouter = require('./routes/admin');
 
 /* VISTAS */
-
 app.set('view engine', 'ejs');
+app.use(methodOverride('_method'));
+
+/* MIDDLEWARES NIVEL APLICACION */
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-
 
 /* RUTAS */
 
@@ -25,9 +27,7 @@ app.use('/producto', productRouter);
 app.use('/administrador', adminRouter);
 
 ///////////////////////////////////////////////////////////
-
 var createError = require('http-errors');
-var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
@@ -35,13 +35,6 @@ var logger = require('morgan');
 app.set('views', path.join(__dirname, 'views'));
 app.use(logger('dev'));
 app.use(cookieParser());
-
-
-
-
-app.get('/contacto', function(req, res,) {
-  res.sendFile(path.join(__dirname, '/views/contact.html'))
-});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -53,7 +46,7 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+  
   // render the error page
   res.status(err.status || 500);
   res.render('error');

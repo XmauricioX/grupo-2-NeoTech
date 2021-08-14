@@ -1,7 +1,21 @@
-let db = require('../data/dataBase')
-let dbu = require('../data/dataBaseUser')
+let { getProducts, getUsers, writeJSON} = require('../data/dataBase')
 
 module.exports = {
+    deleteProduct: (req, res) => {
+        getProducts.find(product => product.id === +req.params.id)
+
+        getProducts.forEach(product => {
+            if (product.id === +req.params.id){
+				let productDeleted = getProducts.indexOf(product)
+				getProducts.splice(productDeleted, 1)
+		}
+        });
+
+        writeJSON(getProducts)
+
+        res.send('producto eliminado')
+    },
+
     panel: (req, res) => {
         res.render('admin/adminPanel', {title: 'NeoTech - Panel General'})
     },
@@ -18,13 +32,13 @@ module.exports = {
         res.render("admin/admin-edit-product-form", {title: 'NeoTech - Form Editar Producto'})
     },
     editProducto: (req,res)=>{
-        res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto', db})
+        res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto', products: getProducts})
     },
     ventaStock: (req,res)=>{
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})
     },
     usuarios: (req,res)=>{
-        res.render("admin/admin-users", {title: 'NeoTech - Usuarios', dbu})
+        res.render("admin/admin-users", {title: 'NeoTech - Usuarios', users: getUsers})
     }
 }
 
