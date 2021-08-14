@@ -1,0 +1,12 @@
+[
+    {"id":1,"firstName":"Jillian","lastName":"Skipsey","email":"jskipsey0@newsvine.com","password":"uBHpbdm","admin":true,"image":"default-image.png"},
+    {"id":2,"firstName":"Farra","lastName":"McMorran","email":"fmcmorran1@amazon.co.uk","password":"2jqquFmX","admin":false,"image":"default-image.png"},
+    {"id":3,"firstName":"Andrej","lastName":"Ballinghall","email":"aballinghall2@cnbc.com","password":"niJsP2uu","admin":false,"image":"default-image.png"},
+    {"id":4,"firstName":"Eldredge","lastName":"Dzenisenka","email":"edzenisenka3@tmall.com","password":"206oMGUmxP","admin":true,"image":"default-image.png"},
+    {"id":5,"firstName":"Letta","lastName":"Rookledge","email":"lrookledge4@dropbox.com","password":"QH3nmP","admin":true,"image":"default-image.png"},
+    {"id":6,"firstName":"Corabelle","lastName":"Stickings","email":"cstickings5@chicagotribune.com","password":"XchI7I","admin":true,"image":"default-image.png"},
+    {"id":7,"firstName":"Perkin","lastName":"Booley","email":"pbooley6@webeden.co.uk","password":"24X93xqzuq","admin":true,"image":"default-image.png"},
+    {"id":8,"firstName":"Constanta","lastName":"Caudrelier","email":"ccaudrelier7@wix.com","password":"fzbkj3up0uTZ","admin":true,"image":"default-image.png"},
+    {"id":9,"firstName":"Niko","lastName":"Lurriman","email":"nlurriman8@slideshare.net","password":"lhxL8LJqn","admin":false,"image":"default-image.png"},
+    {"id":10,"firstName":"Zia","lastName":"Lygo","email":"zlygo9@ask.com","password":"hD2aK7","admin":false,"image":"default-image.png"}
+]
