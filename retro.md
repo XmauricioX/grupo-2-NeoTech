@@ -79,3 +79,39 @@
     <li>Archivos duplicados</li>
     <li>Vistas repetidas</li>
 </ul>
+
+<h2>RETROSPECTIVA DEL SPRINT 3</h2>
+
+<p>Según la retrospectiva que realizamos en el sprint 3 , estas son las cosas que deberiamos hacer, seguir haciendo o dejar de hacer en el sprint 4</p>
+
+<h3>Seguir haciendo:</h3>
+<ul>
+    <li>Seguir en comunicación</li>
+    <li>Mantener el Trello actualizado y organizado</li>
+    <li>Repartir las tareas</li>
+</ul>
+
+<h3>Hacer más:</h3>
+<ul>
+    <li>Ser más detallista en el proyecto</li>
+    <li>Ser más estrictos con las fechas limites en las tarjetas</li>
+</ul>
+
+<h3>Empezar a hacer:</h3>
+<ul>
+    <li>Trabajar en las distintas ramas de Git</li>
+    <li>Implementar el orden de las rutas y los controladores</li>
+</ul>
+
+<h3>Hacer menos:</h3>
+<ul>
+    <li>No aplazar tareas importantes</li>
+    <li>Esperar las consignas y adelantarse en el proyecto</li>
+</ul>
+
+<h3>Dejar de hacer:</h3>
+<ul>
+    <li>Atrasarnos en el proyecto</li>
+    <li>Comentarios innecesarios que no aportan al proyecto</li>
+    <li>Trabajos que se nos dificultan (pedir ayuda)</li>
+</ul>

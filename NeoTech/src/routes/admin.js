@@ -1,6 +1,6 @@
 var express = require('express');
-//const { usuarios } = require('../controllers/adminController');
 var router = express.Router();
+/* const { usuarios } = require('../controllers/adminController'); */
 let controller = require('../controllers/adminController')
 
 
@@ -24,6 +24,7 @@ let controller = require('../controllers/adminController')
 router.get('/panel-general', controller.panel)
 
 // GET AGREGAR PRODUCTO FORMULARIO
+
 router.get("/agregar-producto", controller.formAgregarProducto);
 // POST AGREGAR PRODUCTO          --------------------------------------------
 router.post("/agregar-producto", controller.agregarProducto);
@@ -38,7 +39,7 @@ router.get("/formulario-editar-producto/:id", controller.formEditProducto);
 router.put("/formulario-editar-producto/:id", controller.editarProducto);
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO ---------------
-// router.delete("editar-producto", controller.)
+router.delete("/eliminar-producto/:id", controller.deleteProduct)
 
 // GET VENTA Y STOCK 
 router.get("/venta-y-stock", controller.ventaStock);

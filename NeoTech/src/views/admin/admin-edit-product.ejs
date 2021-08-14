@@ -26,7 +26,7 @@
 
             <main id="container">
                 
-                <% db.forEach(element => { %>
+                <% products.forEach(element => { %>
                 <div class="card">
                     
                     <figure class="img-container">
@@ -42,8 +42,13 @@
                         <h2 class="number-card"><%= element.anio %></h2>
                         <p class="description-card"> Modelo: <%= element.modelo %> <br> Color: <%= element.color %> </p>
 
-                        <a class="mas" href="/administrador/formulario-editar-producto/<%= element.id %>"> <i class="fas fa-pencil-alt"></i> </a>
-                        <i id="delete-product" class="fas fa-times"></i>
+                        <a class="mas" href="/administrador/formulario-editar-producto/<%= element.id %>"></a>"> <i class="fas fa-pencil-alt"></i> </a>
+                       <form action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
+                        <button type="submit">
+                            <i id="delete-product" class="fas fa-times"></i>
+                        </button>    
+                        </form>
+                         
                     </div>
                 </div>               
                 <% }) %>
