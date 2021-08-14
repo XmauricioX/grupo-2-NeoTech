@@ -1,0 +1,161 @@
+/* SIDEBAR */
+/* SIDEBAR ANIMATION */
+.body__index__admin {
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#bar{
+    position: absolute;
+    right: -4px;
+    height: 100vh;
+    width: 1%;
+    animation-name: rgb;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes rgb {
+    0%{background-color: red;}
+    20%{background-color: rgb(2, 218, 2);}
+    60%{background-color: rgb(0, 0, 253);}
+    70%{background-color: darkmagenta;}
+    100%{background-color: red;}
+}
+
+/* SIDEBAR CROSS */
+#container-admin #sidebar #cross{
+    z-index: 20;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 20px;
+    color: var(--white);
+}
+/* SIDEBAR CONTAINER */
+#container-admin #sidebar{
+    z-index: 10;
+    display: none;
+    background-color: var(--color-Dark);
+    width: 320px;
+    height: 100vh;
+    position: fixed;
+}
+/* ADMIN INFO */
+#container-admin #sidebar #admin-info{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#container-admin #sidebar #admin-info #edit-admin{
+    position: absolute;
+}
+#container-admin #sidebar #admin-info #edit-admin{
+    color: white;
+    margin-right: 5px;
+    font-size: 25px;
+    bottom: 10px;
+    left: 50px;
+}
+#container-admin #sidebar #admin-name{
+    font-size: 20px;
+    color: var(--white);
+}
+#container-admin #sidebar #admin-info #picture-admin{
+    margin: 20px;
+    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: violet ;
+}
+#container-admin #sidebar #admin-info #admin-pic{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;    
+}
+/* INDEX */
+#container-admin #sidebar #index{
+    background-color: var(--color-Dark-Gray);
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    position: relative;
+    height: 60%;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+#container-admin #sidebar #index a{
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+#container-admin #sidebar #index #cerrar-admin{
+    position: absolute;
+    bottom: 20px;
+}
+
+
+/* CONTENT */
+#container-admin #hamburguer-admin{
+    margin: 20px 0 0 20px;
+    font-size: 20px;
+    color: var(--white);
+}
+#container-admin #content{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#container-admin #content #admin-welcome{
+    font-size: 30px;
+    color: var(--white);
+}
+#navigation{
+    height: 150px
+}
+@media(min-width:1024px){
+    #navigation{
+        height: 150px
+    }
+    #bar{
+        width: 6px;
+        left: 320px;
+    }
+    #container-admin #sidebar{
+        display: block;
+        position: static;
+    }
+    #container-admin #cross{
+        display: none;
+    }
+    #container-admin #hamburguer-admin{
+        display:none;
+    }
+    #container-admin{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    #container-admin #content{
+        position: absolute;
+        width: 75.4%;
+        right: 0;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    #container-admin #sidebar #index a{
+        color: white;
+        font-size: 30px;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+    #container-admin #sidebar #index a:hover{
+        text-decoration: underline
+    }
+}
+
+/* IMPORTS */
+@import url(./admin-add-product.css);

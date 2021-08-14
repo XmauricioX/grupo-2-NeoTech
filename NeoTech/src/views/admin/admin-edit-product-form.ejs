@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head-admin") %> 
+    <link rel="stylesheet" href="../../../styles/admin-edit-product-form.css">
+</head>
+<body>
+    
+    <%- include("../admin/admi-nav") -%>
+
+    
+    <div id="container-admin">
+
+            <%- include("../partials/aside-admin") -%>
+            
+
+        <main id="content">
+            <p id="admin-welcome">
+                Admin Edit Product Form
+            </p>
+
+            <div id="container-form">         
+
+                <form id="form-add" action="/administrador/admin-edit-product-form" method="POST">
+        
+                    <input type="file" name="" id="t-file">
+                    <input type="text" name="aaa" id="" placeholder="Nombre">
+                    <input type="number" min="0" max="1000000" step="10" name="precio" id="" placeholder="Precio"> 
+                    
+                    <div id="categorias">
+                        
+                        <label id="label-categoria" for="form-add">CATEGORIA</label>
+                        <select name="" id="categorias-select"> 
+                            <option value="gabinete">Gabinete</option>
+                            <option value="monitor">Monitor</option>
+                            <option value="mouse">Mouse</option>
+                            <option value="auricular">Ariculares</option>
+                            <option value="Joystick">Joystick</option>
+                            <option value="Teclado">Teclado</option>
+                        </select>
+                        
+                    </div> 
+                    
+                    <input type="option" name="colores" id="" value="" placeholder="color/es">
+                    <npiut type="text" name="" id="description" placeholder="Descripción"> 
+
+                    <input class="submit" type="submit" value="Guardar">
+               
+                </form>
+        
+            </div>
+
+        </main>
+
+    </div>
+    <%- include("../partials/admin-links") -%>
+
+    <%- include('../partials/scripts') -%>
+
+</body>
+</html>

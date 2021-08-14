@@ -1,0 +1,141 @@
+.product__body {
+    background-color: var(--grey);
+}
+
+.product__section{
+    margin: 50px 20px;
+    height: auto;
+}
+.product__main #arrow{
+    color: var(--green);
+    font-size: 30px;
+    position: relative;
+    left: 20px;
+    top: 20px;
+}
+
+.product__section article{
+    max-width: 300px;
+    margin: 0px auto;
+    text-align: center;
+    height: 50vh;
+}
+.product__section article img{
+    background-image: url(/images/imgs-bg/bg-product.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    padding: 10px 0;
+    border: var(--green) 2px solid;
+    border-radius: 20%;
+    margin-bottom: 60px;
+    margin-top: 0px;
+    overflow: hidden;
+}
+.btn__detail{
+    display: flex;
+    justify-content: center;
+}
+.btn__detail .a__detail{
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 25px;
+    color: var(--white);
+    background-color: var(--green);
+    font-size: 45px;
+    position: fixed;
+    bottom: 10px;
+    padding: 0px 15px;
+}
+
+.detail{
+    outline: 1px solid var(--green);
+    background-color: var(--dark-grey);
+    border-radius: 1%;
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    margin: 0px auto 100px;
+}
+.detail h2{
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--white);
+}
+.detail p{
+    text-align: justify;
+    color: var(--white);
+}
+div.container-r{
+    margin-top: 80px;
+}
+
+
+@media (min-width: 768px){
+    .product__section{
+        margin-top: 0%;
+        width: 80%;
+        display: inline-flex;
+        flex-wrap: nowrap;
+        height: 100vh;
+    }
+    .product__section article{
+        margin-top: 15%;
+        width: 60%;
+        margin-left: 0;
+    }
+    article img{
+        height: auto;
+        width: auto;
+    }
+    .btn__detail .a__detail{
+        position: static;
+        padding: 0px 20px;
+        font-size: 45px;
+        margin: 0;
+    }
+    .container-r .detail{
+        width: 100%;
+        font-size: 15px;
+        height: 70%;
+        margin-bottom: 20px;
+        overflow: overlay;
+    }
+    .container-r{        
+        position: relative;
+        margin: 0;
+        width: 35%;
+        height: auto;
+        padding: 0;
+    }
+    .product__main #arrow{
+        top: -245px;
+        left: 20px;
+    }
+    
+}
+
+@media (min-width: 1024px){
+    .product__main{
+        padding-top: 50px;
+    }
+    .detail{
+        font-size: 80px;
+        height: 100%;
+    }
+    #arrow{
+        display: none;
+    }
+    .product__section article{
+        max-width: 500px;
+        margin: 80px 20px 0 auto ;
+    }
+    article img{
+        width: 50%;
+    }
+    .container-r{
+        margin: 0 85px;
+        height: 650px;
+    }
+}

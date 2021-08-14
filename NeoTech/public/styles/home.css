@@ -1,0 +1,297 @@
+.body__home{
+    color: var(--white);
+}
+.main__home {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.main__home .container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+}
+.main__home .text{     
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.39);
+    text-align: center;
+    padding: 30px 0;
+    width: 200px;
+    font-size: 10px;
+    margin-bottom: 10%;
+}
+.main__home .container img{
+    object-fit: cover;
+    align-self: center;
+    /* height: 100%;
+    width: 100%; */
+    height: 100vh;
+    width: 100vw;
+}
+.main__home .container p{
+    padding: 15px 30px 0;
+}
+.main__home .product{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.main__home .product img.product-img {
+    z-index: 2;
+    width: min-content;
+    height: 100%;
+
+}
+.main__home #container-3 .h2_home{
+    /* justify-content: center;
+    /* margin: 0 auto; */
+    color: var(--color-Green); 
+    font-size: 37px;
+    position: relative;
+    bottom: 260px;
+} 
+.main__home #contenedor-4 {
+    height: 120vh;
+    width: 100%;
+}
+.main__home #container-4 .product{
+    flex-direction: column;
+    justify-content: space-between;
+    bottom: 20px;
+    height: max-content;
+}
+.main__home #container-4 .product-img{
+    z-index: 0;
+    width: 400px;
+}
+.main__home #container-4 .text{
+    z-index: 1;
+}
+.main__home #container-2 .product-img{
+    position: relative;
+    width: auto;
+    height: 100vh;
+    z-index: 0;
+    /* overflow: hidden; */
+    bottom: 130px;
+}
+.main__home #container-2 .text{
+    top: 20%;
+    z-index: 1;
+}
+.main__home #container-2 .product{
+    height: 100vh;
+    /* overflow: hidden; */
+}
+.main__home #container-2 .product-img{
+    bottom: 0;
+}
+.main__home #container-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+}
+.main__home #container-1 .container-img{
+    z-index: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.39);
+    padding: 40px 20px;
+}
+
+.main__home .grid-container{
+    display: none;
+}
+.main__home #carouselExampleFade{
+    height: 100vh;
+    overflow: hidden;
+}
+.main__home .carousel-item img {
+    height: 100vh;
+}
+#c-1{
+    display: none;
+}
+
+@media (min-width: 768px){
+    #c-2{
+        display: none;
+    }
+    #c-1{
+        display: block;
+    }
+    
+    .main__home #container-2 .product{
+        height: 100vh;
+        z-index: 0 ;
+    }
+    .main__home #container-2 .text{
+        z-index: 1;
+    }
+    .main__home #container-4 .product-img{
+        width: 450px;
+    }
+}
+@media (min-width: 1024px){
+    
+    #carouselExampleControls{
+        margin-top: 80px;
+    }
+    .main__home #container-2 .product{
+        height: 100vh;
+        z-index: 0;
+    }
+    .main__home #container-2 .text{
+        z-index: 1;
+    }
+    .main__home #container-4 {
+        /* flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end; */
+        width: 100%;
+    }
+    .main__home #container-4 .container-img{
+        /* margin: 0;
+        padding: 0;
+        width: 100%; */
+        width: 100vw;
+    }
+    .main__home .container{
+        margin: auto;
+    }
+    .main__home #container-4 .product{
+        justify-content: center;
+        right: -200px;
+    }
+    .main__home #container-4 .text{
+        /* left: 300px; */
+        left: 25%;
+    }        
+    .main__home .text{
+        font-size: 20px;
+    }
+
+
+
+    .main__home .grid-container{
+        display: grid;
+        height: 150vh;
+        width: 80%;
+        margin: 20px auto 20px;
+        grid-template-areas:"a b c"
+                            "a b d"
+                            "e b d"
+                            "f f g";
+        grid-gap: 20px;
+    }
+    .main__home #item1,#item2,#item3,#item4,#item5,#item6,#item7{
+        border: 1px solid var(--color-Green);
+        
+    }
+    
+    .main__home #item1{
+        grid-area: a;
+        background-image: url(../images/home/collage/intel-2.webp);
+        background-size: cover;
+        background-position: center;
+    }
+    .main__home #item2{
+        grid-area: b;
+        background-image: url(../images/home/collage/amd.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .main__home #item3{
+        grid-area: c;
+        background-image: url(../images/home/collage/bg-5.jpg);
+        background-size: cover;    
+    }
+    .main__home #item4{
+        grid-area: d;
+        background-image: url(../images/home/collage/bg-5.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .main__home #item5{
+        grid-area: e;
+        background-image: url(../images/home/collage/fdfa44f729f4e32b0f1a7024e60489a4--online-computer-store-acer-aspire.jpg);
+        background-size: cover;
+    }
+    .main__home #item6{
+        grid-area: f;
+        background-image: url(../images/home/collage/amd.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .main__home #item7{
+        grid-area: g;
+        background-image: url(../images/home/collage/bg-5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .main__home .ci{
+        width: fit-content;
+    }
+}
+
+#black-screen{
+    width: 100vw;
+    height: 100%;
+    background-color: var(--color-Dark);
+    z-index: 90;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    
+    animation-name: fondo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+#boton-play{
+    font-size: 100px;
+    color: var(--green);
+    border: 10px solid var(--green);
+    padding: 30px 40px 30px 55px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    animation-name: border-green;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+/* 
+    las animaciones se linkean solas solo basta con llamarlas
+    en un evento y se ejecutan
+*/
+@keyframes fondo{
+    0% {background-color: var(--dark-grey);}
+    50% {background-color: black;}
+    100% {background-color: var(--dark-grey);}
+}
+@keyframes border-green{
+    0% {border-color: var(--green);}
+    50% {border-color: var(--dark-grey);}
+    100% {border-color: var(--green);}
+}
+@keyframes mynewmove{
+    from{opacity: 100%;}
+    to{opacity: 0%;}
+}

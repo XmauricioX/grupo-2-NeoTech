@@ -1,0 +1,12 @@
+@import url(general.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(home.css);
+@import url(login.css);
+@import url(register.css);
+@import url(product-list.css);
+@import url(product-detail.css);
+@import url(contact.css);
+@import url(nav.css);
+@import url(full-cart.css);
+@import url(error.css);
