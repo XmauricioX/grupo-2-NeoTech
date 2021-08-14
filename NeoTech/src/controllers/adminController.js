@@ -1,4 +1,4 @@
-let { getProducts, getUsers, writeJSON} = require('../data/dataBase')
+let { getProducts, getUsers, writeProductJSON} = require('../data/dataBase')
 
 module.exports = {
     deleteProduct: (req, res) => {
@@ -11,7 +11,7 @@ module.exports = {
 		}
         });
 
-        writeJSON(getProducts)
+        writeProductJSON(getProducts)
 
         res.send('producto eliminado')
     },
@@ -19,26 +19,26 @@ module.exports = {
     panel: (req, res) => {
         res.render('admin/adminPanel', {title: 'NeoTech - Panel General'})
     },
-    formAgregarProducto: (req,res) =>{
+    formAddProduct: (req,res) =>{
         res.render("admin/admin-add-product", {title: 'NeoTech - Agregar Producto'})
     },
-    agregarProducto: (req,res) =>{ 
+    addProduct: (req,res) =>{ 
         res.send(req.body)
     },
-    editCuenta: (req,res)=>{
+    editAccount: (req,res)=>{
         res.render("admin/admin-edit-account", {title: 'NeoTech - Editar Cuenta'})
     },
-    formEditProducto: (req,res)=>{
+    formEditProduct: (req,res)=>{
         res.render("admin/admin-edit-product-form", {title: 'NeoTech - Form Editar Producto'})
     },
-    editProducto: (req,res)=>{
+    editProduct: (req,res)=>{
         res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto', products: getProducts})
     },
-    ventaStock: (req,res)=>{
+    saleStock: (req,res)=>{
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})
     },
-    usuarios: (req,res)=>{
-        res.render("admin/admin-users", {title: 'NeoTech - Usuarios', users: getUsers})
+    users: (req,res)=>{
+        res.render('admin/admin-users', {title: 'NeoTech - Usuarios', users: getUsers})
     }
 }
 

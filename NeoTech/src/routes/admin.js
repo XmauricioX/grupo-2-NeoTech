@@ -1,7 +1,16 @@
 var express = require('express');
 var router = express.Router();
-/* const { usuarios } = require('../controllers/adminController'); */
-let controller = require('../controllers/adminController')
+const { users,
+        deleteProduct,
+        panel,
+        formAddProduct,
+        addProduct,
+        editAccount,
+        formEditProduct,
+        editProduct,
+        saleStock
+         } = require('../controllers/adminController');
+/* let controller = require('../controllers/adminController') */
 
 
 // LISTADO 00 ECHO
@@ -21,31 +30,31 @@ let controller = require('../controllers/adminController')
 // EDITAR CUENTA USUARIO Y ADMIN
 
 /* GET admin page. */
-router.get('/panel-general', controller.panel)
+router.get('/panel-general', panel)
 
 // GET AGREGAR PRODUCTO FORMULARIO
-router.get("/agregar-producto", controller.formAgregarProducto)
+router.get("/agregar-producto", formAddProduct)
 // POST AGREGAR PRODUCTO         /*  -------------------------------------------- */
-router.post("/agregar-producto", controller.agregarProducto)
+router.post("/agregar-producto", addProduct)
 
 // GET EDITAR CUENTA
-router.get("/editar-cuenta", controller.editCuenta)
+router.get("/editar-cuenta", editAccount)
 
 // GET EDITAR PRODUCTO FORMULARIO
-router.get("/formulario-editar-producto", controller.formEditProducto)
+router.get("/formulario-editar-producto", formEditProduct)
 // GET PANEL EDITAR PRODUCTO ( LISTADO DE PRODUCTOS )
-router.get("/editar-producto", controller.editProducto)
+router.get("/editar-producto", editProduct)
 // PUT EDITAR UN PRODUCTO           /* ----------------------------------------- */
-/* router.put("/editar-producto/:id", controller.) */
+/* router.put("/editar-producto/:id", ) */
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO /* --------------- */
-router.delete("/eliminar-producto/:id", controller.deleteProduct)
+router.delete("/eliminar-producto/:id", deleteProduct)
 
 // GET VENTA Y STOCK 
-router.get("/venta-y-stock", controller.ventaStock)
+router.get("/venta-y-stock", saleStock)
 
 // GET LISTA DE USUARIOS
-router.get("/usuarios", controller.usuarios)
+router.get("/usuarios", users)
 
 
 
