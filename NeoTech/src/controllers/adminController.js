@@ -15,18 +15,6 @@ module.exports = {
 
         res.send('producto eliminado')
     },
-    /* deleteProduct: (req, res) => {
-        getproducts.forEach(product => {
-            if(product.id === +req.params.id){
-                let productDeleted = getSucursales.indexOf(sucursal);
-                getSucursales.splice(productDeleted, 1)
-            }
-        })
-
-        writeJson(getSucursales);
-        
-        res.redirect('/admin/sucursales');
-    }, */
 
     panel: (req, res) => {
         res.render('admin/adminPanel', {title: 'NeoTech - Panel General'})
