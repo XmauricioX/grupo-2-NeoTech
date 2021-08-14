@@ -24,27 +24,27 @@ let controller = require('../controllers/adminController')
 router.get('/panel-general', controller.panel)
 
 // GET AGREGAR PRODUCTO FORMULARIO
-router.get("/agregar-producto", controller.formAgregarProducto)
+router.get("/agregar-producto", controller.formAgregarProducto);
 // POST AGREGAR PRODUCTO          --------------------------------------------
-router.post("/agregar-producto", controller.agregarProducto)
+router.post("/agregar-producto", controller.agregarProducto);
 
 // GET EDITAR CUENTA
-router.get("/editar-cuenta", controller.editCuenta)
+router.get("/editar-cuenta", controller.editCuenta);
 // GET VISTA DEL ADMIN ( LISTADO DE PRODUCTOS )
-router.get("/editar-producto", controller.adminEdit)
+router.get("/editar-producto", controller.adminEdit);
 // GET VISTA DEL FORMULARIO
-router.get("/formulario-editar-producto/:id", controller.formEditProducto)
+router.get("/formulario-editar-producto/:id", controller.formEditProducto);
 // PUT EDITAR UN PRODUCTO LOGICA    ------------------------------------------
-router.put("/formulario-editar-producto", controller.editarProducto)
+router.put("/formulario-editar-producto/", controller.editarProducto);
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO ---------------
 // router.delete("editar-producto", controller.)
 
 // GET VENTA Y STOCK 
-router.get("/venta-y-stock", controller.ventaStock)
+router.get("/venta-y-stock", controller.ventaStock);
 
 // GET LISTA DE USUARIOS
-router.get("/usuarios", controller.usuarios)
+router.get("/usuarios", controller.usuarios);
 
 
 
