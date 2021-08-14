@@ -24,7 +24,7 @@ module.exports = {
         res.render("admin/admin-edit-product-form", { product ,title: 'NeoTech - Form Editar Producto'})
     },// formulario de editar
     editarProducto: (req, res) => {
-        res.send("se supone")
+        res.send(req.body)
     },// logica de editar
     ventaStock: (req,res)=>{
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})

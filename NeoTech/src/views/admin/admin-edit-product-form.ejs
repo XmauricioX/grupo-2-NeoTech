@@ -21,7 +21,7 @@
 
             <div id="container-form">         
 
-                <form id="form-add" action="/administrador/formulario-editar-producto/?_method=PUT" method="POST">
+                <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST">
         
                     <input type="file" name="" id="t-file">
                     <input value="<%= product.marca %>" type="text" name="aaa" id="" placeholder="Nombre">
@@ -44,14 +44,14 @@
                                     <% } else if(product.categoria == "Teclado"){%>
                                         <option selected value="Teclado">Teclado</option>
                                 <% } %>
-                                       
+                                
                             </select>
                     </div>
                     
                     <input value="<%= product.color %>" type="option" name="colores" id="" placeholder="color/es">
                     <input value="<%= product.descripcion %>" type="text" name="" id="description" placeholder="Descripción"> 
                     
-                    <input class="submit" type="submit" value="Editar">
+                    <button class="submit" type="submit" >Editar</button>
                 </form>
                 
         

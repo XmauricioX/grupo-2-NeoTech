@@ -1,5 +1,5 @@
 var express = require('express');
-const { usuarios } = require('../controllers/adminController');
+//const { usuarios } = require('../controllers/adminController');
 var router = express.Router();
 let controller = require('../controllers/adminController')
 
@@ -35,7 +35,7 @@ router.get("/editar-producto", controller.adminEdit);
 // GET VISTA DEL FORMULARIO
 router.get("/formulario-editar-producto/:id", controller.formEditProducto);
 // PUT EDITAR UN PRODUCTO LOGICA    ------------------------------------------
-router.put("/formulario-editar-producto/", controller.editarProducto);
+router.put("/formulario-editar-producto/:id", controller.editarProducto);
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO ---------------
 // router.delete("editar-producto", controller.)
