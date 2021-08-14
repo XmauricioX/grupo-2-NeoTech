@@ -35,10 +35,10 @@ router.get("/formulario-editar-producto", controller.formEditProducto)
 // GET PANEL EDITAR PRODUCTO ( LISTADO DE PRODUCTOS )
 router.get("/editar-producto", controller.editProducto)
 // PUT EDITAR UN PRODUCTO           ------------------------------------------
-router.put("/editar-producto/:id", controller.)
+// router.put("/editar-producto/:id", controller.)
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO ---------------
-router.delete("editar-producto", controller.)
+// router.delete("editar-producto", controller.)
 
 // GET VENTA Y STOCK 
 router.get("/venta-y-stock", controller.ventaStock)
