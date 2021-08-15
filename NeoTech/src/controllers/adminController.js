@@ -1,4 +1,5 @@
-let { getProducts, getUsers, writeProductJSON} = require('../data/dataBase')
+let { getProducts, getUsers, writeProductJSON} = require('../data/dataBase');
+const { get } = require('../routes');
 
 module.exports = {
     deleteProduct: (req, res) => {
@@ -38,7 +39,23 @@ module.exports = {
         res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto', products: getProducts})
     },
     logicEditProduct: (req,res)=>{
-        res.send("editaste")
+        let { marca, precio, categoria, color, descripcion } = req.body;
+
+        getProducts.forEach(product => {
+            if(product.id === +req.params.id){
+                product.id = product.id,
+                product.marca = marca,
+                product.precio = precio,
+                product.categoria = categoria,
+                product.color = color,
+                product.descripcion = descripcion
+            }
+        })
+
+        writeProductJSON(getProducts);
+
+        res.redirect('/administrador/editar-producto')
+            
     },
     saleStock: (req,res)=>{
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})

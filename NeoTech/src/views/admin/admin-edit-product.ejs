@@ -20,9 +20,9 @@
                 Admin Edit Product
             </p>
 
-            <form id="form-edit-product" action="" method="">
+            <!-- <form id="form-edit-product" action="" method="">
                 <input type="search" placeholder="Buscar producto"><i class="fas fa-search"></i>
-            </form>
+            </form> -->
 
             <main id="container">
                 
@@ -39,8 +39,12 @@
         
                     <div class="text-card">
                         <h2 class="name-card"><%= element.marca %></h2>
-                        <h2 class="number-card"><%= element.anio %></h2>
-                        <p class="description-card"> Modelo: <%= element.modelo %> <br> Color: <%= element.color %> </p>
+                        <h2 class="number-card"><%= element.precio %></h2>
+                        <p class="description-card"> 
+                            Categoria: <%= element.categoria %> <br> 
+                            Color: <%= element.color %> <br>
+                            Descripción: <%= element.descripcion.slice(0,45) %>... 
+                        </p>
 
                         <a class="mas" href="/administrador/formulario-editar-producto/<%= element.id %>"> <i class="fas fa-pencil-alt"></i> </a>
                         <form action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
