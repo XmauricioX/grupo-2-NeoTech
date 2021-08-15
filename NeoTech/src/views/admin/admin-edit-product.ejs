@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 
     <%- include("../partials/head-admin") -%>
@@ -17,7 +17,7 @@
 
         <main id="content">
             <p id="admin-welcome">
-                Admin Edit Product
+                Edición de proucto
             </p>
 
             <form id="form-edit-product" action="" method="">
@@ -38,13 +38,12 @@
                     <hr>
         
                     <div class="text-card">
-                        <h2 class="name-card"><%= element.marca %></h2>
-                        <h2 class="number-card"><%= element.anio %></h2>
-                        <p class="description-card"> Modelo: <%= element.modelo %> <br> Color: <%= element.color %> </p>
+                        <h2 class="name-card"><%= element.producto %></h2>
+                        <p class="description-card"> Marca: <%= element.marca %> <br> Color: <%= element.color %> </p>
 
                         <a class="mas" href="/administrador/formulario-editar-producto/"> <i class="fas fa-pencil-alt"></i> </a>
-                       <form action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
-                        <button type="submit">
+                       <form class="delete-content" action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST">
+                        <button class="delete-product" type="submit">
                             <i id="delete-product" class="fas fa-times"></i>
                         </button>    
                         </form>

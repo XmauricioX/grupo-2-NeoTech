@@ -8,9 +8,10 @@ const { users,
         editAccount,
         formEditProduct,
         editProduct,
-        saleStock
+        saleStock,
+        deleteUsers
          } = require('../controllers/adminController');
-/* let controller = require('../controllers/adminController') */
+
 
 
 // LISTADO 00 ECHO
@@ -55,7 +56,8 @@ router.get("/venta-y-stock", saleStock)
 
 // GET LISTA DE USUARIOS
 router.get("/usuarios", users)
-
+// DELETE BORRAR UN USUARIO DESDE EL PANEL DE EDITAR PRODUCTO
+router.delete("/usuarios/:id", deleteUsers)
 
 
 module.exports = router;
