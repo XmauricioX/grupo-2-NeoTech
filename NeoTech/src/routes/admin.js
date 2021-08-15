@@ -8,8 +8,9 @@ const { users,
         editAccount,
         formEditProduct,
         editProduct,
-        saleStock
-         } = require('../controllers/adminController');
+        saleStock,
+        logicEditProduct
+        } = require('../controllers/adminController');
 /* let controller = require('../controllers/adminController') */
 
 
@@ -40,12 +41,12 @@ router.post("/agregar-producto", addProduct)
 // GET EDITAR CUENTA
 router.get("/editar-cuenta", editAccount)
 
-// GET EDITAR PRODUCTO FORMULARIO
-router.get("/formulario-editar-producto", formEditProduct)
 // GET PANEL EDITAR PRODUCTO ( LISTADO DE PRODUCTOS )
 router.get("/editar-producto", editProduct)
+// GET EDITAR PRODUCTO FORMULARIO
+router.get("/formulario-editar-producto/:id", formEditProduct)
 // PUT EDITAR UN PRODUCTO           /* ----------------------------------------- */
-/* router.put("/editar-producto/:id", ) */
+router.put("/formulario-editar-producto/:id", logicEditProduct)
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO /* --------------- */
 router.delete("/eliminar-producto/:id", deleteProduct)

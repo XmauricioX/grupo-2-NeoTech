@@ -16,35 +16,78 @@
 
         <main id="content">
             <p id="admin-welcome">
-                Admin Edit Product Form
+                Estas editando: <%= product.marca %>
             </p>
 
             <div id="container-form">         
 
-                <form id="form-add" action="/administrador/admin-edit-product-form" method="POST">
+                <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST">
         
-                    <input type="file" name="" id="t-file">
-                    <input type="text" name="aaa" id="" placeholder="Nombre">
-                    <input type="number" min="0" max="1000000" step="10" name="precio" id="" placeholder="Precio"> 
+                    <div style="text-align: center;">
+                        <img id="description" src="/images/imgs-product/<%= product.imagen %>" alt="imagen del producto">
+                    </div>
+                    <input type="file" name="imagen" id="t-file" value="">
+
+                    <input type="text" name="aaa" id="" value="<%= product.marca %>">
+                    <input type="number" min="0" max="1000000" step="10" name="precio" id="" value="<%= product.precio %>"> 
                     
                     <div id="categorias">
                         
                         <label id="label-categoria" for="form-add">CATEGORIA</label>
-                        <select name="" id="categorias-select"> 
-                            <option value="gabinete">Gabinete</option>
-                            <option value="monitor">Monitor</option>
-                            <option value="mouse">Mouse</option>
-                            <option value="auricular">Ariculares</option>
-                            <option value="Joystick">Joystick</option>
-                            <option value="Teclado">Teclado</option>
+                        <select name="categoria" id="categorias-select"> 
+                            <% if(product.categoria == "Gabinete" ){ %>
+                                    <option selected value="gabinete">Gabinete</option>
+                                    <option value="monitor">Monitor</option>
+                                    <option value="auricular">Ariculares</option>
+                                    <option value="Teclado">Teclado</option>
+                                    <option value="Mouse">Mouse</option>
+                                    <option value="Joystick">Joystick</option>
+                                <% }else if(product.categoria == "Monitor"){ %>
+                                    <option  value="gabinete">Gabinete</option>
+                                    <option selected value="monitor">Monitor</option>
+                                    <option  value="auricular">Ariculares</option>
+                                    <option  value="Teclado">Teclado</option>
+                                    <option value="Mouse">Mouse</option>
+                                    <option value="Joystick">Joystick</option>
+                                <% }else if(product.categoria == "Mouse"){%>
+                                    <option  value="gabinete">Gabinete</option>
+                                    <option  value="monitor">Monitor</option>
+                                    <option  value="auricular">Ariculares</option>
+                                    <option  value="Teclado">Teclado</option>
+                                    <option selected value="Mouse">Mouse</option>
+                                    <option value="Joystick">Joystick</option>
+                                <% }else if(product.categoria == "Auriculares"){ %>
+                                    <option  value="gabinete">Gabinete</option>
+                                    <option  value="monitor">Monitor</option>
+                                    <option selected value="auricular">Ariculares</option>
+                                    <option  value="Teclado">Teclado</option>
+                                    <option value="Mouse">Mouse</option>
+                                    <option value="Joystick">Joystick</option>
+                                <% }else if(product.categoria == "Joystick"){ %>
+                                    <option  value="gabinete">Gabinete</option>
+                                    <option  value="monitor">Monitor</option>
+                                    <option  value="auricular">Ariculares</option>
+                                    <option  value="Teclado">Teclado</option>
+                                    <option  value="Mouse">Mouse</option>
+                                    <option selected value="Joystick">Joystick</option>
+                                <% }else if(product.categoria == "Teclado"){ %>
+                                    <option  value="gabinete">Gabinete</option>
+                                    <option  value="monitor">Monitor</option>
+                                    <option  value="auricular">Ariculares</option>
+                                    <option selected value="Teclado">Teclado</option>
+                                    <option value="Mouse">Mouse</option>
+                                    <option value="Joystick">Joystick</option>
+                                <% }else{ %>
+                                    <option selected value="">...</option>
+                                <% } %>
                         </select>
                         
                     </div> 
                     
-                    <input type="option" name="colores" id="" value="" placeholder="color/es">
-                    <npiut type="text" name="" id="description" placeholder="Descripción"> 
+                    <input type="option" name="color" id="" value="<%= product.color %>" placeholder="color/es">
+                    <input type="text" name="descripcion" id="description" value="<%= product.descripcion %>"> 
 
-                    <input class="submit" type="submit" value="Guardar">
+                    <button class="submit" type="submit" value="Guardar">Guardar</button>
                
                 </form>
         

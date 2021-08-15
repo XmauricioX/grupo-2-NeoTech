@@ -29,10 +29,16 @@ module.exports = {
         res.render("admin/admin-edit-account", {title: 'NeoTech - Editar Cuenta'})
     },
     formEditProduct: (req,res)=>{
-        res.render("admin/admin-edit-product-form", {title: 'NeoTech - Form Editar Producto'})
+        let product = getProducts.find(product =>{
+		return product.id === +req.params.id
+		}); //al ponerle un + es lo mismo que hacer Number()
+        res.render("admin/admin-edit-product-form", { product ,title: 'NeoTech - Form Editar Producto'})
     },
     editProduct: (req,res)=>{
         res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto', products: getProducts})
+    },
+    logicEditProduct: (req,res)=>{
+        res.send("editaste")
     },
     saleStock: (req,res)=>{
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})
