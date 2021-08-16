@@ -1,65 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <%- include("../partials/head-admin") -%>
 
-    <link rel="stylesheet" href="../../../styles/admin-edit-product.css">
+        <link rel="stylesheet" href="../../../styles/admin-edit-product.css">
 </head>
+
 <body class="body__edit__product">
-    
+
     <%- include("../admin/admi-nav") -%>
 
-    
-    <div id="container-admin">
+
+        <div id="container-admin">
 
         <%- include("../partials/aside-admin") -%>
 
-        <main id="content">
-            <p id="admin-welcome">
-                Admin Edit Product
-            </p>
+            <main id="content">
+                <p id="admin-welcome">
+                    Admin Edit Product
+                </p>
 
-            <form id="form-edit-product" action="" method="">
-                <input type="search" placeholder="Buscar producto"><i class="fas fa-search"></i>
-            </form>
+                <form id="form-edit-product" action="" method="">
+                    <input type="search" placeholder="Buscar producto"><i class="fas fa-search"></i>
+                </form>
 
-            <main id="container">
-                
-                <% products.forEach(element => { %>
-                <div class="card">
-                    
-                    <figure class="img-container">
-                        <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
-                        <!-- FONDO DEL PRODUCTO -->
-                        <img class="img-1" src="/images/imgs-product/<%- element.imagen %> " alt="product">
-                        <!-- IMAGEN DEL PRODUCTO -->
-                    </figure>
-                    <hr>
-        
-                    <div class="text-card">
-                        <h2 class="name-card"><%= element.marca %></h2>
-                        <h2 class="number-card"><%= element.anio %></h2>
-                        <p class="description-card"> Modelo: <%= element.modelo %> <br> Color: <%= element.color %> </p>
+                <main id="container">
 
-                        <a class="mas" href="/administrador/formulario-editar-producto/"> <i class="fas fa-pencil-alt"></i> </a>
-                       <form action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
-                        <button type="submit">
-                            <i id="delete-product" class="fas fa-times"></i>
-                        </button>    
-                        </form>
-                         
-                    </div>
-                </div>               
-                <% }) %>
+                    <% products.forEach(element=> { %>
+                        <div class="card">
+
+                            <figure class="img-container">
+                                <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
+                                <!-- FONDO DEL PRODUCTO -->
+                                <img class="img-1" src="/images/imgs-product/<%- element.imagen %> " alt="product">
+                                <!-- IMAGEN DEL PRODUCTO -->
+                            </figure>
+                            <hr>
+
+                            <div class="text-card">
+                                <h2 class="name-card">
+                                    <%= element.marca %>
+                                </h2>
+                                <h2 class="number-card">$<%= element.precio %>
+                                </h2>
+                                <p class="description-card"> Producto: <%= element.producto %> <br> Color: <%=
+                                            element.color %> <br> Categoria: <%= element.categoria %>
+                                </p>
+
+                                <a class="mas" href="/administrador/formulario-editar-producto/"> <i
+                                        class="fas fa-pencil-alt"></i> </a>
+                                <form action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE"
+                                    method="POST">
+                                    <button type="submit">
+                                        <i id="delete-product" class="fas fa-times"></i>
+                                    </button>
+                                </form>
+
+                            </div>
+                        </div>
+                        <% }) %>
+                </main>
+
             </main>
 
-        </main>
+        </div>
+        <%- include("../partials/admin-links") -%>
 
-    </div>
-    <%- include("../partials/admin-links") -%>
-
-    <%- include('../partials/scripts.ejs') %>
+        <%- include('../partials/scripts.ejs') %>
 
 </body>
+
 </html>

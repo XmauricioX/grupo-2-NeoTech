@@ -133,8 +133,8 @@ hr{
 } 
 #delete-product{
     position: relative;
-    bottom: 424px;
-    left: 230px;
+    bottom: 447px;
+    left: 228px;
     font-size: 40px;
     color: var(--color-Green-Old);
     cursor: pointer;
