@@ -6,22 +6,19 @@ module.exports = {
 
         getProducts.forEach(product => {
             if (product.id === +req.params.id){
-                let productDeleted = getProducts.indexOf(product)
+				let productDeleted = getProducts.indexOf(product)
 				getProducts.splice(productDeleted, 1)
-            }
+		}
         });
-        
+
         writeProductJSON(getProducts)
-        
-        // res.send('producto eliminado')
-        res.redirect('/administrador/editar-producto')
+
+        res.send('producto eliminado')
     },
 
     panel: (req, res) => {
         res.render('admin/adminPanel', {title: 'NeoTech - Panel General'})
     },
-
-// añadir productos//////////////////////////////
     formAddProduct: (req,res) =>{
         res.render("admin/admin-add-product", {title: 'NeoTech - Agregar Producto'})
     },
@@ -59,8 +56,6 @@ module.exports = {
 
         res.redirect('/administrador/editar-producto')
     },
-// fin añadir productos  ///////////////////////////////////////////
-
     editAccount: (req,res)=>{
         res.render("admin/admin-edit-account", {title: 'NeoTech - Editar Cuenta'})
     },
@@ -74,7 +69,7 @@ module.exports = {
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})
     },
     users: (req,res)=>{
-        res.render("/admin-users", {title: 'NeoTech - Usuarios'})
+        res.render('admin/admin-users', {title: 'NeoTech - Usuarios', users: getUsers})
     }
 }
 

@@ -53,7 +53,7 @@ router.get("/venta-y-stock", saleStock)
 
 /*  -------------------------------------------- */
 // GET LISTA DE USUARIOS
-router.get("/usuarios/", users)
+router.get("/usuarios", users)
 /*  -------------------------------------------- */
 
 
