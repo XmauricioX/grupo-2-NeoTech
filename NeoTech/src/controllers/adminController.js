@@ -12,8 +12,9 @@ module.exports = {
         });
 
         writeProductJSON(getProducts)
-
-        res.send('producto eliminado')
+        
+        // res.send('producto eliminado')
+        res.redirect('/administrador/editar-producto')
     },
 
     panel: (req, res) => {

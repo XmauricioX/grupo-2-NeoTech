@@ -111,13 +111,13 @@ hr{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    
+    margin-top: -50px;
 }
 
 .description-card{
     width: 100%;
-    margin-bottom: 20px;
     overflow: hidden;
+    padding-top: 20px;
 }
 .mas{
     display: block;
@@ -133,11 +133,13 @@ hr{
 } 
 #delete-product{
     position: relative;
-    bottom: 447px;
-    left: 228px;
+    bottom: 320px;
+    left: 235px;
     font-size: 40px;
     color: var(--color-Green-Old);
     cursor: pointer;
+    border: none;
+    background-color: transparent;
 }
 @media (min-width: 768px){
     #container{

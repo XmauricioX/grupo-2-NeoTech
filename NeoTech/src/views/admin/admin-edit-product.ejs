@@ -17,20 +17,17 @@
 
         <%- include("../partials/aside-admin") -%>
 
-            <main id="content">
+            <div id="content">
                 <p id="admin-welcome">
                     Admin Edit Product
                 </p>
-
-                <form id="form-edit-product" action="" method="">
-                    <input type="search" placeholder="Buscar producto"><i class="fas fa-search"></i>
-                </form>
-
-                <main id="container">
-
+                
+                
+                <div id="container">
+                    
                     <% products.forEach(element=> { %>
                         <div class="card">
-
+                            
                             <figure class="img-container">
                                 <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                                 <!-- FONDO DEL PRODUCTO -->
@@ -38,8 +35,19 @@
                                 <!-- IMAGEN DEL PRODUCTO -->
                             </figure>
                             <hr>
+                            
+                            <a class="mas" href="/administrador/formulario-editar-producto/"><i class="fas fa-pencil-alt"></i></a>
 
+                            <form action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE"
+                                method="POST">
+                                <button id="delete-product" type="submit">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </form>
                             <div class="text-card">
+                                
+                                
+
                                 <h2 class="name-card">
                                     <%= element.marca %>
                                 </h2>
@@ -48,24 +56,15 @@
                                 <p class="description-card"> Producto: <%= element.producto %> <br> Color: <%=
                                             element.color %> <br> Categoria: <%= element.categoria %>
                                 </p>
-
-                                <a class="mas" href="/administrador/formulario-editar-producto/"> <i
-                                        class="fas fa-pencil-alt"></i> </a>
-                                <form action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE"
-                                    method="POST">
-                                    <button type="submit">
-                                        <i id="delete-product" class="fas fa-times"></i>
-                                    </button>
-                                </form>
-
+                                
                             </div>
                         </div>
                         <% }) %>
-                </main>
-
-            </main>
-
-        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
         <%- include("../partials/admin-links") -%>
 
         <%- include('../partials/scripts.ejs') %>
