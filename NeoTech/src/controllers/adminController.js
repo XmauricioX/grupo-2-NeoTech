@@ -45,7 +45,7 @@ module.exports = {
             id: lastID + 1,
             marca: marca.trim(),
             producto : producto.trim(),
-            precio: precio.trim(),
+            precio: +precio.trim(),
             categoria: categoria.trim(),
             color: color.trim(),
             descripcion: descripcion.trim()
