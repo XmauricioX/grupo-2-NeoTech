@@ -1,11 +1,19 @@
 var express = require('express');
 var router = express.Router();
-let controller = require('../controllers/usersController')
+let {
+    login,
+    register,
+    userRegister,
+    } = require('../controllers/usersController')
 
 
 /* GET users page. */
-router.get('/iniciar-sesion', controller.login);
-router.get('/registro', controller.register)
+router.get('/iniciar-sesion', login);
+
+/* GET FORM REGISTER */
+router.get('/registro', register)
+/* POST FORM REGISTER */
+router.post('/registro', userRegister)
 
 
 module.exports = router;

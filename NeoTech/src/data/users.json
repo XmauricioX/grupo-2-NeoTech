@@ -88,5 +88,30 @@
         "password": "hD2aK7",
         "admin": false,
         "image": "default-image.png"
+    },
+    {
+        "id": 11,
+        "firstName": "Homero",
+        "lastName": "Simpsons",
+        "email": "homer_JS@gmail.com",
+        "password": "jymyfjmufy"
+    },
+    {
+        "id": 12,
+        "firstName": "Homero",
+        "lastName": "Simpsons",
+        "email": "homer_JS@gmail.com",
+        "password": "Crevezaaaaaaaaaaaaa",
+        "admin": false,
+        "image": "default-image.png"
+    },
+    {
+        "id": 13,
+        "firstName": "Homero",
+        "lastName": "Simpsons",
+        "email": "homer_JS@gmail.com",
+        "password": "estavezfunciono",
+        "admin": false,
+        "image": "default-image.png"
     }
 ]
