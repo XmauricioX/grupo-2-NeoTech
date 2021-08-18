@@ -90,13 +90,6 @@
         "image": "default-image.png"
     },
     {
-        "id": 11,
-        "firstName": "Homero",
-        "lastName": "Simpsons",
-        "email": "homer_JS@gmail.com",
-        "password": "jymyfjmufy"
-    },
-    {
         "id": 12,
         "firstName": "Homero",
         "lastName": "Simpsons",
@@ -111,6 +104,24 @@
         "lastName": "Simpsons",
         "email": "homer_JS@gmail.com",
         "password": "estavezfunciono",
+        "admin": false,
+        "image": "default-image.png"
+    },
+    {
+        "id": 14,
+        "firstName": "cosme",
+        "lastName": "fulanito",
+        "email": "cosmefulanito@mail.com",
+        "password": "cosme",
+        "admin": false,
+        "image": "default-image.png"
+    },
+    {
+        "id": 15,
+        "firstName": "cosme",
+        "lastName": "fulanito",
+        "email": "cosmefulanito@mail.com",
+        "password": "123123123",
         "admin": false,
         "image": "default-image.png"
     }

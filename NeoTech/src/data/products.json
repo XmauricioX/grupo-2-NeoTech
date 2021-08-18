@@ -1,0 +1,252 @@
+[
+    {
+        "id": 1,
+        "trademark": "Sony",
+        "description": "Cuenta con Bluetooth. Pantalla táctil. Mando inalámbrico.  Incluye un control. Con sistema de vibración incorporado. Diversión garantizada con tu joystick PlayStation. Diseño ergonómico.",
+        "product": "Joystick",
+        "price": 15000,
+        "color": "negro",
+        "category": "Joystick",
+        "image": "joy.png"
+    },
+    {
+        "id": 2,
+        "trademark": "Sony",
+        "description": "Cuenta con Bluetooth. Pantalla táctil. Mando inalámbrico.  Incluye un control. Con sistema de vibración incorporado. Diversión garantizada con tu joystick PlayStation. Diseño ergonómico.",
+        "product": "Joystick",
+        "price": 15000,
+        "color": "blanco",
+        "category": "Joystick",
+        "image": "joy.png"
+    },
+    {
+        "id": 3,
+        "trademark": "Sony",
+        "description": "Incluye control inalámbrico. Resolución de 3840px x 2160px.Memoria RAM de 16GB.Horas de diversión garantizada.Cuenta con: 1 soporte vertical, 1 cable de alimentación ac, 1 cable usb, 1 cable hdmi, 1 guía de inicio rápido, 1 guía de seguridad.",
+        "product": "Playstation 5",
+        "price": 190000,
+        "color": "negro",
+        "category": "Joystick",
+        "image": "play.png"
+    },
+    {
+        "id": 4,
+        "trademark": "Sony",
+        "description": "Alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.",
+        "product": "Auriculares",
+        "price": 7000,
+        "color": "blanco",
+        "category": "Auriculares",
+        "image": "auri.png"
+    },
+    {
+        "id": 5,
+        "trademark": "Sony",
+        "description": "Alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.",
+        "product": "Auriculares",
+        "price": 7000,
+        "color": "rojo",
+        "category": "Auriculares",
+        "image": "auri.png"
+    },
+    {
+        "id": 6,
+        "trademark": "HyperX",
+        "description": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductre",
+        "product": "Teclado",
+        "price": 8000,
+        "color": "black",
+        "category": "Teclado",
+        "image": "teclado.png"
+    },
+    {
+        "id": 7,
+        "trademark": "HyperX",
+        "description": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductre",
+        "product": "Teclado",
+        "price": 8000,
+        "color": "rojo",
+        "category": "Teclado",
+        "image": "teclado.png"
+    },
+    {
+        "id": 8,
+        "trademark": "HyperX",
+        "description": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductre",
+        "product": "Mouse",
+        "price": 5500,
+        "color": "rojo",
+        "category": "Mouse",
+        "image": "mouse.png"
+    },
+    {
+        "id": 9,
+        "trademark": "HyperX",
+        "description": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductre",
+        "product": "Auriculares",
+        "price": 9300,
+        "color": "rojo",
+        "category": "Auriculares",
+        "image": "auri.png"
+    },
+    {
+        "id": 10,
+        "trademark": "HyperX",
+        "description": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "product": "Mouse",
+        "price": 5500,
+        "color": "gris",
+        "category": "Mouse",
+        "image": "mouse.png"
+    },
+    {
+        "id": 11,
+        "trademark": "Logitech",
+        "description": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "product": "Parlante",
+        "price": 3700,
+        "color": "gris",
+        "category": "Monitor",
+        "image": "parlante.png"
+    },
+    {
+        "id": 12,
+        "trademark": "Logitech",
+        "description": "scirocco",
+        "product": "Parlante",
+        "price": 2500,
+        "color": "gris",
+        "category": "Monitor",
+        "image": "parlante.png"
+    },
+    {
+        "id": 13,
+        "trademark": "Logitech",
+        "description": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "product": "Monitor",
+        "price": 9000,
+        "color": "blanco",
+        "category": "Monitor",
+        "image": "monitor.png"
+    },
+    {
+        "id": 14,
+        "trademark": "Logitech",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Monitor",
+        "price": 11000,
+        "color": "blanco",
+        "category": "Monitor",
+        "image": "monitor.png"
+    },
+    {
+        "id": 15,
+        "trademark": "Logitech",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Parlantes",
+        "price": 3200,
+        "color": "blanco",
+        "category": "Monitor",
+        "image": "parlante.png"
+    },
+    {
+        "id": 16,
+        "trademark": "Gigabyte",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Placa de video",
+        "price": 155000,
+        "color": "azul",
+        "category": "Monitor",
+        "image": "placa.png"
+    },
+    {
+        "id": 17,
+        "trademark": "Gigabyte",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Placa de video",
+        "price": 157000,
+        "color": "azul",
+        "category": "Monitor",
+        "image": "monitor.png"
+    },
+    {
+        "id": 18,
+        "trademark": "Gigabyte",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Mousepad",
+        "price": 2000,
+        "color": "azul",
+        "category": "Mouse",
+        "image": "pad.png"
+    },
+    {
+        "id": 19,
+        "trademark": "Gigabyte",
+        "description": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "product": "Mousepad",
+        "price": 1800,
+        "color": "amarillo",
+        "category": "Mouse",
+        "image": "pad.png"
+    },
+    {
+        "id": 20,
+        "trademark": "Gigabyte",
+        "description": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "product": "Placa de Video",
+        "price": 195000,
+        "color": "amarillo",
+        "category": "Joystick",
+        "image": "placa.png"
+    },
+    {
+        "id": 21,
+        "trademark": "Samsung",
+        "description": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "product": "Monitor",
+        "price": 35000,
+        "color": "verde",
+        "category": "Monitor",
+        "image": "monitor.png"
+    },
+    {
+        "id": 22,
+        "trademark": "Samsung",
+        "description": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "product": "Motherboard",
+        "price": 7700,
+        "color": "verde",
+        "category": "Teclado",
+        "image": "mother.png"
+    },
+    {
+        "id": 23,
+        "trademark": "Samsung",
+        "description": "Communications:802.11a/b/g/n/ac Wireless + Bluetooth 4.2 HP HD Privacy Camera with Integrated Dual Array Digital Microphone",
+        "product": "Motherboard",
+        "price": 8000,
+        "color": "verde",
+        "category": "Monitor",
+        "image": "mother.png"
+    },
+    {
+        "id": 24,
+        "trademark": "Samsung",
+        "description": "Velocidad en cada lectura Como cuenta con 1920 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa",
+        "product": "monitor",
+        "price": 95500,
+        "color": "negro",
+        "category": "Monitor",
+        "image": "monitor.png"
+    },
+    {
+        "id": 25,
+        "trademark": "Samsung",
+        "description": "Velocidad en cada lectura Como cuenta con 1920 núcleos, los cálculos para el procesamiento de gráficos se realizarán de forma simultánea logrando un resultado óptimo del trabajo de la placa",
+        "product": "Placa de video",
+        "price": 130000,
+        "color": "negro",
+        "category": "Teclado",
+        "image": "placa.png"
+    }
+]

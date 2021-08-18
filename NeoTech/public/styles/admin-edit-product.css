@@ -26,6 +26,14 @@
 #container-admin{
     color: var(--white);
 }
+.delete-product{
+    background-color:transparent;
+    border:none;
+    height: 0;
+}
+.delete-content{
+    height: 0;
+}
 /* BARRA DE BUSQUEDA */
 /* #form-edit-product{
     position: absolute;
