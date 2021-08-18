@@ -10,6 +10,7 @@ const { users,
         editProduct,
         saleStock,
       } = require('../controllers/adminController');
+const uploadFile = require('../middlewares/uploadFiles');
 
 
 /* GET admin page. */
@@ -19,7 +20,7 @@ router.get('/panel-general', panel)
 // GET AGREGAR PRODUCTO FORMULARIO
 router.get("/agregar-producto", formAddProduct)
 // POST AGREGAR PRODUCTO         
-router.post("/agregar-producto", addProduct)
+router.post("/agregar-producto",uploadFile.single('product-image'), addProduct)
 /*  -------------------------------------------- */
 
 

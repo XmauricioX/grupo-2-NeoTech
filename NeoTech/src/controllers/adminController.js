@@ -43,12 +43,14 @@ module.exports = {
 
         let newProduct = {
             id: lastID + 1,
+            imagen: req.file ? req.file.filename : "default-image.png",
             marca: marca.trim(),
             producto : producto.trim(),
             precio: +precio.trim(),
             categoria: categoria.trim(),
             color: color.trim(),
-            descripcion: descripcion.trim()
+            descripcion: descripcion.trim(),
+            //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el "default-image.png".
         };
 
         getProducts.push(newProduct);
