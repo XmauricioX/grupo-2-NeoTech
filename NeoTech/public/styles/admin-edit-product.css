@@ -26,11 +26,7 @@
 #container-admin{
     color: var(--white);
 }
-.delete-product{
-    background-color:transparent;
-    border:none;
-    height: 0;
-}
+
 .delete-content{
     height: 0;
 }
@@ -141,11 +137,14 @@ hr{
 } 
 #delete-product{
     position: relative;
-    bottom: 424px;
-    left: 230px;
+    bottom: 319px;
+    left: 235px;
     font-size: 40px;
     color: var(--color-Green-Old);
     cursor: pointer;
+    background-color:transparent;
+    border:none;
+    height: 0;
 }
 @media (min-width: 768px){
     #container{

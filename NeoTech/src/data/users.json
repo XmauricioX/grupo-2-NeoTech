@@ -124,5 +124,14 @@
         "password": "123123123",
         "admin": false,
         "image": "default-image.png"
+    },
+    {
+        "id": 16,
+        "firstName": "wefefewf",
+        "lastName": "ewfewfew",
+        "email": "wefewf@dfwwr",
+        "password": "fewfwefe",
+        "admin": false,
+        "image": "default-image.png"
     }
 ]
