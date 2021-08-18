@@ -32,14 +32,14 @@
                     <figure class="img-container">
                         <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                         <!-- FONDO DEL PRODUCTO -->
-                        <img class="img-1" src="/images/imgs-product/<%- element.imagen %> " alt="product">
+                        <img class="img-1" src="/images/imgs-product/<%- element.image %> " alt="product">
                         <!-- IMAGEN DEL PRODUCTO -->
                     </figure>
                     <hr>
         
                     <div class="text-card">
-                        <h2 class="name-card"><%= element.producto %></h2>
-                        <p class="description-card"> Marca: <%= element.marca %> <br> Color: <%= element.color %> </p>
+                        <h2 class="name-card"><%= element.product %></h2>
+                        <p class="description-card"> Marca: <%= element.trademark %> <br> Color: <%= element.color %> </p>
 
                         <a class="mas" href="/administrador/formulario-editar-producto/"> <i class="fas fa-pencil-alt"></i> </a>
                        <form class="delete-content" action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
