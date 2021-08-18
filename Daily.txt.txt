@@ -42,3 +42,7 @@ ayer organice el trello, hoy agregue la vista del carrito lleno y la vista de er
 
 Franco.
 ayer hice el JSON de productos y ordene el css del login. hoy hice un forEach y cargue las imagenes a la base de datos para poder verlas por ID.
+
+18/8
+Franco
+Ayer hice el agregar productos y usuarios desde los formularios hoy hice la carpeta middlewares para poder implementar el agregado de imagen,sin inconvenientes
