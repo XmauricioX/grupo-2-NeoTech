@@ -15,14 +15,14 @@
         <main id="content" >
 
             <p id="admin-welcome">
-                agregar producto
+                Agregar productos
             </p>
 
             <div id="container-form">         
 
-                <form id="form-add" action="/administrador/agregar-producto" method="POST">
+                <form id="form-add" action="/administrador/agregar-producto" enctype="multipart/form-data" method="POST">
         
-                    <input type="file" name="" id="t-file">
+                    <input type="file" name="product-image" id="t-file" multiple>
                     <input type="text" name="marca" id="" placeholder="Marca">
                     <input type="text" name="producto" id="" placeholder="Producto">
                     <input type="number" name="precio" id="" placeholder="Precio"> 

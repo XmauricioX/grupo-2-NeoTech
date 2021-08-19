@@ -1,3 +1,4 @@
+
 var express = require('express');
 var app = express();
 var path = require('path');
@@ -8,10 +9,17 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
 var adminRouter = require('./routes/admin');
+////////////franco//////////////
+var logMiddleware = require('./middlewares/logMiddleware')
+///////////////////////////////
+
 
 /* VISTAS */
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
+////////////franco//////////////
+app.use(logMiddleware)
+///////////////////////////////
 
 /* MIDDLEWARES NIVEL APLICACION */
 app.use(express.static('public'));
@@ -45,7 +53,7 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+  
   // render the error page
   res.status(err.status || 500);
   res.render('error');

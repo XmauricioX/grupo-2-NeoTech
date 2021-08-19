@@ -1,5 +1,6 @@
 let { getUsers, writeUsersJSON} = require('../data/dataBase')
 
+
 module.exports = {
     login: (req, res) => {
         res.render('users/login', {
