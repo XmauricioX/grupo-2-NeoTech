@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 
     <%- include("../partials/head-admin") -%>
@@ -17,7 +17,7 @@
 
         <main id="content">
             <p id="admin-welcome">
-                Admin Edit Product
+                Editar Producto
             </p>
             
             <!-- <form id="form-edit-product" action="" method="">
@@ -32,7 +32,7 @@
                         <figure class="img-container">
                             <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                             <!-- FONDO DEL PRODUCTO -->
-                            <img class="img-1" src="/images/imgs-product/<%- element.imagen %> " alt="product">
+                            <img class="img-1" src="/images/imgs-product/<%- element.image %> " alt="product">
                             <!-- IMAGEN DEL PRODUCTO -->
                         </figure>
                         <hr>
@@ -45,12 +45,12 @@
                         </button>    
                         </form>
                     <div class="text-card">
-                        <h2 class="name-card"><%= element.marca %></h2>
-                        <h2 class="number-card">$<%= element.precio %></h2>
+                        <h2 class="name-card"><%= element.trademark %></h2>
+                        <h2 class="number-card">$<%= element.price %></h2>
                         <p class="description-card"> 
-                            Categoria: <%= element.categoria %> <br> 
+                            Categoria: <%= element.category %> <br> 
                             Color: <%= element.color %> <br>
-                            Descripción: <%= element.descripcion.slice(0,45) %>... 
+                            Descripción: <%= element.description.slice(0,45) %>... 
                         </p>
                         
                         

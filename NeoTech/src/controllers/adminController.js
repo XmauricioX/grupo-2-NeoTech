@@ -43,13 +43,13 @@ module.exports = {
 
         let newProduct = {
             id: lastID + 1,
-            marca: marca.trim(),
-            producto : producto.trim(),
-            precio: +precio.trim(),
-            categoria: categoria.trim(),
+            trademark: marca.trim(),
+            product : producto.trim(),
+            price: +precio.trim(),
+            category: categoria.trim(),
             color: color.trim(),
-            descripcion: descripcion.trim(),
-            imagen: req.file ? req.file.filename : "default-image.png",
+            description: descripcion.trim(),
+            image: req.file ? req.file.filename : "default-image.png",
             //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el "default-image.png".
         };
 
@@ -70,19 +70,19 @@ module.exports = {
         res.render("admin/admin-edit-product-form", { product ,title: 'NeoTech - Form Editar Producto'})
     },
     editProduct: (req,res)=>{
-        res.render("admin/admin-edit-product", {title: 'NeoTech - Editar Producto', products: getProducts})
+        res.render('admin/admin-edit-product', {title: 'NeoTech - Editar Producto', products: getProducts})
     },
     logicEditProduct: (req,res)=>{
-        let { marca, precio, categoria, color, descripcion } = req.body;
+        let { trademark, price, category, color, description } = req.body;
 
         getProducts.forEach(product => {
             if(product.id === +req.params.id){
                 product.id = product.id,
-                product.marca = marca,
-                product.precio = precio,
-                product.categoria = categoria,
+                product.trademark = trademark,
+                product.price = price,
+                product.category = category,
                 product.color = color,
-                product.descripcion = descripcion
+                product.description = description
             }
         })
 
