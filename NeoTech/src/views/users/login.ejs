@@ -1,0 +1,48 @@
+
+
+<%- include('../partials/head.ejs') %>
+
+    <body class="body__login">
+
+        <%- include('../partials/header.ejs') %>
+
+        <%- include('../partials/nav.ejs') %>
+
+            <!-- login -->
+            <div class="login">
+                <h1>Iniciar Sesión</h1>
+                <form class="form-container">
+                    <nav class="container-contact">
+                        <!-- Username -->
+                        <label for="email"></label>
+                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
+                        <!-- Password -->
+                        <label for="password"></label>
+                        <input class="password" type="password" id="password" placeholder="Ingrese su contraseña">
+                        <!-- button log in -->
+                        <button class="button-login" type="submit" value="log-in">Iniciar Sesión</button>
+                        <!-- password & account -->
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                        <a href="#">¿No tenes una cuenta?</a>
+                        <!-- button create account -->
+                        <button class="button-create" type="submit" value="create-account">Crea una Cuenta</button>
+                    </nav>
+                </form>
+            </div>
+
+            <div class="networks">
+                <!-- button facebook -->
+                <button class="button-facebook"><img class="logo-face" src="/images/icons/icon-login-face.png"
+                        alt="logo-face">Iniciar sesión con Facebook</button>
+
+                <!-- button google -->
+                <button class="button-google"><img class="logo-google" src="/images/icons/icon-login-google.png"
+                        alt="logo-google">Iniciar sesión con Google</button>
+            </div>
+
+        <%- include('../partials/footer.ejs') %>
+
+        <%- include('../partials/scripts.ejs') %>
+    </body>
+
+</html>

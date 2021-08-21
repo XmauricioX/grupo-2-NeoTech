@@ -1,0 +1,42 @@
+<!-- HEAD -->
+<%- include('./partials/head.ejs') %>
+    <body class="body__contact"> 
+        <!-- HEADER -->
+        <%- include('./partials/header.ejs') %>
+        <!-- NAV -->
+        <%- include('./partials/nav.ejs') %>
+
+    <div id="contact">
+       
+        <!-- CONTACTO -->
+        <div class="container-contact">
+            <h1>Contacto</h1>
+            <div class="arrow-left">
+                <i id="arrow" class="fas fa-arrow-left"></i>
+            </div>
+            <form class="container__form">
+                
+                    <!-- Email -->
+                    <label for="email"></label>
+                    <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
+                    <!-- Reason for contact -->
+                    <label for="text"></label>
+                    <input class="text" type="text" name="name" id="text" placeholder="Razón de contacto">
+                    <!-- Message -->
+                    <label for="message"></label>
+                    <textarea class="message" name="message" id="message" placeholder="Escriba su mensaje"></textarea>
+                    <!-- button log in -->
+                    <button class="button-send" type="submit" value="log-in">Enviar</button>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <%- include('./partials/footer.ejs') %>
+
+    <!-- SCRIPTS -->
+    <%- include('./partials/scripts.ejs') %>
+    </body>
+        
+</html>

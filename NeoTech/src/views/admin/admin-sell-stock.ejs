@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head-admin") -%>
+      <link rel="stylesheet" href="../../styles/admin-sell-stock.css">
+</head>
+<body class="admin__sell">
+
+    <%- include("../admin/admi-nav") -%>
+
+
+    <div id="container-admin">
+
+            <%- include("../partials/aside-admin") -%>
+
+        <main id="content">
+            <p id="admin-welcome">
+                ventas y stock
+            </p>
+
+            <div id="numbers-admin">
+                <p>Nro Ventas</p>
+                <p>0</p>
+
+                <p>Stock Disponible</p>
+                <p>0</p>
+
+                <p>Nro Clientes</p>
+                <p>0</p>
+
+                <p>Nro Admins</p>
+                <p>3</p>
+
+                <p>Total Recaudado</p>
+                <p>0</p>
+            </div>
+
+        </main>
+
+    </div>
+    <%- include("../partials/admin-links") -%>
+
+    <%- include('../partials/scripts.ejs') %>
+
+</body>
+</html>

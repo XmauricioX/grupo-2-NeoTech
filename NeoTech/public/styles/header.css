@@ -1,0 +1,66 @@
+/* HEADER */
+
+.header{
+	background-image: url(/images/imgs-bg/bg\ header.png);
+	background-size: cover;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+.header .logo-container{
+	text-align: center;
+}
+
+.header .logo{
+	align-content: center;
+	animation-name: rotation;	
+	animation-duration: 5s;
+	animation-timing-function:linear;
+	animation-iteration-count: infinite;
+	max-width: 25%;
+	margin: 20px 0;
+}
+
+@keyframes rotation {
+	50% {transform: rotateY(360deg);} 
+	75%{transform: scale(1.1);}
+}
+
+.header .icon_header{
+	border-radius: 100%;
+	margin: 10px;
+    /* max-height: 50px; */
+    width: 40px;
+}
+
+.header .icon-bank{
+	display: none;
+}
+
+/* TABLET */
+
+@media(min-width: 768px){
+	.header .container{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.header .logo {
+		max-width: 20%;
+	}
+	
+	.header .icon-bank{
+		align-self: center;
+		display: flex;
+		flex-direction: row;
+		text-align: center;
+	}
+	.header .icon_header{
+		max-width: 50px;
+	}
+}

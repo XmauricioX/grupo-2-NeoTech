@@ -1,0 +1,217 @@
+@import url('/styles/style.css');
+
+
+/* Background body */
+
+.body__contact {
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 10%;
+    font-family:var(--font-Quicksand);
+    text-align: center;
+}
+
+/* Title: Iniciar Sesión */
+.container-contact h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--green);
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+
+#contact .arrow-left {
+    color: var(--green);
+    font-size: 30px;
+    position: absolute;
+    left: 10px;
+    top: 20px;
+}
+
+/* form */
+
+#contact .container__form {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.582);
+    backdrop-filter: blur(4px);
+    border: 2px solid var(--green);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 26px;
+    max-width: 298px;
+    /* max-width: 85%; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#contact input {
+    display: block;
+    background-color: var(--dark-grey);
+    border: 1px solid black;
+    color: white;
+    outline: none;
+}
+
+#contact .container__form .email {
+    border: black;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    /* padding: 12px 45px 12px 5px; */
+    padding: 12px 0 12px 5px;
+    width: 90%;
+    text-align: initial;
+} 
+
+#contact .container__form .text {
+    border: black;
+    border-radius: 10px;
+    font-size: 17px;
+    margin-bottom: 25px;
+    padding: 12px 0 12px 5px;
+    width: 90%;
+    text-align: initial;
+}
+
+/* message */
+
+#contact .container__form .message {
+    background-color: var(--dark-grey);
+    border: 1px solid black;
+    color: white;
+    display: block;
+    outline: none;
+    resize: none;
+}
+
+#contact .container__form .message {
+    border: black;
+    border-radius: 10px;
+    font-size: 17px;
+    font-family: var(--font-Quicksand);
+    margin-bottom: 25px;
+    padding: 8px 0px 185px 6px;
+    text-align: initial;
+    font-weight:bold;
+    width: 90%;
+}
+
+/* Buttons: log in & create account */
+#contact .button-send {
+    background-color: var(--grey);
+    border: solid 2px var(--green);
+    border-radius: 30px;
+    color: white;
+    font-size:23px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    padding: 9px 16px;
+}
+
+#contact .button-send:hover {
+    background-color: var(--green);
+    color: black;
+}
+
+
+/* media queries Tablet */
+
+@media (min-width:768px) {
+    .container-contact h1 {
+        font-size: 48px;
+        padding-top: 20px;
+        margin-bottom: 22px;
+    }
+
+    #contact .arrow-left {
+        color: var(--green);
+        font-size: 35px;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+
+    #contact .container__form {
+        max-width:700px;
+        /* max-width: 60%; */
+    }
+
+    #contact .container__form {
+        padding-top: 30px;
+    }
+
+    #contact .container__form .email {
+        font-size: 23px;
+        margin-bottom: 25px;
+    } 
+    
+    #contact .container__form .text {
+        font-size: 23px;
+        margin-bottom: 25px;
+    }
+
+    /* message */
+
+    #contact .container__form .message {
+    
+    font-size: 23px;
+    margin-bottom: 25px;
+    padding: 8px 8px 185px 6px;
+    text-align: initial;
+    font-weight:bold;
+    }
+}
+
+
+
+/* media queries Desktop */
+
+@media (min-width:1024px) {
+    .body__contact {
+    background-position-x: 55%;
+    background-size: cover;
+}
+
+    .container-contact h1 {
+        font-size: 60px;
+        padding-top: 40px;
+        margin-bottom: 35px;
+        margin-top: 50px;
+    }
+
+    #contact .arrow-left {
+        display: none;
+    }
+
+    #contact .container-form {
+        /* max-width:700px; */
+        max-width: 50%;
+    }
+
+    #contact form .container__form {
+        padding-top: 5%;
+    }
+
+    #contact form .container__form .email {
+        font-size: 23px;
+        margin-bottom: 25px;
+        width: 90%;
+    } 
+    
+    #contact form .container__form .text {
+        font-size: 23px;
+        margin-bottom: 25px;
+        width: 90%;
+    }
+
+    /* message */
+
+    #contact form .container__form .message {
+    padding: 8px 8px 280px 6px;
+    text-align: initial;
+    font-weight:bold;
+    width: 90%;
+    }
+}

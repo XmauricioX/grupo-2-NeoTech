@@ -1,0 +1,42 @@
+<%- include('../partials/head.ejs') %>
+<%- include("../partials/nav") %>
+    <body class="product__body">
+        
+        <main class="product__main">
+
+            <i id="arrow" class="fas fa-arrow-left"></i>
+
+            <section class="product__section">
+
+                <article>
+                    <img src="/images/imgs-product/<%- productID.image %>" alt="auricular">
+                </article>
+
+                <!-- <i class="fal fa-times"></i> -->
+
+                <div class="container-r">
+                        <div class="detail">
+                            <h2>
+                                <%= productID.trademark %> 
+                            </h2>
+                            <p>
+                                Precio: <br>
+                                $<%= productID.price %> <br> <br>
+                                Color: <br>
+                                <%= productID.color %> <br> <br>
+                                Categoria: <br>
+                                <%= productID.category %> <br> <br>
+                                
+                                Descripción: <br>
+                                <%= productID.description %>
+                            </p>
+                        </div>
+                        <div class="btn__detail">
+                            <a href="" class="a__detail">COMPRAR</a>
+                        </div>
+                    </div>
+            </section>
+        </main>
+    </body>
+<%- include("../partials/footer") %>
+    </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head-admin") -%>
+    <link rel="stylesheet" href="../../../styles/admin-add-product.css">
+</head>
+<body class="admin__add__product">
+    
+    <%- include("../admin/admi-nav") -%>
+    
+    <div id="container-admin">
+    
+    <%- include("../partials/aside-admin") -%>
+            
+        <main id="content" >
+
+            <p id="admin-welcome">
+                Agregar productos
+            </p>
+
+            <div id="container-form">         
+
+                <form id="form-add" action="/administrador/agregar-producto" enctype="multipart/form-data" method="POST">
+        
+                    <input type="file" name="product-image" id="t-file" multiple>
+                    <input type="text" name="marca" id="" placeholder="Marca">
+                    <input type="text" name="producto" id="" placeholder="Producto">
+                    <input type="number" name="precio" id="" placeholder="Precio"> 
+                    
+                    <div id="categorias">
+                        
+                        <label id="label-categoria" for="form-add">CATEGORIA</label>
+                        
+                        <select name="categoria" id="categorias-select">
+                            <option value="Monitores">Monitores</option>
+                            <option value="Mouse">Mouse</option>
+                            <option value="Auriculares">Auriculares</option>
+                            <option value="Joysticks">Joysticks</option>
+                            <option value="Teclados">Teclados</option>
+                        </select>
+                    </div>
+                    
+                    <input type="text" name="color" id="" value="" placeholder="Color/es">
+                    <input type="text" name="descripcion" id="descripcion" placeholder="Descripción"> 
+                    
+                    <input class="submit" type="submit" value="Añadir">
+                </form>
+                
+            </div>
+            
+        </main>
+        
+    </div>
+    
+<%- include("../partials/admin-links") -%>
+
+<%- include('../partials/scripts.ejs') %>
+
+</body>
+</html>
