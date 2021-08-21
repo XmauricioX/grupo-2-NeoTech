@@ -18,7 +18,8 @@ var logMiddleware = require('./middlewares/logMiddleware')
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 ////////////franco//////////////
-app.use(logMiddleware)///////////////////////////////
+app.use(logMiddleware)
+///////////////////////////////
 
 /* MIDDLEWARES NIVEL APLICACION */
 app.use(express.static('public'));
