@@ -10,4 +10,4 @@ router.get("/lista-de-productos/:id", controller.productDetail)
 
 
 
-module.exports = router;
+module.exports = router;ddddddddd
