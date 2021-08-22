@@ -13,17 +13,31 @@
                 <form class="register__form" action="/cuenta/registro" method="POST">
                     <nav class="register__container">
                         <!-- name -->
-                        <label for="text"></label>
-                        <input class="text" type="text" name="firstName" id="text" placeholder="Nombre">
-                        <input class="text" type="text" name="lastName" id="text" placeholder="Apellido">
-                        <!-- email -->
+                        <label for="firstName"></label>
+                        <input class="text" type="text" name="firstName" id="text" placeholder="Nombre" value="<%= locals.old && old.firstName %>">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <small class="text-error"><%= errors.firstName.msg %></small>
+                        <% } %>
+                        <!-- lastname -->
+                        <label for="lastName"></label>
+                        <input class="text" type="text" name="lastName" id="text" placeholder="Apellido" value="<%= locals.old && old.lastName %>">
+                        <% if (locals.errors && errors.lastName) { %>
+                            <small class="text-error"><%= errors.lastName.msg %></small>
+                        <% } %>
+                            <!-- email -->
                         <label for="email"></label>
-                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
+                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email" value="<%= locals.old && old.email %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <small class="text-error"><%= errors.email.msg %></small>
+                        <% } %>
                         <!-- password -->
                         <label for="password"></label>
-                        <input class="password" type="password" id="password" name="password" placeholder="Ingrese su contraseña">
+                        <input class="password" type="password" id="password" name="password" placeholder="Ingrese su contraseña" value="<%= locals.old && old.password %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <small class="text-error"><%= errors.password.msg %></small>
+                        <% } %>
                         <!-- button log in -->
-                        <button class="button-register" type="submit" value="log-in">Registrarse</button>
+                            <button class="button-register" type="submit" value="log-in">Registrarse</button>
                     </nav>
                 </form>
             </div>

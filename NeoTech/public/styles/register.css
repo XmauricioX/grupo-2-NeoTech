@@ -80,6 +80,7 @@
     font-weight: lighter;
     margin-bottom: 20px;
     padding: 9px 16px;
+    margin-top: 5px;
 }
 
 #registro .button-register:hover {
@@ -156,6 +157,11 @@
     font-weight: lighter;
     margin-top: 15px;
     padding: 11px 24px;
+}
+
+.text-error{
+    color: tomato;
+    margin-top: -5px;
 }
 
 
