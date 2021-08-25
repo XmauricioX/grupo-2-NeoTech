@@ -52,11 +52,11 @@ module.exports = {
             image: req.file ? req.file.filename : "default-image.png",
             //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el "default-image.png".
         };
-
+        
         getProducts.push(newProduct);
-
+        
         writeProductJSON(getProducts);
-
+        
         res.redirect('/administrador/editar-producto')
     },
     ///////////////////////////////////////////////
@@ -65,7 +65,7 @@ module.exports = {
     },
     formEditProduct: (req,res)=>{
         let product = getProducts.find(product =>{
-		return product.id === +req.params.id
+            return product.id === +req.params.id
 		}); //al ponerle un + es lo mismo que hacer Number()
         res.render("admin/admin-edit-product-form", { product ,title: 'NeoTech - Form Editar Producto'})
     },
@@ -74,7 +74,7 @@ module.exports = {
     },
     logicEditProduct: (req,res)=>{
         let { trademark, price, category, color, description } = req.body;
-
+        
         getProducts.forEach(product => {
             if(product.id === +req.params.id){
                 product.id = product.id,
@@ -82,14 +82,16 @@ module.exports = {
                 product.price = price,
                 product.category = category,
                 product.color = color,
-                product.description = description
+                product.description = description,
+                product.image = req.file ? req.file.filename : product.image
+                //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el nombre que ya estaba cargado anteriormente en el mismo JSON(LA IMAGEN QUE CARGAMOS ANTERIORMENTE).
             }
         })
-
+        
         writeProductJSON(getProducts);
-
+        
         res.redirect('/administrador/editar-producto')
-            
+        
     },
     saleStock: (req,res)=>{
         res.render("admin/admin-sell-stock", {title: 'NeoTech - Ventas Y Stock'})

@@ -31,7 +31,7 @@ router.get("/editar-producto", editProduct)
 // GET EDITAR PRODUCTO FORMULARIO
 router.get("/formulario-editar-producto/:id", formEditProduct)
 // PUT EDITAR UN PRODUCTO           /* ----------------------------------------- */
-router.put("/formulario-editar-producto/:id", logicEditProduct)
+router.put("/formulario-editar-producto/:id", uploadFile.single('product-image'), logicEditProduct)
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO /* --------------- */
 router.delete("/eliminar-producto/:id", deleteProduct)
