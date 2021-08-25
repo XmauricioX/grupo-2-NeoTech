@@ -1,1 +1,182 @@
-[{"id":4,"trademark":"panafonic","description":"probando mi amor por ti si si","product":"Auriculares","price":"700","color":"blanco","image":"auri.png"},{"id":5,"trademark":"Sony","description":"Alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.","product":"Auriculares","price":7000,"color":"rojo","category":"Auriculares","image":"auri.png"},{"id":6,"trademark":"HyperX","description":"HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore","product":"Teclado","price":8000,"color":"black","category":"Teclado","image":"teclado.png"},{"id":7,"trademark":"HyperX","description":"HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore","product":"Teclado","price":8000,"color":"rojo","category":"Teclado","image":"teclado.png"},{"id":8,"trademark":"HyperX","description":"HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore","product":"Mouse","price":5500,"color":"rojo","category":"Mouse","image":"mouse.png"},{"id":9,"trademark":"HyperX","description":"HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore","product":"Auriculares","price":9300,"color":"rojo","category":"Auriculares","image":"auri.png"},{"id":10,"trademark":"HyperX","description":"Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora","product":"Mouse","price":5500,"color":"gris","category":"Mouse","image":"mouse.png"},{"id":11,"trademark":"Logitech","description":"Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora","product":"Parlante","price":3700,"color":"gris","category":"Monitor","image":"parlante.png"},{"id":13,"trademark":"Logitech","description":"Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora","product":"Monitor","price":9000,"color":"blanco","category":"Monitor","image":"monitor.png"},{"id":14,"trademark":"Logitech","description":"PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.","product":"Monitor","price":11000,"color":"blanco","category":"Monitor","image":"monitor.png"},{"id":15,"trademark":"Logitech","description":"PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.","product":"Parlantes","price":3200,"color":"blanco","category":"Monitor","image":"parlante.png"},{"id":16,"trademark":"Gigabyte","description":"PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.","product":"Placa de video","price":155000,"color":"azul","category":"Monitor","image":"placa.png"},{"id":17,"trademark":"Gigabyte","description":"PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.","product":"Placa de video","price":157000,"color":"azul","category":"Monitor","image":"monitor.png"},{"id":18,"trademark":"Gigabyte","description":"PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.","product":"Mousepad","price":2000,"color":"azul","category":"Mouse","image":"pad.png"},{"id":24,"trademark":"Noga","description":"por favor que funcione","product":"Joystick","price":25000,"category":"Joysticks","color":"rojo"},{"id":25,"trademark":"Peugeot","product":"Teclado","price":"465465","color":"yrynsryn","description":"por favor que funcione","image":"1629849922598_img_.png"},{"id":27,"trademark":"wrfvf","product":"rwvr","price":"25000","color":"yerwf","description":"weffjlkgkjkgghkgkkkkggggggggggggggg","image":"1629849852019_img_.png"},{"id":29,"trademark":"ty","product":"yrh","price":25000,"category":"Monitores","color":"ryhr","description":"ryr","image":"1629849162970_img_.png"},{"id":30,"trademark":"hd","product":"hfd","price":4500000,"category":"Teclados","color":"e5","description":"5e5","image":"1629850400476_img_.png"}]
+[
+    {
+        "id": 4,
+        "trademark": "panafonic",
+        "description": "probando mi amor por ti si si",
+        "product": "Auriculares",
+        "price": "700",
+        "color": "blanco",
+        "category": "Auriculares",
+        "image": "auri.png"
+    },
+    {
+        "id": 5,
+        "trademark": "Sony",
+        "description": "Alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.",
+        "product": "Auriculares",
+        "price": 7000,
+        "color": "rojo",
+        "category": "Auriculares",
+        "image": "auri.png"
+    },
+    {
+        "id": 6,
+        "trademark": "HyperX",
+        "description": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore",
+        "product": "Teclado",
+        "price": 8000,
+        "color": "black",
+        "category": "Teclado",
+        "image": "teclado.png"
+    },
+    {
+        "id": 7,
+        "trademark": "HyperX",
+        "description": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore",
+        "product": "Teclado",
+        "price": 8000,
+        "color": "rojo",
+        "category": "Teclado",
+        "image": "teclado.png"
+    },
+    {
+        "id": 8,
+        "trademark": "HyperX",
+        "description": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore",
+        "product": "Mouse",
+        "price": 5500,
+        "color": "rojo",
+        "category": "Mouse",
+        "image": "mouse.png"
+    },
+    {
+        "id": 9,
+        "trademark": "HyperX",
+        "description": "HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore",
+        "product": "Auriculares",
+        "price": 9300,
+        "color": "rojo",
+        "category": "Auriculares",
+        "image": "auri.png"
+    },
+    {
+        "id": 10,
+        "trademark": "HyperX",
+        "description": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "product": "Mouse",
+        "price": 5500,
+        "color": "gris",
+        "category": "Mouse",
+        "image": "mouse.png"
+    },
+    {
+        "id": 11,
+        "trademark": "Logitech",
+        "description": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "product": "Parlante",
+        "price": 3700,
+        "color": "gris",
+        "category": "Monitor",
+        "image": "parlante.png"
+    },
+    {
+        "id": 13,
+        "trademark": "Logitech",
+        "description": "Nvidia es el fabricante líder de placas de video; su calidad asegura una experiencia positiva en el desarrollo del motor gráfico de tu computadora",
+        "product": "Monitor",
+        "price": 9000,
+        "color": "blanco",
+        "category": "Monitor",
+        "image": "monitor.png"
+    },
+    {
+        "id": 14,
+        "trademark": "Logitech",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Monitor",
+        "price": 11000,
+        "color": "blanco",
+        "category": "Monitor",
+        "image": "monitor.png"
+    },
+    {
+        "id": 15,
+        "trademark": "Logitech",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Parlantes",
+        "price": 3200,
+        "color": "blanco",
+        "category": "Monitor",
+        "image": "parlante.png"
+    },
+    {
+        "id": 16,
+        "trademark": "Gigabyte",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Placa de video",
+        "price": 155000,
+        "color": "azul",
+        "category": "Monitor",
+        "image": "placa.png"
+    },
+    {
+        "id": 17,
+        "trademark": "Gigabyte",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Placa de video",
+        "price": 157000,
+        "color": "azul",
+        "category": "Monitor",
+        "image": "monitor.png"
+    },
+    {
+        "id": 18,
+        "trademark": "Gigabyte",
+        "description": "PC de escritorio para uso de Oficinas, Comercios, Escuelas, Uso hogareño y mas por su gran rendimiento y velocidad.",
+        "product": "Mousepad",
+        "price": 2000,
+        "color": "azul",
+        "category": "Mouse",
+        "image": "pad.png"
+    },
+    {
+        "id": 25,
+        "trademark": "Peugeot",
+        "product": "Teclado",
+        "price": "465465",
+        "color": "yrynsryn",
+        "description": "por favor que funcione",
+        "category": "Mouse",
+        "image": "1629849922598_img_.png"
+    },
+    {
+        "id": 27,
+        "trademark": "wrfvf",
+        "product": "rwvr",
+        "price": "25000",
+        "color": "yerwf",
+        "description": "weffjlkgkjkgghkgkkkkggggggggggggggg",
+        "category": "Mouse",
+        "image": "1629849852019_img_.png"
+    },
+    {
+        "id": 29,
+        "trademark": "ty",
+        "product": "yrh",
+        "price": 25000,
+        "category": "Monitores",
+        "color": "ryhr",
+        "description": "ryr",
+        "image": "1629849162970_img_.png"
+    },
+    {
+        "id": 30,
+        "trademark": "hd",
+        "product": "hfd",
+        "price": 4500000,
+        "category": "Teclado",
+        "color": "e5",
+        "description": "5e5",
+        "image": "1629850400476_img_.png"
+    }
+]

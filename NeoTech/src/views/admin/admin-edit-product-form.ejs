@@ -32,52 +32,14 @@
                     <input type="number" name="price" id="" value="<%= product.price %>"> 
                     
                     <div id="categorias">
-                        
+                       
                         <label id="label-categoria" for="form-add">CATEGORIA</label>
                         <select name="category" id="categorias-select"> 
-                            <% if(product.category == "gabinete" ){ %>
-                                    <option selected value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                                <% }else if(product.category == "monitor"){ %>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option selected value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                                <% }else if(product.category == "mouse"){%>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option selected value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                                <% }else if(product.category == "auriculares"){ %>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option selected value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                                <% }else if(product.category == "joystick"){ %>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option selected value="joystick">Joystick</option>
-                                <% }else if(product.category == "teclado"){ %>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option selected value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                            <% } %>
+                                    <option value="Monitores" <%= product.category == "Monitor" ? "selected" : "" %> >Monitores</option>
+                                    <option value="Auriculares" <%= product.category == "Auriculares" ? "selected" : "" %> >Auriculares</option>
+                                    <option value="Teclados" <%= product.category == "Teclado" ? "selected" : "" %> >Teclados</option>
+                                    <option value="Mouse" <%= product.category == "Mouse" ? "selected" : "" %> >Mouse</option>
+                                    <option value="Joystick" <%= product.category == "Joystick" ? "selected" : "" %> >Joystick</option>
                         </select>
                         
                     </div> 
