@@ -8,6 +8,7 @@ router.get('/lista-de-productos', controller.productList)
 // GET 
 router.get("/lista-de-productos/:id", controller.productDetail)
 
+router.get("/resultado-de-busqueda", controller.search)
 
 
 module.exports = router;
