@@ -33,22 +33,22 @@ module.exports = {
 		    }
         });
 
-        let {marca,
-			producto,
-			precio,
-            categoria,
+        let {trademark,
+			product,
+			price,
+            category,
 			color,
-			descripcion
+			description
 			} = req.body
 
         let newProduct = {
             id: lastID + 1,
-            trademark: marca.trim(),
-            product : producto.trim(),
-            price: +precio.trim(),
-            category: categoria.trim(),
+            trademark: trademark.trim(),
+            product : product.trim(),
+            price: +price.trim(),
+            category: category.trim(),
             color: color.trim(),
-            description: descripcion.trim(),
+            description: description.trim(),
             image: req.file ? req.file.filename : "default-image.png",
             //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el "default-image.png".
         };
@@ -78,11 +78,11 @@ module.exports = {
         getProducts.forEach(product => {
             if(product.id === +req.params.id){
                 product.id = product.id,
-                product.trademark = trademark,
-                product.price = price,
-                product.category = category,
-                product.color = color,
-                product.description = description,
+                product.trademark = trademark.trim(),
+                product.price = price.trim(),
+                product.category = category.trim(),
+                product.color = color.trim(),
+                product.description = description.trim(),
                 product.image = req.file ? req.file.filename : product.image
                 //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el nombre que ya estaba cargado anteriormente en el mismo JSON(LA IMAGEN QUE CARGAMOS ANTERIORMENTE).
             }
