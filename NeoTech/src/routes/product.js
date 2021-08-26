@@ -18,5 +18,6 @@ router.get('/categoria/:categoria', category)
 /* GET PRODUCTOS POR MARCA */
 router.get('/marca', trademark)
 
+router.get("/categoria/:categoria?", controller.productCategory)
 
 module.exports = router;
