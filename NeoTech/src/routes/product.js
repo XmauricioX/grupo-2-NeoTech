@@ -3,7 +3,7 @@ var router = express.Router();
 let {productList,
     productDetail,
     search,
-    category,
+    productCategory,
     trademark} = require('../controllers/productController')
 
 
@@ -14,10 +14,9 @@ router.get("/lista-de-productos/:id", productDetail)
 /* GET BUSCADOR */
 router.get("/resultado-de-busqueda", search)
 /* GET PRODUCTOS POR CATEGORIA */
-router.get('/categoria/:categoria', category)
+router.get("/categoria/:categoria?", productCategory)
 /* GET PRODUCTOS POR MARCA */
-router.get('/marca', trademark)
+router.get('/marca/:marca', trademark)
 
-router.get("/categoria/:categoria?", controller.productCategory)
 
 module.exports = router;

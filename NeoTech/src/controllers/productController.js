@@ -54,9 +54,22 @@ module.exports = {
         }
     },
     trademark: (req, res) => {
+        let trademark = req.params.marca.trim()
+        //la variable trademark guarda 
+        let trademarkFind = []
 
+        getProducts.forEach(product => {
+            if (product.trademark === trademark) {
+                trademarkFind.push(product)
+            }
+        })
+            res.render('products/productTrademark', {
+                trademark: trademarkFind,
+                title: "NeoTech - Marcas"
+            })
+        } 
     }
-}
+
 
 
 
