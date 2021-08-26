@@ -27,25 +27,25 @@
                         <img id="description" src="/images/imgs-product/<%= product.image %>" alt="imagen del producto">
                     </div>
                     <input type="file" name="product-image" id="t-file" multiple>
-
-                    <input type="text" name="trademark" id="" value="<%= product.trademark %>">
-                    <input type="number" name="price" id="" value="<%= product.price %>"> 
+                    <input type="text" name="productName" id="" value="<%= product.product %>" placeholder="Producto">
+                    <input type="text" name="trademark" id="" value="<%= product.trademark %>" placeholder="Marca">
+                    <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
                     
                     <div id="categorias">
                        
                         <label id="label-categoria" for="form-add">CATEGORIA</label>
                         <select name="category" id="categorias-select"> 
                                     <option value="Monitores" <%= product.category == "Monitor" ? "selected" : "" %> >Monitores</option>
-                                    <option value="Auriculares" <%= product.category == "Auriculares" ? "selected" : "" %> >Auriculares</option>
+                                    <option value="Audio" <%= product.category == "Audio" ? "selected" : "" %> >Audio</option>
                                     <option value="Teclados" <%= product.category == "Teclado" ? "selected" : "" %> >Teclados</option>
                                     <option value="Mouse" <%= product.category == "Mouse" ? "selected" : "" %> >Mouse</option>
-                                    <option value="Joystick" <%= product.category == "Joystick" ? "selected" : "" %> >Joystick</option>
+                                    <option value="Gaming" <%= product.category == "Gaming" ? "selected" : "" %> >Gaming</option>
                         </select>
                         
                     </div> 
                     
-                    <input type="text" name="color" id="" value="<%= product.color %>" placeholder="color/es">
-                    <input type="text" name="description" id="description" value="<%= product.description %>"> 
+                    <input type="text" name="color" id="" value="<%= product.color %>" placeholder="Color/es">
+                    <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion"> 
 
                     <button class="submit" type="submit" value="Guardar">Guardar</button>
                
