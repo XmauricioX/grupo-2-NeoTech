@@ -45,11 +45,11 @@
                         </button>    
                         </form>
                     <div class="text-card">
-                        <h2 class="name-card"><%= element.trademark %></h2>
+                        <h2 class="name-card"><%= element.product %></h2>
                         <h2 class="number-card">$<%= element.price %></h2>
                         <p class="description-card"> 
+                            Marca: <%= element.trademark %> <br> 
                             Categoria: <%= element.category %> <br> 
-                            Color: <%= element.color %> <br>
                             Descripción: <%= element.description.slice(0,45) %>... 
                         </p>
                         

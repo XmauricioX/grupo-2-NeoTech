@@ -73,7 +73,7 @@ module.exports = {
         res.render('admin/admin-edit-product', {title: 'NeoTech - Editar Producto', products: getProducts})
     },
     logicEditProduct: (req,res)=>{
-        let { trademark, price, category, color, description } = req.body;
+        let { trademark, price, category, color, description, productName } = req.body;
         
         getProducts.forEach(product => {
             if(product.id === +req.params.id){
@@ -83,6 +83,7 @@ module.exports = {
                 product.category = category.trim(),
                 product.color = color.trim(),
                 product.description = description.trim(),
+                product.product = productName.trim(),
                 product.image = req.file ? req.file.filename : product.image
                 //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el nombre que ya estaba cargado anteriormente en el mismo JSON(LA IMAGEN QUE CARGAMOS ANTERIORMENTE).
             }
