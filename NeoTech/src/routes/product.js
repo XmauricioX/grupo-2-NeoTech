@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
-let {productList,
+let {
+    productList,
     productDetail,
     search,
     productCategory,
-    trademark} = require('../controllers/productController')
+    trademark
+    } = require('../controllers/productController')
 
 
 /* GET LISTADO DE PRODUCTOS. */
