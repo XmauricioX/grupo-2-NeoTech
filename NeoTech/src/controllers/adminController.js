@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-let { getProducts, getUsers, writeProductJSON} = require('../data/dataBase');
-const { get } = require('../routes');
-=======
 let { getProducts, getUsers, writeProductJSON, writeUsersJSON} = require('../data/dataBase');
->>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
 
 module.exports = {
     deleteProduct: (req, res) => {
@@ -70,11 +65,7 @@ module.exports = {
     },
     formEditProduct: (req,res)=>{
         let product = getProducts.find(product =>{
-<<<<<<< HEAD
-		return product.id === +req.params.id
-=======
             return product.id === +req.params.id
->>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
 		}); //al ponerle un + es lo mismo que hacer Number()
         res.render("admin/admin-edit-product-form", { product ,title: 'NeoTech - Form Editar Producto'})
     },
