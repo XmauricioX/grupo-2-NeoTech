@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+<<<<<<< HEAD
 const { users,
         deleteProduct,
         panel,
@@ -29,6 +30,22 @@ const { users,
 // BORRAR USUARIO
 // AGREGAR USAURIO controller
 // EDITAR CUENTA USUARIO Y ADMIN
+=======
+const {users,
+    deleteProduct,
+    panel,
+    formAddProduct,
+    addProduct,
+    editAccount,
+    formEditProduct,
+    editProduct,
+    saleStock,
+    deleteUsers,
+    logicEditProduct} = require('../controllers/adminController');
+
+const uploadFile = require('../middlewares/uploadFiles');
+
+>>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
 
 /* GET admin page. */
 router.get('/panel-general', panel)
@@ -36,7 +53,7 @@ router.get('/panel-general', panel)
 // GET AGREGAR PRODUCTO FORMULARIO
 router.get("/agregar-producto", formAddProduct)
 // POST AGREGAR PRODUCTO         /*  -------------------------------------------- */
-router.post("/agregar-producto", addProduct)
+router.post("/agregar-producto",uploadFile.single('product-image'), addProduct)
 
 // GET EDITAR CUENTA
 router.get("/editar-cuenta", editAccount)
@@ -46,7 +63,11 @@ router.get("/editar-producto", editProduct)
 // GET EDITAR PRODUCTO FORMULARIO
 router.get("/formulario-editar-producto/:id", formEditProduct)
 // PUT EDITAR UN PRODUCTO           /* ----------------------------------------- */
+<<<<<<< HEAD
 router.put("/formulario-editar-producto/:id", logicEditProduct)
+=======
+router.put("/formulario-editar-producto/:id", uploadFile.single('product-image'), logicEditProduct)
+>>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO /* --------------- */
 router.delete("/eliminar-producto/:id", deleteProduct)
@@ -56,6 +77,19 @@ router.get("/venta-y-stock", saleStock)
 
 // GET LISTA DE USUARIOS
 router.get("/usuarios", users)
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////
+// DELETE BORRAR UN USUARIO DESDE EL PANEL DE EDITAR PRODUCTO
+router.delete("/usuarios/:id", deleteUsers)
 
 
 

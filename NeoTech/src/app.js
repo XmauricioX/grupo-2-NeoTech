@@ -9,10 +9,17 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
 var adminRouter = require('./routes/admin');
+////////////franco//////////////
+var logMiddleware = require('./middlewares/logMiddleware')
+///////////////////////////////
+
 
 /* VISTAS */
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
+////////////franco//////////////
+app.use(logMiddleware)
+///////////////////////////////
 
 /* MIDDLEWARES NIVEL APLICACION */
 app.use(express.static('public'));

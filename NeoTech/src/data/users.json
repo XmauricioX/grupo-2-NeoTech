@@ -1,23 +1,5 @@
 [
     {
-        "id": 1,
-        "firstName": "Jillian",
-        "lastName": "Skipsey",
-        "email": "jskipsey0@newsvine.com",
-        "password": "uBHpbdm",
-        "admin": true,
-        "image": "default-image.png"
-    },
-    {
-        "id": 2,
-        "firstName": "Farra",
-        "lastName": "McMorran",
-        "email": "fmcmorran1@amazon.co.uk",
-        "password": "2jqquFmX",
-        "admin": false,
-        "image": "default-image.png"
-    },
-    {
         "id": 3,
         "firstName": "Andrej",
         "lastName": "Ballinghall",
@@ -64,28 +46,19 @@
     },
     {
         "id": 8,
-        "firstName": "Constanta",
-        "lastName": "Caudrelier",
-        "email": "ccaudrelier7@wix.com",
-        "password": "fzbkj3up0uTZ",
-        "admin": true,
-        "image": "default-image.png"
-    },
-    {
-        "id": 9,
-        "firstName": "Niko",
-        "lastName": "Lurriman",
-        "email": "nlurriman8@slideshare.net",
-        "password": "lhxL8LJqn",
+        "firstName": "Franco",
+        "lastName": "Fernandez",
+        "email": "francodel4to@ymail.com",
+        "password": "asereje",
         "admin": false,
         "image": "default-image.png"
     },
     {
-        "id": 10,
-        "firstName": "Zia",
-        "lastName": "Lygo",
-        "email": "zlygo9@ask.com",
-        "password": "hD2aK7",
+        "id": 9,
+        "firstName": "cosme",
+        "lastName": "fulanito",
+        "email": "cosmefulanito@mail.com",
+        "password": "asdasdasd",
         "admin": false,
         "image": "default-image.png"
     }

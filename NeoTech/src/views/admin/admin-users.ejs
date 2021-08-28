@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <%- include("../partials/head-admin") -%>
       <link rel="stylesheet" href="../../styles/admin-users.css">
@@ -13,9 +13,9 @@
 
         <%- include("../partials/aside-admin") -%>
 
-        <main id="content" style="height: 113vh;">
+        <main id="content">
             <p id="admin-welcome">
-                Admin Edit Users
+                Editar usuarios
             </p>
 
            
@@ -26,20 +26,26 @@
                     
                     <figure class="img-container">
                         <img class="img-0" src="/images/product-list/bg-product.png" alt="background-product">
-                        <img class="img-1" src="/images/imgs-product/<%- element.imagen %> " alt="product">
+                        <img class="img-1" src="/images/imgs-product/<%- element.image %> " alt="product">
                     </figure>
                     <hr>
         
                     <div class="text-card">
-                        <h2 class="name-card"><%= element.nombre %> </h2>
-                        
+                        <h2 class="name-card"><%= element.firstName %> </h2>
+                        <%= element.id %>
                         <div id="admin-card">                        
                             admin  <input id="admin-check" type="checkbox">
                         </div>
+                        <form class="delete-content" action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST">
+                            <button class="delete-product" type="submit">
+                                <i class="fas fa-times"></i>
+                            </button>    
+                            </form>
                     </div>
 
                 </div>         
                 <% }) %> 
+                
             </main>
 
         </main>
