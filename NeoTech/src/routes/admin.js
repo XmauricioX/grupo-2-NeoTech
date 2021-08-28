@@ -1,36 +1,5 @@
 var express = require('express');
 var router = express.Router();
-<<<<<<< HEAD
-const { users,
-        deleteProduct,
-        panel,
-        formAddProduct,
-        addProduct,
-        editAccount,
-        formEditProduct,
-        editProduct,
-        saleStock,
-        logicEditProduct
-        } = require('../controllers/adminController');
-/* let controller = require('../controllers/adminController') */
-
-
-// LISTADO 00 ECHO
-// CREACION Form 00 ECHO
-// EDITAR FOR 00 ECHO
-// DETALLE 00 ECHO
-
-// este sprint
-// CREACION FRANCO
-// EDITAR PRODUCTO MAURICIO
-// BORRAR PRODUCTO ARIEL
-
-// adicional nuesto
-// EDITAR usuario
-// BORRAR USUARIO
-// AGREGAR USAURIO controller
-// EDITAR CUENTA USUARIO Y ADMIN
-=======
 const {users,
     deleteProduct,
     panel,
@@ -45,7 +14,6 @@ const {users,
 
 const uploadFile = require('../middlewares/uploadFiles');
 
->>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
 
 /* GET admin page. */
 router.get('/panel-general', panel)
