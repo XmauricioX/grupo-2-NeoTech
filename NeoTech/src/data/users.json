@@ -61,5 +61,14 @@
         "password": "asdasdasd",
         "admin": false,
         "image": "default-image.png"
+    },
+    {
+        "id": 10,
+        "firstName": "mauricio",
+        "lastName": "maneyro",
+        "email": "email@email",
+        "password": "alan",
+        "admin": false,
+        "image": "default-image.png"
     }
 ]
