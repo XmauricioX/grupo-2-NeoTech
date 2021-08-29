@@ -61,5 +61,23 @@
         "password": "asdasdasd",
         "admin": false,
         "image": "default-image.png"
+    },
+    {
+        "id": 10,
+        "firstName": "hgdgh",
+        "lastName": "Fernandez",
+        "email": "francodel4to@gmail.com",
+        "password": "$2a$10$82CO/F47vszAsS6.mVLbluEsoNh2ttjYAjRqKGUeGtP0mS./19LTS",
+        "admin": false,
+        "image": "default-image.png"
+    },
+    {
+        "id": 11,
+        "firstName": "Homero",
+        "lastName": "Simpsons",
+        "email": "homer_JS@ddd.com",
+        "password": "$2a$10$Kh8SfRy6JzfT27OjK7aAROgppPiCVBMVOuWjoMdfAaUyZxYyJveuW",
+        "admin": false,
+        "image": "default-image.png"
     }
 ]

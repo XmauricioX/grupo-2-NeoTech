@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const {users,
+const {
+    users,
     deleteProduct,
     panel,
     formAddProduct,
@@ -10,7 +11,8 @@ const {users,
     editProduct,
     saleStock,
     deleteUsers,
-    logicEditProduct} = require('../controllers/adminController');
+    logicEditProduct
+    } = require('../controllers/adminController');
 
 const uploadFile = require('../middlewares/uploadFiles');
 const productValidator = require('../validations/productsValidator')

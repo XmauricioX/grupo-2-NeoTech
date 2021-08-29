@@ -32,7 +32,7 @@ module.exports = {
     },
     productCategory: (req, res) => {
         let category = req.params.categoria.trim()
-        //la variable category guarda 
+        //la variable category guarda el parametro que reciba por ruta /categoria/
         let categoryFind = []
 
         getProducts.forEach(product => {
