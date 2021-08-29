@@ -1,4 +1,5 @@
 let { getProducts, getUsers, writeProductJSON, writeUsersJSON} = require('../data/dataBase');
+const { validationResult } = require('express-validator')
 
 module.exports = {
     deleteProduct: (req, res) => {

@@ -13,6 +13,7 @@ const {users,
     logicEditProduct} = require('../controllers/adminController');
 
 const uploadFile = require('../middlewares/uploadFiles');
+const productValidator = require('../validations/productsValidator')
 
 
 /* GET admin page. */
@@ -21,7 +22,7 @@ router.get('/panel-general', panel)
 // GET AGREGAR PRODUCTO FORMULARIO
 router.get("/agregar-producto", formAddProduct)
 // POST AGREGAR PRODUCTO         /*  -------------------------------------------- */
-router.post("/agregar-producto",uploadFile.single('product-image'), addProduct)
+router.post("/agregar-producto",uploadFile.single('product-image'), productValidator, addProduct)
 
 // GET EDITAR CUENTA
 router.get("/editar-cuenta", editAccount)
@@ -31,7 +32,7 @@ router.get("/editar-producto", editProduct)
 // GET EDITAR PRODUCTO FORMULARIO
 router.get("/formulario-editar-producto/:id", formEditProduct)
 // PUT EDITAR UN PRODUCTO           /* ----------------------------------------- */
-router.put("/formulario-editar-producto/:id", uploadFile.single('product-image'), logicEditProduct)
+router.put("/formulario-editar-producto/:id", uploadFile.single('product-image'), productValidator, logicEditProduct)
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO /* --------------- */
 router.delete("/eliminar-producto/:id", deleteProduct)
