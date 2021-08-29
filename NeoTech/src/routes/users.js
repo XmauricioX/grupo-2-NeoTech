@@ -5,6 +5,8 @@ let {
     register,
     userRegister,
     } = require('../controllers/usersController')
+let registerValidator = require('../validations/registerValidator');
+
 
 /* GET USERS PAGE. */
 
@@ -15,7 +17,7 @@ router.get('/iniciar-sesion', login);
 router.get('/registro', register)
 
 /* POST FORM REGISTER */
-router.post('/registro', userRegister)
+router.post('/registro', registerValidator, userRegister)
 
 
 
