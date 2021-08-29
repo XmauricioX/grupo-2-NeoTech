@@ -23,7 +23,6 @@ module.exports = {
     formAddProduct: (req,res) =>{
         res.render("admin/admin-add-product", {title: 'NeoTech - Agregar Producto'})
     },
-    ///////////////////////////////////////////
     addProduct: (req,res) =>{ 
         let lastID = 1;
 
@@ -59,7 +58,6 @@ module.exports = {
         
         res.redirect('/administrador/editar-producto')
     },
-    ///////////////////////////////////////////////
     editAccount: (req,res)=>{
         res.render("admin/admin-edit-account", {title: 'NeoTech - Editar Cuenta'})
     },
@@ -100,10 +98,6 @@ module.exports = {
     users: (req,res)=>{
         res.render('admin/admin-users', {title: 'NeoTech - Usuarios', users: getUsers})
     },
-
-
-    
-    ///////////////////////////////////////////////////////////////////
     deleteUsers: (req, res) => {
         getUsers.find(user => user.id === +req.params.id)
 
@@ -118,6 +112,5 @@ module.exports = {
 
         res.redirect('/administrador/usuarios')
     },
-    /////////////////////////////////////////////////////////
 }
 
