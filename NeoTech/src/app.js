@@ -25,7 +25,12 @@ app.use(logMiddleware)
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(session({ secret: "secreto" }));
+app.use(session({ 
+  secret: "secreto",
+  // estas dos ultimas lineas adicionales sacan los errores de deprecated en la terminal
+  resave: false,
+  saveUninitialized: false
+ }));
 /* RUTAS */
 
 app.use('/', indexRouter);

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+<%- include("./partials/nav") %>
+<body>
+    
+    <div style="height: 80vh; background-color: black; color: white; padding: 100px;">
+        <h2>
+            Esta logueado:
+        </h2>
+
+        <p style="color: white;text-align: center;">
+            <%= user.firstName + " " +user.lastName %>
+        </p>
+    </div>
+
+    <%- include("./partials/footer") %>
+</body>
+</html>

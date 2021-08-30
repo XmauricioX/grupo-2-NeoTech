@@ -1,11 +1,28 @@
 let { getUsers, writeUsersJSON} = require('../data/dataBase')
-
+let User = require("../models/Users")
 
 module.exports = {
     login: (req, res) => {
         res.render('users/login', {
             title: 'NeoTech - Iniciar Sesion',
         })
+    },
+    logicLogin: (req,res) =>{
+        let userToLogin = User.findByField("email", req.body.email);
+// esto te trae el objeto con los datos del usuario usando como parametro el email ya que no se puede repetir
+
+// esto compara que el email y la pass sean identicas a las del objeto que busca en la base de datos
+        if(( userToLogin.password === req.body.password )  && (userToLogin.email === req.body.email)){
+            req.session.userLogged = userToLogin;
+            res.render('user', {
+                title: "Perfil de usuario" ,
+                user: req.session.userLogged
+            })
+        }else{
+            res.render('users/login', {
+                title: 'NeoTech - Iniciar Sesion',
+            })
+        }
     },
     register: (req, res) => {
         res.render('users/register', {
