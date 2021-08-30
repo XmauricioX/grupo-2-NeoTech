@@ -52,8 +52,8 @@
     outline: none;
 } 
 
-#registro .register__form .register__container .password {
-    margin-bottom: 25px;
+#registro .register__form .register__container .repeatPassword {
+    margin-bottom: 10px;
     
 } 
 #registro input {
@@ -116,28 +116,12 @@
 }
 
 #registro .networks .logo-google {
-    /* bottom: 42px; */
     position: relative;
-    /* right: 76px; */
-    /* width: 32px; */
     right: 12px;
     width: 32px;
 }
 
 #registro .button-facebook {
-    /* background-color: #2b4ca3;
-    border:none;
-    color: white;
-    font-size: 14px;
-    font-weight: lighter;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    width: 300px;
-    margin: 15px;
-    padding: 10px;
-     */
      background-color: #2b4ca3;
      border:none;
      color: white;
@@ -157,6 +141,44 @@
     margin-top: 15px;
     padding: 11px 24px;
 }
+
+.log_in {
+    color: white;
+    margin-top: 12px;
+    margin-bottom: -8px;
+}
+
+.log_in_link {
+    text-decoration: none;
+    color: var(--green);
+}
+
+.log_in_link:hover {
+    color: var(--green);
+    font-weight: 800;
+}
+
+
+/* validations */
+.text-error{
+    color: tomato;
+    margin-top: -5px;
+    font-weight: 600;
+}
+.form-ad-input_check {
+    color: var(--green);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+  
+.form-ad-input_check label {
+    font-size: 0.8rem;
+    padding-left: 5px;
+}
+
 
 
 
@@ -193,6 +215,7 @@
     #registro .button-register {
         border-radius: 40px;
         font-size:24px;
+        margin-top: 10px;
     }
     
     /* social media buttons */
@@ -238,7 +261,7 @@
 
     #registro .register__form {
         border-radius: 30px;
-        width: 340px;
+        width: 370px;
         margin-top: 30px;
     }
 

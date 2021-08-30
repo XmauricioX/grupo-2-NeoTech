@@ -27,10 +27,19 @@
                         <img id="description" src="/images/imgs-product/<%= product.image %>" alt="imagen del producto">
                     </div>
                     <input type="file" name="product-image" id="t-file" multiple>
-                    <input type="text" name="productName" id="" value="<%= product.product %>" placeholder="Producto">
-                    <input type="text" name="trademark" id="" value="<%= product.trademark %>" placeholder="Marca">
-                    <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
                     
+                    <input type="text" name="product" id="" value="<%= product.product %>" value="<%= locals.old ? old.name : product.name %>" placeholder="Marca">
+                    <% if (locals.errors && errors.product) { %>
+                        <small style="color: red;"><%= errors.product.msg %> </small>
+                       <% } %>
+                    <input type="text" name="trademark" id="" value="<%= product.trademark %>" placeholder="Marca">
+                    <% if (locals.errors && errors.trademark) { %>
+                        <small style="color: red;"><%= errors.trademark.msg %> </small>
+                       <% } %>
+                    <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
+                    <% if (locals.errors && errors.price) { %>
+                        <small style="color: red;"><%= errors.price.msg %> </small>
+                       <% } %>
                     <div id="categorias">
                        
                         <label id="label-categoria" for="form-add">CATEGORIA</label>
@@ -45,8 +54,13 @@
                     </div> 
                     
                     <input type="text" name="color" id="" value="<%= product.color %>" placeholder="Color/es">
+                    <% if (locals.errors && errors.color) { %>
+                        <small style="color: red;"><%= errors.color.msg %> </small>
+                       <% } %>
                     <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion"> 
-
+                    <% if (locals.errors && errors.description) { %>
+                        <small style="color: red;"><%= errors.description.msg %> </small>
+                       <% } %>
                     <button class="submit" type="submit" value="Guardar">Guardar</button>
                
                 </form>

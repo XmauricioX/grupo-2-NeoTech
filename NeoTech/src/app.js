@@ -3,6 +3,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 let methodOverride = require('method-override')
+let session = require('express-session')
 
 /* ENRUTADORES */
 var indexRouter = require('./routes/index');
@@ -25,6 +26,11 @@ app.use(logMiddleware)
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(session({ 
+  secret: 'mySecret',
+  resave: false, 
+  saveUninitialized: true 
+}));
 
 /* RUTAS */
 

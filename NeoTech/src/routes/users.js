@@ -12,10 +12,8 @@ let registerValidator = require('../validations/registerValidator');
 
 /* GET FORM LOGIN */
 router.get('/iniciar-sesion', login);
-
 /* GET FORM REGISTER */
 router.get('/registro', register)
-
 /* POST FORM REGISTER */
 router.post('/registro', registerValidator, userRegister)
 
