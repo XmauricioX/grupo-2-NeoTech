@@ -18,8 +18,6 @@
                 Editar usuarios
             </p>
 
-           
-
             <main id="container">
                 <% users.forEach(element => { %>
                 <div class="card">
@@ -33,8 +31,8 @@
                     <div class="text-card">
                         <h2 class="name-card"><%= element.firstName %> </h2>
                         <%= element.id %>
-                        <div id="admin-card">                        
-                            admin  <input id="admin-check" type="checkbox">
+                        <div id="admin-card">
+                            <form action="/administrador/usuarios/<%= element.id %> " method="post">admin  <input id="admin-check" type="checkbox" name="check-admin"></form>              
                         </div>
                         <form class="delete-content" action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST">
                             <button class="delete-product" type="submit">
@@ -47,7 +45,7 @@
                 <% }) %> 
                 
             </main>
-
+                        
         </main>
 
     </div>

@@ -1,5 +1,5 @@
 const { check, body } = require('express-validator');
-const { users } = require('../data/dataBase')
+const { getUsers } = require('../data/dataBase')
 module.exports = [
     check('firstName')//nombre del input
         .notEmpty().withMessage("*Este campo es obligatorio").bail()
