@@ -13,6 +13,7 @@ let {
 router.get('/iniciar-sesion', login);
 /* POST PROCESAR LOGIN */
 router.post('/iniciar-sesion', logicLogin);
+/*  */
 
 /* GET FORM REGISTER */
 router.get('/registro', register)
