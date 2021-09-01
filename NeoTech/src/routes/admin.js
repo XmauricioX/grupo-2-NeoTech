@@ -16,13 +16,14 @@ const {
 
 const uploadFile = require('../middlewares/uploadFiles');
 const productValidator = require('../validations/productsValidator')
+let userSession = require('../middlewares/usersSession')
 
 
 /* GET admin page. */
 router.get('/panel-general', panel)
 
 // GET AGREGAR PRODUCTO FORMULARIO
-router.get("/agregar-producto", formAddProduct)
+router.get("/agregar-producto",userSession, formAddProduct)
 // POST AGREGAR PRODUCTO         /*  -------------------------------------------- */
 router.post("/agregar-producto",uploadFile.single('product-image'), productValidator, addProduct)
 

@@ -4,7 +4,8 @@ module.exports = {
     productList: (req, res) => {
         res.render('products/productList', {
             title: 'NeoTech - Lista de Productos',
-            products: getProducts
+            products: getProducts,
+            session: req.session
         })
     },
     productDetail: (req, res) => {
@@ -13,21 +14,22 @@ module.exports = {
         });
         res.render("products/productDetail", {
             title: 'NeoTech - Detalle de Producto',
-            productID
+            productID,
+            session: req.session
         })
     },
     search: (req, res) => {
-
         let result = []
         getProducts.forEach(element => {
-            if (element.description.toLowerCase().includes(req.query.keywords.toLowerCase())) {
+            if (element.product.toLowerCase().includes(req.query.keywords.toLowerCase()) || element.trademark.toLowerCase().includes(req.query.keywords.toLowerCase())) {
                 result.push(element)
             }
         });
         res.render('products/results', {
             result,
             title: 'NeoTech - Resultado de busqueda',
-            products: getProducts
+            products: getProducts,
+            session: req.session
         })
     },
     productCategory: (req, res) => {
@@ -44,12 +46,14 @@ module.exports = {
         if (categoryFind.length > 0) {
             res.render('products/productCategory', {
                 categories: categoryFind,
-                title: "NeoTech - Categorías"
+                title: "NeoTech - Categorías",
+                session: req.session,
             })
         } else {
             res.render('products/productCategory', {
                 getProducts,
-                title: "NeoTech - Categorías"
+                title: "NeoTech - Categorías",
+                session: req.session
             })
         }
     },
@@ -63,12 +67,13 @@ module.exports = {
                 trademarkFind.push(product)
             }
         })
-            res.render('products/productTrademark', {
-                trademark: trademarkFind,
-                title: "NeoTech - Marcas"
-            })
-        } 
+        res.render('products/productTrademark', {
+            trademark: trademarkFind,
+            title: "NeoTech - Marcas",
+            session: req.session
+        })
     }
+}
 
 
 

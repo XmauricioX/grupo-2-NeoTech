@@ -4,6 +4,8 @@ var app = express();
 var path = require('path');
 let methodOverride = require('method-override')
 let session = require('express-session')
+var cookieSession = require('cookie-session')
+
 
 /* ENRUTADORES */
 var indexRouter = require('./routes/index');
@@ -29,7 +31,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({ 
   secret: 'mySecret',
   resave: false, 
-  saveUninitialized: true 
+  saveUninitialized: true,
+  cookie: { maxAge: 60000 }
 }));
 
 /* RUTAS */

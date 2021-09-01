@@ -1,21 +1,25 @@
 var express = require('express');
 var router = express.Router();
 let {
-    login,
     register,
     userRegister,
+    login,
+    processLogin,
+    logout
     } = require('../controllers/usersController')
 let registerValidator = require('../validations/registerValidator');
+let loginValidator = require('../validations/loginValidator')
 
 
-/* GET USERS PAGE. */
 
-/* GET FORM LOGIN */
-router.get('/iniciar-sesion', login);
 /* GET FORM REGISTER */
 router.get('/registro', register)
-/* POST FORM REGISTER */
 router.post('/registro', registerValidator, userRegister)
+
+/*  FORM LOGIN */
+router.get('/iniciar-sesion', login);
+router.post('/iniciar-sesion',loginValidator, processLogin);
+router.get('/cerrar-sesion', logout);
 
 
 
