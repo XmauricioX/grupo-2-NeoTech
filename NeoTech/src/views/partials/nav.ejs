@@ -75,17 +75,18 @@
             </a>
             <ul class="submenu">
 
-                <% if (typeof session.user !="undefined" ) { %>
-                    <li class="menu__item"><a href="/administrador/panel-general" class="menu__link">Administrador</a>
+                <% if (session.user != undefined && session.user.rol == true) { %>
+                    <li class="menu__item"><a href="/administrador/panel-general" class="menu__link">Panel Admin</a>
                     </li>
                     <li class="menu__item"><a href="/cuenta/cerrar-sesion" class="menu__link">cerrar sesion</a></li>
+                    <% } else if (session.user !== undefined) {%>
+                        <li class="menu__item"><a href="/cuenta/mi-cuenta" class="menu__link">mi cuenta</a></li>
+                        <li class="menu__item"><a href="/cuenta/cerrar-sesion" class="menu__link">cerrar sesion</a></li>
                     <% } else { %>
                         <li class="menu__item"><a href="/cuenta/iniciar-sesion" class="menu__link">Iniciar sesion</a>
                         </li>
                         <li class="menu__item"><a href="/cuenta/registro" class="menu__link">Registrarse</a></li>
                         <% } %>
-
-
 
             </ul>
         </li>
