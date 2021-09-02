@@ -46,3 +46,16 @@ ayer hice el JSON de productos y ordene el css del login. hoy hice un forEach y 
 18/8
 Franco
 Ayer hice el agregar productos y usuarios desde los formularios hoy hice la carpeta middlewares para poder implementar el agregado de imagen,sin inconvenientes
+
+26/8
+Franco
+Ayer organice un poco el trello,hoy agregue las vistas y rutas de los productos filtrados por categoria, sin inconvenientes
+
+28/8
+Franco
+ayer agregue las validaciones al registro con el check, hoy estuve modificando el json de productos agregando mas productos y descripciones, sin inconvenientes
+
+31/8
+Franco
+ayer estuve haciendo las vistas para que el usuario en session pueda editar sus datos, hoy estuve agregando mas vistas al nav que te llevan al editar ususarios y cerrar sesion,
+inconvenientes: todavia no puedo renderizar la vista de modificar usuario

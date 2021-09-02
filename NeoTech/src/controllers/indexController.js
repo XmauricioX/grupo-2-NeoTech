@@ -7,7 +7,7 @@ module.exports = {
     },
     contact: (req, res) => {
         res.render('contact', {
-            title: 'NoeTech - Contacto',
+            title: 'NeoTech - Contacto',
             session: req.session
         })
     }

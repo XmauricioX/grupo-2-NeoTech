@@ -1,4 +1,4 @@
-let { getProducts, getUsers, writeProductJSON, writeUsersJSON} = require('../data/dataBase');
+let { getProducts, getUsers, writeProductJSON, writeUsersJSON } = require('../data/dataBase');
 const { validationResult } = require('express-validator')
 
 module.exports = {
@@ -117,7 +117,6 @@ module.exports = {
 
         writeProductJSON(getProducts)
 
-        // res.send('producto eliminado')
         res.redirect('/administrador/editar-producto')
     },
     saleStock: (req, res) => {
