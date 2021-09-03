@@ -71,7 +71,10 @@ hr{
     flex-direction: row;
     justify-content: space-between;
     color: white;
+<<<<<<< HEAD
+=======
     margin-top: 52px;
+>>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
 }
 
 .description-card{
@@ -92,10 +95,17 @@ hr{
  #masp{
     display: none;
 }
+<<<<<<< HEAD
+ #delete-product{
+    position: relative;
+    bottom: 424px;
+    left: 230px;
+=======
 #delete-product{
     position: absolute;
     bottom: 373px;
     left: 236px;
+>>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
     font-size: 40px;
     color: var(--color-Green-Old);
     cursor: pointer;

@@ -16,16 +16,17 @@ let uploadAvatarUser = require('../middlewares/uploadAvatarUser');
 let userSession = require('../middlewares/usersSession')
 
 
-
+const notLoged = require("../middlewares/usersSession")
+const loged = require("../middlewares/logedMiddleware")
 
 
 /* GET FORM REGISTER */
-router.get('/registro', register)
+router.get('/registro', loged ,register)
 router.post('/registro', registerValidator, userRegister)
 
 /*  FORM LOGIN */
-router.get('/iniciar-sesion', login);
-router.post('/iniciar-sesion', loginValidator, processLogin);
+router.get('/iniciar-sesion', loged , login);
+router.post('/iniciar-sesion',loginValidator, processLogin);
 router.get('/cerrar-sesion', logout);
 
 /* GET USER FORM */

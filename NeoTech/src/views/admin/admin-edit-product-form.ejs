@@ -19,6 +19,17 @@
 
             <div id="container-form">         
 
+
+                <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST">
+        
+                    <div style="text-align: center;">
+                        <img id="description" src="/images/imgs-product/<%= product.imagen %>" alt="imagen del producto">
+                    </div>
+                    <input type="file" name="" id="t-file" value="">
+
+                    <input type="text" name="marca" id="" value="<%= product.marca %>">
+                    <input type="number" min="0" max="1000000" step="10" name="precio" id="" value="<%= product.precio %>"> 
+
                 <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         
                     <div style="text-align: center;">
@@ -35,9 +46,13 @@
                         <small style="color: red;"><%= errors.trademark.msg %> </small>
                        <% } %>
                     <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
+
+
+
                     <% if (locals.errors && errors.price) { %>
                         <small style="color: red;"><%= errors.price.msg %> </small>
                        <% } %>
+
                     <div id="categorias">
                        
                         <label id="label-categoria" for="form-add">CATEGORIA</label>
@@ -51,6 +66,10 @@
                         
                     </div> 
                     
+
+                    <input type="text" name="color" id="" value="<%= product.color %>" placeholder="color/es">
+                    <input type="text" name="descripcion" id="description" value="<%= product.descripcion %>"> 
+
                     <input type="text" name="color" id="" value="<%= product.color %>" placeholder="Color/es">
                     <% if (locals.errors && errors.color) { %>
                         <small style="color: red;"><%= errors.color.msg %> </small>

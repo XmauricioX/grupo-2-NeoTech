@@ -72,7 +72,10 @@ color: white;
     margin: 15px 0;
     padding: 10px 15px;
 }
-
+#remember_check{
+    flex-direction: row; 
+    color: white;
+}
 .login .button-login:hover {
     background-color: var(--green);
     color: black;
