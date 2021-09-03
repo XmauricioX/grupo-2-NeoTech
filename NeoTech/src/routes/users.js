@@ -18,6 +18,7 @@ let userSession = require('../middlewares/usersSession')
 
 
 
+
 /* GET FORM REGISTER */
 router.get('/registro', register)
 router.post('/registro', registerValidator, userRegister)
