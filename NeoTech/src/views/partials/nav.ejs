@@ -41,6 +41,7 @@
             <a href="#" class="menu__link submenu-btn"> <i class="far fa-folder"></i>
                 marcas </a>
             <ul class="submenu">
+
                 <li class="menu__item"><a href="/producto/marca/Sony" class="menu__link">SONY</a></li>
                 <li class="menu__item"><a href="/producto/marca/Nintendo" class="menu__link">NINTENDO</a></li>
                 <li class="menu__item"><a href="/producto/marca/Gigabyte" class="menu__link">GIGABYTE</a></li>
@@ -54,11 +55,16 @@
                 <i class="fas fa-boxes"></i> productos
             </a>
             <ul class="submenu">
-                <li class="menu__item"><a href="/producto/categoria/Teclado" class="menu__link"><i class="far fa-keyboard"></i></a></li>
-                <li class="menu__item"><a href="/producto/categoria/Mouse" class="menu__link"><i class="fas fa-mouse"></i></a></li>
-                <li class="menu__item"><a href="/producto/categoria/Monitor" class="menu__link"><i class="fas fa-tv"></i></a></li>
-                <li class="menu__item"><a href="/producto/categoria/Gaming" class="menu__link"><i class="fas fa-gamepad"></i></a></li>
-                <li class="menu__item"><a href="/producto/categoria/Audio" class="menu__link"><i class="fas fa-headphones"></i></a></li>
+                <li class="menu__item"><a href="/producto/categoria/Teclado" class="menu__link"><i
+                            class="far fa-keyboard"></i></a></li>
+                <li class="menu__item"><a href="/producto/categoria/Mouse" class="menu__link"><i
+                            class="fas fa-mouse"></i></a></li>
+                <li class="menu__item"><a href="/producto/categoria/Monitor" class="menu__link"><i
+                            class="fas fa-tv"></i></a></li>
+                <li class="menu__item"><a href="/producto/categoria/Gaming" class="menu__link"><i
+                            class="fas fa-gamepad"></i></a></li>
+                <li class="menu__item"><a href="/producto/categoria/Audio" class="menu__link"><i
+                            class="fas fa-headphones"></i></a></li>
                 <li class="menu__item"><a href="/producto/lista-de-productos" class="menu__link">ver todos</a></li>
             </ul>
         </li>
@@ -68,9 +74,20 @@
                 <i class="far fa-user-circle"></i> cuenta
             </a>
             <ul class="submenu">
-                <li class="menu__item"><a href="/cuenta/iniciar-sesion" class="menu__link">Iniciar sesion</a></li>
-                <li class="menu__item"><a href="/cuenta/registro" class="menu__link">Registrarse</a></li>
-                <li class="menu__item"><a href="/administrador/panel-general" class="menu__link">Administrador</a></li>
+
+                <% if (session.user != undefined && session.user.rol == true) { %>
+                    <li class="menu__item"><a href="/administrador/panel-general" class="menu__link">Panel Admin</a>
+                    </li>
+                    <li class="menu__item"><a href="/cuenta/cerrar-sesion" class="menu__link">cerrar sesion</a></li>
+                    <% } else if (session.user !== undefined) {%>
+                        <li class="menu__item"><a href="/cuenta/mi-cuenta" class="menu__link">mi cuenta</a></li>
+                        <li class="menu__item"><a href="/cuenta/cerrar-sesion" class="menu__link">cerrar sesion</a></li>
+                    <% } else { %>
+                        <li class="menu__item"><a href="/cuenta/iniciar-sesion" class="menu__link">Iniciar sesion</a>
+                        </li>
+                        <li class="menu__item"><a href="/cuenta/registro" class="menu__link">Registrarse</a></li>
+                        <% } %>
+
             </ul>
         </li>
 

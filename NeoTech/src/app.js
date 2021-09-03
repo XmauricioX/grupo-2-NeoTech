@@ -3,7 +3,10 @@ var express = require('express');
 var app = express();
 var path = require('path');
 let methodOverride = require('method-override')
-const session = require("express-session")
+let session = require('express-session')
+var cookieSession = require('cookie-session')
+
+
 /* ENRUTADORES */
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,11 +29,12 @@ app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(session({ 
-  secret: "secreto",
-  // estas dos ultimas lineas adicionales sacan los errores de deprecated en la terminal
-  resave: false,
-  saveUninitialized: false
- }));
+  secret: 'mySecret',
+  resave: false, 
+  saveUninitialized: true,
+  cookie: { maxAge: 60000 }
+}));
+
 /* RUTAS */
 
 app.use('/', indexRouter);

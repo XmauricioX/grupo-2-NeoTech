@@ -8,24 +8,18 @@
     
     <%- include("../admin/admi-nav") -%>
 
-    
-    <div id="container-admin">
+        <div id="container-admin">
 
             <%- include("../partials/aside-admin") -%>
             
-
         <main id="content">
             <p id="admin-welcome">
-<<<<<<< HEAD
-                Estas editando: <%= product.marca %>
-=======
                 Estas editando: <%= product.trademark %>
->>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
             </p>
 
             <div id="container-form">         
 
-<<<<<<< HEAD
+
                 <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST">
         
                     <div style="text-align: center;">
@@ -35,86 +29,55 @@
 
                     <input type="text" name="marca" id="" value="<%= product.marca %>">
                     <input type="number" min="0" max="1000000" step="10" name="precio" id="" value="<%= product.precio %>"> 
-=======
+
                 <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
         
                     <div style="text-align: center;">
                         <img id="description" src="/images/imgs-product/<%= product.image %>" alt="imagen del producto">
                     </div>
                     <input type="file" name="product-image" id="t-file" multiple>
-                    <input type="text" name="productName" id="" value="<%= product.product %>" placeholder="Producto">
-                    <input type="text" name="trademark" id="" value="<%= product.trademark %>" placeholder="Marca">
-                    <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
->>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
                     
+                    <input type="text" name="product" id="" value="<%= product.product %>" value="<%= locals.old ? old.name : product.name %>" placeholder="Marca">
+                    <% if (locals.errors && errors.product) { %>
+                        <small style="color: red;"><%= errors.product.msg %> </small>
+                       <% } %>
+                    <input type="text" name="trademark" id="" value="<%= product.trademark %>" placeholder="Marca">
+                    <% if (locals.errors && errors.trademark) { %>
+                        <small style="color: red;"><%= errors.trademark.msg %> </small>
+                       <% } %>
+                    <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
+
+
+
+                    <% if (locals.errors && errors.price) { %>
+                        <small style="color: red;"><%= errors.price.msg %> </small>
+                       <% } %>
+
                     <div id="categorias">
                        
                         <label id="label-categoria" for="form-add">CATEGORIA</label>
-<<<<<<< HEAD
-                        <select name="categoria" id="categorias-select"> 
-                            <% if(product.categoria == "gabinete" ){ %>
-                                    <option selected value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                                <% }else if(product.categoria == "monitor"){ %>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option selected value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                                <% }else if(product.categoria == "mouse"){%>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option selected value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                                <% }else if(product.categoria == "auriculares"){ %>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option selected value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                                <% }else if(product.categoria == "joystick"){ %>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option selected value="joystick">Joystick</option>
-                                <% }else if(product.categoria == "teclado"){ %>
-                                    <option value="gabinete">Gabinete</option>
-                                    <option value="monitor">Monitor</option>
-                                    <option value="auricular">Ariculares</option>
-                                    <option selected value="teclado">Teclado</option>
-                                    <option value="mouse">Mouse</option>
-                                    <option value="joystick">Joystick</option>
-                            <% } %>
-=======
                         <select name="category" id="categorias-select"> 
                                     <option value="Monitores" <%= product.category == "Monitor" ? "selected" : "" %> >Monitores</option>
                                     <option value="Audio" <%= product.category == "Audio" ? "selected" : "" %> >Audio</option>
                                     <option value="Teclados" <%= product.category == "Teclado" ? "selected" : "" %> >Teclados</option>
                                     <option value="Mouse" <%= product.category == "Mouse" ? "selected" : "" %> >Mouse</option>
                                     <option value="Gaming" <%= product.category == "Gaming" ? "selected" : "" %> >Gaming</option>
->>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
                         </select>
                         
                     </div> 
                     
-<<<<<<< HEAD
+
                     <input type="text" name="color" id="" value="<%= product.color %>" placeholder="color/es">
                     <input type="text" name="descripcion" id="description" value="<%= product.descripcion %>"> 
-=======
-                    <input type="text" name="color" id="" value="<%= product.color %>" placeholder="Color/es">
-                    <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion"> 
->>>>>>> 848d3f0d20acbaec89ca9ea60c9f44c7023f3af3
 
+                    <input type="text" name="color" id="" value="<%= product.color %>" placeholder="Color/es">
+                    <% if (locals.errors && errors.color) { %>
+                        <small style="color: red;"><%= errors.color.msg %> </small>
+                       <% } %>
+                    <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion"> 
+                    <% if (locals.errors && errors.description) { %>
+                        <small style="color: red;"><%= errors.description.msg %> </small>
+                       <% } %>
                     <button class="submit" type="submit" value="Guardar">Guardar</button>
                
                 </form>

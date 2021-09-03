@@ -1,77 +1,99 @@
-let { getUsers, writeUsersJSON} = require('../data/dataBase')
-let User = require("../models/Users")
+let { getUsers, writeUsersJSON } = require('../data/dataBase')
+const { validationResult } = require('express-validator')
+//modulo de express-validator para poder trabajar con los resultados de la validacion
+const bcrypt = require('bcryptjs')
 
 module.exports = {
-    login: (req, res) => {
-        res.render('users/login', {
-            title: 'NeoTech - Iniciar Sesion',
-        })
-    },
-    logicLogin: (req,res) =>{
-        let userToLogin = User.findByField("email", req.body.email);
-        // esto te trae el objeto con los datos del usuario usando 
-        // como parametro el email ya que no se puede repetir
-        
-        // esto compara que el email y la pass sean identicas
-        // a las del objeto que busca en la base de datos
-        if(( userToLogin.password === req.body.password )  && (userToLogin.email === req.body.email)){
-            req.session.userLogged = userToLogin;
-
-            //cookie para recordar al user
-
-            if (req.body.remember_user) {
-                res.coockie("userEmail", req.body.email, { maxAge: (1000 * 60) * 2 })
-            }
-
-            res.render('user', {
-                title: "Perfil de usuario" ,
-                user: req.session.userLogged
-            })
-        }else{
-            res.render('users/login', {
-                title: 'NeoTech - Iniciar Sesion',
-            })
-        }
-
-    },
-    profile: (req, res) =>{
-        console.log(req.coockieParser.userEmail);
-        return res.render("user")
-    },
     register: (req, res) => {
         res.render('users/register', {
-            title: 'NeoTech - registro',
+            title: 'NeoTech - Registro',
+            session: req.session
         })
     },
     userRegister: (req, res) => {
-        let lastID = 1;
+        let errors = validationResult(req);
 
-        getUsers.forEach(user => {
-			if(user.id > lastID) {
-				lastID = user.id
-		    }
-        });
+        if (errors.isEmpty()) {
 
-        let {firstName,
-			lastName,
-			email,
-            password,
-			} = req.body
+            let lastID = 0;
 
-        let newUsers = {
-            id: lastID + 1,
-            firstName: firstName.trim(),
-            lastName: lastName.trim(),
-            email: email.trim(),
-            password: password.trim(),
-            admin: false,
-            image: "default-image.png"
-        };
+            getUsers.forEach(user => {
+                if (user.id > lastID) {
+                    lastID = user.id
+                }
+            });
 
-        getUsers.push(newUsers);
+            let { firstName,
+                lastName,
+                email,
+                password,
+            } = req.body
 
-        writeUsersJSON(getUsers);
+            let newUsers = {
+                id: lastID + 1,
+                firstName: firstName.trim(),
+                lastName: lastName.trim(),
+                email: email,
+                password: bcrypt.hashSync(password, 10),
+                admin: false,
+                image: "default-image.png"
+            };
 
-        res.redirect('/')
+            getUsers.push(newUsers);
+
+            writeUsersJSON(getUsers);
+
+            res.redirect('/cuenta/iniciar-sesion')
+
+        } else {
+            res.render('users/register', {
+                title: 'NeoTech - Registro',
+                errors: errors.mapped(),
+                old: req.body,
+                session: req.session
+            })
+        }
+    },
+    login: (req, res) => {
+        res.render('users/login', {
+            title: 'NeoTech - Iniciar Sesion',
+            session: req.session
+        })
+    },
+    processLogin: (req, res) => {
+        let errors = validationResult(req)
+
+        if (errors.isEmpty()) {
+            let user = getUsers.find(user => user.email === req.body.email)
+            req.session.user = {
+                id: user.id,
+                userName: user.firstName + " " + user.lastName,
+                email: user.email,
+                avatar: user.image,
+                rol: user.admin
+            }
+            /* if(req.body.remember){
+                res.cookie('cookieDali', req.session.user, {maxAge: 1000*60})
+            } */
+            res.locals.users = req.session.users
+
+            res.redirect('/')
+        } else {
+            res.render('users/login', {
+                title: 'NeoTech - Iniciar Sesion',
+                errors: errors.mapped(),
+                session: req.session
+            })
+        }
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        /* if(req.cookies.cookieDali){
+            res.cookie('cookieDali', '', {maxAge: -1})
+        } */
+        
+        res.redirect('/');
+        
     }
 }
+   
