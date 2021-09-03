@@ -1,0 +1,45 @@
+<!-- HEAD -->
+<%- include('../partials/head.ejs') %>
+
+    <body class="body__user__profile">
+
+        <%- include('../partials/header.ejs') %>
+
+        <%- include('../partials/nav.ejs') %>
+
+            <!-- Mi Perfil -->
+            <div class="user__edit">
+                <h1 class="user__edit__title">Mi cuenta</h1>
+                <form class="user__edit__form">
+                    <nav class="user__edit__container">
+                        <!-- image -->
+                        <div class="avatar">
+                            <img src="/images/imgs-users/<%= user.image %>" alt="img-user">
+                        </div>
+                        <h3 class="userProfile_title">Datos personales</h3>
+                        <!-- datos personales -->
+                        <p class="userProfile_item">Nombre: <%= user.firstName %></p>
+                        <p class="userProfile_item">Apellido: <%= user.lastName %></p>
+                        <p class="userProfile_item">Email: <%= user.email %></p>
+                    </p>
+                    <!-- mas datos -->
+                        <h3 class="userProfile_title">Datos de contacto</h3>
+                        <p class="userProfile_item">Teléfono: <%= user.tel ? user.tel : "---------" %></p>
+                        <p class="userProfile_item">Dirección: <%= user.address ? user.address : "---------" %></p>
+                        <p class="userProfile_item">Código postal: <%= user.pc ? user.pc : "-------" %></p>
+                        <p class="userProfile_item">Provincia: <%= user.province ? user.province : "---------" %></p>
+                        <p class="userProfile_item">Localidad: <%= user.city ? user.city : "---------" %></p>
+                    </p>
+                        <!-- button log in -->
+                        <a href="/cuenta/editar-usuario/<%= user.id %>" class="button__edit__user">Editar cuenta</a>
+                    </nav>
+                </form>
+            </div>
+
+
+        <%- include('../partials/footer.ejs') %>
+
+        <%- include('../partials/scripts.ejs') %>
+    </body>
+
+</html>

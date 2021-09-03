@@ -21,12 +21,15 @@
                     <% } %>
                     <!-- Password -->
                     <label for="password"></label>
-                    <input class="password" type="password" name="pass" id="password" placeholder="Ingrese su contraseña">
-                    <% if (locals.errors && errors.pass) { %>
-                        <small class="text-error"><%= errors.pass.msg %></small>
+                    <input class="password" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <small class="text-error"><%= errors.password.msg %></small>
                     <% } %>
-                    <!-- <input type="checkbox" name="remember" id="check"><label for="check">Recordar</label> -->
-                    
+                    <!-- check -->
+                    <div class="form-ad-input_check">
+                        <input type="checkbox" name="remember terms" id="remember">
+                        <label for="remember">Recordar contraseña</label>
+                    </div>
                     <!-- button log in -->
                     <button class="button-login" type="submit" value="log-in">Iniciar Sesión</button>
                     <% if (locals.errorMsg) { %>

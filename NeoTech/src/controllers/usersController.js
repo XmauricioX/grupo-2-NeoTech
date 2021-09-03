@@ -36,7 +36,12 @@ module.exports = {
                 email: email,
                 password: bcrypt.hashSync(password, 10),
                 admin: false,
-                image: "default-image.png"
+                image: "default.png",
+                tel: "",
+                address: "",
+                pc: "",
+                province:"",
+                city:""
             };
 
             getUsers.push(newUsers);
@@ -55,29 +60,35 @@ module.exports = {
         }
     },
     login: (req, res) => {
+        let user = getUsers.find(user => user.id === +req.params.id)
+
         res.render('users/login', {
             title: 'NeoTech - Iniciar Sesion',
-            session: req.session
+            session: req.session,
+            user
         })
     },
     processLogin: (req, res) => {
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
+
             let user = getUsers.find(user => user.email === req.body.email)
+            
             req.session.user = {
                 id: user.id,
-                userName: user.firstName + " " + user.lastName,
+                firstName: user.firstName,
                 email: user.email,
-                avatar: user.image,
-                rol: user.admin
+                image: user.image,
+                admin: user.admin
             }
-            /* if(req.body.remember){
-                res.cookie('cookieDali', req.session.user, {maxAge: 1000*60})
-            } */
-            res.locals.users = req.session.users
+            if(req.body.remember){
+                res.cookie('cookieUser',req.session.user,{expires: new Date(Date.now() + 900000), httpOnly: true})
+            } 
+            res.locals.user = req.session.user
 
             res.redirect('/')
+
         } else {
             res.render('users/login', {
                 title: 'NeoTech - Iniciar Sesion',
@@ -88,12 +99,72 @@ module.exports = {
     },
     logout: (req, res) => {
         req.session.destroy();
-        /* if(req.cookies.cookieDali){
-            res.cookie('cookieDali', '', {maxAge: -1})
-        } */
+
+        if(req.cookies.cookieUser){
+            res.cookie('cookieUser', '', {maxAge: -1})
+        } 
         
         res.redirect('/');
         
-    }
+    },
+    userProfile: (req, res) =>{
+        let user = getUsers.find(user=> user.id === req.session.user.id);
+        res.render('users/userProfile', {
+            title: 'NeoTech - Tu Perfil',
+            session: req.session,
+            user
+        })
+    },
+    userEdit: (req, res) => {
+        let user = getUsers.find(user => user.id === +req.params.id)
+        res.render('users/userEdit', { 
+            title: 'NeoTech - Tu Perfil',
+            session: req.session,
+            user
+        })
+    },
+    userUpdate: (req, res) =>{
+        let errors = validationResult(req)
+            
+        if(errors.isEmpty()){
+            let user = getUsers.find(user => user.id === +req.params.id)
+            
+            let { 
+                firstName, 
+                lastName,
+                tel,
+                address,
+                pc,
+                province,
+                city
+            } = req.body;
+
+            user.id = user.id
+            user.firstName = firstName
+            user.lastName = lastName
+            user.tel = tel
+            user.address = address
+            user.pc = pc
+            user.province = province
+            user.city = city
+            user.image = req.file ? req.file.filename : user.image
+
+            writeUsersJSON(getUsers)
+
+            delete user.password
+            
+            req.session.user = user
+
+            res.redirect('/cuenta/editar-usuario')
+                  
+        } else{
+            res.render('/users/userEdit', {
+                title: 'NeoTech - Tu Perfil',
+                errors: errors.mapped(),
+                old: req.body,
+                session:req.session
+            })   
+        }
+    },
 }
    

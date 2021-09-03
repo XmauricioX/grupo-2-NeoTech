@@ -4,10 +4,17 @@ const { validationResult } = require('express-validator')
 module.exports = {
 
     panel: (req, res) => {
-        res.render('admin/adminPanel', { title: 'NeoTech - Panel General', session: req.session })
+        res.render('admin/adminPanel', { 
+            title: 'NeoTech - Panel General',
+            session: req.session
+        })
+            
     },
     formAddProduct: (req, res) => {
-        res.render("admin/admin-add-product", { title: 'NeoTech - Agregar Producto', session: req.session })
+        res.render("admin/admin-add-product", { 
+            title: 'NeoTech - Agregar Producto',
+            session: req.session 
+        })
     },
     addProduct: (req, res) => {
         let errors = validationResult(req)
@@ -58,13 +65,21 @@ module.exports = {
         }
     },
     editProduct: (req, res) => {
-        res.render('admin/admin-edit-product', { title: 'NeoTech - Editar Producto', products: getProducts, session: req.session })
+        res.render('admin/admin-edit-product', {
+            title: 'NeoTech - Editar Producto',
+            products: getProducts,
+            session: req.session
+        })
     },
     formEditProduct: (req, res) => {
         let product = getProducts.find(product => {
             return product.id === +req.params.id
         }); //al ponerle un + es lo mismo que hacer Number()
-        res.render("admin/admin-edit-product-form", { product, title: 'NeoTech - Form Editar Producto', session: req.session })
+        res.render("admin/admin-edit-product-form", { 
+            product,
+            title: 'NeoTech - Form Editar Producto',
+            session: req.session
+        })
     },
     logicEditProduct: (req, res) => {
         let errors = validationResult(req)
@@ -120,10 +135,12 @@ module.exports = {
         res.redirect('/administrador/editar-producto')
     },
     saleStock: (req, res) => {
-        res.render("admin/admin-sell-stock", { title: 'NeoTech - Ventas Y Stock', session: req.session })
+        res.render("admin/admin-sell-stock", { title: 'NeoTech - Ventas Y Stock',             session: req.session
+    })
     },
     users: (req, res) => {
-        res.render('admin/admin-users', { title: 'NeoTech - Usuarios', users: getUsers, session: req.session })
+        res.render('admin/admin-users', { title: 'NeoTech - Usuarios', users: getUsers,             session: req.session
+    })
     },
     editUser: (req, res) => {
 
@@ -143,6 +160,7 @@ module.exports = {
         res.redirect('/administrador/usuarios')
     },
     editAccount: (req, res) => {
-        res.render("admin/admin-edit-account", { title: 'NeoTech - Editar Cuenta', session: req.session })
+        res.render("admin/admin-edit-account", { title: 'NeoTech - Editar Cuenta',            session: req.session
+    })
     },
 }

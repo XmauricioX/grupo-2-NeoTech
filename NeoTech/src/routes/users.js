@@ -5,10 +5,16 @@ let {
     userRegister,
     login,
     processLogin,
-    logout
+    logout,
+    userProfile,
+    userEdit,
+    userUpdate,
     } = require('../controllers/usersController')
 let registerValidator = require('../validations/registerValidator');
-let loginValidator = require('../validations/loginValidator')
+let loginValidator = require('../validations/loginValidator');
+let uploadAvatarUser = require('../middlewares/uploadAvatarUser');
+let userSession = require('../middlewares/usersSession')
+
 
 const notLoged = require("../middlewares/usersSession")
 const loged = require("../middlewares/logedMiddleware")
@@ -22,6 +28,11 @@ router.get('/iniciar-sesion', loged , login);
 router.post('/iniciar-sesion',loginValidator, processLogin);
 router.get('/cerrar-sesion', logout);
 
+/* GET USER FORM */
+router.get('/editar-usuario', userSession, userProfile)
+/* EDIT USER FORM */
+router.get('/editar-usuario/:id', userEdit)
+router.put('/editar-usuario/:id', uploadAvatarUser.single('user-image'),userSession, userUpdate)
 
 
 
