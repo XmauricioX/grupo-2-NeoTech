@@ -43,5 +43,14 @@
         "password": "$2a$10$jFWwu2pc9Jwd7FxRbBbPouR4bfxDjONhtqdvxDxCoyXom9zsjgCH2",
         "admin": true,
         "image": "default-image.png"
+    },
+    {
+        "id": 7,
+        "firstName": "mauricio",
+        "lastName": "maneyro",
+        "email": "email@email.com",
+        "password": "$2a$10$MAlpQFCsCvpVC4uh5j6mkeK6LWlATgjLaBATdUHgsOXy99ELg77H2",
+        "admin": false,
+        "image": "default-image.png"
     }
 ]

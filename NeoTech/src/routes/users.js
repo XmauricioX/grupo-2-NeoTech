@@ -10,14 +10,15 @@ let {
 let registerValidator = require('../validations/registerValidator');
 let loginValidator = require('../validations/loginValidator')
 
-
+const notLoged = require("../middlewares/usersSession")
+const loged = require("../middlewares/logedMiddleware")
 
 /* GET FORM REGISTER */
-router.get('/registro', register)
+router.get('/registro', loged ,register)
 router.post('/registro', registerValidator, userRegister)
 
 /*  FORM LOGIN */
-router.get('/iniciar-sesion', login);
+router.get('/iniciar-sesion', loged , login);
 router.post('/iniciar-sesion',loginValidator, processLogin);
 router.get('/cerrar-sesion', logout);
 
