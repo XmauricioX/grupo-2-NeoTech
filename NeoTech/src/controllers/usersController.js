@@ -100,7 +100,7 @@ module.exports = {
     logout: (req, res) => {
         req.session.destroy();
 
-        if(req.cookies.cookieUser){
+        if(req.cookies){
             res.cookie('cookieUser', '', {maxAge: -1})
         } 
         
