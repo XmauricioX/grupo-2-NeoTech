@@ -71,7 +71,7 @@ hr{
     flex-direction: row;
     justify-content: space-between;
     color: white;
-    margin-top: 52px;
+    /* margin-top: 52px; */
 }
 
 .description-card{
@@ -104,7 +104,7 @@ left: 236px; */
     cursor: pointer;
     background-color: transparent;
     border: none;
-    top: -50px;
+    /* top: -50px; */
 }
 .form__transparent {
     margin-bottom: -52px;

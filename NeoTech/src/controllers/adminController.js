@@ -160,7 +160,7 @@ module.exports = {
         res.redirect('/administrador/usuarios')
     },
     editAccount: (req, res) => {
-        res.render("admin/admin-edit-account", { title: 'NeoTech - Editar Cuenta',            session: req.session
+        res.render("admin/admin-edit-account", { title: 'NeoTech - Editar Cuenta', session: req.session
     })
     },
 }
