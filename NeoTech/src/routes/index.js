@@ -3,7 +3,7 @@ var router = express.Router();
 let {
     index,
     contact
-    } = require('../controllers/indexController')
+    } = require('../controllers/indexController');
 
 
 /* GET home page. */

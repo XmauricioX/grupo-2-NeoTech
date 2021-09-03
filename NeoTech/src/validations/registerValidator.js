@@ -13,18 +13,18 @@ module.exports = [
     check('email')  
         .isEmail().withMessage("*Debes ingresar un email válido"),
 
-    // body('email').custom(value => {
-    //     let user = users.filter(user=>{ 
-    //         return user.email == value 
-    //     })
+    body('email').custom(value => {
+        let user = getUsers.filter(user=>{ 
+            return user.email == value 
+        })
         
-    //     if(user == true){ 
-    //         return true 
-    //     }else{
-    //         return false 
-    //     }
-    // })
-    // .withMessage('El email ya está registrado'),
+        if(user == false){ 
+            return true 
+        }else{
+            return false 
+        }
+    })
+    .withMessage('El email ya está registrado'),
     
     check('password')
         .notEmpty()

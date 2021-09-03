@@ -4,7 +4,6 @@ var app = express();
 var path = require('path');
 let methodOverride = require('method-override')
 let session = require('express-session')
-var cookieSession = require('cookie-session')
 
 
 /* ENRUTADORES */

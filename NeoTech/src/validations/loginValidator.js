@@ -4,8 +4,8 @@ const bcrypt = require('bcryptjs')
 
 module.exports = [
     check('email')
-    .isEmail()
-    .withMessage('Debes ingresar un email válido'),
+        .isEmail()
+        .withMessage('Debes ingresar un email válido'),
 
     body('email')
     .custom(value => {
@@ -19,11 +19,11 @@ module.exports = [
     })
     .withMessage("Email no registrado"),
 
-    check('pass')
+    check('password')
     .notEmpty()
     .withMessage('Debes escribir tu contraseña'),
 
-    body('pass')
+    body('password')
     .custom((value, {req}) => {  
             let user = getUsers.find(user => user.email === req.body.email)
             return bcrypt.compareSync(value, user.password)
