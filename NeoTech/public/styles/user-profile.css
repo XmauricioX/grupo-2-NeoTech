@@ -54,11 +54,11 @@
     color: var(--green);   
 }
 
+/* image */
 .user__edit .avatar {
     width: 9rem;
     height: 9rem;
     border-radius: 50%;
-    /* background-color: blanchedalmond; */
     margin: 5px auto;
 }
 

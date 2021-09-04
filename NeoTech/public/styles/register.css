@@ -50,6 +50,7 @@
     text-align: initial;
     width: 85%;
     outline: none;
+    font-weight: 600;
 } 
 
 #registro .register__form .register__container .repeatPassword {
