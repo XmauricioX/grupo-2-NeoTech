@@ -16,12 +16,16 @@
                 <a href="/producto/lista-de-productos/<%= element.id %>"><img class="img-1" src="/images/imgs-product/<%- element.image %> " alt="product"></a>
                 <!-- PRODUCTO -->
             </figure>
-            <hr>
+            <hr class="line__green">
 
             <div class="text-card">
-                <h2 class="name-card"> <%= element.trademark %> </h2>
-                <h2 class="number-card"> $<%= element.price %> </h2>
-                <p class="description-card"> Modelo: <%= element.product %> <br> Color: <%= element.color %> </p>
+                <h2 class="name__card"> <%= element.product %> </h2>
+                <h2 class="number__card"> $<%= element.price %> </h2>
+                <p class="description-card"> 
+                    Categoria: <%= element.category %> <br>
+                    Marca: <%= element.trademark %> <br> 
+                    Color: <%= element.color %> <br>
+                    Descripción: <%= element.description.slice(0,45) %>...
                 <a class="mas carrito" href="">
                     <i class="fas fa-shopping-cart">
                         <p class="masp ">añadir al carrito</p>
