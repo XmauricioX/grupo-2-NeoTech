@@ -26,7 +26,7 @@
                     </div>
                     <input type="file" name="product-image" id="t-file" multiple>
                     
-                    <input type="text" name="product" id="" value="<%= product.product %>" value="<%= locals.old ? old.name : product.name %>" placeholder="Marca">
+                    <input type="text" name="productName" id="" value="<%= product.product %>" value="<%= locals.old ? old.name : product.name %>" placeholder="Producto">
                     <% if (locals.errors && errors.product) { %>
                         <small style="color: red;"><%= errors.product.msg %> </small>
                        <% } %>

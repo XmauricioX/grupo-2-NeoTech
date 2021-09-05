@@ -5,7 +5,7 @@ module.exports = [
         .notEmpty().withMessage("El campo es obligatorio")
         .isLength({ min: 4 }).withMessage("El nombre debe tener como mínimo 4 caracteres"),
    
-    check('product')
+    check('productName')
         .notEmpty().withMessage("El campo es obligatorio"),
 
     check('price')
