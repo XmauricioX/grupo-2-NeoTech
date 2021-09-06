@@ -4,7 +4,7 @@ const fs = require('fs');
 
 function logMiddleware(req,res,next) {
     fs.appendFileSync('log.txt', 'Se ingreso en la pagina ' + req.url)
-    //usamos el metodo fs.writeFileSync para poder escribir un archivo
+    //usamos el metodo fs.appendFileSync para poder escribir un archivo si no existe, lo crea
     next();
 }
 

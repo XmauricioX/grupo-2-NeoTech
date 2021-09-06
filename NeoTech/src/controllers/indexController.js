@@ -1,12 +1,14 @@
 module.exports = {
     index: (req, res) => {
         res.render('home', {
-            title: 'NeoTech - Inicio'
+            title: 'NeoTech - Inicio',
+            session: req.session
         })
     },
     contact: (req, res) => {
         res.render('contact', {
-            title: 'NoeTech - Contacto',
+            title: 'NeoTech - Contacto',
+            session: req.session
         })
     }
 }

@@ -1,0 +1,80 @@
+<!-- HEAD -->
+<%- include('../partials/head.ejs') %>
+
+    <body class="body__user__update">
+
+        <%- include('../partials/header.ejs') %>
+
+        <%- include('../partials/nav.ejs') %>
+
+            <!-- Editar usuario -->
+            <div class="user__update">
+                <h1 class="user__update__title">Editar Usuario</h1>
+                <form class="user__update__form" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+                    <nav class="user__update__container">
+
+                        <!-- image -->
+                        <div class="avatar">
+                            <img src="/images/imgs-users/<%= user.image %>" alt="img-user">
+                        </div>
+                        <!-- select image -->
+                        <div class="input-file">
+                            <button class="btn__update__image">
+                                <p class="userUpdate_subtitle">Cambiar foto de perfil</p>
+                                <input type="file" name="user-image" multiple>
+                            </button>
+                        </div>
+                        <!-- name -->
+                        <label for="firstName"></label>
+                        <input class="text" type="text" name="firstName" id="firstName" placeholder="Nombre" value="<%= locals.old ? old.firstName : user.firstName %>">
+                        <% if (locals.errors && errors.firstName) { %>
+                            <small class="text-error"><%= errors.firstName.msg %></small>
+                        <% } %>
+                        <!-- lastname -->
+                        <label for="lastName"></label>
+                        <input class="text" type="text" name="lastName" id="lastName" placeholder="Apellido" value="<%= locals.old ? old.lastName : user.lastName %>">
+                        <% if (locals.errors && errors.lastName) { %>
+                            <small class="text-error"><%= errors.lastName.msg %></small>
+                        <% } %>
+                        <!-- email -->
+                        <label for="email"></label>
+                        <input class="email" type="email" name="email" id="email" placeholder="Email" value="<%= user.email %>" readonly>
+                        
+                        <input class="text" type="text" name="tel" placeholder="Ingresá tu teléfono" value="<%= locals.old ? old.tel : user.tel %>">
+                        <% if (locals.errors && errors.tel) { %>
+                            <small class="text-error"><%= errors.tel.msg %> </small>
+                        <% } %>
+                        <!-- address -->
+                        <input class="text" type="text" name="address" placeholder="Domicilio" value="<%= locals.old ? old.address : user.address %>">
+                        <% if (locals.errors && errors.address) { %>
+                            <small class="text-error"><%= errors.address.msg %> </small>
+                        <% } %>
+                        <!-- post code -->
+                        <input class="text" type="text" name="pc" placeholder="Código postal" value="<%= locals.old ? old.pc : user.pc %>">
+                        <% if (locals.errors && errors.pc) { %>
+                            <small class="text-error"><%= errors.pc.msg %> </small>
+                        <% } %>
+                        <!-- province -->
+                            <select class="update__select__province" name="province" id="">
+                                <option value="">Provincia</option>
+                            </select> 
+                        <!-- city -->
+                        <select class="update__select__city" name="city" id="">
+                            <option value="">Localidad</option>
+                        </select>
+                        <!-- button edit -->
+                        <button class="button__update__user" type="submit">Guardar</button>                    
+                          
+                    </nav>
+                    
+                </form>
+            </div>
+
+
+        <%- include('../partials/footer.ejs') %>
+
+        <%- include('../partials/scripts.ejs') %>
+    </body>
+
+</html>

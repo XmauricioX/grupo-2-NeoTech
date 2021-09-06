@@ -71,7 +71,7 @@ hr{
     flex-direction: row;
     justify-content: space-between;
     color: white;
-    margin-top: 52px;
+    /* margin-top: 52px; */
 }
 
 .description-card{
@@ -92,16 +92,19 @@ hr{
  #masp{
     display: none;
 }
+/* position: absolute;
+bottom: 373px;
+left: 236px; */
 #delete-product{
     position: absolute;
-    bottom: 373px;
-    left: 236px;
+    bottom: 424px;
+    left: 230px;
     font-size: 40px;
     color: var(--color-Green-Old);
     cursor: pointer;
     background-color: transparent;
     border: none;
-    top: -50px;
+    /* top: -50px; */
 }
 .form__transparent {
     margin-bottom: -52px;

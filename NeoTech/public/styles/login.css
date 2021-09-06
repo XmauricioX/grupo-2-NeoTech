@@ -49,6 +49,7 @@
     text-align: initial;
     width: 85%;
     outline: none;
+    font-weight: 600;
 }
 .login .email,
 .login .password {
@@ -72,33 +73,39 @@ color: white;
     margin: 15px 0;
     padding: 10px 15px;
 }
-
+#remember_check{
+    flex-direction: row; 
+    color: white;
+}
 .login .button-login:hover {
     background-color: var(--green);
     color: black;
 }
 
-.login .form-container .container-contact a {
+.login .pass__a,
+.login .account__a {
     color: white;
     font-size: 15px;
     padding-bottom: 9px;
     text-decoration: none;
 }
 
-.login .form-container .container-contact a:hover{
+.login .pass__a:hover,
+.login .account__a:hover {
     color: var(--green);
 }
 
-.login .button-create {
+.login .button__create {
     background-color: var(--dark-grey);
     border:solid 2px var(--green);
-    border-radius: 20px;
+    border-radius: 25px;
     color: white;
     font-size:12px;
     margin: 15px 0;
     padding: 10px;
+    text-decoration: none;
 }
-.login .button-create:hover {
+.login .button__create:hover {
     background-color: var(--green);
     color: black;
 }
@@ -176,8 +183,9 @@ color: white;
         border-radius: 40px;
         font-size:24px;
     }
-    .login .form-container .container-contact a {
-        font-size: 18px;
+    .login .pass__a,
+    .login .account__a {
+        font-size: 15px;
     } 
     /* social media buttons */
     .networks {
@@ -246,7 +254,7 @@ color: white;
     }
     .login .button-login {
         border-radius: 50px;
-        font-size:25px;
+        font-size:23px;
     }
 
     .login .button-login:hover {

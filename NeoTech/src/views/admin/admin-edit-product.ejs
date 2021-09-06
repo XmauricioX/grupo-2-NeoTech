@@ -20,15 +20,10 @@
                 Editar Producto
             </p>
             
-            <!-- <form id="form-edit-product" action="" method="">
-                <input type="search" placeholder="Buscar producto"><i class="fas fa-search"></i>
-            </form> -->
-            
             <main id="container">
                 
                 <% products.forEach(element => { %>
                     <div class="card">
-                        
                         <figure class="img-container">
                             <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                             <!-- FONDO DEL PRODUCTO -->
@@ -36,26 +31,26 @@
                             <!-- IMAGEN DEL PRODUCTO -->
                         </figure>
                         <hr>
-                        
-                        <a class="mas" href="/administrador/formulario-editar-producto/<%= element.id %>"> <i class="fas fa-pencil-alt"></i> </a>
-                        
-                        <form class="form__transparent" action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
-                        <button id="delete-product" type="submit">
-                            <i  class="fas fa-times"></i>
-                        </button>    
-                        </form>
-                    <div class="text-card">
-                        <h2 class="name-card"><%= element.trademark %></h2>
-                        <h2 class="number-card">$<%= element.price %></h2>
-                        <p class="description-card"> 
-                            Categoria: <%= element.category %> <br> 
-                            Color: <%= element.color %> <br>
-                            Descripción: <%= element.description.slice(0,45) %>... 
-                        </p>
-                        
-                        
-                    </div>
-                </div>               
+
+                        <div class="text-card">
+                            <h2 class="name-card"><%= element.product %></h2>
+                            <h2 class="number-card">$<%= element.price %></h2>
+                            <p class="description-card"> 
+                                Marca: <%= element.trademark %> <br> 
+                                Categoria: <%= element.category %> <br> 
+                                Descripción: <%= element.description.slice(0,45) %>... 
+                            </p>
+                            
+                            
+                            <a class="mas" href="/administrador/formulario-editar-producto/<%= element.id %>"> <i class="fas fa-pencil-alt"></i> </a>
+                            
+                            <form class="form__transparent" action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
+                                <button id="delete-product" type="submit">
+                                    <i  class="fas fa-times"></i>
+                                </button>    
+                            </form>
+                        </div>
+                    </div>               
                 <% }) %>
             </main>
 

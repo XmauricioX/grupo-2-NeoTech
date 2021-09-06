@@ -1,0 +1,166 @@
+@import url("/stylesheets/style.css");
+
+
+/* Background body */
+.body__user__profile {
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-position-y: 33%;
+    font-family:var(--font-Quicksand);
+    text-align: center;
+}
+.user__edit {
+    margin-bottom: 15%;
+}
+/* Title: Mi Cuenta */
+.user__edit .user__edit__title {
+    color: var(--green);
+    font-size: 40px;
+    margin: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* form */
+.user__edit .user__edit__form {
+    background-color: rgba(0, 0, 0, 0.582);
+    backdrop-filter: blur(4px);
+    border: 2px solid var(--green);
+    border-radius: 30px;
+    margin: 0 auto;
+    max-width: 298px;
+    /* max-width: 90%; */
+    padding-top: 15px;
+}
+
+.user__edit .user__edit__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.userProfile_title{
+    color: var(--green);
+}
+.user__edit .user__edit__container .userProfile_item {
+    padding: 2px;
+    margin: 4px 0;
+    color: white;
+    font-weight: 600;
+}
+
+.user__edit .user__edit__container .userProfile_item:hover {
+    color: var(--green);   
+}
+
+/* image */
+.user__edit .avatar {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin: 5px auto;
+}
+
+.user__edit .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Button: edit user */
+.user__edit .button__edit__user {
+    background-color: var(--dark-grey);
+    border: 2px solid var(--green);
+    border-radius: 27px;
+    color: white;
+    font-size:20px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    padding: 9px 16px;
+    text-decoration: none;
+}
+
+.user__edit .button__edit__user:hover {
+    background-color: var(--green);
+    color: black;
+}
+
+
+
+
+/* media queries Tablet */
+@media (min-width:768px) {
+    .user__edit {
+        margin-bottom: 17%;
+    }
+
+    .user__edit .user__edit__title {
+        font-size: 48px;
+        padding-top: 15px 0;
+    }
+
+    .user__edit .user__edit__container .userProfile_item {
+        font-size: 20px;
+    }
+
+    .user__edit .user__edit__form {
+        max-width: 565px;
+    }
+
+    .userProfile_title{
+        color: var(--green);
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .user__edit .avatar {
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        /* background-color: blanchedalmond; */
+        margin: 5px auto;
+    }
+}
+
+
+
+
+
+/* media queries Desktop */
+
+@media (min-width:1024px) {
+    .user__edit {
+        margin-bottom: 8%;
+    }
+    .body__user__profile {
+        background-position-x:55%;
+        background-size: cover;
+    }
+
+    .user__edit .user__edit__title {
+        margin-top: 115px;
+    }
+
+    .userProfile_title{
+        font-size: 37px;
+    }
+
+    .user__edit .user__edit__form {
+        max-width: 800px;
+    }
+
+    .user__edit .avatar {
+        width: 16rem;
+        height: 16rem;
+        border-radius: 50%;
+        /* background-color: blanchedalmond; */
+        margin: 5px auto;
+    }
+    
+        /* Button: edit user */
+    .user__edit .button__edit__user {
+        margin-top: 20px;
+    }
+}
