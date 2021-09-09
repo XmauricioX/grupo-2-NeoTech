@@ -1,5 +1,5 @@
 module.exports = function admin(req, res, next) {
-    if (req.session.user.rol == false) {
+    if (req.session.user.admin == false) {
         return res.redirect("/")
     }
     next()
