@@ -157,3 +157,46 @@
     <li>Perjudicar al compañero no haciendo la parte que nos corresponde</li>
     <li>No conectarse a las reuniones de zoom o discord</li>
 </ul>
+
+<h2>RETROSPECTIVA DEL SPRINT 4</h2>
+
+<p>Según la retrospectiva del sprint 4, estas son las cosas que deberiamos hacer, seguir haciendo o dejar de hacer en el proximo sprint</p>
+
+<h3>Seguir haciendo:</h3>
+<ul>
+    <li>Trabajar mas en git</li>
+    <li>Revisar que no se rompan las vistas antes de subir los archivos al repositorio remoto</li>
+    <li>Intentar trabajar mas en equipo</li>
+    <li>Dividirnos las tareas que se nos presentan y pedir ayuda si no se puede hacer la tarea</li>
+    <li>Seguir armando dailys/weeklys</li>
+</ul>
+
+<h3>Hacer más:</h3>
+<ul>
+    <li>Prestar mas atención y tiempo al proyecto</li>
+    <li>Ayudar a los compañeros y avisar cuando haya problemas</li>
+    <li>No traer cambios viejos al repo</li>
+</ul>
+
+<h3>Empezar a hacer:</h3>
+<ul>
+    <li>Subir los cambios a la rama develop</li>
+    <li>Organizar mejor el Trello</li>
+    <li>Mas reuniones grupales</li>
+    <li>Hacer cosas de mas que puedan mejorar el proyecto y no solo lo pedido</li>
+</ul>
+
+<h3>Hacer menos:</h3>
+<ul>
+    <li>Dejar pasar mucho tiempo en el proyecto</li>
+    <li>Subir cosas incompletas al repo</li>
+</ul>
+
+<h3>Dejar de hacer:</h3>
+<ul>
+    <li>En lo posible terminar antes del tiempo de entrga</li>
+    <li>Comentarios innecesarios que no aportan nada al proyecto</li>
+    <li>Perjudicar al compañero no haciendo la parte que nos corresponde</li>
+    <li>No conectarse a las reuniones de zoom o discord</li>
+</ul>
+
