@@ -157,3 +157,5 @@
     <li>Perjudicar al compañero no haciendo la parte que nos corresponde</li>
     <li>No conectarse a las reuniones de zoom o discord</li>
 </ul>
+
+
