@@ -82,9 +82,9 @@ module.exports = {
                 image: user.image,
                 admin: user.admin
             }
-            if(req.body.remember){
-                res.cookie('cookieUser',req.session.user,{expires: new Date(Date.now() + 60000*60*24), httpOnly: true})
-            } 
+            if(req.body.remember){ // Si el checkbox está seleccionado creo la cookie
+                res.cookie('cookieUser',req.session.user,{expires: new Date(Date.now() + 900000), httpOnly: true})
+            }
             res.locals.user = req.session.user
 
             res.redirect('/')
@@ -99,13 +99,11 @@ module.exports = {
     },
     logout: (req, res) => {
         req.session.destroy();
-
-        if(req.cookies){
-            res.cookie('cookieUser', '', {maxAge: -1})
-        } 
+        if(req.cookies.cookieUser){
+            res.cookie('cookieUser','',{maxAge:-1})
+        }
         
-        res.redirect('/');
-        
+        return res.redirect('/')
     },
     userProfile: (req, res) =>{
         let user = getUsers.find(user=> user.id === req.session.user.id);
@@ -166,5 +164,5 @@ module.exports = {
             })   
         }
     },
-}
    
+            }
