@@ -56,6 +56,6 @@ Franco
 ayer agregue las validaciones al registro con el check, hoy estuve modificando el json de productos agregando mas productos y descripciones, sin inconvenientes
 
 31/8
-Franco
+Franco 
 ayer estuve haciendo las vistas para que el usuario en session pueda editar sus datos, hoy estuve agregando mas vistas al nav que te llevan al editar ususarios y cerrar sesion,
 inconvenientes: todavia no puedo renderizar la vista de modificar usuario
