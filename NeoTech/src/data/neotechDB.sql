@@ -30,7 +30,7 @@ CREATE TABLE `categories` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(40) CHARACTER SET utf8mb4 NOT NULL,
-  `last_name` varchar(40) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `last_name` varchar(40) CHARACTER SET utf8mb4 NOT NULL,
   `email` varchar(100) CHARACTER SET utf8mb4 NOT NULL,
   `password` varchar(60) CHARACTER SET utf8mb4 NOT NULL COMMENT 'hashing(60)',
   `image` text CHARACTER SET utf8mb4 DEFAULT NULL,
@@ -46,7 +46,7 @@ CREATE TABLE `users` (
 
 CREATE TABLE `addresses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `address` varchar(50) COLLATE utf8_bin NOT NULL,
+  `address` varchar(40) COLLATE utf8_bin DEFAULT NULL,
   `pc` varchar(30) COLLATE utf8_bin DEFAULT NULL,
   `country` varchar(40) COLLATE utf8_bin DEFAULT NULL,
   `province` varchar(40) COLLATE utf8_bin DEFAULT NULL,
@@ -69,6 +69,8 @@ CREATE TABLE `products` (
   `price` decimal(10,0) NOT NULL,
   `category_id` int(11) NOT NULL,
   `brand_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `products_FK` (`brand_id`),
   KEY `products_FK_1` (`category_id`),
