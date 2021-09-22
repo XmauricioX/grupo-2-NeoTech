@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = "Products";
     let cols = {
         id: {
-            type: dataTypes.INTEGER(11).UNSIGNED,
+            type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
             allowNull: false 
@@ -20,17 +20,20 @@ module.exports = (sequelize, dataTypes) => {
         },
         images: {
             type: dataTypes.TEXT,
+            allowNull: false
         },
         price: {
             type: dataTypes.DECIMAL(10,0),
             allowNull: false
         },
-        // category_id: {
-            //completar con FK
-            // },
-        // brand_id: {
-            //completar con FK
-        // }
+        category_id: {
+            type: dataTypes.INTEGER,
+            allowNull: false
+            },
+        brand_id: {
+            type: dataTypes.INTEGER,
+            allowNull: false
+        }
     }
     let config = {
         tableName: "products",
