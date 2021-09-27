@@ -81,23 +81,36 @@
 const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const {
-    Op
-} = require("sequelize");
-const {
-    promiseImpl
-} = require('ejs');
+const { Op } = require("sequelize");
+const { promiseImpl } = require('ejs');
 
 module.exports = {
     productList: (req, res) => {
-        db.Product.findAll()
-        .then(products => {
-            
-        })  
-        res.render('products/productList', {
-            title: 'NeoTech - Lista de Productos',
-            products: getProducts,
-            session: req.session
+        db.Products.findAll({
+            include: [{association: 'category'}, {association: 'brand'}]
+            //en product list mandamos la asociacion con las tablas de marca y categoria 
+            //para poder renderizar en la vista los datos que contengan las mismas
         })
+        .then(products => {
+            res.render('products/productList', {
+                title: 'NeoTech - Lista de Productos',
+                products,
+                session: req.session
+            })
+        })  
+        .catch(err => console.log(err))
+    },
+    productDetail: (req, res) => {
+        db.Products.findByPk(req.params.id, {
+            include: [{association: 'category'}, {association: 'brand'}]
+        })
+        .then(product => {
+            res.render('products/productDetail', {
+                title: 'NeoTech - Detalle de Producto',
+                productID: product,
+                session: req.session
+            })
+        })
+        .catch(err => console.log(err))
     }
 }

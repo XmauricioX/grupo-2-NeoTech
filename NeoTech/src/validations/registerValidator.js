@@ -1,30 +1,34 @@
 const { check, body } = require('express-validator');
-const { getUsers } = require('../data/dataBase')
+// const { getUsers } = require('../data/dataBase')
+const db = require('../database/models')
+
+
 module.exports = [
-    check('firstName')//nombre del input
+    check('first_name')//nombre del input
         .notEmpty().withMessage("*El campo nombre es obligatorio").bail()
         .isLength({ min: 2 }),
         //.isLength() debe pasarse como parametro el largo de caracteres que quiera como min y max 
         //notEmpty() esta validacion indica que no puede estar vacia
         //whitMessage() permite pasar un mensaje a la validacion del input
-    check('lastName')  
+    check('last_name')  
         .notEmpty().withMessage("*El campo apellido es obligatorio"),
 
     check('email')  
         .isEmail().withMessage("*Debes ingresar un email válido"),
 
     body('email').custom(value => {
-        let user = getUsers.filter(user=>{ 
-            return user.email == value 
+        return db.Users.findOne({
+            where: {
+                email: value
+            }
         })
-        
-        if(user == false){ 
-            return true 
-        }else{
-            return false 
-        }
-    })
-    .withMessage('El email ya está registrado'),
+        .then(user => {
+            if(user) {
+                return Promise.reject('El email ya está registrado')
+            }
+        })
+    }),
+    
     
     check('password')
         .notEmpty()

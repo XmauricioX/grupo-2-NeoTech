@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false 
         },
         address: {
-            type: dataTypes.STRING(40),
+            type: dataTypes.STRING(100),
         },
         pc: {
             type: dataTypes.STRING(30)
@@ -23,7 +23,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(40)
         },
         user_id: {
-            //agregar FK
             type: dataTypes.INTEGER(11),
             allowNull: false
         },
@@ -31,10 +30,17 @@ module.exports = (sequelize, dataTypes) => {
     
     let config = {
         tableName: "addresses",
-        timestamps: false
+        timestamps: true
     }
 
     const Address = sequelize.define(alias, cols, config)
+
+    Address.associate = models => {
+        Address.belongsTo(models.Users, {
+            as: "user",
+            foreignKey: "user_id"
+        })
+    }
 
     return Address;
 }

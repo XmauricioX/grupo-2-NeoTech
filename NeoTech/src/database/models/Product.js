@@ -19,14 +19,14 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         images: {
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING(100),
             allowNull: false
         },
         price: {
             type: dataTypes.DECIMAL(10,0),
             allowNull: false
         },
-        category_id: {
+        categoryId: {
             type: dataTypes.INTEGER,
             allowNull: false
             },
@@ -41,6 +41,17 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Product = sequelize.define(alias, cols, config)
+
+    Product.associate = models => {
+        Product.belongsTo(models.Categories, {
+            as: "category",
+            foreignKey: "categoryId"
+        })
+        Product.belongsTo(models.Brands, {
+            as: "brand",
+            foreignKey: "brand_id"
+        })
+    }
 
     return Product;
 }

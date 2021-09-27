@@ -139,11 +139,11 @@ module.exports = {
         res.redirect('/administrador/editar-producto')
     },
     saleStock: (req, res) => {
-        res.render("admin/admin-sell-stock", { title: 'NeoTech - Ventas Y Stock',             session: req.session
+        res.render("admin/admin-sell-stock", { title: 'NeoTech - Ventas Y Stock', session: req.session
     })
     },
     users: (req, res) => {
-        res.render('admin/admin-users', { title: 'NeoTech - Usuarios', users: getUsers,             session: req.session
+        res.render('admin/admin-users', { title: 'NeoTech - Usuarios', users: getUsers, session: req.session
     })
     },
     editUser: (req, res) => {

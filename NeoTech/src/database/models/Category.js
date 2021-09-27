@@ -18,6 +18,13 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Category = sequelize.define(alias, cols, config)
+ 
+    Category.associate = models => {
+        Category.hasMany(models.Products, {
+            as: "products",
+            foreignKey: "categoryId"
+        })
+    }
 
     return Category;
 }

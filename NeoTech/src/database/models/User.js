@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         email: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING(255),
             allowNull: false,
             unique: true
         },
@@ -25,7 +25,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         image: {
-            type: dataTypes.TEXT
+            type: dataTypes.STRING(100)
+        },
+        user_rol: {
+            type: dataTypes.INTEGER(1),
+            allowNull: false
         },
         phone:{
             type: dataTypes.STRING(50)
@@ -38,6 +42,13 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const User = sequelize.define(alias, cols, config)
+
+    User.associate = models => {
+        User.hasMany(models.Addresses, {
+            as: "addresses",
+            foreignKey: "user_id"
+        })
+    }
 
     return User;
 }
