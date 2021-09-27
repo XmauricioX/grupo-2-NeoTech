@@ -112,5 +112,58 @@ module.exports = {
             })
         })
         .catch(err => console.log(err))
+    },
+    productCategory: (req,res) => {
+        db.Products.findAll({
+            include: [{association: 'category'}, {association: 'brand'}],
+            where: {
+                id: req.params.categoria,
+            },
+        })
+        .then(category => {
+            //res.send([category])
+            //var BUSCA = [category]
+            res.render('products/productCategory', {
+            title: 'NeoTech - Categorías',
+            category,
+            session: req.session
+            })
+        })
+        .catch(err => res.send("ERROR WACHIN: " + err))
+    },
+productBrand: (req,res) =>{
+    db.Products.findAll({
+        include: [{association: 'category'}, {association: 'brand'}],
+        where: {
+            id: req.params.marca,
+        },
+    })
+    .then(trademark => {
+        //res.send(trademark)
+        res.render('products/productTrademark', {
+        title: 'NeoTech - Marcas',
+        trademark,
+        session: req.session
+        })
+    })
+    .catch(err => res.send( "ERROR PERRO: " + err))
     }
 }
+
+
+// db.Categories.findOne({
+//     where: {
+//     id: req.params.categoria
+// },
+// })
+// .then(category => {
+// res.send([category])
+// // var BUSCA = [category]
+// // res.render('products/productCategory', {
+// //     title: 'NeoTech - Categorías',
+// //     BUSCA,
+// //     session: req.session
+// // })
+// })
+// .catch(err => res.send("ERROR WACHIN: " + err))
+// }
