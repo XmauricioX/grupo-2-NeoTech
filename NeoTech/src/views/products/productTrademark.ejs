@@ -7,7 +7,7 @@
 
     <main class="container__product">
 
-        <% if(trademark.length != 0) { %> <% trademark.forEach(element => { %>
+        <% trademark.forEach(element => { %>
         <div class="card">
 
             <figure class="img-container">
@@ -19,12 +19,13 @@
             <hr class="line__green">
 
             <div class="text-card">
-                <h2 class="name__card"> <%= element.product %> </h2>
+                <h2 class="name__card"> <%= element.product_name %> </h2>
                 <h2 class="number__card"> $<%= element.price %> </h2>
                 <p class="description-card"> 
-                    Categoria: <%= element.category %> <br>
-                    Marca: <%= element.trademark %> <br> 
-                    Color: <%= element.color %> </p>
+                    Categoria: <%= element.category.category_name %> <br>
+                    Marca: <%= element.brand.brand_name %> <br> 
+                    Color: <%= element.color %> <br>
+                    Descripción: <%= element.description.slice(0,45) %>...</p>
                 <a class="mas carrito" href="">
                     <i class="fas fa-shopping-cart">
                         <p class="masp ">añadir al carrito</p>
@@ -35,14 +36,8 @@
                 </form>
             </div>
         </div>
-        <% }) %>  <% } else { %>
-            <div class="col-12">
-              <h2 class="products-title" style="color: tomato">
-                No hay productos que coincidan con esa búsqueda
-              </h2>
-            </div>
-            <% } %>
-
+        <% }) %> 
+        
     </main>
 
     <%- include('../partials/scripts.ejs') %>
