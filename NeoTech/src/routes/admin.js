@@ -12,6 +12,10 @@ const {
     saleStock,
     deleteUsers,
     logicEditProduct,
+    formAddCategory,
+    formAddBrand,
+    addCategory,
+    addBrand,
     deleteBrand,
     deleteCategory
     } = require('../controllers/adminController');
@@ -29,6 +33,12 @@ router.get('/panel-general', /* userSession , admin , */ panel)
 router.get("/agregar-producto",/* userSession, admin , */ formAddProduct)
 // POST AGREGAR PRODUCTO         /*  -------------------------------------------- */
 router.post("/agregar-producto",uploadFile.single('product-image'), productValidator, addProduct)
+// GET AGREGAR CATEGORIAS Y MARCAS FORMULARIO
+router.get("/categorias",/* userSession, admin , */ formAddCategory)
+router.get("/marcas",/* userSession, admin , */ formAddBrand)
+// POST AGREGAR CATEGORIAS Y MARCAS         /*  -------------------------------------------- */
+router.post("/categorias",uploadFile.single('product-image'), productValidator, addCategory)
+router.post("/marcas",uploadFile.single('product-image'), productValidator, addBrand)
 
 // GET EDITAR CUENTA
 router.get("/editar-cuenta", /* userSession , admin , */ editAccount)
@@ -49,6 +59,10 @@ router.get("/venta-y-stock", /* userSession, admin , */saleStock)
 // GET LISTA DE USUARIOS
 router.get("/usuarios", /* userSession , */users)
 
+// DELETE USER
+router.delete("/usuarios/:id", deleteUsers)
+
+
 router.delete("/eliminar-marca/:id", deleteBrand)
 router.delete("/eliminar-categoria/:id", deleteCategory)
 
@@ -61,10 +75,6 @@ router.delete("/eliminar-categoria/:id", deleteCategory)
 
 
 
-
-/////////////////////////////////////////////
-// DELETE BORRAR UN USUARIO DESDE EL PANEL DE EDITAR PRODUCTO
-router.delete("/usuarios/:id", deleteUsers)
 
 
 

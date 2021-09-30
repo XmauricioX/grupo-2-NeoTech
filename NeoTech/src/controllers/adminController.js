@@ -9,20 +9,73 @@ module.exports = {
             session: req.session
         })
     },
+    formAddCategory: (req, res) => {
+        const category = db.Categories.findAll()
+        const brands = db.Brands.findAll()
+
+        Promise.all([category, brands])
+            .then(([categorias, marcas]) => {
+                res.render("admin/admin-add-category", {
+                    title: 'NeoTech - Agregar marcas',
+                    session: req.session,
+                    categorias,
+                    marcas
+                })
+            })
+            .catch(err => console.log(err))
+    },
+    formAddBrand: (req, res) => {
+        const category = db.Categories.findAll()
+        const brands = db.Brands.findAll()
+
+        Promise.all([category, brands])
+            .then(([categorias, marcas]) => {
+                res.render("admin/admin-add-brand", {
+                    title: 'NeoTech - Agregar marcas',
+                    session: req.session,
+                    categorias,
+                    marcas
+                })
+            })
+            .catch(err => console.log(err))
+    },
+    addCategory: (req, res) => {
+        let { category } = req.body
+
+        db.Categories.create({
+            category_name: category,
+        })
+        res.send(category)
+            .then(() => {
+                res.redirect('/administrador/editar-producto')
+            })
+            .catch(err => console.log(err))
+    },
+    addBrand: (req, res) => {
+        let { brand } = req.body
+
+        db.Brands.create({
+            brand_name: brand,
+        })
+        .then(() => {
+            res.redirect('/administrador/editar-producto')
+        })
+        .catch(err => console.log(err))
+    },
     formAddProduct: (req, res) => {
         const category = db.Categories.findAll()
         const brands = db.Brands.findAll()
 
         Promise.all([category, brands])
-        .then(([categorias, marcas]) => {
-            res.render("admin/admin-add-product", {
-                title: 'NeoTech - Agregar Producto',
-                session: req.session,
-                categorias,
-                marcas,
+            .then(([categorias, marcas]) => {
+                res.render("admin/admin-add-product", {
+                    title: 'NeoTech - Agregar Producto',
+                    session: req.session,
+                    categorias,
+                    marcas,
+                })
             })
-        })
-        .catch(err => console.log(err))
+            .catch(err => console.log(err))
     },
     addProduct: (req, res) => {
         let errors = validationResult(req)
@@ -45,30 +98,30 @@ module.exports = {
                 color: color,
                 description: description,
                 images: req.file && req.file.filename
+                //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el "default-image.png".
             })
-            .then(res.redirect('/administrador/panel-general'))
-            .catch(err => console.log(err))
-
+                .then(res.redirect('/administrador/editar-producto'))
+                .catch(err => console.log(err))
         } else {
-
             const category = db.Categories.findAll()
             const brands = db.Brands.findAll()
 
             Promise.all([category, brands])
-            .then(([categorias, marcas]) => {
-                res.render("admin/admin-add-product", {
-                    title: 'NeoTech - Agregar Producto',
-                    errors: errors.mapped(),
-                    old: req.body,
-                    session: req.session,
-                    categorias,
-                    marcas
+                .then(([categorias, marcas]) => {
+                    res.render("admin/admin-add-product", {
+                        title: 'NeoTech - Agregar Producto',
+                        errors: errors.mapped(),
+                        old: req.body,
+                        session: req.session,
+                        categorias,
+                        marcas
+                    })
                 })
-            })
+                .catch(err => console.log(err))
         }
     },
     editProduct: (req, res) => {
-        
+
         db.Products.findAll({
             include: [{association: 'category'}, {association: 'brand'}]
         })
@@ -80,7 +133,6 @@ module.exports = {
             })
         })
         .catch(err => console.log(err))
-        
     },
     formEditProduct: (req, res) => {
         const category = db.Categories.findAll()
@@ -102,7 +154,6 @@ module.exports = {
         .catch(err => console.log(err))
     },
     logicEditProduct: (req, res) => {
-
         let errors = validationResult(req)
          
         if (errors.isEmpty()) { 
@@ -160,6 +211,7 @@ module.exports = {
         } 
     },
     deleteProduct: (req, res) => {
+        
         db.Products.destroy({
             where: {
                 id: req.params.id
@@ -174,9 +226,9 @@ module.exports = {
             session: req.session
         })
     },
-    users: (req, res) => {
-        db.Users.findAll()
+    users: (req, res) => {//Ariel
 
+        db.Users.findAll()
         .then(users => {
             res.render('admin/admin-users', {
                 title: 'NeoTech - Usuarios',
@@ -185,8 +237,10 @@ module.exports = {
             })
         })
         .catch(err => console.log(err))
+
     },
-    deleteUsers: (req, res) => {
+    deleteUsers: (req, res) => {//Ariel
+        
         db.Users.destroy({
             where: {
                 id: +req.params.id
@@ -198,10 +252,10 @@ module.exports = {
     },
     editAccount: (req, res) => {
         res.render("admin/admin-edit-account",
-            {
-                title: 'NeoTech - Editar Cuenta',
-                session: req.session
-            })
+        {
+            title: 'NeoTech - Editar Cuenta',
+            session: req.session
+        })
     },
     deleteBrand: (req, res) => {
         db.Brands.destroy({
@@ -221,7 +275,5 @@ module.exports = {
         .then(res.redirect('/administrador/panel-general'))
         .catch(err => console.log(err))
     },
-    editUser: (req, res) => {
-        
-    },
+    editUser: (req, res) => {},
 }

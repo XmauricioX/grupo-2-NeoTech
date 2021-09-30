@@ -34,7 +34,6 @@
 
                     <div id="categorias">
 
-                        <!-- <label id="label-categoria" for="form-add">MARCA</label> -->
                         <select name="brand" id="categorias-select"> 
                             <option value="#" selected disabled>Marca...</option>
                             <% brands.forEach(brand=> { %>
@@ -47,9 +46,7 @@
                         </div> 
                         <div id="categorias">
                             
-                            <!-- <label id="label-categoria" for="form-add">CATEGORIA</label> -->
                             <select name="category" id="categorias-select"> 
-                                <!-- <option selected hidden value="">Categorias</option> -->
                                 <option value="#" selected disabled>Categoría...</option>
                                 <% categories.forEach(category=> { %>
                                     <option value="<%= category.id %>" >
@@ -61,9 +58,6 @@
                             </div> 
                             
 
-                            
-
-                            <!-- <input type="file" name="product-image" id="t-file" multiple> -->
                             <input type="text" name="product" id="" value="<%= product.product_name %>" value="<%= locals.old ? old.product_name : product.product_name %>" placeholder="Producto">
                             <% if (locals.errors && errors.product) { %>
                                 <small style="color: red;"><%= errors.product.msg %> </small>
