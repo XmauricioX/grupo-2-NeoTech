@@ -11,7 +11,9 @@ const {
     editProduct,
     saleStock,
     deleteUsers,
-    logicEditProduct
+    logicEditProduct,
+    deleteBrand,
+    deleteCategory
     } = require('../controllers/adminController');
 
 const uploadFile = require('../middlewares/uploadFiles');
@@ -46,6 +48,10 @@ router.get("/venta-y-stock", /* userSession, admin , */saleStock)
 
 // GET LISTA DE USUARIOS
 router.get("/usuarios", /* userSession , */users)
+
+router.delete("/eliminar-marca/:id", deleteBrand)
+router.delete("/eliminar-categoria/:id", deleteCategory)
+
 
 
 

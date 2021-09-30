@@ -8,7 +8,6 @@ module.exports = {
             title: 'NeoTech - Panel General',
             session: req.session
         })
-
     },
     formAddProduct: (req, res) => {
         const category = db.Categories.findAll()
@@ -23,6 +22,7 @@ module.exports = {
                 marcas,
             })
         })
+        .catch(err => console.log(err))
     },
     addProduct: (req, res) => {
         let errors = validationResult(req)
@@ -156,7 +156,7 @@ module.exports = {
                     })
                 })
             })
-
+            .catch(err => console.log(err))
         } 
     },
     deleteProduct: (req, res) => {
@@ -176,16 +176,15 @@ module.exports = {
     },
     users: (req, res) => {
         db.Users.findAll()
-            .then(users => {
-                res.render('admin/admin-users', {
-                    title: 'NeoTech - Usuarios',
-                    users,
-                    session: req.session
-                })
-            })
-    },
-    editUser: (req, res) => {
 
+        .then(users => {
+            res.render('admin/admin-users', {
+                title: 'NeoTech - Usuarios',
+                users,
+                session: req.session
+            })
+        })
+        .catch(err => console.log(err))
     },
     deleteUsers: (req, res) => {
         db.Users.destroy({
@@ -193,9 +192,9 @@ module.exports = {
                 id: +req.params.id
             }
         })
-            .then(user => {
-                res.redirect('/administrador/usuarios')
-            })
+        .then(user => {
+            res.redirect('/administrador/usuarios')
+        })
     },
     editAccount: (req, res) => {
         res.render("admin/admin-edit-account",
@@ -204,4 +203,23 @@ module.exports = {
                 session: req.session
             })
     },
+    deleteBrand: (req, res) => {
+        db.Brands.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(res.redirect('/administrador/panel-general'))
+        .catch(err => console.log(err))
+    },
+    deleteCategory: (req, res) => {
+        db.Categories.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(res.redirect('/administrador/panel-general'))
+        .catch(err => console.log(err))
+    },
+    editUser: (req, res) => {},
 }
