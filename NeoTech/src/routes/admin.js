@@ -15,7 +15,9 @@ const {
     formAddCategory,
     formAddBrand,
     addCategory,
-    addBrand
+    addBrand,
+    deleteBrand,
+    deleteCategory
     } = require('../controllers/adminController');
 
 const uploadFile = require('../middlewares/uploadFiles');
@@ -57,18 +59,22 @@ router.get("/venta-y-stock", /* userSession, admin , */saleStock)
 // GET LISTA DE USUARIOS
 router.get("/usuarios", /* userSession , */users)
 
-
-
-
-
-
-
-
-
-
-/////////////////////////////////////////////
-// DELETE BORRAR UN USUARIO DESDE EL PANEL DE EDITAR PRODUCTO
+// DELETE USER
 router.delete("/usuarios/:id", deleteUsers)
+
+
+router.delete("/eliminar-marca/:id", deleteBrand)
+router.delete("/eliminar-categoria/:id", deleteCategory)
+
+
+
+
+
+
+
+
+
+
 
 
 

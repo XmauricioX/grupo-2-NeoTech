@@ -27,17 +27,17 @@
                         <figure class="img-container">
                             <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                             <!-- FONDO DEL PRODUCTO -->
-                            <img class="img-1" src="/images/imgs-product/<%- element.image %> " alt="product">
+                            <img class="img-1" src="/images/imgs-product/<%- element.images %> " alt="product">
                             <!-- IMAGEN DEL PRODUCTO -->
                         </figure>
                         <hr>
 
                         <div class="text-card">
-                            <h2 class="name-card"><%= element.product %></h2>
+                            <h2 class="name-card"><%= element.product_name %></h2>
                             <h2 class="number-card">$<%= element.price %></h2>
                             <p class="description-card"> 
-                                Marca: <%= element.trademark %> <br> 
-                                Categoria: <%= element.category %> <br> 
+                                Marca: <%= element.brand.brand_name %> <br> 
+                                Categoria: <%= element.category.category_name %> <br> 
                                 Descripción: <%= element.description.slice(0,45) %>... 
                             </p>
                             

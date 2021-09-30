@@ -7,57 +7,66 @@
 <body>
     
     <%- include("../admin/admi-nav") -%>
-
-        <div id="container-admin">
-
-            <%- include("../partials/aside-admin") -%>
-            
+    
+    <div id="container-admin">
+        
+        <%- include("../partials/aside-admin") -%>
+        
         <main id="content">
             <p id="admin-welcome">
-                Estas editando: <%= product.trademark %>
+                Estas editando: <%= product.product_name %>
             </p>
-
+            
             <div id="container-form">         
-
+                
                 <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-        
-                    <div style="text-align: center;">
-                        <img id="description" src="/images/imgs-product/<%= product.image %>" alt="imagen del producto">
-                    </div>
-                    <input type="file" name="product-image" id="t-file" multiple>
                     
-                    <input type="text" name="productName" id="" value="<%= product.product %>" value="<%= locals.old ? old.name : product.name %>" placeholder="Producto">
-                    <% if (locals.errors && errors.product) { %>
-                        <small style="color: red;"><%= errors.product.msg %> </small>
-                       <% } %>
-                    <input type="text" name="trademark" id="" value="<%= product.trademark %>" placeholder="Marca">
-                    <% if (locals.errors && errors.trademark) { %>
-                        <small style="color: red;"><%= errors.trademark.msg %> </small>
-                       <% } %>
-                    <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
+                    <div style="text-align: center;">
+                        <img id="description" src="/images/imgs-product/<%= product.images %>" alt="imagen del producto">
+                    </div>
+                    
+                    <div class="input-file">
+                        <button class="btn__update__image">
+                            <p class="userUpdate_subtitle">Cambiar imagen de Producto</p>
+                            <input type="file" name="product-image" multiple>
+                        </button>
+                    </div>
 
+                    <div id="categorias">
 
+                        <select name="brand" id="categorias-select"> 
+                            <option value="#" selected disabled>Marca...</option>
+                            <% brands.forEach(brand=> { %>
+                                <option value="<%= brand.id %>" >
+                                    <%= brand.brand_name %>
+                                </option>
+                                <% }) %>
+                            </select>
+                            
+                        </div> 
+                        <div id="categorias">
+                            
+                            <select name="category" id="categorias-select"> 
+                                <option value="#" selected disabled>Categoría...</option>
+                                <% categories.forEach(category=> { %>
+                                    <option value="<%= category.id %>" >
+                                        <%= category.category_name %>
+                                    </option>
+                                    <% }) %>
+                                </select>
+                                
+                            </div> 
+                            
 
+                            <input type="text" name="product" id="" value="<%= product.product_name %>" value="<%= locals.old ? old.product_name : product.product_name %>" placeholder="Producto">
+                            <% if (locals.errors && errors.product) { %>
+                                <small style="color: red;"><%= errors.product.msg %> </small>
+                                <% } %>
+                                <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
                     <% if (locals.errors && errors.price) { %>
                         <small style="color: red;"><%= errors.price.msg %> </small>
                        <% } %>
 
-                    <div id="categorias">
-                       
-                        <label id="label-categoria" for="form-add">CATEGORIA</label>
-                        <select name="category" id="categorias-select"> 
-                                    <option value="Monitores" <%= product.category == "Monitor" ? "selected" : "" %> >Monitores</option>
-                                    <option value="Audio" <%= product.category == "Audio" ? "selected" : "" %> >Audio</option>
-                                    <option value="Teclados" <%= product.category == "Teclado" ? "selected" : "" %> >Teclados</option>
-                                    <option value="Mouse" <%= product.category == "Mouse" ? "selected" : "" %> >Mouse</option>
-                                    <option value="Gaming" <%= product.category == "Gaming" ? "selected" : "" %> >Gaming</option>
-                        </select>
-                        
-                    </div> 
-                    
-
-                    <!-- <input type="text" name="color" id="" value="<%= product.color %>" placeholder="color/es">
-                    <input type="text" name="descripcion" id="description" value="<%= product.descripcion %>">  -->
 
                     <input type="text" name="color" id="" value="<%= product.color %>" placeholder="Color/es">
                     <% if (locals.errors && errors.color) { %>
