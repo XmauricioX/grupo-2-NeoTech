@@ -1,5 +1,4 @@
 let db = require('../database/models')
-/* let { getProducts, getUsers, writeProductJSON, writeUsersJSON } = require('../data/dataBase'); */
 const { validationResult } = require('express-validator')
 
 module.exports = {
@@ -16,16 +15,14 @@ module.exports = {
         const brands = db.Brands.findAll()
 
         Promise.all([category, brands])
-            .then(([categorias, marcas]) => {
-                res.render("admin/admin-add-product", {
-                    title: 'NeoTech - Agregar Producto',
-                    session: req.session,
-                    categorias,
-                    marcas,
-                })
+        .then(([categorias, marcas]) => {
+            res.render("admin/admin-add-product", {
+                title: 'NeoTech - Agregar Producto',
+                session: req.session,
+                categorias,
+                marcas,
             })
-
-
+        })
     },
     addProduct: (req, res) => {
         let errors = validationResult(req)
@@ -39,6 +36,7 @@ module.exports = {
                 color,
                 description
             } = req.body
+
             db.Products.create({
                 brand_id: trademark,
                 product_name: product,
@@ -46,103 +44,129 @@ module.exports = {
                 categoryId: category,
                 color: color,
                 description: description,
-                images: req.file ? req.file.filename : "default-image.png",
-                //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el "default-image.png".
+                images: req.file && req.file.filename
             })
-                .then((product) => {
-                    res.redirect('/', {
-                    })
-                })
-                .catch(err => console.log(err))
+            .then(res.redirect('/administrador/panel-general'))
+            .catch(err => console.log(err))
+
         } else {
+
             const category = db.Categories.findAll()
             const brands = db.Brands.findAll()
 
             Promise.all([category, brands])
-                .then(([categorias, marcas]) => {
-                    res.render("admin/admin-add-product", {
-                        title: 'NeoTech - Agregar Producto',
-                        errors: errors.mapped(),
-                        old: req.body,
-                        session: req.session,
-                        categorias,
-                        marcas
-                    })
+            .then(([categorias, marcas]) => {
+                res.render("admin/admin-add-product", {
+                    title: 'NeoTech - Agregar Producto',
+                    errors: errors.mapped(),
+                    old: req.body,
+                    session: req.session,
+                    categorias,
+                    marcas
                 })
+            })
         }
     },
     editProduct: (req, res) => {
-        res.render('admin/admin-edit-product', {
-            title: 'NeoTech - Editar Producto',
-            session: req.session
+        
+        db.Products.findAll({
+            include: [{association: 'category'}, {association: 'brand'}]
         })
+        .then(products => {
+            res.render('admin/admin-edit-product', {
+                title: 'NeoTech - Editar Producto',
+                products,
+                session: req.session
+            })
+        })
+        .catch(err => console.log(err))
+        
     },
     formEditProduct: (req, res) => {
-        let product = getProducts.find(product => {
-            return product.id === +req.params.id
-        }); //al ponerle un + es lo mismo que hacer Number()
-        res.render("admin/admin-edit-product-form", {
-            product,
-            title: 'NeoTech - Form Editar Producto',
-            session: req.session
+        const category = db.Categories.findAll()
+        const brand = db.Brands.findAll()
+
+        Promise.all([category, brand])
+        .then(([categories, brands]) => {
+            db.Products.findByPk(req.params.id)
+            .then(product => {
+                res.render("admin/admin-edit-product-form", { 
+                    title: 'NeoTech - Editar Producto',
+                    session: req.session,
+                    product,
+                    categories,
+                    brands
+                })
+            })
         })
+        .catch(err => console.log(err))
     },
     logicEditProduct: (req, res) => {
-        /*  let errors = validationResult(req)
-         let product = getProducts.find(product => {
-             return product.id === +req.params.id
-         });
-         if (errors.isEmpty()) { */
 
-        let { productName,
-            trademark,
+        let errors = validationResult(req)
+         
+        if (errors.isEmpty()) { 
+
+        let { 
+            product,
             price,
-            category,
             color,
             description,
+            category,
+            brand
         } = req.body;
 
-        getProducts.forEach(product => {
-            if (product.id === +req.params.id) {
-                product.id = product.id,
-                    product.product = productName.trim(),
-                    product.trademark = trademark.trim(),
-                    product.price = price.trim(),
-                    product.category = category.trim(),
-                    product.color = color.trim(),
-                    product.description = description.trim(),
-                    product.image = req.file ? req.file.filename : product.image
-                //Si req.file existe(si subieron un archivo), guarda el nombre de ese archivo en el JSON, y si no guarda el nombre que ya estaba cargado anteriormente en el mismo JSON(LA IMAGEN QUE CARGAMOS ANTERIORMENTE).
+        db.Products.update(
+            {
+                images: req.file && req.file.filename,
+                product_name: product.trim(),
+                color: color.trim(),
+                description: description.trim(),
+                price: price.trim(),
+                categoryId: category,
+                brand_id: brand
+            },
+            {
+                where: {
+                    id: req.params.id
+                }
             }
-        })
+        )     
+        .then(res.redirect('/administrador/editar-producto'))
+        .catch(err => console.log(err))
+        
 
-        writeProductJSON(getProducts);
+        } else { 
+        
+            const category = db.Categories.findAll()
+            const brand = db.Brands.findAll()
 
-        res.redirect('/administrador/editar-producto')
+            Promise.all([category, brand])
+            .then(([categories, brands]) => {
+                db.Products.findByPk(req.params.id)
+                .then(product => {
+                    res.render("admin/admin-edit-product-form", { 
+                        title: 'NeoTech - Editar Producto',
+                        errors: errors.mapped(),
+                        old: req.body,
+                        session: req.session,
+                        product,
+                        categories,
+                        brands
+                    })
+                })
+            })
 
-        /*  } else { */
-        res.render("admin/admin-edit-product-form", {
-            title: 'NeoTech - Editar Producto',
-            product,
-            errors: errors.mapped(),
-            old: req.body,
-            session: req.session
-        })
-        /*  } */
+        } 
     },
     deleteProduct: (req, res) => {
-        getProducts.find(product => product.id === +req.params.id)
-
-        getProducts.forEach(product => {
-            if (product.id === +req.params.id) {
-                let productDeleted = getProducts.indexOf(product)
-                getProducts.splice(productDeleted, 1)
+        db.Products.destroy({
+            where: {
+                id: req.params.id
             }
-        });
-
-        writeProductJSON(getProducts)
-
-        res.redirect('/administrador/editar-producto')
+        })
+        .then(res.redirect('/administrador/editar-producto'))
+        .catch(err => console.log(err))
     },
     saleStock: (req, res) => {
         res.render("admin/admin-sell-stock", {
@@ -150,7 +174,7 @@ module.exports = {
             session: req.session
         })
     },
-    users: (req, res) => {//Ariel
+    users: (req, res) => {
         db.Users.findAll()
             .then(users => {
                 res.render('admin/admin-users', {
@@ -163,7 +187,7 @@ module.exports = {
     editUser: (req, res) => {
 
     },
-    deleteUsers: (req, res) => {//Ariel
+    deleteUsers: (req, res) => {
         db.Users.destroy({
             where: {
                 id: +req.params.id

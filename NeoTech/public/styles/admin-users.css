@@ -7,6 +7,17 @@
     position: absolute;
     top: 80px;
 }
+.delete-user{
+    position: absolute;
+    bottom: 340px;
+    left: 230px;
+    font-size: 40px;
+    color: var(--color-Green-Old);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    /* top: -50px; */
+}
 #content{
     padding-top: 0px;
     margin-top: 0px;
