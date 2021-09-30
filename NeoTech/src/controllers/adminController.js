@@ -221,5 +221,7 @@ module.exports = {
         .then(res.redirect('/administrador/panel-general'))
         .catch(err => console.log(err))
     },
-    editUser: (req, res) => {},
+    editUser: (req, res) => {
+        
+    },
 }
