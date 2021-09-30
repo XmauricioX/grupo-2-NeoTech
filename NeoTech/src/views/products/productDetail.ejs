@@ -9,7 +9,7 @@
             <section class="product__section">
 
                 <article>
-                    <img src="/images/imgs-product/<%- productID.image %>" alt="auricular">
+                    <img src="/images/imgs-product/<%- productID.images %>" alt="auricular">
                 </article>
 
                 <!-- <i class="fal fa-times"></i> -->
@@ -17,7 +17,7 @@
                 <div class="container-r">
                         <div class="detail">
                             <h2>
-                                <%= productID.trademark %> 
+                                <%= productID.brand.brand_name %> 
                             </h2>
                             <p>
                                 Precio: <br>
@@ -25,7 +25,7 @@
                                 Color: <br>
                                 <%= productID.color %> <br> <br>
                                 Categoria: <br>
-                                <%= productID.category %> <br> <br>
+                                <%= productID.category.category_name %> <br> <br>
                                 
                                 Descripción: <br>
                                 <%= productID.description %>

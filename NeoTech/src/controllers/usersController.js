@@ -1,10 +1,10 @@
-let { getUsers, writeUsersJSON } = require('../data/dataBase')
 const { validationResult } = require('express-validator')
 //modulo de express-validator para poder trabajar con los resultados de la validacion
 const bcrypt = require('bcryptjs')
+const db = require('../database/models')
 
 module.exports = {
-    register: (req, res) => {
+    registerForm: (req, res) => {
         res.render('users/register', {
             title: 'NeoTech - Registro',
             session: req.session
@@ -15,41 +15,26 @@ module.exports = {
 
         if (errors.isEmpty()) {
 
-            let lastID = 0;
-
-            getUsers.forEach(user => {
-                if (user.id > lastID) {
-                    lastID = user.id
-                }
-            });
-
-            let { firstName,
-                lastName,
+            let { 
+                first_name,
+                last_name,
                 email,
                 password,
             } = req.body
 
-            let newUsers = {
-                id: lastID + 1,
-                firstName: firstName.trim(),
-                lastName: lastName.trim(),
+            db.Users.create({
+                first_name: first_name.trim(),
+                last_name: last_name.trim(),
                 email: email,
                 password: bcrypt.hashSync(password, 10),
-                admin: false,
                 image: "default.png",
-                tel: "",
-                address: "",
-                pc: "",
-                province:"",
-                city:""
-            };
-
-            getUsers.push(newUsers);
-
-            writeUsersJSON(getUsers);
-
-            res.redirect('/cuenta/iniciar-sesion')
-
+                user_rol: 0,
+                phone: "",
+            })
+            .then(() => {
+                res.redirect('/cuenta/iniciar-sesion')
+            })
+            .catch(err => console.log(err))
         } else {
             res.render('users/register', {
                 title: 'NeoTech - Registro',
@@ -60,12 +45,9 @@ module.exports = {
         }
     },
     login: (req, res) => {
-        let user = getUsers.find(user => user.id === +req.params.id)
-
         res.render('users/login', {
-            title: 'NeoTech - Iniciar Sesion',
+            title: 'NeoTech - Iniciar Sesión',
             session: req.session,
-            user
         })
     },
     processLogin: (req, res) => {
@@ -73,21 +55,27 @@ module.exports = {
 
         if (errors.isEmpty()) {
 
-            let user = getUsers.find(user => user.email === req.body.email)
-            
-            req.session.user = {
-                id: user.id,
-                firstName: user.firstName,
-                email: user.email,
-                image: user.image,
-                admin: user.admin
-            }
-            if(req.body.remember){
-                res.cookie('cookieUser',req.session.user,{expires: new Date(Date.now() + 900000), httpOnly: true})
-            } 
-            res.locals.user = req.session.user
+            db.Users.findOne({
+                where: {
+                    email: req.body.email,
+                },
+            }).then(user => {
+                req.session.user = {
+                    id: user.id,
+                    first_name: user.first_name,
+                    email: user.email,
+                    image: user.image,
+                    user_rol: user.user_rol
+                }
 
-            res.redirect('/')
+                if(req.body.remember){ // Si el checkbox está seleccionado creo la cookie
+                    res.cookie('cookieUser',req.session.user,{expires: new Date(Date.now() + 900000), httpOnly: true})
+                }
+                res.locals.user = req.session.user
+    
+                res.redirect('/')
+            })
+            .catch(err => console.log(err))
 
         } else {
             res.render('users/login', {
@@ -99,63 +87,90 @@ module.exports = {
     },
     logout: (req, res) => {
         req.session.destroy();
-
         if(req.cookies.cookieUser){
-            res.cookie('cookieUser', '', {maxAge: -1})
-        } 
+            res.cookie('cookieUser','',{maxAge:-1})
+        }
         
-        res.redirect('/');
-        
+        return res.redirect('/')
     },
     userProfile: (req, res) =>{
-        let user = getUsers.find(user=> user.id === req.session.user.id);
-        res.render('users/userProfile', {
-            title: 'NeoTech - Tu Perfil',
-            session: req.session,
-            user
+        db.Users.findByPk(req.session.user.id)
+        .then(user => {
+            db.Addresses.findOne({
+                where: {
+                    user_id: user.id
+                }
+            })
+            .then(address => {
+                res.render('users/userProfile', {
+                    title: 'NeoTech - Tu Perfil',
+                    session: req.session,
+                    user,
+                    address
+                })
+            })
         })
     },
     userEdit: (req, res) => {
-        let user = getUsers.find(user => user.id === +req.params.id)
-        res.render('users/userEdit', { 
-            title: 'NeoTech - Tu Perfil',
-            session: req.session,
-            user
+        db.Users.findByPk(req.session.user.id)
+        .then(user => {
+            db.Addresses.findOne({
+                where: {
+                    user_id: user.id
+                }
+            })
+            .then(address => {
+                res.render('users/userEdit', {
+                    title: 'NeoTech - Tu Perfil',
+                    session: req.session,
+                    user,
+                    address
+                })
+            })
         })
     },
     userUpdate: (req, res) =>{
         let errors = validationResult(req)
             
         if(errors.isEmpty()){
-            let user = getUsers.find(user => user.id === +req.params.id)
             
             let { 
-                firstName, 
-                lastName,
-                tel,
+                first_name, 
+                last_name,
+                phone,
                 address,
                 pc,
+                country,
                 province,
                 city
             } = req.body;
 
-            user.id = user.id
-            user.firstName = firstName
-            user.lastName = lastName
-            user.tel = tel
-            user.address = address
-            user.pc = pc
-            user.province = province
-            user.city = city
-            user.image = req.file ? req.file.filename : user.image
-
-            writeUsersJSON(getUsers)
-
-            delete user.password
-            
-            req.session.user = user
-
-            res.redirect('/cuenta/editar-usuario')
+            db.Users.update(
+                {
+                    first_name,
+                    last_name,
+                    phone,
+                    image: req.file && req.file.filename,
+                },
+                {
+                    where: {
+                        id: req.params.id
+                    }
+                }
+            )
+            .then(result => {
+                db.Addresses.create({
+                    address: address,
+                    pc: pc,
+                    country: country,
+                    province: province,
+                    city: city,
+                    user_id: req.params.id,
+                })
+                .then(result => {
+                    res.redirect('/cuenta/editar-usuario')
+                })
+            })
                   
         } else{
             res.render('/users/userEdit', {
@@ -167,4 +182,3 @@ module.exports = {
         }
     },
 }
-   

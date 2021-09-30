@@ -49,6 +49,7 @@
     text-align: initial;
     width: 85%;
     outline: none;
+    font-weight: 600;
 }
 .login .email,
 .login .password {

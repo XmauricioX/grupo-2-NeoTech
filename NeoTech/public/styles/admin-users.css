@@ -7,6 +7,17 @@
     position: absolute;
     top: 80px;
 }
+.delete-user{
+    position: absolute;
+    bottom: 340px;
+    left: 230px;
+    font-size: 40px;
+    color: var(--color-Green-Old);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    /* top: -50px; */
+}
 #content{
     padding-top: 0px;
     margin-top: 0px;
@@ -74,18 +85,19 @@
     height: 320px;
     z-index: 0;
     position: relative;
+    
 }
-.img-0{
+/* .img-0{
     z-index: 1;
     position: absolute;
     width: 100%;
     height: inherit;
-}
+} */
 .img-1{
-    height: inherit;
-    position: absolute;
-    z-index: 2;
-    width: 100%;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    margin: 32px 12px;
 }
 hr{
     width: 100%;

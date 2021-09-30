@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 let {
-    register,
+    registerForm,
     userRegister,
     login,
     processLogin,
@@ -19,8 +19,9 @@ let userSession = require('../middlewares/usersSession')
 const notLoged = require("../middlewares/usersSession")
 const loged = require("../middlewares/logedMiddleware")
 
+
 /* GET FORM REGISTER */
-router.get('/registro', loged ,register)
+router.get('/registro', loged ,registerForm)
 router.post('/registro', registerValidator, userRegister)
 
 /*  FORM LOGIN */

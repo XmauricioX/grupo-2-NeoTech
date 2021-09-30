@@ -11,7 +11,11 @@ const {
     editProduct,
     saleStock,
     deleteUsers,
-    logicEditProduct
+    logicEditProduct,
+    formAddCategory,
+    formAddBrand,
+    addCategory,
+    addBrand
     } = require('../controllers/adminController');
 
 const uploadFile = require('../middlewares/uploadFiles');
@@ -21,20 +25,26 @@ let userSession = require('../middlewares/usersSession')
 const admin = require("../middlewares/admin")
 
 /* GET admin page. */
-router.get('/panel-general', userSession , admin , panel)
+router.get('/panel-general', /* userSession , admin , */ panel)
 
 // GET AGREGAR PRODUCTO FORMULARIO
-router.get("/agregar-producto",userSession, admin , formAddProduct)
+router.get("/agregar-producto",/* userSession, admin , */ formAddProduct)
 // POST AGREGAR PRODUCTO         /*  -------------------------------------------- */
 router.post("/agregar-producto",uploadFile.single('product-image'), productValidator, addProduct)
+// GET AGREGAR CATEGORIAS Y MARCAS FORMULARIO
+router.get("/categorias",/* userSession, admin , */ formAddCategory)
+router.get("/marcas",/* userSession, admin , */ formAddBrand)
+// POST AGREGAR CATEGORIAS Y MARCAS         /*  -------------------------------------------- */
+router.post("/categorias",uploadFile.single('product-image'), productValidator, addCategory)
+router.post("/marcas",uploadFile.single('product-image'), productValidator, addBrand)
 
 // GET EDITAR CUENTA
-router.get("/editar-cuenta", userSession , admin , editAccount)
+router.get("/editar-cuenta", /* userSession , admin , */ editAccount)
 
 // GET PANEL EDITAR PRODUCTO ( LISTADO DE PRODUCTOS )
-router.get("/editar-producto", userSession, admin ,editProduct)
+router.get("/editar-producto", /* userSession, admin , */editProduct)
 // GET EDITAR PRODUCTO FORMULARIO
-router.get("/formulario-editar-producto/:id", userSession ,formEditProduct)
+router.get("/formulario-editar-producto/:id", /* userSession , */formEditProduct)
 // PUT EDITAR UN PRODUCTO           /* ----------------------------------------- */
 router.put("/formulario-editar-producto/:id", uploadFile.single('product-image'), productValidator, logicEditProduct)
 
@@ -42,10 +52,10 @@ router.put("/formulario-editar-producto/:id", uploadFile.single('product-image')
 router.delete("/eliminar-producto/:id", deleteProduct)
 
 // GET VENTA Y STOCK 
-router.get("/venta-y-stock", userSession, admin ,saleStock)
+router.get("/venta-y-stock", /* userSession, admin , */saleStock)
 
 // GET LISTA DE USUARIOS
-router.get("/usuarios", userSession, admin ,users)
+router.get("/usuarios", /* userSession , */users)
 
 
 

@@ -1,4 +1,4 @@
-let fs = require('fs')
+/* let fs = require('fs')
 
 module.exports = {
     getProducts : JSON.parse(fs.readFileSync('./src/data/products.json', 'utf-8')),
@@ -9,4 +9,4 @@ module.exports = {
     writeUsersJSON : (dataBase) => {
         fs.writeFileSync('./src/data/users.json', JSON.stringify(dataBase), "utf-8")
     }
-}
+} */

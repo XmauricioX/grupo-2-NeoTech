@@ -13,16 +13,16 @@
                 <form class="register__form" action="/cuenta/registro" method="POST">
                     <nav class="register__container">
                         <!-- name -->
-                        <label for="firstName"></label>
-                        <input class="text" type="text" name="firstName" id="text" placeholder="Nombre" value="<%= locals.old && old.firstName %>">
-                        <% if (locals.errors && errors.firstName) { %>
-                            <small class="text-error"><%= errors.firstName.msg %></small>
+                        <label for="first_name"></label>
+                        <input class="text" type="text" name="first_name" id="text" placeholder="Nombre" value="<%= locals.old && old.first_name %>">
+                        <% if (locals.errors && errors.first_name) { %>
+                            <small class="text-error"><%= errors.first_name.msg %></small>
                         <% } %>
                         <!-- lastname -->
-                        <label for="lastName"></label>
-                        <input class="text" type="text" name="lastName" id="text" placeholder="Apellido" value="<%= locals.old && old.lastName %>">
-                        <% if (locals.errors && errors.lastName) { %>
-                            <small class="text-error"><%= errors.lastName.msg %></small>
+                        <label for="last_name"></label>
+                        <input class="text" type="text" name="last_name" id="text" placeholder="Apellido" value="<%= locals.old && old.last_name %>">
+                        <% if (locals.errors && errors.last_name) { %>
+                            <small class="text-error"><%= errors.last_name.msg %></small>
                         <% } %>
                             <!-- email -->
                         <label for="email"></label>

@@ -110,11 +110,17 @@
     justify-content: center;
 }
 #container-admin #content #admin-welcome{
-    font-size: 30px;
+    font-size: 17px;
     color: var(--white);
 }
 #navigation{
     height: 150px
+}
+@media(min-width:760px) {
+    #container-admin #content #admin-welcome{
+        font-size: 30px;
+        color: var(--white);
+    }
 }
 @media(min-width:1024px){
     #navigation{
@@ -154,6 +160,10 @@
     }
     #container-admin #sidebar #index a:hover{
         text-decoration: underline
+    }
+    #container-admin #content #admin-welcome{
+        font-size: 30px;
+        color: var(--white);
     }
 }
 

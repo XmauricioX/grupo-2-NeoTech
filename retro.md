@@ -157,3 +157,44 @@
     <li>Perjudicar al compañero no haciendo la parte que nos corresponde</li>
     <li>No conectarse a las reuniones de zoom o discord</li>
 </ul>
+
+
+<h2>RETROSPECTIVA DEL SPRINT 5</h2>
+
+<h3>Seguir haciendo:</h3>
+<ul>
+    <li>Revisar que funcionen las funcionalidades antes de subir los archivos</li>
+    <li>trabajar mas en equipo</li>
+    <li>Dividirnos las tareas que se nos presentan y pedir ayuda si no se puede hacer la tarea</li>
+    <li>Seguir armando dailys/weeklys</li>
+    <li>Subir los cambios a la rama develop y al final del sprint subir a master</li>
+</ul>
+
+<h3>Hacer más:</h3>
+<ul>
+    <li>Prestar mas atención y tiempo al proyecto</li>
+    <li>Ayudar a los compañeros y avisar cuando haya problemas</li>
+</ul>
+
+<h3>Empezar a hacer:</h3>
+<ul>
+    <li>Organizar mejor el Trello</li>
+    <li>Mas reuniones grupales</li>
+    <li>comprender los tiempos de los demas</li>
+    <li>tener comunicación asertiva sin meter sentimientos o pensamientos personales</li>
+</ul>
+
+<h3>Hacer menos:</h3>
+<ul>
+    <li>empezar tarde con las tareas</li>
+    <li>Subir cosas incompletas al repo</li>
+</ul>
+
+<h3>Dejar de hacer:</h3>
+<ul>
+    <li>En lo posible terminar sobre el tiempo de entrga</li>
+    <li>Comentarios en el codigo innecesarios</li>
+    <li>No conectarse a las reuniones</li>
+</ul>
+
+
