@@ -258,12 +258,14 @@ module.exports = {
         })
     },
     deleteBrand: (req, res) => {
+        
         db.Brands.destroy({
             where: {
                 id: req.params.id
             }
         })
-        .then(res.redirect('/administrador/panel-general'))
+        /* res.send(req.params) */
+        .then(res.redirect('/administrador/marcas'))
         .catch(err => console.log(err))
     },
     deleteCategory: (req, res) => {
@@ -272,7 +274,7 @@ module.exports = {
                 id: req.params.id
             }
         })
-        .then(res.redirect('/administrador/panel-general'))
+        .then(res.redirect('/administrador/categorias'))
         .catch(err => console.log(err))
     },
     editUser: (req, res) => {},

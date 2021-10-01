@@ -15,27 +15,30 @@
             <%- include("../partials/aside-admin") -%>
 
                 <main id="content">
-                    
+
                     <div id="container-form">
-                        
-                        <form id="form-add" action="/administrador/marcas" enctype="multipart/form-data"
-                        method="POST">
-                       
+
+                        <form id="form-add" action="/administrador/marcas" enctype="multipart/form-data" method="POST">
+
                             <input type="text" name="brand" id="" value="<%= locals.old && old.product %>"
                                 placeholder="Marca">
-                            
-                                    <input class="submit" type="submit" value="Agregar">
-                                    <select name="category" id="categorias-select">
-                                        <% marcas.forEach(marca=> { %>
-                                            <option value="<%= marca.id %> ">
-                                                <%= marca.brand_name %>
-                                            </option>
-                                            <% }) %>
-                                    </select>
-                                    <input class="submit" type="submit" value="Eliminar">
-                        </form>
 
+                            <input class="submit" type="submit" value="Agregar">
+
+                        </form>
+                                <div>
+                                    <h3>Lista de Marcas</h3>
+
+                                <% marcas.forEach(element => { %>
+                                    <%= element.brand_name %> 
+                                    <form class="form__transparent" action="/administrador/marcas/<%= element.id %>?_method=DELETE" method="POST">
+                                        <button id="delete-product" type="submit">
+                                            <i  class="fas fa-times"></i>
+                                        </button>    
+                                    </form>
+                                <% }) %>
                     </div>
+                </div>
 
                 </main>
 

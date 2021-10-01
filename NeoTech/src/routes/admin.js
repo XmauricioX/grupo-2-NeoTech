@@ -49,6 +49,10 @@ router.get("/editar-producto", /* userSession, admin , */editProduct)
 router.get("/formulario-editar-producto/:id", /* userSession , */formEditProduct)
 // PUT EDITAR UN PRODUCTO           /* ----------------------------------------- */
 router.put("/formulario-editar-producto/:id", uploadFile.single('product-image'), productValidator, logicEditProduct)
+// DELETE ELIMINAR CATEGORIAS Y MARCAS
+router.delete("/categorias/:id", deleteCategory)
+router.delete("/marcas/:id", deleteBrand)
+
 
 // DELETE BORRAR UN PRODUCTO DESDE EL PANEL DE EDITAR PRODUCTO /* --------------- */
 router.delete("/eliminar-producto/:id", deleteProduct)

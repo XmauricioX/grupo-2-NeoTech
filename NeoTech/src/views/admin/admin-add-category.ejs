@@ -28,15 +28,21 @@
                                 placeholder="Categoria">
                             
                                     <input class="submit" type="submit" value="Agregar">
-                                    <select name="category" id="categorias-select">
-                                        <% categorias.forEach(categoria=> { %>
-                                            <option value="<%= categoria.id %> ">
-                                                <%= categoria.category_name %>
-                                            </option>
-                                            <% }) %>
-                                    </select>
-                                    <input class="submit" type="submit" value="Eliminar">
+                                    
                         </form>
+
+                        <div>
+                            <h3>Lista de Marcas</h3>
+
+                        <% categorias.forEach(element => { %>
+                            <%= element.category_name %> 
+                            <form class="form__transparent" action="/administrador/categorias/<%= element.id %>?_method=DELETE" method="POST">
+                                <button id="delete-product" type="submit">
+                                    <i  class="fas fa-times"></i>
+                                </button>    
+                            </form>
+                        <% }) %>
+            </div>
 
                     </div>
 
