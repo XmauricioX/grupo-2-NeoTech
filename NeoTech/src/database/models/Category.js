@@ -9,6 +9,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         category_name: {
             type: dataTypes.STRING(40),
+            allowNull: false 
         }
     }
     
