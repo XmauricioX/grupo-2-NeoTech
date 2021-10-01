@@ -105,7 +105,7 @@
 @media (min-width: 768px){
     .admin__add__product{
         background-image: url(/images/imgs-bg/teclado-original.jpg);
-        
+        background-repeat: no-repeat;
     }
     #container-form{
         width: 60%;

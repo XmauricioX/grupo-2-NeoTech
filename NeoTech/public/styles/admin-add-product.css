@@ -6,6 +6,7 @@
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 #container-form{
     width: 90%;
@@ -111,6 +112,9 @@
     justify-content: space-around;
 }
 @media (min-width: 768px){
+    .admin__add__product{        
+        background-size: cover;
+    }
     #container-form{
         max-width: 450px;
         margin-top: 45px;
@@ -120,10 +124,6 @@
     }
     .btn__update__image {
         font-size:22px;
-    }
-    .admin__add__product{
-        background-image: url(/images/imgs-bg/teclado-original.jpg);
-        
     }
     #admin-welcome{
         top: 110px;       

@@ -4,6 +4,8 @@
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
 }
 #bar{
     position: absolute;
@@ -117,6 +119,9 @@
     height: 150px
 }
 @media(min-width:760px) {
+    .body__index__admin {
+        background-repeat: no-repeat;
+    }
     #container-admin #content #admin-welcome{
         font-size: 30px;
         color: var(--white);
