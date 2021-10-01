@@ -27,8 +27,8 @@
 }
 .delete-btn{
     position: relative;
-    bottom: 23px;
-    left: 95%;
+    /* bottom: 23px;
+    left: 95%; */
     font-size: 20px;
     color: var(--color-Green-Old);
     cursor: pointer;
@@ -37,9 +37,7 @@
     /* top: -50px; */
     display: flex;
 }
-.form__transparent {
-    
-}
+
 #form-add{
     display: flex;
     flex-direction: column;

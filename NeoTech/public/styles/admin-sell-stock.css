@@ -2,6 +2,7 @@
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 #admin-welcome{
     position: absolute;
