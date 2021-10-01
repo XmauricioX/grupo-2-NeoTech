@@ -33,7 +33,7 @@
 }
 /* SIDEBAR CONTAINER */
 #container-admin #sidebar{
-    z-index: 10;
+    z-index: 60;
     display: none;
     background-color: var(--color-Dark);
     width: 320px;
