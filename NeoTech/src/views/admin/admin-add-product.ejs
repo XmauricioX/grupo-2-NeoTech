@@ -25,32 +25,37 @@
                         <form id="form-add" action="/administrador/agregar-producto" enctype="multipart/form-data"
                             method="POST">
 
-                            <input type="file" name="product-image" id="t-file" multiple>
+                            <div class="input-file">
+                                <button class="btn__update__image">
+                                    <p class="userUpdate_subtitle">Agregar imagen del Producto</p>
+                                    <input type="file" name="product-image" multiple>
+                                </button>
+                            </div>
 
                             <div id="categorias">
 
-                                <label id="label-categoria" for="form-add">CATEGORIA</label>
-
-                                <select name="category" id="categorias-select">
-                                    <% categorias.forEach(categoria=> { %>
-                                        <option value="<%= categoria.id %> ">
-                                            <%= categoria.category_name %>
+                                <select name="brand" id="categorias-select"> 
+                                    <option value="#" selected disabled>Marca...</option>
+                                    <% marcas.forEach(brand=> { %>
+                                        <option value="<%= brand.id %>" >
+                                            <%= brand.brand_name %>
                                         </option>
                                         <% }) %>
-                                </select>
-                            </div>
-                            <div id="categorias">
-
-                                <label id="label-categoria" for="form-add">MARCAS</label>
-
-                                <select name="trademark" id="categorias-select">
-                                    <% marcas.forEach(categoria=> { %>
-                                        <option value="<%= categoria.id %> ">
-                                            <%= categoria.brand_name %>
-                                        </option>
-                                        <% }) %>
-                                </select>
-                            </div>
+                                    </select>
+                                    
+                                </div> 
+                                <div id="categorias">
+                                    
+                                    <select name="category" id="categorias-select"> 
+                                        <option value="#" selected disabled>Categoría...</option>
+                                        <% categorias.forEach(category=> { %>
+                                            <option value="<%= category.id %>" >
+                                                <%= category.category_name %>
+                                            </option>
+                                            <% }) %>
+                                        </select>
+                                        
+                                    </div>
 
 
                             <input type="text" name="product" id="" value="<%= locals.old && old.product %>"
