@@ -13,17 +13,17 @@
             <figure class="img-container">
                 <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                 <!-- FONDO -->
-                <a href="/producto/lista-de-productos/<%= element.id %>"><img class="img-1" src="/images/imgs-product/<%- element.image %> " alt="product"></a>
+                <a href="/producto/lista-de-productos/<%= element.id %>"><img class="img-1" src="/images/imgs-product/<%- element.images %> " alt="product"></a>
                 <!-- PRODUCTO -->
             </figure>
             <hr class="line__green">
 
             <div class="text-card">
-                <h2 class="name__card"> <%= element.product %> </h2>
+                <h2 class="name__card"> <%= element.product_name %> </h2>
                 <h2 class="number__card"> $<%= element.price %> </h2>
                 <p class="description-card"> 
-                    Categoria: <%= element.category %> <br>
-                    Marca: <%= element.trademark %> <br> 
+                    Categoria: <%= element.category.category_name %> <br>
+                    Marca: <%= element.brand.brand_name %> <br> 
                     Color: <%= element.color %> <br>
                     Descripción: <%= element.description.slice(0,45) %>...
                 <a class="mas carrito" href="">

@@ -24,18 +24,18 @@
                     
                     <figure class="img-container">
                         <!-- <img class="img-0" src="/images/product-list/" alt="background-product"> -->
-                        <img class="img-1" src="/images/imgs-product/<%- element.image %> " alt="product">
+                        <img class="img-1" src="/images/imgs-users/<%- element.image %> " alt="product">
                     </figure>
                     <hr>
         
                     <div class="text-card">
-                        <h2 class="name-card"><%= element.firstName %> </h2>
-                        <%= element.id %>
+                        <h2 class="name-card"><%= element.first_name %> </h2>
+                        <h3>ID: <%= element.id %></h3>
                         <div id="admin-card">
                             <form action="/administrador/usuarios/<%= element.id %> " method="post">admin  <input id="admin-check" type="checkbox" name="check-admin"></form>              
                         </div>
                         <form class="delete-content" action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST">
-                            <button class="delete-product" type="submit">
+                            <button class="delete-user" type="submit">
                                 <i class="fas fa-times"></i>
                             </button>    
                             </form>

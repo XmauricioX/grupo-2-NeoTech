@@ -4,4 +4,4 @@ module.exports = function loged(req, res, next) {
     }
     next()
 }
-// si estas logueado no te deja pasar (para que no entre al registro por ejemplo)
+// si no estas logueado no te deja pasar (para que no entre al registro por ejemplo)

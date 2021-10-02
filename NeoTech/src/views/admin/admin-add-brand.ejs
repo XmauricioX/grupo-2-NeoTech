@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head-admin") -%>
+    <link rel="stylesheet" href="../../../styles/category-and-brand.css">
+</head>
+
+<body class="admin__add__category__brand">
+
+    <%- include("../admin/admi-nav") -%>
+
+    <div id="container-admin">
+
+        <%- include("../partials/aside-admin") -%>
+
+        <main id="content">
+
+            <div id="container-form">
+
+                <form id="form-add" action="/administrador/marcas" enctype="multipart/form-data" method="POST">
+
+                    <input type="text" name="brandCategory" id="" value="<%= locals.old && old.brandCategory %>" placeholder="Agregar Marcas">
+                        <% if (locals.errors && errors.brandCategory) { %>
+                            <small style="color: red;">
+                                <%= errors.brandCategory.msg %>
+                            </small>
+                        <% } %>
+
+                    <input class="submit" type="submit" value="Agregar">
+
+                </form>
+                <form id="form-add-btm">
+
+                    <div class="list">
+                        <h3 class="title">Eliminar Marcas</h3>
+
+                        <% marcas.forEach(element => { %>
+                        <%= element.brand_name %>
+                        <form class="form__transparent" action="/administrador/marcas/<%= element.id %>?_method=DELETE"
+                            method="POST">
+                            <button class="delete-btn" type="submit">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </form>
+                        <% }) %>
+                    </div>
+
+                </form>
+            </div>
+
+        </main>
+
+    </div>
+
+    <%- include("../partials/admin-links") -%>
+
+    <%- include('../partials/scripts.ejs') %>
+
+</body>
+
+</html>

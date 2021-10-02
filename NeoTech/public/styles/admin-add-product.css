@@ -6,11 +6,62 @@
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 #container-form{
-    width: 60%;
+    width: 90%;
     margin-top: 0;
 }
+
+/* button update image */
+.userUpdate_subtitle {
+    color: var(--green);
+    margin: 0;
+}
+
+.input-file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+    color: var(--primary);
+    padding: 0 1rem;
+    border-radius: .5rem;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.input-file input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.btn__update__image {
+    background-color: var(--dark-grey);
+    border-color: var(--green);
+    border-radius: 12px;
+    font-size:14px;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+    width: 96%;
+}
+#categorias-select{
+    font-size: 20px;
+    color: var(--white);
+    background-color: var(--color-Dark);
+    border-color: var(--color-Green);
+    width: 99%;
+    margin: 10px 0;
+}
+
 #form-add{
     display: flex;
     flex-direction: column;
@@ -18,6 +69,7 @@
     border-radius: 20px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.582);
+    margin-top: 15px;
 }
 #form-add input{
     padding: 10px 10px;
@@ -60,21 +112,39 @@
     justify-content: space-around;
 }
 @media (min-width: 768px){
-    .admin__add__product{
-        background-image: url(/images/imgs-bg/teclado-original.jpg);
-        
+    .admin__add__product{        
+        background-size: cover;
+    }
+    #container-form{
+        max-width: 450px;
+        margin-top: 45px;
+    }
+    #categorias-select{
+        font-size: 26px;
+    }
+    .btn__update__image {
+        font-size:22px;
     }
     #admin-welcome{
         top: 110px;       
     }
 }
 @media (min-width: 1024px){
+    #container-form{
+        max-width: 60%;
+        margin-top: -50px;
+    }
+    .btn__update__image {
+        font-size:28px;
+    }
+    .input-file {
+        margin-top: 10px;
+    }
     .admin__add__product{
         background-repeat: no-repeat;
         background-position: 70px;
         background-size: 85%;
         background-size: cover;
-        
     }
     #form-add ::placeholder{
         font-size: 30px;
@@ -90,6 +160,8 @@
         color: var(--white);
         background-color: var(--color-Dark);
         border-color: var(--color-Green);
+        width: 99%;
+        margin: 10px 0;
     }
     input #description{
         height: 1000px;

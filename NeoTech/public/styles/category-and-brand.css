@@ -1,0 +1,144 @@
+
+.admin__add__category__brand{
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#container-form{
+    /* width: 60%; */
+    width: 90%;
+    margin-top: 0;
+    position: relative;
+    bottom: 60px;
+}
+.title {
+    color: var(--color-Green);
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.list {
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+.delete-btn{
+    position: relative;
+    /* bottom: 23px;
+    left: 95%; */
+    font-size: 20px;
+    color: var(--color-Green-Old);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    /* top: -50px; */
+    display: flex;
+}
+
+#form-add{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-Green);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.582);
+    position: relative;
+    /* bottom: 160px; */
+    margin-bottom: 25px;
+}
+#form-add-btm{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-Green);
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.582);
+    position: relative;
+    /* bottom: 140px; */
+}
+#form-add input{
+    padding: 10px 10px;
+    margin: 5px 0;
+    background-color: var(--color-Dark);
+    border-radius: 8px;
+    border: 1px solid black;
+    color: white;
+    outline: none;
+}
+#form-add .submit{
+    border: 2px solid var(--color-Green);
+    padding: 0 0px;
+    border-radius: 20px;
+    /* font-size: 30px; */
+    font-size: 20px;
+    width: 100%;
+    margin: 5px auto;
+}
+.submit:active{
+    background-color: var(--color-Green);
+    color: black;
+}
+#form-add input:focus{
+    border: 1px solid var(--color-Green);
+}
+
+#description{
+    height: 80px;
+}
+#form-add ::placeholder{
+    font-size: 20px;
+}
+#label-categoria{
+    color: var(--white);
+    padding-left: 3px;
+}
+#categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+@media (min-width: 768px){
+    .admin__add__product{
+        background-image: url(/images/imgs-bg/teclado-original.jpg);
+        
+    }
+    #admin-welcome{
+        top: 110px;       
+    }
+    #container-form{
+        width: 65%;
+    }
+}
+@media (min-width: 1024px){
+    .admin__add__product{
+        background-repeat: no-repeat;
+        background-position: 70px;
+        background-size: 85%;
+        background-size: cover;
+        
+    }
+    #form-add ::placeholder{
+        font-size: 30px;
+    }
+    #form-add input{
+        height: 60px;
+    }
+    #label-categoria{
+        font-size: 30px
+    }
+    #categorias-select{
+        font-size: 30px;
+        color: var(--white);
+        background-color: var(--color-Dark);
+        border-color: var(--color-Green);
+    }
+    input #description{
+        height: 1000px;
+    }
+    #admin-welcome{
+        top: 5px;
+    }
+}

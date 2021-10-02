@@ -25,6 +25,8 @@
                     <% if (locals.errors && errors.password) { %>
                         <small class="text-error"><%= errors.password.msg %></small>
                     <% } %>
+                    <small class="text-error"><%= (locals.errors && errors.custom && !errors.email && !errors.password)?errors.custom.msg: "" %></small>
+                    <br>
                     <!-- check -->
                     <div class="form-ad-input_check">
                         <input type="checkbox" name="remember" id="remember">
@@ -32,9 +34,6 @@
                     </div>
                     <!-- button log in -->
                     <button class="button-login" type="submit" value="log-in">Iniciar Sesión</button>
-                    <% if (locals.errorMsg) { %>
-                        <small class="text-error"><%= errorMsg %></small>
-                    <% } %>
                     <!-- password & account -->
                     <a class="pass__a" href="#">¿Olvidaste tu contraseña?</a>
                     <a class="account__a" href="#">¿No tenes una cuenta?</a>

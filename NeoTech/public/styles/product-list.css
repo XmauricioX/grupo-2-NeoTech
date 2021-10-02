@@ -1,11 +1,18 @@
 @import url(./general.css);
 
 /* CONTENEDOR */
-.container__product {
+#product-list {
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed; 
+    
+}
+.container__product {
+    /* background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;  */
 
     display: grid;
     grid-template-columns: 1fr a 1fr;
