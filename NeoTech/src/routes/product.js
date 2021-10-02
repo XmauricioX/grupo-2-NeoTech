@@ -5,7 +5,6 @@ let {
     productDetail,
     search,
     productCategory,
-    trademark,
     productBrand
     } = require('../controllers/productController')
 
@@ -15,7 +14,7 @@ router.get('/lista-de-productos', productList)
 // GET DETALLE DE PRODUCTO   
 router.get("/lista-de-productos/:id", productDetail)
 // /* GET BUSCADOR */
-// router.get("/resultado-de-busqueda", search)
+router.get("/resultado-de-busqueda", search)
 // /* GET PRODUCTOS POR CATEGORIA */
 router.get("/categoria/:categoria", productCategory)
 // /* GET PRODUCTOS POR MARCA */
