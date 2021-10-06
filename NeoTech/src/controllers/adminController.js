@@ -133,7 +133,7 @@ module.exports = {
 
         if (errors.isEmpty()) {
             let {
-                trademark,
+                brand,
                 product,
                 price,
                 category,
@@ -142,7 +142,7 @@ module.exports = {
             } = req.body
 
             db.Products.create({
-                    brand_id: trademark,
+                    brand_id: brand,
                     product_name: product,
                     price: price,
                     categoryId: category,

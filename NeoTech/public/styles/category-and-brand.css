@@ -1,12 +1,16 @@
 
-.admin__add__product{
+.admin__add__category__brand{
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 #container-form{
-    width: 60%;
+    /* width: 60%; */
+    width: 90%;
     margin-top: 0;
+    position: relative;
+    bottom: 60px;
 }
 .title {
     color: var(--color-Green);
@@ -23,8 +27,8 @@
 }
 .delete-btn{
     position: relative;
-    bottom: 23px;
-    left: 95%;
+    /* bottom: 23px;
+    left: 95%; */
     font-size: 20px;
     color: var(--color-Green-Old);
     cursor: pointer;
@@ -41,7 +45,8 @@
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.582);
     position: relative;
-    bottom: 160px;
+    /* bottom: 160px; */
+    margin-bottom: 25px;
 }
 #form-add-btm{
     display: flex;
@@ -51,7 +56,7 @@
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.582);
     position: relative;
-    bottom: 140px;
+    /* bottom: 140px; */
 }
 #form-add input{
     padding: 10px 10px;
@@ -66,7 +71,8 @@
     border: 2px solid var(--color-Green);
     padding: 0 0px;
     border-radius: 20px;
-    font-size: 30px;
+    /* font-size: 30px; */
+    font-size: 20px;
     width: 100%;
     margin: 5px auto;
 }
@@ -100,6 +106,9 @@
     }
     #admin-welcome{
         top: 110px;       
+    }
+    #container-form{
+        width: 65%;
     }
 }
 @media (min-width: 1024px){
