@@ -55,12 +55,10 @@
 
 }
 .main__home #container-3 .h2_home{
-    /* justify-content: center;
-    /* margin: 0 auto; */
     color: var(--color-Green); 
     font-size: 37px;
     position: relative;
-    bottom: 260px;
+    bottom: 400px;
 } 
 .main__home #contenedor-4 {
     height: 120vh;
@@ -119,7 +117,7 @@
     overflow: hidden;
 }
 .main__home .carousel-item img {
-    height: 100vh;
+    height: 45vh;
 }
 #c-1{
     display: none;
@@ -140,6 +138,9 @@
     .main__home #container-2 .text{
         z-index: 1;
     }
+    .main__home #container-3 .h2_home{
+        font-size: 45px;
+    } 
     .main__home #container-4 .product-img{
         width: 450px;
     }
@@ -156,6 +157,9 @@
     .main__home #container-2 .text{
         z-index: 1;
     }
+    .main__home #container-3 .h2_home{
+        font-size: 60px;
+    } 
     .main__home #container-4 {
         /* flex-direction: row;
         justify-content: space-between;
@@ -203,35 +207,35 @@
     
     .main__home #item1{
         grid-area: a;
-        background-image: url(../images/home/collage/intel-2.webp);
+        background-image: url(../images/home/collage/joys.jpg);
         background-size: cover;
         background-position: center;
     }
     .main__home #item2{
         grid-area: b;
-        background-image: url(../images/home/collage/amd.jpg);
+        background-image: url(../images/home/collage/gaming.jpg);
         background-position: center;
         background-size: cover;
     }
     .main__home #item3{
         grid-area: c;
-        background-image: url(../images/home/collage/bg-5.jpg);
+        background-image: url(../images/home/collage/monitor.jpg);
         background-size: cover;    
     }
     .main__home #item4{
         grid-area: d;
-        background-image: url(../images/home/collage/bg-5.jpg);
+        background-image: url(../images/home/collage/auriculares.jpg);
         background-position: center;
         background-size: cover;
     }
     .main__home #item5{
         grid-area: e;
-        background-image: url(../images/home/collage/fdfa44f729f4e32b0f1a7024e60489a4--online-computer-store-acer-aspire.jpg);
+        background-image: url(../images/home/collage/mobile4.jpg);
         background-size: cover;
     }
     .main__home #item6{
         grid-area: f;
-        background-image: url(../images/home/collage/amd.jpg);
+        background-image: url(../images/home/collage/switch.jpg);
         background-size: cover;
         background-position: center;
     }

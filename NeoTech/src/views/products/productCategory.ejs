@@ -7,39 +7,40 @@
 
     <main class="container__product">
 
-        <% category.forEach(element => { %>
+        <% categories.products.forEach(category => { %>
+         
             <div class="card">
-
+                
                 <figure class="img-container">
                     <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                     <!-- FONDO -->
-                    <a href="/producto/lista-de-productos/<%= element.id %>"><img class="img-1" src="/images/imgs-product/<%= element.image ? element.image : "default-image.png" %> " alt="product"></a>
+                    <a href="/producto/lista-de-productos/<%= category.id %>"><img class="img-1" src="/images/imgs-product/<%= category.images ? category.images : "default-image.png" %> " alt="product"></a>
                     <!-- PRODUCTO -->
                 </figure>
                 <hr class="line__green">
-
+                
                 <div class="text-card">
-                    <h2 class="name__card"> <%= element.product_name %> </h2>
-                    <h2 class="number__card"> $<%= element.price %> </h2>
+                    <h2 class="name__card"> <%= category.product_name %> </h2>
+                    <h2 class="number__card"> $<%= category.price %> </h2>
                     <p class="description-card"> 
-                        Categoria: <%= element.category.category_name %> <br>
-                        Marca: <%= element.brand.brand_name %> <br> 
-                        Color: <%= element.color %> <br>
-                        Descripción: <%= element.description.slice(0,45) %>... </p> 
-                    <a class="mas carrito" href="">
-                        <i class="fas fa-shopping-cart">
-                            <p class="masp ">añadir al carrito</p>
-                        </i>
-                    </a>
-                    <form id="form-comprar" action="" method="post">
-                        <a class="comprar " href="">COMPRAR</a>
-                    </form>
+                        Categoria: <%= categories.category_name %> <br>
+                        Color: <%= category.color %> <br>
+                        Descripción: <%= category.description.slice(0,45) %>...</p>
+                        
+                        <a class="mas carrito" href="">
+                            <i class="fas fa-shopping-cart">
+                                <p class="masp ">añadir al carrito</p>
+                            </i>
+                        </a>
+                        <form id="form-comprar" action="" method="post">
+                            <a class="comprar " href="">COMPRAR</a>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        <% }) %>
-
-    </main>
-
+                
+            <% }) %>
+            </main>
+            
     <%- include('../partials/scripts.ejs') %>
 </body>
 </html>

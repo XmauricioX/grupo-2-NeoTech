@@ -1,9 +1,7 @@
 const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const {
-    Op
-} = require("sequelize");
+const { Op } = require("sequelize");
 const {
     promiseImpl
 } = require('ejs');
@@ -46,43 +44,34 @@ module.exports = {
             .catch(err => console.log(err))
     },
     productCategory: (req, res) => {
-        db.Products.findAll({
-                include: [{
-                    association: 'category'
-                }, {
-                    association: 'brand'
-                }],
-                where: {
-                    id: req.params.categoria,
-                },
+
+        db.Categories.findOne({
+             where: {
+                category_name: req.params.categoria
+            },
+            include:[{association:"products"}]
+        })
+        .then(categories => {
+            res.render('products/productCategory', {
+                title: 'NeoTech - Categorías',
+                categories,
+                session: req.session
             })
-            .then(category => {
-                //res.send([category])
-                //var BUSCA = [category]
-                res.render('products/productCategory', {
-                    title: 'NeoTech - Categorías',
-                    category,
-                    session: req.session
-                })
-            })
-            .catch(err => res.send(err))
+        })
+        .catch(err => res.send(err))
     },
     productBrand: (req, res) => {
-        db.Products.findAll({
-                include: [{
-                    association: 'category'
-                }, {
-                    association: 'brand'
-                }],
+
+        db.Brands.findOne({
                 where: {
-                    id: req.params.marca,
+                    brand_name: req.params.marca,
                 },
+                include:[{association:"products"}]
             })
-            .then(trademark => {
-                //res.send(trademark)
-                res.render('products/productTrademark', {
+            .then(brands => {
+                res.render('products/productBrand', {
                     title: 'NeoTech - Marcas',
-                    trademark,
+                    brands,
                     session: req.session
                 })
             })

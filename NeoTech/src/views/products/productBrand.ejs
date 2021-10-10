@@ -1,0 +1,44 @@
+<!-- HEAD -->
+<%- include('../partials/head.ejs') %>
+
+<!-- NAV -->
+<%- include('../partials/nav.ejs') %>
+<body id="product-list">
+
+    <main class="container__product">
+
+        <% brands.products.forEach(element => { %>
+        <div class="card">
+
+            <figure class="img-container">
+                <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
+                <!-- FONDO -->
+                <a href="/producto/lista-de-productos/<%= element.id %>"><img class="img-1" src="/images/imgs-product/<%= element.images ? element.images : "default-image.png" %> " alt="product"></a>
+                <!-- PRODUCTO -->
+            </figure>
+            <hr class="line__green">
+
+            <div class="text-card">
+                <h2 class="name__card"> <%= element.product_name %> </h2>
+                <h2 class="number__card"> $<%= element.price %> </h2>
+                <p class="description-card"> 
+                    Marca: <%= brands.brand_name %> <br> 
+                    Color: <%= element.color %> <br>
+                    Descripción: <%= element.description.slice(0,45) %>...</p>
+                <a class="mas carrito" href="">
+                    <i class="fas fa-shopping-cart">
+                        <p class="masp ">añadir al carrito</p>
+                    </i>
+                </a>
+                <form id="form-comprar" action="" method="post">
+                    <a class="comprar " href="">COMPRAR</a>
+                </form>
+            </div>
+        </div>
+        <% }) %> 
+        
+    </main>
+
+    <%- include('../partials/scripts.ejs') %>
+</body>
+</html>
