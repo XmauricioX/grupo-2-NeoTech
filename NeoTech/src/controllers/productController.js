@@ -1,7 +1,9 @@
 const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+const {
+    Op
+} = require("sequelize");
 const {
     promiseImpl
 } = require('ejs');
@@ -46,19 +48,21 @@ module.exports = {
     productCategory: (req, res) => {
 
         db.Categories.findOne({
-             where: {
-                category_name: req.params.categoria
-            },
-            include:[{association:"products"}]
-        })
-        .then(categories => {
-            res.render('products/productCategory', {
-                title: 'NeoTech - Categorías',
-                categories,
-                session: req.session
+                where: {
+                    category_name: req.params.categoria
+                },
+                include: [{
+                    association: "products"
+                }]
             })
-        })
-        .catch(err => res.send(err))
+            .then(categories => {
+                res.render('products/productCategory', {
+                    title: 'NeoTech - Categorías',
+                    categories,
+                    session: req.session
+                })
+            })
+            .catch(err => res.send(err))
     },
     productBrand: (req, res) => {
 
@@ -66,7 +70,9 @@ module.exports = {
                 where: {
                     brand_name: req.params.marca,
                 },
-                include:[{association:"products"}]
+                include: [{
+                    association: "products"
+                }]
             })
             .then(brands => {
                 res.render('products/productBrand', {
@@ -79,18 +85,34 @@ module.exports = {
     },
     search: (req, res) => {
         db.Products.findAll({
-                where: {
-                    product_name: {
-                        [Op.like]: '%' + req.query.keywords.toLowerCase() + '%'
-                    },
-                },
                 include: [{
-                        association: "brand"
-                    },
-                    {
-                        association: "category"
-                    }
-                ]
+                    association: "brand"
+                }, {
+                    association: "category"
+                }],
+                where: {
+                    [Op.or]: [{
+                            product_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            description: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            color: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            price: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
             })
             .then(product => {
                 res.render('products/results', {
@@ -98,6 +120,6 @@ module.exports = {
                     product,
                     session: req.session
                 })
-        })
+            })
     }
 }
