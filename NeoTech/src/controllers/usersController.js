@@ -158,21 +158,44 @@ module.exports = {
                     }
                 }
             )
-            .then(result => {
-                db.Addresses.create({
-                    address: address,
-                    pc: pc,
-                    country: country,
-                    province: province,
-                    city: city,
-                    user_id: req.params.id,
+            .then(user => {
+                db.Addresses.findAll({
+                    where:{
+                        user_id: req.params.id
+                    }
                 })
                 .then(result => {
-                    res.redirect('/cuenta/editar-usuario')
+                    if (result.length > 0) {
+                        db.Addresses.update({
+                            address: address,
+                            pc: pc,
+                            country: country,
+                            province: province,
+                            city: city,
+                        }, {
+                            where: {
+                                user_id: req.params.id
+                            }
+                        })
+                        .then(result => {
+                            res.redirect('/cuenta/editar-usuario')
+                        })
+                    } else {
+                        db.Addresses.create({
+                            address: address,
+                            pc: pc,
+                            country: country,
+                            province: province,
+                            city: city,
+                            user_id: req.params.id,
+                        })
+                        .then(result => {
+                            res.redirect('/cuenta/editar-usuario')
+                        })
+                    }
                 })
             })
-                  
-        } else{
+        } else {
             res.render('/users/userEdit', {
                 title: 'NeoTech - Tu Perfil',
                 errors: errors.mapped(),

@@ -10,8 +10,9 @@ module.exports = [
         //.isLength() debe pasarse como parametro el largo de caracteres que quiera como min y max 
         //notEmpty() esta validacion indica que no puede estar vacia
         //whitMessage() permite pasar un mensaje a la validacion del input
-    check('last_name')  
-        .notEmpty().withMessage("*El campo apellido es obligatorio"),
+        check('last_name')  
+        .notEmpty().withMessage("*El campo apellido es obligatorio")
+        .isLength({ min: 2 }),
 
     check('email')  
         .isEmail().withMessage("*Debes ingresar un email válido"),
@@ -31,12 +32,19 @@ module.exports = [
     
     
     check('password')
+        .trim()
         .notEmpty()
         .withMessage('*Debes escribir tu contraseña')
-        .isLength({ min: 6, max:12 }).withMessage("*La contraseña debe tener entre 6 y 12 caracteres"),
+        .isLength({ min: 8, max:20 }).withMessage("*La contraseña debe tener entre 8 y 20 caracteres")
+        .matches(/(?=.*?[A-Z])/).withMessage("*La contraseña debe tener al menos una letra en mayúscula")
+        .matches(/(?=.*?[a-z])/).withMessage("*La contraseña debe tener al menos una letra en minúscula")
+        .matches(/(?=.*?[0-9])/).withMessage("*La contraseña debe tener al menos un número")
+        .matches(/(?=.*?[#?!@$%^&*-])/).withMessage("*La contraseña debe tener al menos un caracter especial")
+        .not().matches(/^$|\s+/).withMessage("*La contraseña no puede contener espacios entre medio"),
 
     body('repeatPassword').custom((value, {req}) => value !== req.body.password ? false : true)
-        .withMessage('*Las contraseñas no coinciden'),
+        .withMessage('*Las contraseñas no coinciden')
+,
 
     check('terms')
         .isString('on')

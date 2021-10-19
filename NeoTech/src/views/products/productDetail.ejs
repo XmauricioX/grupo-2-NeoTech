@@ -17,7 +17,7 @@
                 <div class="container-r">
                         <div class="detail">
                             <h2>
-                                <%= productID.brand.brand_name %> 
+                                <%= productID.product_name %> 
                             </h2>
                             <p>
                                 Precio: <br>
@@ -26,9 +26,11 @@
                                 <%= productID.color %> <br> <br>
                                 Categoria: <br>
                                 <%= productID.category.category_name %> <br> <br>
+                                Marca:
+                                <%= productID.brand.brand_name %> <br> <br>
                                 
                                 Descripción: <br>
-                                <%= productID.description %>
+                                <%= productID.description %> 
                             </p>
                         </div>
                         <div class="btn__detail">
@@ -37,6 +39,6 @@
                     </div>
             </section>
         </main>
+        <%- include("../partials/footer") %>
     </body>
-<%- include("../partials/footer") %>
     </html>

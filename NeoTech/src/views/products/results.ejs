@@ -7,7 +7,8 @@
 
     <main class="container__product">
 
-        <% if(product) { %> <% product.forEach(element => { %>
+        <% if(product.length > 0) { %> 
+            <% product.forEach(element => { %>
         <div class="card">
 
             <figure class="img-container">
@@ -24,7 +25,8 @@
                 <p class="description-card"> 
                     Categoria: <%= element.category.category_name %> <br>
                     Marca: <%= element.brand.brand_name %> <br>
-                    Color: <%= element.color %> </p>
+                    Color: <%= element.color %> <br>
+                    Descripción: <%= element.description.slice(0,45) %>...
                 <a class="mas carrito" href="">
                     <i class="fas fa-shopping-cart">
                         <p class="masp ">añadir al carrito</p>
@@ -35,13 +37,14 @@
                 </form>
             </div>
         </div>
-        <% }) %> <% } else { %>
+        <% }) %> 
+        <% } else { %>
             <div class="col-12">
-              <h1 class="products-title" style="color: rgb(102, 255, 71)">
-                No hay productos que coincidan con esa búsqueda
+              <h1 class="product-not-found">
+                No hay producto que coincidan con tu búsqueda.
               </h1>
             </div>
-            <% } %>
+        <% } %>
 
     </main>
 

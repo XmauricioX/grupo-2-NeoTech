@@ -46,43 +46,38 @@ module.exports = {
             .catch(err => console.log(err))
     },
     productCategory: (req, res) => {
-        db.Products.findAll({
-                include: [{
-                    association: 'category'
-                }, {
-                    association: 'brand'
-                }],
+
+        db.Categories.findOne({
                 where: {
-                    id: req.params.categoria,
+                    category_name: req.params.categoria
                 },
+                include: [{
+                    association: "products"
+                }]
             })
-            .then(category => {
-                //res.send([category])
-                //var BUSCA = [category]
+            .then(categories => {
                 res.render('products/productCategory', {
                     title: 'NeoTech - Categorías',
-                    category,
+                    categories,
                     session: req.session
                 })
             })
             .catch(err => res.send(err))
     },
     productBrand: (req, res) => {
-        db.Products.findAll({
-                include: [{
-                    association: 'category'
-                }, {
-                    association: 'brand'
-                }],
+
+        db.Brands.findOne({
                 where: {
-                    id: req.params.marca,
+                    brand_name: req.params.marca,
                 },
+                include: [{
+                    association: "products"
+                }]
             })
-            .then(trademark => {
-                //res.send(trademark)
-                res.render('products/productTrademark', {
+            .then(brands => {
+                res.render('products/productBrand', {
                     title: 'NeoTech - Marcas',
-                    trademark,
+                    brands,
                     session: req.session
                 })
             })
@@ -90,18 +85,34 @@ module.exports = {
     },
     search: (req, res) => {
         db.Products.findAll({
-                where: {
-                    product_name: {
-                        [Op.like]: '%' + req.query.keywords.toLowerCase() + '%'
-                    },
-                },
                 include: [{
-                        association: "brand"
-                    },
-                    {
-                        association: "category"
-                    }
-                ]
+                    association: "brand"
+                }, {
+                    association: "category"
+                }],
+                where: {
+                    [Op.or]: [{
+                            product_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            description: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            color: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            price: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
             })
             .then(product => {
                 res.render('products/results', {
@@ -109,10 +120,6 @@ module.exports = {
                     product,
                     session: req.session
                 })
-        })
-        .catch(err => res.send(err))
+            })
     }
-    }
-
-
-
+}
