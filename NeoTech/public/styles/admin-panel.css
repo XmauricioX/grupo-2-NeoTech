@@ -4,6 +4,8 @@
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
 }
 #bar{
     position: absolute;
@@ -33,7 +35,7 @@
 }
 /* SIDEBAR CONTAINER */
 #container-admin #sidebar{
-    z-index: 10;
+    z-index: 60;
     display: none;
     background-color: var(--color-Dark);
     width: 320px;
@@ -117,6 +119,9 @@
     height: 150px
 }
 @media(min-width:760px) {
+    .body__index__admin {
+        background-repeat: no-repeat;
+    }
     #container-admin #content #admin-welcome{
         font-size: 30px;
         color: var(--white);

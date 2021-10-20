@@ -30,7 +30,7 @@
 
 /*PARTE SUPERIOR */
 .card{
-    margin: auto;
+    margin: 10px auto;
     background-color: var(--color-Dark);
     width: 280px;
     border-radius: 20px;

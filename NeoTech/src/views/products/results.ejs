@@ -7,24 +7,26 @@
 
     <main class="container__product">
 
-        <% if(result.length != 0) { %> <% result.forEach(element => { %>
+        <% if(product.length > 0) { %> 
+            <% product.forEach(element => { %>
         <div class="card">
 
             <figure class="img-container">
                 <img class="img-0" src="/images/imgs-bg/bg-product.png" alt="background-product">
                 <!-- FONDO -->
-                <a href="/producto/lista-de-productos/<%= element.id %>"><img class="img-1" src="/images/imgs-product/<%- element.image %> " alt="product"></a>
+                <a href="/producto/lista-de-productos/<%= element.id %>"><img class="img-1" src="/images/imgs-product/<%- element.images %> " alt="product"></a>
                 <!-- PRODUCTO -->
             </figure>
             <hr class="line__green">
 
             <div class="text-card">
-                <h2 class="name__card"> <%= element.product %> </h2>
+                <h2 class="name__card"> <%= element.product_name %> </h2>
                 <h2 class="number__card"> $<%= element.price %> </h2>
                 <p class="description-card"> 
-                    Categoria: <%= element.category %> <br>
-                    Marca: <%= element.trademark %> <br>
-                    Color: <%= element.color %> </p>
+                    Categoria: <%= element.category.category_name %> <br>
+                    Marca: <%= element.brand.brand_name %> <br>
+                    Color: <%= element.color %> <br>
+                    Descripción: <%= element.description.slice(0,45) %>...
                 <a class="mas carrito" href="">
                     <i class="fas fa-shopping-cart">
                         <p class="masp ">añadir al carrito</p>
@@ -35,16 +37,18 @@
                 </form>
             </div>
         </div>
-        <% }) %> <% } else { %>
+        <% }) %> 
+        <% } else { %>
             <div class="col-12">
-              <h2 class="products-title" style="color: tomato">
-                No hay productos que coincidan con esa búsqueda
-              </h2>
+              <h1 class="product-not-found">
+                No hay producto que coincidan con tu búsqueda.
+              </h1>
             </div>
-            <% } %>
+        <% } %>
 
     </main>
 
     <%- include('../partials/scripts.ejs') %>
 </body>
 </html>
+ 
