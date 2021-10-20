@@ -29,11 +29,9 @@ window.addEventListener("load", function () {
         switch (true) {
             case !$inputName.value.trim():
                 $small1.innerHTML = 'El campo nombre es OBLIGATORIO'
-                console.log("OBLIGATORIO");
                 break;
             case $inputName.value.length < 2:
-                $small1.innerHTML = 'nombre invalido, debe tener mas de dos caracteres'
-                console.log("MENOS DE DOS CARACTERES");
+                $small1.innerHTML = 'debe tener almenos 2 caracteres'
                 break;
             default:
                 $small1.innerHTML = ''
@@ -45,6 +43,9 @@ window.addEventListener("load", function () {
         switch (true) {
             case !$inputLastName.value.trim():
                 $small2.innerHTML = "El campo apellido es OBLIGATORIO"
+                break;
+            case $inputLastName.value.length < 2:
+                $small2.innerHTML = "debe tener almenos 2 caracteres"
                 break;
             default:
                 $small2.innerHTML = ""
@@ -70,8 +71,8 @@ window.addEventListener("load", function () {
             case !$pass1.value.trim():
                 $errPass1.innerHTML = "El campo contraseña es obligatorio"
                 break;
-                case $inputName.value.length < 2:
-                    $small1.innerHTML = 'nombre invalido, debe tener mas de dos caracteres'
+                case $pass1.value.length < 8:
+                    $errPass1.innerHTML = 'debe tener almenos 8 caracteres'
                     break;
             default:
                 $errPass1.innerHTML = ''
@@ -83,7 +84,9 @@ window.addEventListener("load", function () {
             case !$pass2.value.trim():
                 $errPass2.innerHTML = 'Confirmar la contraseña es obligatorio'
                 break;
-
+            case $pass2.value.length < 8:
+                $errPass2.innerHTML = 'debe tener almenos 8 caracteres'
+                break;
             default:
                 $errPass2.innerHTML = ''
                 break;
