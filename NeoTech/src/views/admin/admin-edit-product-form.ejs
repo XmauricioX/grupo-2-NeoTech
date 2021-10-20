@@ -3,6 +3,8 @@
 <head>
     <%- include("../partials/head-admin") %> 
     <link rel="stylesheet" href="../../../styles/admin-edit-product-form.css">
+     <!-- Validation Front Admin -->
+     <script src="/js/validationProducts.js"></script>
 </head>
 <body>
     
@@ -60,21 +62,21 @@
 
                             <input type="text" name="product" id="" value="<%= product.product_name %>" value="<%= locals.old ? old.product_name : product.product_name %>" placeholder="Producto">
                             <% if (locals.errors && errors.product) { %>
-                                <small style="color: red;"><%= errors.product.msg %> </small>
+                                <small class="text-error"><%= errors.product.msg %> </small>
                                 <% } %>
                                 <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
                     <% if (locals.errors && errors.price) { %>
-                        <small style="color: red;"><%= errors.price.msg %> </small>
+                        <small class="text-error"><%= errors.price.msg %> </small>
                        <% } %>
 
 
                     <input type="text" name="color" id="" value="<%= product.color %>" placeholder="Color/es">
                     <% if (locals.errors && errors.color) { %>
-                        <small style="color: red;"><%= errors.color.msg %> </small>
+                        <small class="text-error"><%= errors.color.msg %> </small>
                        <% } %>
                     <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion"> 
                     <% if (locals.errors && errors.description) { %>
-                        <small style="color: red;"><%= errors.description.msg %> </small>
+                        <small class="text-error"><%= errors.description.msg %> </small>
                        <% } %>
                     <button class="submit" type="submit" value="Guardar">Guardar</button>
                
