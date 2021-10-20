@@ -2,7 +2,6 @@ window.addEventListener("load", function () {
 
     let $inputName = document.querySelector("#firstName");
     let $small1 = document.querySelector("#small-first-name")
-    let $small1A = document.querySelector("#small-first-name-1")
 
     let $inputLastName = document.querySelector("#lastName")
     let $small2 = document.querySelector("#small-last-name")

@@ -12,7 +12,7 @@ window.addEventListener('load', function(){
                 $emailErr.innerHTML = 'El campo email es OBLIGATORIO'
                 break;
             default:
-                $small1.innerHTML = ''
+                $emailErr.innerHTML = ''
                 break;
         }
     })
@@ -22,7 +22,7 @@ window.addEventListener('load', function(){
                 $passwordErr.innerHTML = 'La contraseña es OBLIGATORIA'
                 break;
             default:
-                $small1.innerHTML = ''
+                $passwordErr.innerHTML = ''
                 break;
         }
     })
