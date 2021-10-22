@@ -104,8 +104,8 @@ window.addEventListener("load", () => {
             case !regExNumber.test($price.value):
                 $priceErrors.innerHTML = 'Este campo solo acepta números'
                 break;   
-            case $price.value.length < 2:
-                $priceErrors.innerHTML = 'El precio del producto debe tener mas de 2 cifras.'
+            case $price.value.length < 3:
+                $priceErrors.innerHTML = 'El precio del producto debe tener mas de 3 cifras.'
                 break; 
             default:
                 $priceErrors.innerHTML = ""
@@ -154,7 +154,7 @@ window.addEventListener("load", () => {
         console.log($form.elements)
         let elementosForm = $form.elements
         
-        for (let index = 0; index < elementosForm.length-1; index++) {
+        for (let index = 1; index < elementosForm.length-1; index++) {
             if(elementosForm[index].value == "" || elementosForm[index].value == 0){
                 submitErrors.innerHTML = "Todos los campos son obligatorios";
                 error = true;

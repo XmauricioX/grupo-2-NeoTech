@@ -33,9 +33,10 @@
                     <div class="input-file">
                         <div class="btn__update__image">
                             <p class="userUpdate_subtitle">Cambiar imagen de Producto</p>
-                            <input class="inputFile" type="file" name="product-image" value="<%= product.images %>" value="<%= locals.old ? old.images : product.images %>"  multiple>
+                            <input class="inputFile" type="file" name="product-image" multiple>
                         </div>
                     </div>
+                    <span class="inputFileErrors"></span>
 
                     <div id="marcas">
 
