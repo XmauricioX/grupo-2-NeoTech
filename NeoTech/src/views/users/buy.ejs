@@ -1,0 +1,48 @@
+<!-- HEAD -->
+<%- include('../partials/head.ejs') %>
+
+    <body class="body__register">
+
+        
+
+        <%- include('../partials/nav.ejs') %>
+
+            <!-- Registro -->
+            <div id="registro">
+                <h1>Compra</h1>
+                <form class="register__form" action="/" method="POST">
+                    <!-- fatlta poner el action! -->
+                    <nav class="register__container">
+                        <!-- CARD NUMBER -->
+                        <input class="email" type="number" id="" name="numero_tarjeta" placeholder="Número de targeta">
+                        <!-- CARD CODE -->
+                        <input class="email" type="number" id="" name="codigo_tarjeta" placeholder="Código de seguridad">
+                        <!-- LAST DATE -->
+                        <input class="email" type="number" id="" name="vencimiento_tarjeta" placeholder="vencimiento">
+                        <!-- NAME -->
+                        <input class="email" type="text" id="" name="titular_tarjeta" placeholder="Nombre del titular">
+                        <!-- BUTTON BUY -->
+                        <button class="button-register" type="submit" value="log-in">COMPRAR</button>
+                    </nav>
+                </form>
+                <!-- MORE -->
+                <p class="log_in">comprar mas? <a class="log_in_link" href="/producto/lista-de-productos"> ver productos</a></p>
+            </div>
+
+            <div class="networks">
+            </div>
+
+        <%- include('../partials/footer.ejs') %>
+        
+        <%- include('../partials/scripts.ejs') %>
+    </body>
+    
+    </html>
+
+
+    <!-- email -->
+<!-- <label for="email"></label>
+<input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
+<% if (locals.errors && errors.email) { %>
+    <small class="text-error"><%= errors.email.msg %></small>
+<% } %> -->
