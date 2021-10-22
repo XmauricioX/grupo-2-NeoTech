@@ -59,3 +59,15 @@ ayer agregue las validaciones al registro con el check, hoy estuve modificando e
 Franco 
 ayer estuve haciendo las vistas para que el usuario en session pueda editar sus datos, hoy estuve agregando mas vistas al nav que te llevan al editar ususarios y cerrar sesion,
 inconvenientes: todavia no puedo renderizar la vista de modificar usuario
+
+20/10
+Franco
+Ayer hice las validaciones del lado del front en el formulario de agregar productos, hoy estuve modificando el formulario,
+inconvenientes: el input submit del form. 
+
+21/10
+Franco
+Ayer hice las validacionesr en el formulario de editar productos, hoy estuve agregando nueva funcionalidad al validador de iamgenes,
+inconvenientes: cuando el input carga una nueva imagen no sobreescribe la imagen anterior. 
+
+

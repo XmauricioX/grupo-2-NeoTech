@@ -1,4 +1,4 @@
-
+/* Validations Backend */
 .text-error{
     color: tomato;
     margin-top: -5px;
@@ -16,4 +16,35 @@
 .form-ad-input_check label {
     font-size: 0.8rem;
     padding-left: 5px;
+}
+
+/* Validations Fronted */
+span{
+    color: var(--green);
+    margin-top: -5px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+#submitErrors {
+    color: var(--green);
+    text-align: center;
+    margin: 12px 0;
+}
+
+.inputFileErrors {
+    color: var(--green);
+    padding-top: 12px;    
+    font-weight: 600;
+    font-size: 12px;
+}
+
+@media (min-width: 768px){
+    span{
+        font-size: 16px;
+    }
+    
+    .inputFileErrors {
+        font-size: 15px;
+    }
 }
