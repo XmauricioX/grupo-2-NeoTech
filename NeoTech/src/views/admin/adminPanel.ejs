@@ -11,10 +11,13 @@
         <%- include("../partials/aside-admin") -%>
 
         <main id="content">
-            <p id="admin-welcome">
-                Bienvenido Admin <br> NOMBRE_ADMIN
-            </p>
-
+             
+                <p id="admin-welcome">
+                    Bienvenido Admin: <br> 
+                    <%= user.first_name %> 
+                    <%= user.last_name %> 
+                </p>
+                
         </main>
 
     </div>

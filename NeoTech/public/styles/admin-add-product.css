@@ -62,6 +62,11 @@
     opacity: 0;
 }
 
+.btn__update__image .inputFile {
+    width: 90%;
+    height: 20px;
+}
+
 .btn__update__image {
     background-color: var(--dark-grey);
     border: solid 2px var(--green);
@@ -197,6 +202,10 @@
     }
     #form-add input{
         height: 60px;
+    }
+    #form-add .btn__update__image .inputFile {
+        width: 90%;
+        height: 20px;
     }
     #label-categoria{
         font-size: 30px
