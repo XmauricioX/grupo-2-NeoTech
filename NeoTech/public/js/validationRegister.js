@@ -52,6 +52,7 @@ window.addEventListener("load", function () {
         }
     })
 
+    
     $inputEmail.addEventListener('blur', function() {
         switch (true) {
             case !$inputEmail.value.trim():
