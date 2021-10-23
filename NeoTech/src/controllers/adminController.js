@@ -6,9 +6,13 @@ const {
 module.exports = {
 
     panel: (req, res) => {
-        res.render('admin/adminPanel', {
-            title: 'NeoTech - Panel General',
-            session: req.session
+        db.Users.findByPk(req.session.user.id)
+        .then(user => {
+            res.render('admin/adminPanel', {
+                title: 'NeoTech - Panel General',
+                session: req.session,
+                user
+            })
         })
     },
     formAddCategory: (req, res) => {
@@ -278,7 +282,7 @@ module.exports = {
             session: req.session
         })
     },
-    users: (req, res) => { //Ariel
+    users: (req, res) => {
 
         db.Users.findAll()
             .then(users => {

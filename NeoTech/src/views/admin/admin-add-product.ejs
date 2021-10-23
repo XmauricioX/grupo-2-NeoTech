@@ -3,7 +3,10 @@
 
 <head>
     <%- include("../partials/head-admin") -%>
-        <link rel="stylesheet" href="../../../styles/admin-add-product.css">
+    <link rel="stylesheet" href="../../../styles/admin-add-product.css">
+    <!-- Validation Front Admin -->
+    <script src="/js/validationAddProducts.js"></script>
+
 </head>
 
 <body class="admin__add__product">
@@ -22,75 +25,84 @@
 
                     <div id="container-form">
 
-                        <form id="form-add" action="/administrador/agregar-producto" enctype="multipart/form-data"
-                            method="POST">
+                        <form class="productsForm" id="form-add" action="/administrador/agregar-producto" enctype="multipart/form-data" method="POST">
+
+                            <div class="img-container" id="img-preview"></div>
 
                             <div class="input-file">
-                                <button class="btn__update__image">
+                                <div class="btn__update__image">
                                     <p class="userUpdate_subtitle">Agregar imagen del Producto</p>
-                                    <input type="file" name="product-image" multiple>
-                                </button>
+                                    <input class="inputFile" type="file" name="product-image" multiple>
+                                </div>
                             </div>
+                            <span class="inputFileErrors"></span>
 
-                            <div id="categorias">
+                            <div id="marcas">
 
-                                <select name="brand" id="categorias-select"> 
-                                    <option value="#" selected disabled>Marca...</option>
+                                <select class="selectBrand" name="brand" id="categorias-select" required> 
+                                    <option value="0" selected disabled>Marca...</option>
                                     <% marcas.forEach(brand=> { %>
                                         <option value="<%= brand.id %>" >
                                             <%= brand.brand_name %>
                                         </option>
-                                        <% }) %>
-                                    </select>
+                                    <% }) %>
+                                </select>                             
+                                
+                            </div> 
+                            <span class="selectBrandErrors"></span>
+                            
+                            <div id="categorias">
+                                
+                                <select class="selectCategory" name="category" id="categorias-select" required> 
+                                    <option value="0" selected disabled>Categoría...</option>
+                                    <% categorias.forEach(category=> { %>
+                                        <option value="<%= category.id %>" >
+                                            <%= category.category_name %>
+                                        </option>
+                                    <% }) %>
+                                </select>
                                     
-                                </div> 
-                                <div id="categorias">
-                                    
-                                    <select name="category" id="categorias-select"> 
-                                        <option value="#" selected disabled>Categoría...</option>
-                                        <% categorias.forEach(category=> { %>
-                                            <option value="<%= category.id %>" >
-                                                <%= category.category_name %>
-                                            </option>
-                                            <% }) %>
-                                        </select>
-                                        
-                                    </div>
-
-
-                            <input type="text" name="product" id="" value="<%= locals.old && old.product %>"
-                                placeholder="Producto">
+                            </div>
+                            <span class="selectCategoryErrors"></span>
+                                
+                                
+                            <input type="text" name="product" class="product_name" value="<%= locals.old && old.product %>" placeholder="Producto">
+                            <span class="productNameErrors"></span>
                             <% if (locals.errors && errors.product) { %>
-                                <small style="color: red;">
+                                <small class="text-error">
                                     <%= errors.product.msg %>
                                 </small>
-                                <% } %>
-                                    <input type="number" name="price" value="<%= locals.old && old.price %>" id=""
-                                        placeholder="Precio">
-                                    <% if (locals.errors && errors.price) { %>
-                                        <small style="color: red;">
-                                            <%= errors.price.msg %>
-                                        </small>
-                                        <% } %>
-                                            <input type="text" name="color" id="" value="<%= locals.old && old.color %>"
-                                                placeholder="Color/es">
-                                            <% if (locals.errors && errors.color) { %>
-                                                <small style="color: red;">
-                                                    <%= errors.color.msg %>
-                                                </small>
-                                                <% } %>
-                                                    <input type="text" name="description" id="descripcion"
-                                                        value="<%= locals.old && old.description %>"
-                                                        placeholder="Descripción">
-                                                    <% if (locals.errors && errors.description) { %>
-                                                        <small style="color: red;">
-                                                            <%= errors.description.msg %>
-                                                        </small>
-                                                        <% } %>
+                            <% } %>
 
 
+                            <input type="number" name="price" class="price" value="<%= locals.old && old.price %>" placeholder="Precio">
+                            <span class="priceErrors"></span>
+                            <% if (locals.errors && errors.price) { %>
+                                <small class="text-error">
+                                    <%= errors.price.msg %>
+                                </small>
+                            <% } %>
 
-                                                            <input class="submit" type="submit" value="Añadir">
+
+                            <input type="text" name="color" class="color" value="<%= locals.old && old.color %>" placeholder="Color/es">
+                            <span class="colorErrors"></span>
+                            <% if (locals.errors && errors.color) { %>
+                                <small class="text-error">
+                                    <%= errors.color.msg %>
+                                </small>
+                            <% } %>
+
+
+                            <input type="text" name="description" class="description" value="<%= locals.old && old.description %>" placeholder="Descripción">
+                            <span class="descriptionErrors"></span>
+                            <% if (locals.errors && errors.description) { %>
+                                <small class="text-error">
+                                    <%= errors.description.msg %>
+                                </small>
+                            <% } %>
+
+                            <span id="submitErrors"></span>
+                            <input class="submit" type="submit" value="Añadir">
                         </form>
 
                     </div>
@@ -101,7 +113,7 @@
 
         <%- include("../partials/admin-links") -%>
 
-            <%- include('../partials/scripts.ejs') %>
+        <%- include('../partials/scripts.ejs') %>
 
 </body>
 

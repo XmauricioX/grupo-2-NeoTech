@@ -204,4 +204,11 @@ module.exports = {
             })   
         }
     },
+    buyProduct: (req, res) => {
+        res.render('users/buy', {
+            title: 'NeoTech - Compra',
+            session: req.session
+            // agregar errores en form 
+        })
+    }
 }

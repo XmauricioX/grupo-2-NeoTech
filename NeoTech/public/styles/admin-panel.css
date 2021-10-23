@@ -106,14 +106,17 @@
 }
 #container-admin #content{
     height: 90vh;
+    /* height: 75vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* margin-top: 30px; */
 }
 #container-admin #content #admin-welcome{
     font-size: 17px;
     color: var(--white);
+    position: initial;
 }
 #navigation{
     height: 150px
@@ -169,6 +172,7 @@
     #container-admin #content #admin-welcome{
         font-size: 30px;
         color: var(--white);
+        margin-bottom: 65px;
     }
 }
 

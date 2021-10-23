@@ -9,6 +9,7 @@ let {
     userProfile,
     userEdit,
     userUpdate,
+    buyProduct
     } = require('../controllers/usersController')
 let registerValidator = require('../validations/registerValidator');
 let loginValidator = require('../validations/loginValidator');
@@ -35,6 +36,7 @@ router.get('/editar-usuario', userSession, userProfile)
 router.get('/editar-usuario/:id', userEdit)
 router.put('/editar-usuario/:id', uploadAvatarUser.single('user-image'),userSession, userUpdate)
 
-
+// BUY FORM (poner middleware de inicio de sesion)
+router.get('/buy', buyProduct)
 
 module.exports = router;
