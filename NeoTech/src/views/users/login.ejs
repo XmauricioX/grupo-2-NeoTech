@@ -11,13 +11,14 @@
            <!-- login -->
            <div class="login">
             <h1>Iniciar Sesión</h1>
-            <form class="form-container" action='/cuenta/iniciar-sesion' method="POST" >
+            <form id="loginForm" class="form-container" action='/cuenta/iniciar-sesion' method="POST" >
+
                 <nav class="container-contact">
 
                     <!-- Email -->
                     <label for="email"></label>
                     <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
-                    <small id="emailErr" class="text-error"></small>
+                    <span id="emailErrors"></span>
                     <% if (locals.errors && errors.email) { %>
                         <small class="text-error"><%= errors.email.msg %></small>
                     <% } %>
@@ -25,11 +26,11 @@
                     <!-- Password -->
                     <label for="password"></label>
                     <input class="password" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+                    <span id="passwordErrors"></span>
                     <% if (locals.errors && errors.password) { %>
                         <small class="text-error"><%= errors.password.msg %></small>
                     <% } %>
-                    <small id="passwordErr" class="text-error"></small>
-                    <small class="text-error"><%= (locals.errors && errors.custom && !errors.email && !errors.password)?errors.custom.msg: "" %></small>
+                    <span class="passwordErrors"><%= (locals.errors && errors.custom && !errors.email && !errors.password)?errors.custom.msg: "" %></span>
                     <br>
 
                     <!-- check -->
@@ -37,13 +38,18 @@
                         <input type="checkbox" name="remember" id="remember">
                         <label for="remember">Recordar contraseña</label>
                     </div>
+
                     <!-- button log in -->
                     <button class="button-login" type="submit" value="log-in">Iniciar Sesión</button>
+                    <span id="submitErrors"></span>
+
                     <!-- password & account -->
-                    <a class="pass__a" href="#">¿Olvidaste tu contraseña?</a>
-                    <!-- <a class="account__a" href="#">¿No tenes una cuenta?</a> -->
+                    <a class="pass__a" href="#">¿Olvidaste email o tu contraseña?</a>
+                    <a class="pass__a" href="#">Recupera tu cuenta</a>
+                    
                     <!-- button create account -->
-                    <a href="/cuenta/registro" class="button__create" type="submit" value="create-account">Crear una Cuenta</a>
+                    <a href="/cuenta/registro" class="button__create" type="submit" value="create-account">Crear una cuenta</a>
+
                 </nav>
             </form>
         </div>
