@@ -28,15 +28,10 @@
                     <% if (locals.errors && errors.password) { %>
                         <small class="text-error"><%= errors.password.msg %></small>
                     <% } %>
-<<<<<<< HEAD
-                    <small class="text-error"><%= (locals.errors && errors.custom && !errors.email && !errors.password)?errors.custom.msg: "" %></small>
-                    <br>
-=======
                     <small id="passwordErr" class="text-error"></small>
                     <small class="text-error"><%= (locals.errors && errors.custom && !errors.email && !errors.password)?errors.custom.msg: "" %></small>
                     <br>
 
->>>>>>> 64a95096d358028279cd08031865a218765543ba
                     <!-- check -->
                     <div class="form-ad-input_check">
                         <input type="checkbox" name="remember" id="remember">

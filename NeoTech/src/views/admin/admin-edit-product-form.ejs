@@ -21,22 +21,6 @@
             
             <div id="container-form">         
                 
-<<<<<<< HEAD
-                <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                    
-                    <div style="text-align: center;">
-                        <img id="description" src="/images/imgs-product/<%= product.images %>" alt="imagen del producto">
-                    </div>
-                    
-                    <div class="input-file">
-                        <button class="btn__update__image">
-                            <p class="userUpdate_subtitle">Cambiar imagen de Producto</p>
-                            <input type="file" name="product-image" multiple>
-                        </button>
-                    </div>
-
-                    <div id="categorias">
-=======
                 <form class="productsForm" id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     
                     <div id="last-img" class="container_last_img">
@@ -44,43 +28,8 @@
                     </div>
 
                     <div class="img-container" id="img-preview"></div>
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 
-                        <select name="brand" id="categorias-select"> 
-                            <option value="#" selected disabled>Marca...</option>
-                            <% brands.forEach(brand=> { %>
-                                <option value="<%= brand.id %>" >
-                                    <%= brand.brand_name %>
-                                </option>
-                                <% }) %>
-                            </select>
-                            
-                        </div> 
-                        <div id="categorias">
-                            
-                            <select name="category" id="categorias-select"> 
-                                <option value="#" selected disabled>Categoría...</option>
-                                <% categories.forEach(category=> { %>
-                                    <option value="<%= category.id %>" >
-                                        <%= category.category_name %>
-                                    </option>
-                                    <% }) %>
-                                </select>
-                                
-                            </div> 
-                            
 
-<<<<<<< HEAD
-                            <input type="text" name="product" id="" value="<%= product.product_name %>" value="<%= locals.old ? old.product_name : product.product_name %>" placeholder="Producto">
-                            <% if (locals.errors && errors.product) { %>
-                                <small style="color: red;"><%= errors.product.msg %> </small>
-                                <% } %>
-                                <input type="number" name="price" id="" value="<%= product.price %>" placeholder="Precio"> 
-                    <% if (locals.errors && errors.price) { %>
-                        <small style="color: red;"><%= errors.price.msg %> </small>
-                       <% } %>
-
-=======
                     <div class="input-file">
                         <div class="btn__update__image">
                             <p class="userUpdate_subtitle">Cambiar imagen de Producto</p>
@@ -118,7 +67,6 @@
                     <span id="selectCategoryErrors"></span>
 
                             
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 
                     <input type="text" name="product" id="product_name" value="<%= product.product_name %>" value="<%= locals.old ? old.product_name : product.product_name %>" placeholder="Producto">
                     <span id="productNameErrors"></span>

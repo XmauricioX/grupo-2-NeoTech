@@ -3,8 +3,6 @@
     /* background-size: cover; */
     background-position: center;
     background-repeat: no-repeat;
-<<<<<<< HEAD
-=======
     background-position-y: 33%; 
     background-position-x: 50%;
     /* background-image: url(/images/imgs-bg/teclado-original.jpg);
@@ -16,15 +14,12 @@
 #admin-welcome{
     position: absolute;
     top: 105px;
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 }
 #container-form{
     width: 90%;
     margin-top: 0;
 }
 
-<<<<<<< HEAD
-=======
 /* previev image */
 .img-container {
     text-align: center;
@@ -36,7 +31,6 @@
 
 
 
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 /* button update image */
 .userUpdate_subtitle {
     color: var(--green);
@@ -54,11 +48,7 @@
     padding: 0 1rem;
     border-radius: .5rem;
     width: 100%;
-<<<<<<< HEAD
-    height: 50px;
-=======
     height: 30px;
->>>>>>> 64a95096d358028279cd08031865a218765543ba
     align-items: center;
     margin-top: 5px;
 }
@@ -72,16 +62,6 @@
     opacity: 0;
 }
 
-<<<<<<< HEAD
-.btn__update__image {
-    background-color: var(--dark-grey);
-    border-color: var(--green);
-    border-radius: 12px;
-    font-size:14px;
-    margin-bottom: 10px;
-    padding: 5px 0px;
-    width: 96%;
-=======
 .btn__update__image .inputFile {
     width: 90%;
     height: 20px;
@@ -97,7 +77,6 @@
     padding: 5px 0px;
     width: 96%;
     text-align: center;
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 }
 #categorias-select{
     font-size: 20px;
@@ -115,12 +94,8 @@
     border-radius: 20px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.582);
-<<<<<<< HEAD
-    margin-top: 15px;
-=======
     /* margin-top: 15px; */
     margin-top: 70px;
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 }
 #form-add input{
     padding: 10px 10px;
@@ -180,10 +155,6 @@
         max-width: 450px;
         margin-top: 45px;
     }
-<<<<<<< HEAD
-    #categorias-select{
-        font-size: 26px;
-=======
     /* previev image */
     .img-container img {
         max-width: 25%;
@@ -196,7 +167,6 @@
     /* ////////////// */
     #categorias-select{
         font-size: 20px;
->>>>>>> 64a95096d358028279cd08031865a218765543ba
     }
     .btn__update__image {
         font-size:22px;
@@ -206,14 +176,6 @@
     }
 }
 @media (min-width: 1024px){
-<<<<<<< HEAD
-    #container-form{
-        max-width: 60%;
-        margin-top: -50px;
-    }
-    .btn__update__image {
-        font-size:28px;
-=======
     #container-form {
         max-width: 60%;
         margin-top: -50px;
@@ -225,7 +187,6 @@
     }
     .btn__update__image {
         font-size:18px;
->>>>>>> 64a95096d358028279cd08031865a218765543ba
     }
     .input-file {
         margin-top: 10px;

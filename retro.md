@@ -164,11 +164,7 @@
 <h3>Seguir haciendo:</h3>
 <ul>
     <li>Revisar que funcionen las funcionalidades antes de subir los archivos</li>
-<<<<<<< HEAD
-    <li>trabajar mas en equipo</li>
-=======
     <li>Trabajar mas en equipo</li>
->>>>>>> 64a95096d358028279cd08031865a218765543ba
     <li>Dividirnos las tareas que se nos presentan y pedir ayuda si no se puede hacer la tarea</li>
     <li>Seguir armando dailys/weeklys</li>
     <li>Subir los cambios a la rama develop y al final del sprint subir a master</li>
@@ -184,39 +180,24 @@
 <ul>
     <li>Organizar mejor el Trello</li>
     <li>Mas reuniones grupales</li>
-<<<<<<< HEAD
-    <li>comprender los tiempos de los demas</li>
-    <li>tener comunicación asertiva sin meter sentimientos o pensamientos personales</li>
-=======
     <li>Comprender los tiempos de los demas</li>
     <li>Tener comunicación asertiva sin meter sentimientos o pensamientos personales</li>
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 </ul>
 
 <h3>Hacer menos:</h3>
 <ul>
-<<<<<<< HEAD
-    <li>empezar tarde con las tareas</li>
-=======
     <li>Empezar tarde con las tareas</li>
->>>>>>> 64a95096d358028279cd08031865a218765543ba
     <li>Subir cosas incompletas al repo</li>
 </ul>
 
 <h3>Dejar de hacer:</h3>
 <ul>
-<<<<<<< HEAD
-    <li>En lo posible terminar sobre el tiempo de entrga</li>
-=======
     <li>En lo posible terminar sobre el tiempo de entrega</li>
->>>>>>> 64a95096d358028279cd08031865a218765543ba
     <li>Comentarios en el codigo innecesarios</li>
     <li>No conectarse a las reuniones</li>
 </ul>
 
 
-<<<<<<< HEAD
-=======
 <h2>RETROSPECTIVA DEL SPRINT 6</h2>
 
 <p>Según la retrospectiva del sprint 6, estas son las cosas que deberiamos hacer, seguir haciendo o dejar de hacer en el proximo sprint</p>
@@ -254,4 +235,3 @@
 </ul>
 
 
->>>>>>> 64a95096d358028279cd08031865a218765543ba

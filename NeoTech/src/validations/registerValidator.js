@@ -10,14 +10,9 @@ module.exports = [
         //.isLength() debe pasarse como parametro el largo de caracteres que quiera como min y max 
         //notEmpty() esta validacion indica que no puede estar vacia
         //whitMessage() permite pasar un mensaje a la validacion del input
-<<<<<<< HEAD
-    check('last_name')  
-        .notEmpty().withMessage("*El campo apellido es obligatorio"),
-=======
         check('last_name')  
         .notEmpty().withMessage("*El campo apellido es obligatorio")
         .isLength({ min: 2 }),
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 
     check('email')  
         .isEmail().withMessage("*Debes ingresar un email válido"),

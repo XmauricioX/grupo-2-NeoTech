@@ -14,18 +14,6 @@
                     <nav class="register__container">
                         <!-- name -->
                         <label for="first_name"></label>
-<<<<<<< HEAD
-                        <input class="text" type="text" name="first_name" id="text" placeholder="Nombre" value="<%= locals.old && old.first_name %>">
-                        <% if (locals.errors && errors.first_name) { %>
-                            <small class="text-error"><%= errors.first_name.msg %></small>
-                        <% } %>
-                        <!-- lastname -->
-                        <label for="last_name"></label>
-                        <input class="text" type="text" name="last_name" id="text" placeholder="Apellido" value="<%= locals.old && old.last_name %>">
-                        <% if (locals.errors && errors.last_name) { %>
-                            <small class="text-error"><%= errors.last_name.msg %></small>
-                        <% } %>
-=======
                         <input id="firstName" class="text" type="text" name="first_name" id="text" placeholder="Nombre" value="<%= locals.old && old.first_name %>">
                             <span id="small-first-name" class="text-error"></span>
                             <% if (locals.errors && errors.first_name) { %>
@@ -38,7 +26,6 @@
                             <% if (locals.errors && errors.last_name) { %>
                                 <small class="text-error"><%= errors.last_name.msg %></small>
                             <% } %>
->>>>>>> 64a95096d358028279cd08031865a218765543ba
                             <!-- email -->
                         <label for="email"></label>
                         <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">

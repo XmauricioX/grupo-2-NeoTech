@@ -158,23 +158,6 @@ module.exports = {
                     }
                 }
             )
-<<<<<<< HEAD
-            .then(result => {
-                db.Addresses.create({
-                    address: address,
-                    pc: pc,
-                    country: country,
-                    province: province,
-                    city: city,
-                    user_id: req.params.id,
-                })
-                .then(result => {
-                    res.redirect('/cuenta/editar-usuario')
-                })
-            })
-                  
-        } else{
-=======
             .then(user => {
                 db.Addresses.findAll({
                     where:{
@@ -213,7 +196,6 @@ module.exports = {
                 })
             })
         } else {
->>>>>>> 64a95096d358028279cd08031865a218765543ba
             res.render('/users/userEdit', {
                 title: 'NeoTech - Tu Perfil',
                 errors: errors.mapped(),
@@ -222,8 +204,6 @@ module.exports = {
             })   
         }
     },
-<<<<<<< HEAD
-=======
     buyProduct: (req, res) => {
         res.render('users/buy', {
             title: 'NeoTech - Compra',
@@ -231,5 +211,4 @@ module.exports = {
             // agregar errores en form 
         })
     }
->>>>>>> 64a95096d358028279cd08031865a218765543ba
 }
