@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `neotech` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `neotech`;
 -- MySQL dump 10.13  Distrib 5.5.62, for Win64 (AMD64)
 --
 -- Host: localhost    Database: neotech
