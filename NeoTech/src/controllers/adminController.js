@@ -6,9 +6,19 @@ const {
 module.exports = {
 
     panel: (req, res) => {
+<<<<<<< HEAD
         res.render('admin/adminPanel', {
             title: 'NeoTech - Panel General',
             session: req.session
+=======
+        db.Users.findByPk(req.session.user.id)
+        .then(user => {
+            res.render('admin/adminPanel', {
+                title: 'NeoTech - Panel General',
+                session: req.session,
+                user
+            })
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
         })
     },
     formAddCategory: (req, res) => {
@@ -81,6 +91,7 @@ module.exports = {
         let errors = validationResult(req)
 
         if (errors.isEmpty()) {
+<<<<<<< HEAD
 
             let {
                 brandCategory
@@ -99,6 +110,26 @@ module.exports = {
             const category = db.Categories.findAll()
             const brands = db.Brands.findAll()
 
+=======
+
+            let {
+                brandCategory
+            } = req.body
+
+            db.Brands.create({
+                    brand_name: brandCategory,
+                })
+                .then(() => {
+                    res.redirect('/administrador/editar-producto')
+                })
+                .catch(err => console.log(err))
+
+        } else {
+
+            const category = db.Categories.findAll()
+            const brands = db.Brands.findAll()
+
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
             Promise.all([category, brands])
                 .then(([categorias, marcas]) => {
                     res.render("admin/admin-add-brand", {
@@ -278,7 +309,11 @@ module.exports = {
             session: req.session
         })
     },
+<<<<<<< HEAD
     users: (req, res) => { //Ariel
+=======
+    users: (req, res) => {
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
 
         db.Users.findAll()
             .then(users => {

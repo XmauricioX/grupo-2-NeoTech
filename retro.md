@@ -164,7 +164,11 @@
 <h3>Seguir haciendo:</h3>
 <ul>
     <li>Revisar que funcionen las funcionalidades antes de subir los archivos</li>
+<<<<<<< HEAD
     <li>trabajar mas en equipo</li>
+=======
+    <li>Trabajar mas en equipo</li>
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
     <li>Dividirnos las tareas que se nos presentan y pedir ayuda si no se puede hacer la tarea</li>
     <li>Seguir armando dailys/weeklys</li>
     <li>Subir los cambios a la rama develop y al final del sprint subir a master</li>
@@ -180,21 +184,74 @@
 <ul>
     <li>Organizar mejor el Trello</li>
     <li>Mas reuniones grupales</li>
+<<<<<<< HEAD
     <li>comprender los tiempos de los demas</li>
     <li>tener comunicación asertiva sin meter sentimientos o pensamientos personales</li>
+=======
+    <li>Comprender los tiempos de los demas</li>
+    <li>Tener comunicación asertiva sin meter sentimientos o pensamientos personales</li>
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
 </ul>
 
 <h3>Hacer menos:</h3>
 <ul>
+<<<<<<< HEAD
     <li>empezar tarde con las tareas</li>
+=======
+    <li>Empezar tarde con las tareas</li>
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
     <li>Subir cosas incompletas al repo</li>
 </ul>
 
 <h3>Dejar de hacer:</h3>
 <ul>
+<<<<<<< HEAD
     <li>En lo posible terminar sobre el tiempo de entrga</li>
+=======
+    <li>En lo posible terminar sobre el tiempo de entrega</li>
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
     <li>Comentarios en el codigo innecesarios</li>
     <li>No conectarse a las reuniones</li>
 </ul>
 
 
+<<<<<<< HEAD
+=======
+<h2>RETROSPECTIVA DEL SPRINT 6</h2>
+
+<p>Según la retrospectiva del sprint 6, estas son las cosas que deberiamos hacer, seguir haciendo o dejar de hacer en el proximo sprint</p>
+
+<h3>Seguir haciendo:</h3>
+<ul>
+    <li>Seguir conectandonos en zoom o discord después de las reuniones</li>
+    <li>Probar todas la funcionalidades del proyecto</li>
+    <li>Pedir ayuda</li>
+</ul>
+
+<h3>Hacer más:</h3>
+<ul>
+    <li>Incorporar más de lo pedido en el sprint</li>
+    <li>Avisar cuando se suben cambios al repositorio</li>
+    <li>Subir el script actualizado si hubo cambios en la base de datos</li>
+</ul>
+
+<h3>Empezar a hacer:</h3>
+<ul>
+    <li>Subir las tarjetas de Trello para ahorrar tiempo</li>
+    <li>Ponerle fecha y dificultad a las tarjetas</li>
+    <li>Darle mas estilo al proyecto de lado del front</li>
+</ul>
+
+<h3>Hacer menos:</h3>
+<ul>
+    <li>No interactuar con el equipo</li>
+</ul>
+
+<h3>Dejar de hacer:</h3>
+<ul>
+    <li>En lo posible terminar antes del tiempo de entrega</li>
+    <li>Perjudicar al compañero no haciendo la parte que nos corresponde</li>
+</ul>
+
+
+>>>>>>> 64a95096d358028279cd08031865a218765543ba

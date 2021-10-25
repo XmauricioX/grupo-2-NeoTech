@@ -3,6 +3,8 @@
 <head>
     <%- include("../partials/head-admin") %> 
     <link rel="stylesheet" href="../../../styles/admin-edit-product-form.css">
+     <!-- Validation Front Admin -->
+     <script src="/js/validationEditProducts.js"></script>
 </head>
 <body>
     
@@ -19,6 +21,7 @@
             
             <div id="container-form">         
                 
+<<<<<<< HEAD
                 <form id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     
                     <div style="text-align: center;">
@@ -33,6 +36,15 @@
                     </div>
 
                     <div id="categorias">
+=======
+                <form class="productsForm" id="form-add" action="/administrador/formulario-editar-producto/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    
+                    <div id="last-img" class="container_last_img">
+                        <img class="last_img" src="/images/imgs-product/<%= product.images %>" alt="imagen del producto">
+                    </div>
+
+                    <div class="img-container" id="img-preview"></div>
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
 
                         <select name="brand" id="categorias-select"> 
                             <option value="#" selected disabled>Marca...</option>
@@ -58,6 +70,7 @@
                             </div> 
                             
 
+<<<<<<< HEAD
                             <input type="text" name="product" id="" value="<%= product.product_name %>" value="<%= locals.old ? old.product_name : product.product_name %>" placeholder="Producto">
                             <% if (locals.errors && errors.product) { %>
                                 <small style="color: red;"><%= errors.product.msg %> </small>
@@ -67,17 +80,75 @@
                         <small style="color: red;"><%= errors.price.msg %> </small>
                        <% } %>
 
+=======
+                    <div class="input-file">
+                        <div class="btn__update__image">
+                            <p class="userUpdate_subtitle">Cambiar imagen de Producto</p>
+                            <input class="inputFile" type="file" name="product-image" multiple>
+                        </div>
+                    </div>
+                    <span class="inputFileErrors"></span>
 
-                    <input type="text" name="color" id="" value="<%= product.color %>" placeholder="Color/es">
+                    <div id="marcas">
+
+                        <select name="brand" class="brand-select" id="selectBrand"> 
+                            <option value="0" selected disabled>Marca...</option>
+                            <% brands.forEach(brand=> { %>
+                                <option value="<%= brand.id %>" >
+                                    <%= brand.brand_name %>
+                                </option>
+                            <% }) %>
+                        </select>
+                            
+                    </div> 
+                    <span id="selectBrandErrors"></span>
+
+                    <div id="categorias">
+                        
+                        <select name="category" class="categories-select" id="selectCategory"> 
+                            <option value="0" selected disabled>Categoría...</option>
+                            <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>" >
+                                    <%= category.category_name %>
+                                </option>
+                                <% }) %>
+                        </select>
+                            
+                    </div> 
+                    <span id="selectCategoryErrors"></span>
+
+                            
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
+
+                    <input type="text" name="product" id="product_name" value="<%= product.product_name %>" value="<%= locals.old ? old.product_name : product.product_name %>" placeholder="Producto">
+                    <span id="productNameErrors"></span>
+                    <% if (locals.errors && errors.product) { %>
+                            <small class="text-error"><%= errors.product.msg %> </small>
+                    <% } %>
+
+                    <input type="number" name="price" id="price" value="<%= product.price %>" placeholder="Precio"> 
+                    <span id="priceErrors"></span>
+                    <% if (locals.errors && errors.price) { %>
+                        <small class="text-error"><%= errors.price.msg %> </small>
+                    <% } %>
+
+
+                    <input type="text" name="color" id="color" value="<%= product.color %>" placeholder="Color/es">
+                    <span id="colorErrors"></span>
                     <% if (locals.errors && errors.color) { %>
-                        <small style="color: red;"><%= errors.color.msg %> </small>
-                       <% } %>
-                    <input type="text" name="description" id="description" value="<%= product.description %>" placeholder="Descripcion"> 
+                        <small class="text-error"><%= errors.color.msg %> </small>
+                    <% } %>
+
+                    <input class="description" type="text" name="description" value="<%= product.description %>" placeholder="Descripcion"> 
+                    <span id="descriptionErrors"></span>
                     <% if (locals.errors && errors.description) { %>
-                        <small style="color: red;"><%= errors.description.msg %> </small>
-                       <% } %>
-                    <button class="submit" type="submit" value="Guardar">Guardar</button>
-               
+                        <small class="text-error"><%= errors.description.msg %> </small>
+                    <% } %>
+
+
+                    <!-- <button class="submit" type="submit" value="Guardar">Guardar</button> -->
+                    <span id="submitErrors"></span>
+                    <input class="submit" type="submit" value="Guardar">           
                 </form>
                 
         

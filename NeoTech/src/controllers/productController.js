@@ -1,7 +1,13 @@
 const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
+<<<<<<< HEAD
 const { Op } = require("sequelize");
+=======
+const {
+    Op
+} = require("sequelize");
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
 const {
     promiseImpl
 } = require('ejs');
@@ -46,6 +52,7 @@ module.exports = {
     productCategory: (req, res) => {
 
         db.Categories.findOne({
+<<<<<<< HEAD
              where: {
                 category_name: req.params.categoria
             },
@@ -59,6 +66,23 @@ module.exports = {
             })
         })
         .catch(err => res.send(err))
+=======
+                where: {
+                    category_name: req.params.categoria
+                },
+                include: [{
+                    association: "products"
+                }]
+            })
+            .then(categories => {
+                res.render('products/productCategory', {
+                    title: 'NeoTech - Categorías',
+                    categories,
+                    session: req.session
+                })
+            })
+            .catch(err => res.send(err))
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
     },
     productBrand: (req, res) => {
 
@@ -66,7 +90,13 @@ module.exports = {
                 where: {
                     brand_name: req.params.marca,
                 },
+<<<<<<< HEAD
                 include:[{association:"products"}]
+=======
+                include: [{
+                    association: "products"
+                }]
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
             })
             .then(brands => {
                 res.render('products/productBrand', {
@@ -79,6 +109,7 @@ module.exports = {
     },
     search: (req, res) => {
         db.Products.findAll({
+<<<<<<< HEAD
                 where: {
                     product_name: {
                         [Op.like]: '%' + req.query.keywords.toLowerCase() + '%'
@@ -91,6 +122,36 @@ module.exports = {
                         association: "category"
                     }
                 ]
+=======
+                include: [{
+                    association: "brand"
+                }, {
+                    association: "category"
+                }],
+                where: {
+                    [Op.or]: [{
+                            product_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            description: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            color: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            price: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
             })
             .then(product => {
                 res.render('products/results', {
@@ -98,6 +159,10 @@ module.exports = {
                     product,
                     session: req.session
                 })
+<<<<<<< HEAD
         })
+=======
+            })
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
     }
 }

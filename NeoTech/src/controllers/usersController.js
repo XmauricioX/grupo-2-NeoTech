@@ -158,6 +158,7 @@ module.exports = {
                     }
                 }
             )
+<<<<<<< HEAD
             .then(result => {
                 db.Addresses.create({
                     address: address,
@@ -173,6 +174,46 @@ module.exports = {
             })
                   
         } else{
+=======
+            .then(user => {
+                db.Addresses.findAll({
+                    where:{
+                        user_id: req.params.id
+                    }
+                })
+                .then(result => {
+                    if (result.length > 0) {
+                        db.Addresses.update({
+                            address: address,
+                            pc: pc,
+                            country: country,
+                            province: province,
+                            city: city,
+                        }, {
+                            where: {
+                                user_id: req.params.id
+                            }
+                        })
+                        .then(result => {
+                            res.redirect('/cuenta/editar-usuario')
+                        })
+                    } else {
+                        db.Addresses.create({
+                            address: address,
+                            pc: pc,
+                            country: country,
+                            province: province,
+                            city: city,
+                            user_id: req.params.id,
+                        })
+                        .then(result => {
+                            res.redirect('/cuenta/editar-usuario')
+                        })
+                    }
+                })
+            })
+        } else {
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
             res.render('/users/userEdit', {
                 title: 'NeoTech - Tu Perfil',
                 errors: errors.mapped(),
@@ -181,4 +222,14 @@ module.exports = {
             })   
         }
     },
+<<<<<<< HEAD
+=======
+    buyProduct: (req, res) => {
+        res.render('users/buy', {
+            title: 'NeoTech - Compra',
+            session: req.session
+            // agregar errores en form 
+        })
+    }
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
 }

@@ -117,7 +117,11 @@
     overflow: hidden;
 }
 .main__home .carousel-item img {
+<<<<<<< HEAD
     height: 45vh;
+=======
+    height: 37vh;
+>>>>>>> 64a95096d358028279cd08031865a218765543ba
 }
 #c-1{
     display: none;
@@ -187,6 +191,9 @@
         font-size: 20px;
     }
 
+    .main__home .carousel-item img {
+        height: 42vh;
+    }
 
 
     .main__home .grid-container{
