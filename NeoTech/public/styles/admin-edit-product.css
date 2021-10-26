@@ -32,7 +32,7 @@
 .card{
     margin: 10px auto;
     background-color: var(--color-Dark);
-    width: 280px;
+    width: 285px;
     border-radius: 20px;
     box-shadow: 0px 0px 30px black;
     position: relative;
@@ -80,6 +80,15 @@ hr{
     margin-top: 10px;
     overflow: hidden;
 }
+.name-card {
+    font-size: 20px;
+    margin-top: -15px;
+}
+.number-card {
+    font-size: 20px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
  .mas{
     display: block;
     font-size: 30px;
@@ -92,12 +101,10 @@ hr{
  #masp{
     display: none;
 }
-/* position: absolute;
-bottom: 373px;
-left: 236px; */
+
 #delete-product{
-    position: absolute;
-    bottom: 424px;
+    position:relative;
+    bottom: 467px;
     left: 230px;
     font-size: 40px;
     color: var(--color-Green-Old);
