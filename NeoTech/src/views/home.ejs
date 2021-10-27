@@ -8,19 +8,22 @@
 <body class="body__home">
     <!-- HEADER -->
     <%- include('./partials/header.ejs') %>
-
+    
     <!-- NAV -->
     <%- include('./partials/nav.ejs') %>
-
+    
     <!-- MAIN DEL HOME -->
     <main class="main__home">
-
+        
         <!-- <div id="black-screen">
-                <div id="boton-play">
-                    <i class="fas fa-play"></i>
-                </div>
-            </div> -->
-
+            <div id="boton-play">
+                <i class="fas fa-play"></i>
+            </div>
+        </div> -->
+        
+        <!-- boton para subir a lo alto de la pagina -->
+        <%- include('./partials/up.ejs') %>
+        
         <div id="c-1">
 
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -52,71 +55,72 @@
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
+        
+    </div>
 
-
-        <div id="c-2">
-
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a href="/producto/categoria/Teclados">
-                            <img src="/images/home/branding/mobile1.jpg" class="d-block w-100" alt="IMAGEN UNO">
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="/producto/categoria/Gaming">
-                            <img src="/images/home/branding/mobile2.jpg" class="d-block w-100" alt="IMAGEN DOS">
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="/producto/categoria/Gaming">
-                            <img src="/images/home/branding/mobile3.jpg" class="d-block w-100" alt="IMAGEN TRES">
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="/producto/categoria/Teclados">
-                            <img src="/images/home/branding/mobile4.jpg" class="d-block w-100" alt="IMAGEN CUATRO">
-                        </a>
-                    </div>
+    
+    <div id="c-2">
+        
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <a href="/producto/categoria/Teclados">
+                        <img src="/images/home/branding/mobile1.jpg" class="d-block w-100" alt="IMAGEN UNO">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/producto/categoria/Gaming">
+                        <img src="/images/home/branding/mobile2.jpg" class="d-block w-100" alt="IMAGEN DOS">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/producto/categoria/Gaming">
+                        <img src="/images/home/branding/mobile3.jpg" class="d-block w-100" alt="IMAGEN TRES">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="/producto/categoria/Teclados">
+                        <img src="/images/home/branding/mobile4.jpg" class="d-block w-100" alt="IMAGEN CUATRO">
+                    </a>
                 </div>
             </div>
-
         </div>
-
-        <div class="container" id="container-2">
-            <img src="/images/home/bg-2.png" alt="imagen 2">
-
-            <div class="text">
-                <h2>CONSOLAS</h2>
-                <p>Para los gamers mas exigentes</p>
-            </div>
-
-            <div class="product">
-                <a href="/producto/categoria/Gaming">
-                    <img class="product-img" src="/images/home/product/product-1.png" alt="producto-2">
-                </a>
-
-            </div>
-
+        
+    </div>
+    
+    
+    <div class="container" id="container-2">
+        <img src="/images/home/bg-2.png" alt="imagen 2">
+        
+        <div class="text">
+            <h2>CONSOLAS</h2>
+            <p>Para los gamers mas exigentes</p>
         </div>
-
-        <div class="container" id="container-3">
-            <h2 class="h2_home">SOLO GAMING</h2>
+        
+        <div class="product">
+            <a href="/producto/categoria/Gaming">
+                <img class="product-img" src="/images/home/product/product-1.png" alt="producto-2">
+            </a>
+            
         </div>
-
-        <div class="container" id="container-4">
-            <img class="container-img" src="/images/home/bg-4.png" alt="imagen 4">
-
-            <div class="product">
-                <a href="/producto/categoria/Monitores">
-                    <img class="product-img" src="/images/home/product/product-2.png" alt="producto-2">
+        
+    </div>
+        
+    <div class="container" id="container-3">
+        <h2 class="h2_home">SOLO GAMING</h2>
+    </div>
+    
+    <div class="container" id="container-4">
+        <img class="container-img" src="/images/home/bg-4.png" alt="imagen 4">
+        
+        <div class="product">
+            <a href="/producto/categoria/Monitores">
+                <img class="product-img" src="/images/home/product/product-2.png" alt="producto-2">
                 </a>
             </div>
             <div class="text">
@@ -148,7 +152,7 @@
                 <p>Alta calidad alta fidelidad</p>
             </div>
         </div>
-
+        
         <div class="grid-container">
             <div style="cursor : pointer" id="item1"></div>
             <div style="cursor : pointer" id="item2"></div>
@@ -160,7 +164,7 @@
         </div>
 
     </main>
-
+    
     <!-- FOOTER -->
     <%- include('./partials/footer.ejs') %>
 
