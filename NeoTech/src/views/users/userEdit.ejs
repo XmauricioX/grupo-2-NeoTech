@@ -61,12 +61,12 @@
                             <small class="text-error"><%= errors.country.msg %> </small>
                         <% } %>
                         <!-- province -->
-                            <select class="update__select__province" name="province" id="">
-                                <option value="">Provincia</option>
+                            <select class="update__select__province" name="province" id="provinceslist">
+                               <!--  <option value="">Provincia</option> -->
                             </select> 
                         <!-- city -->
-                        <select class="update__select__city" name="city" id="">
-                            <option value="">Localidad</option>
+                        <select class="update__select__city" name="city" id="citieslist">
+                            
                         </select>
                         <!-- button edit -->
                         <button class="button__update__user" type="submit">Guardar</button>                    
@@ -80,6 +80,7 @@
         <%- include('../partials/footer.ejs') %>
 
         <%- include('../partials/scripts.ejs') %>
+        <script src="/js/apiProvincias.js"></script>
     </body>
 
 </html>

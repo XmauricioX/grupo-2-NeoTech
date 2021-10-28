@@ -11,10 +11,13 @@
             <!-- Registro -->
             <div id="registro">
                 <h1>Registro</h1>
-                <form class="register__form" action="/cuenta/registro" method="POST">
+                <form id="registerForm" class="register__form" action="/cuenta/registro" method="POST">
+
                     <nav class="register__container">
+
                         <!-- name -->
                         <label for="first_name"></label>
+<<<<<<< HEAD
                         <input id="firstName" class="text" type="text" name="first_name" id="text" placeholder="Nombre" value="<%= locals.old && old.first_name %>">
                             <span id="small-first-name" class="text-error"></span>
                             <% if (locals.errors && errors.first_name) { %>
@@ -47,17 +50,64 @@
                             <% if (locals.errors && errors.repeatPassword) { %>
                                 <small class="text-error"><%= errors.repeatPassword.msg %></small>
                             <% } %>
+=======
+                        <input id="inputName" class="text" type="text" name="first_name" id="text" placeholder="Nombre" value="<%= locals.old && old.first_name %>">
+                            <span id="inputNameErrors"></span>
+                            <% if (locals.errors && errors.first_name) { %>
+                                <small class="text-error"><%= errors.first_name.msg %></small>
+                            <% } %>
+
+                        <!-- lastname -->
+                        <label for="last_name"></label>
+                        <input id="inputLastName" class="text" type="text" name="last_name" id="text" placeholder="Apellido" value="<%= locals.old && old.last_name %>">
+                            <span id="inputLastNameErrors"></span>
+                            <% if (locals.errors && errors.last_name) { %>
+                                <small class="text-error"><%= errors.last_name.msg %></small>
+                            <% } %>
+                            
+                        <!-- email -->
+                        <label for="email"></label>
+                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
+                            <span id="emailErrors"></span>
+                            <% if (locals.errors && errors.email) { %>
+                                <small class="text-error"><%= errors.email.msg %></small>
+                            <% } %>
+
+                        <!-- password -->
+                        <label for="password"></label>
+                        <input class="password" type="password" id="password" name="password" placeholder="Ingrese una contraseña">
+                            <span id="passwordErrors"></span>
+                            <% if (locals.errors && errors.password) { %>
+                                <small class="text-error"><%= errors.password.msg %></small>
+                            <% } %>
+                            
+                        <!-- repeat password -->
+                        <label for="rePassword"></label>
+                        <input id="rePassword" class="password repeatPassword" type="password" id="password" name="repeatPassword" placeholder="Repita la contraseña">
+                            <span id="rePasswordErrors"></span>
+                            <% if (locals.errors && errors.repeatPassword) { %>
+                                <small class="text-error"><%= errors.repeatPassword.msg %></small>
+                            <% } %>
+
+>>>>>>> 963263a666874aa8ba877983f886cee899371201
                         <!-- check -->
                         <div class="form-ad-input_check">
                             <input type="checkbox" name="terms" id="check">
                             <label for="check">Acepto los términos y condiciones</label>
+<<<<<<< HEAD
                                 <span id="small-check" class="text-error"></span>
+=======
+                                <span id="checkErrors"></span>
+>>>>>>> 963263a666874aa8ba877983f886cee899371201
                                 <% if (locals.errors && errors.terms) { %>
                                     <small class="text-error"><%= errors.terms.msg %> </small>
                                 <% } %>
                         </div>
+
                         <!-- button log in -->
-                            <button class="button-register" type="submit" value="log-in">Registrarse</button>
+                        <span id="submitErrors"></span>
+                        <button class="button-register" type="submit" value="log-in">Registrarse</button>
+
                     </nav>
                 </form>
                 <p class="log_in">Ya estas registrado? <a class="log_in_link" href="/cuenta/iniciar-sesion"> Inicia Sesión</a></p>

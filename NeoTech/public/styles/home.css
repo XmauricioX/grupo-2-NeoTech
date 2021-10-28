@@ -55,11 +55,17 @@
 
 }
 .main__home #container-3 .h2_home{
-    color: var(--color-Green); 
-    font-size: 37px;
     position: relative;
-    bottom: 400px;
-} 
+    font-size: 37px;
+    bottom: 300px; 
+}
+.main__home #container-3 #container-h2{
+    position: absolute;
+}
+.main__home #container-3 #gif-home{
+    filter: blur(4px);
+}
+
 .main__home #contenedor-4 {
     height: 120vh;
     width: 100%;
@@ -130,7 +136,6 @@
     #c-1{
         display: block;
     }
-    
     .main__home #container-2 .product{
         height: 100vh;
         z-index: 0 ;
@@ -140,6 +145,7 @@
     }
     .main__home #container-3 .h2_home{
         font-size: 45px;
+        color: white;
     } 
     .main__home #container-4 .product-img{
         width: 450px;

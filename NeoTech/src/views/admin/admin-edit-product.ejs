@@ -14,7 +14,7 @@
     <div id="container-admin">
 
         <%- include("../partials/aside-admin") -%>
-
+        
         <main id="content">
             <p id="admin-welcome">
                 Editar Producto
@@ -31,15 +31,17 @@
                             <!-- IMAGEN DEL PRODUCTO -->
                         </figure>
                         <hr>
-
+                        
+                        
                         <div class="text-card">
-                            <h2 class="name-card"><%= element.product_name %></h2>
+                            <h2 class="name-card"><%= element.product_name.slice(0,13) %></h2>
                             <h2 class="number-card">$<%= element.price %></h2>
                             <p class="description-card"> 
                                 Marca: <%= element.brand.brand_name %> <br> 
                                 Categoria: <%= element.category.category_name %> <br> 
                                 Descripción: <%= element.description.slice(0,45) %>... 
                             </p>
+                            
                             
                             
                             <a class="mas" href="/administrador/formulario-editar-producto/<%= element.id %>"> <i class="fas fa-pencil-alt"></i> </a>

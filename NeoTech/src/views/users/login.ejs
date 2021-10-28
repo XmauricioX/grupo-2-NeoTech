@@ -1,6 +1,7 @@
 
 <%- include('../partials/head.ejs') %>
 
+<<<<<<< HEAD
 <body class="body__login">
 
     
@@ -62,6 +63,75 @@
 <%- include('../partials/footer.ejs') %>
 
 <%- include('../partials/scripts.ejs') %>
+=======
+    <body class="body__login">
+
+        
+
+        <%- include('../partials/nav.ejs') %>
+
+           <!-- login -->
+           <div class="login">
+            <h1>Iniciar Sesión</h1>
+            <form id="loginForm" class="form-container" action='/cuenta/iniciar-sesion' method="POST" >
+
+                <nav class="container-contact">
+
+                    <!-- Email -->
+                    <label for="email"></label>
+                    <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
+                    <span id="emailErrors"></span>
+                    <% if (locals.errors && errors.email) { %>
+                        <small class="text-error"><%= errors.email.msg %></small>
+                    <% } %>
+
+                    <!-- Password -->
+                    <label for="password"></label>
+                    <input class="password" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+                    <span id="passwordErrors"></span>
+                    <% if (locals.errors && errors.password) { %>
+                        <small class="text-error"><%= errors.password.msg %></small>
+                    <% } %>
+                    <span class="passwordErrors"><%= (locals.errors && errors.custom && !errors.email && !errors.password)?errors.custom.msg: "" %></span>
+                    <br>
+
+                    <!-- check -->
+                    <div class="form-ad-input_check">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">Recordar contraseña</label>
+                    </div>
+
+                    <!-- button log in -->
+                    <button class="button-login" type="submit" value="log-in">Iniciar Sesión</button>
+                    <span id="submitErrors"></span>
+
+                    <!-- password & account -->
+                    <a class="pass__a" href="#">¿Olvidaste email o tu contraseña?</a>
+                    <a class="pass__a" href="#">Recupera tu cuenta</a>
+                    
+                    <!-- button create account -->
+                    <a href="/cuenta/registro" class="button__create" type="submit" value="create-account">Crear una cuenta</a>
+
+                </nav>
+            </form>
+        </div>
+
+        <div class="networks">
+            <!-- button facebook -->
+            <button class="button-facebook"><img class="logo-face" src="/images/icons/icon-login-face.png"
+                    alt="logo-face">Iniciar sesión con Facebook</button>
+
+            <!-- button google -->
+            <button class="button-google"><img class="logo-google" src="/images/icons/icon-login-google.png"
+                    alt="logo-google">Iniciar sesión con Google</button>
+        </div>
+
+    <script src="/js/validationLogin.js"></script>
+
+    <%- include('../partials/footer.ejs') %>
+
+    <%- include('../partials/scripts.ejs') %>
+>>>>>>> 963263a666874aa8ba877983f886cee899371201
 </body>
 
 </html>
