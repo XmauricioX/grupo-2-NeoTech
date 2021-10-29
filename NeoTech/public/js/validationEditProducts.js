@@ -20,8 +20,10 @@ window.addEventListener("load", () => {
     $inputFileErrors = qs(".inputFileErrors"),
     $imgPreview = qs('#img-preview'),
     $lastImg = qs('#last-img'),
+    $borderImg = qs('.btn__update__image'),
     $form = qs(".productsForm"),
-    regExNumber = /^[0-9]\d*(\.\d+)?$/;
+    regExNumber = /^[0-9]\d*(\.\d+)?$/,
+    warning = `<i class="fas fa-exclamation-circle"></i>`;
 
 
 
@@ -31,7 +33,8 @@ window.addEventListener("load", () => {
         let filePath = $inputFile.value, //Capturo el valor del input
             allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
         if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
-            $inputFileErrors.innerHTML = 'Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)';
+            $inputFileErrors.innerHTML = `${warning} Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)`;
+            $borderImg.style.borderColor = "#eb1010"
             $inputFile.value = '';
             $imgPreview.innerHTML = '';
             return false;
@@ -55,12 +58,13 @@ window.addEventListener("load", () => {
     $selectBrand.addEventListener('blur', () => {
         console.log($selectBrand.value)
         switch (true) {
-            // case !$selectBrand.value == 0 || !$selectBrand.value == "" :
             case $selectBrand.value == 0 || $selectBrand.value == "" :
-                $selectBrandErrors.innerHTML = 'Debes seccionar una marca para continuar.'
+                $selectBrandErrors.innerHTML = `${warning} Debes seccionar una marca para continuar.`
+                $selectBrand.style.borderColor = "#eb1010"
                 break;   
             default:
                 $selectBrandErrors.innerHTML = ""
+                $selectBrand.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -71,10 +75,12 @@ window.addEventListener("load", () => {
         switch (true) {
             // case !$selectBrand.value == 0 || !$selectBrand.value == "" :
             case $selectCategory.value == 0 || $selectCategory.value == "" :
-                $selectCategoryErrors.innerHTML = 'Debes seccionar una categoría para continuar.'
+                $selectCategoryErrors.innerHTML = `${warning} Debes seccionar una categoría para continuar.`
+                $selectCategory.style.borderColor = "#eb1010"
                 break;   
             default:
                 $selectCategoryErrors.innerHTML = ""
+                $selectCategory.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -83,13 +89,16 @@ window.addEventListener("load", () => {
         console.log($productName.value.trim())
         switch (true) {
             case !$productName.value.trim():
-                $productNameErrors.innerHTML = 'El campo es obligatorio.'
+                $productNameErrors.innerHTML = `${warning} El campo es obligatorio.`
+                $productName.style.borderColor = "#eb1010"
                 break;
             case $productName.value.length < 3:
-                $productNameErrors.innerHTML = 'El nombre del producto debe tener al menos 3 caracteres.'
+                $productNameErrors.innerHTML = `${warning} El nombre del producto debe tener al menos 3 caracteres.`
+                $productName.style.borderColor = "#eb1010"
                 break;   
             default:
                 $productNameErrors.innerHTML = ""
+                $productName.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -99,16 +108,20 @@ window.addEventListener("load", () => {
         console.log($price.value.trim())
         switch (true) {
             case !$price.value.trim():
-                $priceErrors.innerHTML = 'El campo es obligatorio.'
+                $priceErrors.innerHTML = `${warning} El campo es obligatorio.`
+                $price.style.borderColor = "#eb1010"
                 break;
             case !regExNumber.test($price.value):
-                $priceErrors.innerHTML = 'Este campo solo acepta números'
+                $priceErrors.innerHTML = `${warning} Este campo solo acepta números`
+                $price.style.borderColor = "#eb1010"
                 break;   
             case $price.value.length < 3:
-                $priceErrors.innerHTML = 'El precio del producto debe tener mas de 3 cifras.'
+                $priceErrors.innerHTML = `El precio del producto debe tener mas de 3 cifras.`
+                $price.style.borderColor = "#eb1010"
                 break; 
             default:
                 $priceErrors.innerHTML = ""
+                $price.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -118,13 +131,16 @@ window.addEventListener("load", () => {
         console.log($color.value.trim())
         switch (true) {
             case !$color.value.trim():
-                $colorErrors.innerHTML = 'El campo es obligatorio.'
+                $colorErrors.innerHTML = `${warning} El campo es obligatorio.`
+                $color.style.borderColor = "#eb1010"
                 break;
             case $color.value.length < 3:
-                $colorErrors.innerHTML = 'El nombre del color debe tener al menos 3 caracteres.'
+                $colorErrors.innerHTML = `${warning} El nombre del color debe tener al menos 3 caracteres.`
+                $color.style.borderColor = "#eb1010"
                 break;   
             default:
                 $colorErrors.innerHTML = ""
+                $color.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -134,13 +150,16 @@ window.addEventListener("load", () => {
         console.log($description.value.trim())
         switch (true) {
             case !$description.value.trim():
-                $descriptionErrors.innerHTML = 'El campo es obligatorio.'
+                $descriptionErrors.innerHTML = `${warning} El campo es obligatorio.`
+                $description.style.borderColor = "#eb1010"
                 break;
             case $description.value.length < 20:
-                $descriptionErrors.innerHTML = 'La descripción debe tener al menos 20 caracteres.'
+                $descriptionErrors.innerHTML = `${warning} La descripción debe tener al menos 20 caracteres.`
+                $description.style.borderColor = "#eb1010"
                 break;   
             default:
                 $descriptionErrors.innerHTML = ""
+                $description.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -156,12 +175,14 @@ window.addEventListener("load", () => {
         
         for (let index = 1; index < elementosForm.length-1; index++) {
             if(elementosForm[index].value == "" || elementosForm[index].value == 0){
-                submitErrors.innerHTML = "Todos los campos son obligatorios";
+                elementosForm[index].style.borderColor = "#eb1010"
+                submitErrors.innerHTML = `${warning} Todos los campos son obligatorios`;
                 error = true;
             }
         }
 
         if(!error){
+            alert('Formulario cargado con exito!');
             console.log('Formulario cargado con exito!');
             $form.submit()
         }

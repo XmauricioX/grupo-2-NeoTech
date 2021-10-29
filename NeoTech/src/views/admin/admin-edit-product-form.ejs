@@ -41,10 +41,9 @@
                     <div id="marcas">
 
                         <select name="brand" class="brand-select" id="selectBrand"> 
-                            <option value="0" selected disabled>Marca...</option>
-                            <% brands.forEach(brand=> { %>
-                                <option value="<%= brand.id %>" >
-                                    <%= brand.brand_name %>
+                            <option hidden selected value="">Marca...</option>
+                            <% locals.brands.forEach(brand=> { %>
+                                <option value="<%= brand.id %>" <%- locals.old && old.brand == brand.id ? "selected" : brand.id == product.brand %>><%= brand.brand_name %>
                                 </option>
                             <% }) %>
                         </select>
@@ -55,12 +54,11 @@
                     <div id="categorias">
                         
                         <select name="category" class="categories-select" id="selectCategory"> 
-                            <option value="0" selected disabled>Categoría...</option>
-                            <% categories.forEach(category=> { %>
-                                <option value="<%= category.id %>" >
-                                    <%= category.category_name %>
-                                </option>
-                                <% }) %>
+                            <option selected hidden value="">Categoría...</option>
+                            <!-- <option value="0" selected disabled>Categoría...</option> -->
+                            <% locals.categories.forEach(category=> { %>   
+                                <option value="<%- category.id %>" <%- locals.old && old.category == category.id ? "selected" : category.id == product.category ? "selected" : "" %>><%= category.category_name %></option>
+                            <% }) %>
                         </select>
                             
                     </div> 

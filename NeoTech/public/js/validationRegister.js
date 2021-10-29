@@ -23,10 +23,11 @@ window.addEventListener("load", function () {
     regExEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
     regExUppercase = /(?=.*?[A-Z])/,
     regExLowercase = /(?=.*?[a-z])/,
-    regExSpCharacter = /(?=.*?[#?!@$%^&*-])/,
+    // regExSpCharacter = /(?=.*?[#?!@$%^&*-])/,
     regExSpace = /^$|\s+/,
     regExNumber = /(?=.*?[0-9])/,
-    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+    regExPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/,
+    warning = `<i class="fas fa-exclamation-circle"></i>`;
 
 
 
@@ -34,16 +35,20 @@ window.addEventListener("load", function () {
     $inputName.addEventListener("blur", function () {
         switch (true) {
             case !$inputName.value.trim():
-                $inputNameErrors.innerHTML = '*El campo nombre es obligatorio'
+                $inputNameErrors.innerHTML = `${warning} El campo nombre es obligatorio`
+                $inputName.style.borderColor = "#eb1010"
                 break;
             case $inputName.value.length < 2:
-                $inputNameErrors.innerHTML = '*El nombre debe tener al menos 2 caracteres'
+                $inputNameErrors.innerHTML = `${warning} El nombre debe tener al menos 2 caracteres`
+                $inputName.style.borderColor = "#eb1010"
                 break;
             case !regExAlpha.test($inputName.value):
-                $inputNameErrors.innerHTML = '*Ingrese un nombre válido'
+                $inputNameErrors.innerHTML = `${warning} Ingrese un nombre válido`
+                $inputName.style.borderColor = "#eb1010"
                 break;  
             default:
                 $inputNameErrors.innerHTML = ''
+                $inputName.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -53,16 +58,20 @@ window.addEventListener("load", function () {
     $inputLastName.addEventListener("blur", function () {
         switch (true) {
             case !$inputLastName.value.trim():
-                $inputLastNameErrors.innerHTML = "*El campo apellido es obligatorio"
+                $inputLastNameErrors.innerHTML = `${warning} El campo apellido es obligatorio`
+                $inputLastName.style.borderColor = "#eb1010"
                 break;
             case $inputLastName.value.length < 2:
-                $inputLastNameErrors.innerHTML = "*El apellido debe tener al menos 2 caracteres"
+                $inputLastNameErrors.innerHTML = `${warning} El apellido debe tener al menos 2 caracteres`
+                $inputLastName.style.borderColor = "#eb1010"
                 break;
-            case !regExAlpha.test($inputName.value):
-                $nameErrors.innerHTML = '*Ingresa un apellido válido'
+            case !regExAlpha.test($inputLastName.value):
+                $nameErrors.innerHTML = `${warning} Ingresa un apellido válido`
+                $inputLastName.style.borderColor = "#eb1010"
                 break;      
             default:
                 $inputLastNameErrors.innerHTML = ""
+                $inputLastName.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -72,13 +81,16 @@ window.addEventListener("load", function () {
     $email.addEventListener('blur', function() {
         switch (true) {
             case !$email.value.trim():
-                $emailErrors.innerHTML = '*El campo email es obligatorio'
+                $emailErrors.innerHTML = `${warning} El campo email es obligatorio`
+                $email.style.borderColor = "#eb1010"
                 break;
             case !regExEmail.test($email.value):
-                $emailErrors.innerHTML = '*Debes ingresar un email válido'
+                $emailErrors.innerHTML = `${warning} Debes ingresar un email válido`
+                $email.style.borderColor = "#eb1010"
                 break;    
             default:
                 $emailErrors.innerHTML = ''
+                $email.style.borderColor = "var(--green)"
                 break;
         }
     })
@@ -88,30 +100,35 @@ window.addEventListener("load", function () {
     $password.addEventListener("blur", function () {
         switch (true) {
             case !$password.value.trim():
-                $passwordErrors.innerHTML = '*La contraseña es obligatoria'
+                $passwordErrors.innerHTML = `${warning} La contraseña es obligatoria`
+                $password.style.borderColor = "#eb1010"
                 break;
             case $password.value.length < 8 || $password.value.length > 20:
-                $passwordErrors.innerHTML = '*La contraseña debe tener entre 8 y 20 caracteres'
+                $passwordErrors.innerHTML = `${warning} La contraseña debe tener entre 8 y 20 caracteres`
+                $password.style.borderColor = "#eb1010"
                 break;
             case !regExNumber.test($password.value):
-                $passwordErrors.innerHTML = '*La contraseña debe tener al menos un número';
+                $passwordErrors.innerHTML = `${warning} La contraseña debe tener al menos un número`;
+                $password.style.borderColor = "#eb1010"
                 break;    
             case !regExLowercase.test($password.value):
-                $passwordErrors.innerHTML = '*La contraseña debe tener al menos una letra en minúscula';
+                $passwordErrors.innerHTML = `${warning} La contraseña debe tener al menos una letra en minúscula`;
+                $password.style.borderColor = "#eb1010"
                 break;    
             case !regExUppercase.test($password.value):
-                $passwordErrors.innerHTML = '*La contraseña debe tener al menos una letra en mayúscula';
-                break;    
-            case !regExSpCharacter.test($password.value):
-                $passwordErrors.innerHTML = '*La contraseña debe tener al menos un caracter especial';
-                break;    
+                $passwordErrors.innerHTML = `${warning} La contraseña debe tener al menos una letra en mayúscula`;
+                $password.style.borderColor = "#eb1010"
+                break;        
             case regExSpace.test($password.value):
-                $passwordErrors.innerHTML = '*La contraseña no puede contener espacios entre medio';
+                $passwordErrors.innerHTML = `${warning} La contraseña no puede contener espacios entre medio`;
+                $password.style.borderColor = "#eb1010"
                 break;    
             case !regExPass.test($password.value):
-                $passwordErrors.innerHTML = '*La contraseña debe tener entre 8 y 20 caracteres, al menos una mayúscula, una minúscula, un número y un caracter especial';
+                $passwordErrors.innerHTML = `${warning} La contraseña debe tener entre 8 y 20 caracteres, al menos una mayúscula, una minúscula y un número`;
+                $password.style.borderColor = "#eb1010"
                 break;    
             default:
+                $password.style.borderColor = "var(--green)"
                 $passwordErrors.innerHTML = ""
                 break;
         }
@@ -122,15 +139,19 @@ window.addEventListener("load", function () {
     $rePassword.addEventListener("blur", function () {
         switch (true) {
             case !$rePassword.value.trim():
-                $rePasswordErrors.innerHTML = '*Reingresa tu contraseña'
+                $rePasswordErrors.innerHTML = `${warning} Reingresa tu contraseña`
+                $rePassword.style.borderColor = "#eb1010"
                 break;
             case $rePassword.value.length < 8 || $rePassword.value.length > 20:
-                $rePasswordErrors.innerHTML = '*La contraseña debe tener entre 8 y 20 caracteres'
+                $rePasswordErrors.innerHTML = `${warning} La contraseña debe tener entre 8 y 20 caracteres`
+                $rePassword.style.borderColor = "#eb1010"
                 break;
             case $rePassword.value !== $password.value:
-                $rePasswordErrors.innerHTML = '*Las contraseñas no coinciden'
+                $rePasswordErrors.innerHTML = `${warning} Las contraseñas no coinciden`
+                $rePassword.style.borderColor = "#eb1010"
                 break;
             default:
+                $rePassword.style.borderColor = "var(--green)"
                 $rePasswordErrors.innerHTML = ''
                 break;
         }
@@ -139,7 +160,7 @@ window.addEventListener("load", function () {
 
     // check
     $check.addEventListener('change', function () {
-        this.checked ? $checkErrors.innerHTML = "" : $checkErrors.innerHTML = '*Debes aceptar las bases y condiciones';
+        this.checked ? $checkErrors.innerHTML = "" : $checkErrors.innerHTML = `${warning} Debes aceptar las bases y condiciones`;
     });
 
 
@@ -152,15 +173,16 @@ window.addEventListener("load", function () {
 
         for (let index = 0; index < elementosForm.length - 1; index++) {
             if (elementosForm[index].value == "" || elementosForm[index].value == 0) {
-                submitErrors.innerHTML = "Todos los campos son obligatorios";
+                elementosForm[index].style.borderColor = "#eb1010"
+                submitErrors.innerHTML = `${warning} Todos los campos son obligatorios`;
                 error = true;
             }
         }
 
         if (!error) {
+            // alert('Se a registrado correctamente. ¡Bienvenido!');
             console.log('Formulario cargado con exito!');
             $registerForm.submit()
         }
     })
-
 })

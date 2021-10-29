@@ -110,6 +110,10 @@
     font-weight: 600;
 }
 
+.user__update .user__update__container .email {
+    margin-bottom: 10px;
+}
+
 .user__update .user__update__container .text:hover,
 .user__update .user__update__container .email:hover {
     color: var(--green);   

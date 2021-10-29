@@ -42,7 +42,7 @@
 #registro .register__form .register__container .text, 
 #registro .register__form .register__container .email, 
 #registro .register__form .register__container .password {
-    border: black;
+    border: solid 2px #464646;
     border-radius: 10px;
     font-size: 15px;
     margin-bottom: 14px;
