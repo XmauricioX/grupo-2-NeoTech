@@ -26,6 +26,9 @@ window.addEventListener("load", () => {
     warning = `<i class="fas fa-exclamation-circle"></i>`;
 
 
+    let validationsErrors = false
+
+
 
     // Image
     $inputFile.addEventListener('change', 
@@ -61,10 +64,12 @@ window.addEventListener("load", () => {
             case $selectBrand.value == 0 || $selectBrand.value == "" :
                 $selectBrandErrors.innerHTML = `${warning} Debes seccionar una marca para continuar.`
                 $selectBrand.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;   
             default:
                 $selectBrandErrors.innerHTML = ""
                 $selectBrand.style.borderColor = "var(--green)"
+                validationsErrors = false
                 break;
         }
     })
@@ -77,10 +82,12 @@ window.addEventListener("load", () => {
             case $selectCategory.value == 0 || $selectCategory.value == "" :
                 $selectCategoryErrors.innerHTML = `${warning} Debes seccionar una categoría para continuar.`
                 $selectCategory.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;   
             default:
                 $selectCategoryErrors.innerHTML = ""
                 $selectCategory.style.borderColor = "var(--green)"
+                validationsErrors = false
                 break;
         }
     })
@@ -91,14 +98,17 @@ window.addEventListener("load", () => {
             case !$productName.value.trim():
                 $productNameErrors.innerHTML = `${warning} El campo es obligatorio.`
                 $productName.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;
             case $productName.value.length < 3:
                 $productNameErrors.innerHTML = `${warning} El nombre del producto debe tener al menos 3 caracteres.`
                 $productName.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;   
             default:
                 $productNameErrors.innerHTML = ""
                 $productName.style.borderColor = "var(--green)"
+                validationsErrors = false
                 break;
         }
     })
@@ -110,18 +120,22 @@ window.addEventListener("load", () => {
             case !$price.value.trim():
                 $priceErrors.innerHTML = `${warning} El campo es obligatorio.`
                 $price.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;
             case !regExNumber.test($price.value):
                 $priceErrors.innerHTML = `${warning} Este campo solo acepta números`
                 $price.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;   
             case $price.value.length < 3:
                 $priceErrors.innerHTML = `El precio del producto debe tener mas de 3 cifras.`
                 $price.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break; 
             default:
                 $priceErrors.innerHTML = ""
                 $price.style.borderColor = "var(--green)"
+                validationsErrors = false
                 break;
         }
     })
@@ -133,14 +147,17 @@ window.addEventListener("load", () => {
             case !$color.value.trim():
                 $colorErrors.innerHTML = `${warning} El campo es obligatorio.`
                 $color.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;
             case $color.value.length < 3:
                 $colorErrors.innerHTML = `${warning} El nombre del color debe tener al menos 3 caracteres.`
                 $color.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;   
             default:
                 $colorErrors.innerHTML = ""
                 $color.style.borderColor = "var(--green)"
+                validationsErrors = false
                 break;
         }
     })
@@ -152,14 +169,17 @@ window.addEventListener("load", () => {
             case !$description.value.trim():
                 $descriptionErrors.innerHTML = `${warning} El campo es obligatorio.`
                 $description.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;
             case $description.value.length < 20:
                 $descriptionErrors.innerHTML = `${warning} La descripción debe tener al menos 20 caracteres.`
                 $description.style.borderColor = "#eb1010"
+                validationsErrors = true
                 break;   
             default:
                 $descriptionErrors.innerHTML = ""
                 $description.style.borderColor = "var(--green)"
+                validationsErrors = false
                 break;
         }
     })
@@ -181,7 +201,7 @@ window.addEventListener("load", () => {
             }
         }
 
-        if(!error){
+        if(!error && !validationsErrors){
             alert('Formulario cargado con exito!');
             console.log('Formulario cargado con exito!');
             $form.submit()
