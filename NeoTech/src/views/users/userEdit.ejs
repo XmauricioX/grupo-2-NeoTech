@@ -10,7 +10,8 @@
             <!-- Editar usuario -->
             <div class="user__update">
                 <h1 class="user__update__title">Editar Usuario</h1>
-                <form class="user__update__form" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="user__update__form">
+                <form class="" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     <nav class="user__update__container">
 
@@ -70,13 +71,19 @@
                         </select>
                         <!-- button edit -->
                         <button class="button__update__user" type="submit">Guardar</button>                    
-                          
                     </nav>
-                    
                 </form>
+
+                <!-- formulario para eliminar cuenta -->
+                <form id="FORM_DELETE" class="" action="/cuenta/editar-usuario/<%= user.id %>?_method=DELETE" method="POST">
+                    <button class="button__delete__user" type="submit">
+                        Eliminar cuenta
+                    </button>    
+                </form>
+
             </div>
-
-
+            </div>
+            
         <%- include('../partials/footer.ejs') %>
 
         <%- include('../partials/scripts.ejs') %>

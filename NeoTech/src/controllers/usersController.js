@@ -204,6 +204,24 @@ module.exports = {
             })   
         }
     },
+    deleteUser: (req, res) => {
+        // por alguna razon al querer usar elert o confirm dice que no esta definido y crashea
+            db.Users.destroy({
+                    where: {
+                        id: +req.params.id
+                    }
+                })
+                .then(user => {
+                    req.session.destroy();
+                    if(req.cookies.cookieUser){
+                        res.cookie('cookieUser','',{maxAge:-1})
+                    }
+                    
+                    res.redirect('/')
+                    alert("su cuenta se eliminó satisfacitoriamente")
+                })
+                // primero borra el usuario, despues cierra la sesion y por ultimo redirecciona al home
+},
     buyProduct: (req, res) => {
         res.render('users/buy', {
             title: 'NeoTech - Compra',
