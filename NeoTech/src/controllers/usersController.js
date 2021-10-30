@@ -205,7 +205,6 @@ module.exports = {
         }
     },
     deleteUser: (req, res) => {
-        // por alguna razon al querer usar elert o confirm dice que no esta definido y crashea
             db.Users.destroy({
                     where: {
                         id: +req.params.id
@@ -218,7 +217,6 @@ module.exports = {
                     }
                     
                     res.redirect('/')
-                    alert("su cuenta se eliminó satisfacitoriamente")
                 })
                 // primero borra el usuario, despues cierra la sesion y por ultimo redirecciona al home
 },
