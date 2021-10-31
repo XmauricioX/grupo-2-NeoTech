@@ -32,24 +32,24 @@
                         <h2 class="name-card"><%= element.first_name %> </h2>
                         <h3>ID: <%= element.id %></h3>
                         <div id="admin-card">
-                            <form action="/administrador/usuarios/<%= element.id %> " method="post">
+                            <!-- <form action="/administrador/usuarios/<%= element.id %> " method="post">
                                 admin  
                                 <input id="admin-check" type="checkbox" name="check-admin">
-                            </form>              
+                            </form>               -->
                         </div>
-                        <form name="formularioEliminar" class="delete-content" action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST">
-                            <button  class="delete-user" type="submit">
-                                <i id="delete_product" class="fas fa-times"></i>
+                         <form name="formularioEliminar" class="delete-content"  action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST" >
+                            <button id="delete_user" class="delete-user" type="submit">
+                                <i class="fas fa-times"></i>
                             </button>    
                         </form>
                     </div>
                     
                 </div>         
                 <% }) %> 
-                <script src="/js/confirm/adminDeleteUserConfirm.js" ></script>
             </main>
             
         </main>
+        <script src="/js/confirm/adminDeleteUserConfirm.js" ></script>
         
     </div>
     <%- include("../partials/admin-links") -%>

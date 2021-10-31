@@ -1,7 +1,9 @@
 window.addEventListener("load", () => {
 
-    let eliminar = document.querySelector("#delete_product")
-    eliminar.addEventListener('click', function (event) {
+    let eliminar = document.querySelectorAll("#delete_user")
+
+    eliminar.forEach(element => {
+    element.addEventListener('click', function (event) {
 
         if (confirm("seguro?")) {
             document.formularioEliminar.submit()
@@ -10,7 +12,6 @@ window.addEventListener("load", () => {
             event.preventDefault()
             alert("no se elimino")
         }
-
     })
-
+})     
 })
