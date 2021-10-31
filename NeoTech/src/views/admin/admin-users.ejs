@@ -29,7 +29,9 @@
                     <hr>
         
                     <div class="text-card">
-                        <h2 class="name-card"><%= element.first_name %> </h2>
+                        <h2 class="name-card"><%= element.first_name.slice(0,15) %> </h2>
+                        <h2 class="name-card"><%= element.last_name.slice(0,15) %> </h2>
+                        <h2 class="name-card"><%= element.email.slice(0,15) %> </h2>
                         <h3>ID: <%= element.id %></h3>
                         <div id="admin-card">
                             <form action="/administrador/usuarios/<%= element.id %> " method="post">admin  <input id="admin-check" type="checkbox" name="check-admin"></form>              
