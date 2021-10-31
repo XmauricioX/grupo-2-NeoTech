@@ -1,7 +1,6 @@
 let db = require('../database/models')
-const {
-    validationResult
-} = require('express-validator')
+const {validationResult} = require('express-validator')
+const {Op} = require("sequelize");
 
 module.exports = {
 
@@ -332,4 +331,44 @@ module.exports = {
             .catch(err => console.log(err))
     },
     editUser: (req, res) => {},
+    search: (req, res) => {
+        db.Products.findAll({
+                include: [{
+                    association: "brand"
+                }, {
+                    association: "category"
+                }],
+                where: {
+                    [Op.or]: [{
+                            product_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            description: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            color: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            price: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(products => {
+                // res.send(product)
+                res.render('admin/adminResults', {
+                    title: 'NeoTech - Resultado de busqueda',
+                    products,
+                    session: req.session
+                })
+            })
+    }
 }
