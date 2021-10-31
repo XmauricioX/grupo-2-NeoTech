@@ -18,7 +18,8 @@ const {
     addBrand,
     deleteBrand,
     deleteCategory,
-    search
+    searchProducts,
+    searchUsers
     } = require('../controllers/adminController');
 
 const uploadFile = require('../middlewares/uploadFiles');
@@ -72,7 +73,11 @@ router.delete("/usuarios/:id", deleteUsers)
 router.delete("/eliminar-marca/:id", deleteBrand)
 router.delete("/eliminar-categoria/:id", deleteCategory)
 
-router.get("/resultados", search)
+// SEARCH PRODUCTS
+router.get("/resultados", searchProducts)
+
+// SEARCH USERS
+router.get("/busqueda-de-usuarios", searchUsers)
 
 
 

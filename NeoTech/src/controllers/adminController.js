@@ -331,7 +331,7 @@ module.exports = {
             .catch(err => console.log(err))
     },
     editUser: (req, res) => {},
-    search: (req, res) => {
+    searchProducts: (req, res) => {
         db.Products.findAll({
                 include: [{
                     association: "brand"
@@ -370,5 +370,43 @@ module.exports = {
                     session: req.session
                 })
             })
-    }
+    },
+    searchUsers: (req, res) => {
+        db.Users.findAll({
+                include: [{
+                    association: "addresses"
+                }],
+                where: {
+                    [Op.or]: [{
+                            id: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            first_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            last_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            email: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(users => {
+                // res.send(users)
+                res.render('admin/admin-users', {
+                    title: 'NeoTech - Resultado de busqueda',
+                    users,
+                    session: req.session
+                })
+            })
+    },
 }
