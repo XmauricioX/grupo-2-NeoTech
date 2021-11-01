@@ -37,9 +37,9 @@
 
                         <% marcas.forEach(element => { %>
                         <%= element.brand_name %>
-                        <form class="form__transparent" action="/administrador/marcas/<%= element.id %>?_method=DELETE"
+                        <form name="formularioEliminar" class="form__transparent" action="/administrador/marcas/<%= element.id %>?_method=DELETE"
                             method="POST">
-                            <button class="delete-btn" type="submit">
+                            <button id="delete-brand" class="delete-btn" type="submit">
                                 <i class="fas fa-times"></i>
                             </button>
                         </form>
@@ -50,7 +50,7 @@
             </div>
 
         </main>
-
+    <script src="/js/confirm/adminDeleteBrandConfirm.js"></script>
     </div>
 
     <%- include("../partials/admin-links") -%>

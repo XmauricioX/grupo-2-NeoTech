@@ -36,9 +36,8 @@
 
                         <% categorias.forEach(element => { %>
                         <%= element.category_name %>
-                        <form class="form__transparent"
-                            action="/administrador/categorias/<%= element.id %>?_method=DELETE" method="POST">
-                            <button class="delete-btn" type="submit">
+                        <form name="formularioEliminar" class="form__transparent" action="/administrador/categorias/<%= element.id %>?_method=DELETE" method="POST">
+                            <button id="delete-category" class="delete-btn" type="submit">
                                 <i class="fas fa-times"></i>
                             </button>
                         </form>
@@ -52,6 +51,8 @@
         </main>
 
     </div>
+
+    <script src="/js/confirm/adminDeleteCategoryConfirm.js"></script>
 
     <%- include("../partials/admin-links") -%>
 
