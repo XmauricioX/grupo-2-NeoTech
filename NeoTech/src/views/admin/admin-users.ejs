@@ -32,10 +32,14 @@
                         <h2 class="name-card"><%= element.first_name %> </h2>
                         <h3>ID: <%= element.id %></h3>
                         <div id="admin-card">
-                            <form action="/administrador/usuarios/<%= element.id %> " method="post">
-                                
-                                
-                                <!-- <input id="admin-check" type="checkbox" name="check-admin"> -->
+                            <form action="/administrador/usuarios/<%= element.id %>?_method=PUT" method="post">
+                                <% if(element.user_rol == 1){ %>
+                                    <p> es admin </p>
+                                    <button>SACAR admin</button>
+                                <% }else{ %>
+                                    <p> no es admin </p>
+                                    <button>DAR admin</button>
+                                    <% } %>
                             </form>              
                         </div>
                          <form name="formularioEliminar" class="delete-content"  action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST" >

@@ -17,7 +17,8 @@ const {
     addCategory,
     addBrand,
     deleteBrand,
-    deleteCategory
+    deleteCategory,
+    adminUsers
     } = require('../controllers/adminController');
 
 const uploadFile = require('../middlewares/uploadFiles');
@@ -67,6 +68,8 @@ router.get("/usuarios", /* userSession , */users)
 // DELETE USER
 router.delete("/usuarios/:id", deleteUsers)
 
+// DAR O SACAR ADMNIN
+router.put('/usuarios/:id', adminUsers)
 
 router.delete("/eliminar-marca/:id", deleteBrand)
 router.delete("/eliminar-categoria/:id", deleteCategory)
