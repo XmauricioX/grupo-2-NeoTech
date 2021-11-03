@@ -18,6 +18,8 @@
         "editorGroup.border": "#44fd15",
         "sash.hoverBorder": "#44fd15",
         "statusBarItem.remoteBackground": "#2edd02",
-        "statusBarItem.remoteForeground": "#15202b"
+        "statusBarItem.remoteForeground": "#15202b",
+        "panel.border": "#44fd15",
+        "sideBar.border": "#44fd15"
     }
 }
