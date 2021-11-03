@@ -211,6 +211,25 @@ module.exports = {
             })
             .catch(err => console.log(err))
     },
+    // formEditProduct: (req, res) => {
+        
+    //     db.Products.findByPk((req.params.id), {
+    //         include: [{
+    //             association: 'category'
+    //         }, {
+    //             association: 'brand'
+    //         }]
+    //     })
+    //         .then(product => {
+    //             // res.send(product)
+    //             res.render("admin/admin-edit-product-form", {
+    //                 title: 'NeoTech - Editar Producto',
+    //                 session: req.session,
+    //                 product
+    //             })
+    //         })
+    //         .catch(err => console.log(err))
+    // },
     logicEditProduct: (req, res) => {
         let errors = validationResult(req)
 
@@ -312,7 +331,7 @@ module.exports = {
         })
     },
     deleteBrand: (req, res) => {
-
+        db.Products.destroy({ where : { brand_id : req.params.id }})
         db.Brands.destroy({
                 where: {
                     id: req.params.id
@@ -322,6 +341,7 @@ module.exports = {
             .catch(err => console.log(err))
     },
     deleteCategory: (req, res) => {
+        db.Products.destroy({ where : { categoryId : req.params.id }})
         db.Categories.destroy({
                 where: {
                     id: req.params.id

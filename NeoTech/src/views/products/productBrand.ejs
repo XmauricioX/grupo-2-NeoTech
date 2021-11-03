@@ -20,7 +20,7 @@
             <hr class="line__green">
 
             <div class="text-card">
-                <h2 class="name__card"> <%= element.product_name %> </h2>
+                <h2 class="name__card"> <%= element.product_name.slice(0,13) %> </h2>
                 <h2 class="number__card"> $<%= element.price %> </h2>
                 <p class="description-card"> 
                     Marca: <%= brands.brand_name %> <br> 
