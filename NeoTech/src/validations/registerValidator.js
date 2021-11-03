@@ -39,7 +39,6 @@ module.exports = [
         .matches(/(?=.*?[A-Z])/).withMessage("*La contraseña debe tener al menos una letra en mayúscula")
         .matches(/(?=.*?[a-z])/).withMessage("*La contraseña debe tener al menos una letra en minúscula")
         .matches(/(?=.*?[0-9])/).withMessage("*La contraseña debe tener al menos un número")
-        .matches(/(?=.*?[#?!@$%^&*-])/).withMessage("*La contraseña debe tener al menos un caracter especial")
         .not().matches(/^$|\s+/).withMessage("*La contraseña no puede contener espacios entre medio"),
 
     body('repeatPassword').custom((value, {req}) => value !== req.body.password ? false : true)

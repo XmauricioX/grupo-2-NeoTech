@@ -6,11 +6,11 @@
     </head>
     <body class="admin_user">
     
-        <%- include("../admin/admi-nav") -%>
-        
-        
-        <div id="container-admin">
-            
+    <%- include("../admin/search-nav-users") -%>
+
+
+    <div id="container-admin">
+
         <%- include("../partials/aside-admin") -%>
         
         <main id="content">
@@ -29,7 +29,9 @@
                     <hr>
                     
                     <div class="text-card">
-                        <h2 class="name-card"><%= element.first_name %> </h2>
+                        <h2 class="name-card"><%= element.first_name.slice(0,15) %> </h2>
+                        <h2 class="name-card"><%= element.last_name.slice(0,15) %> </h2>
+                        <h2 class="name-card"><%= element.email.slice(0,15) %> </h2>
                         <h3>ID: <%= element.id %></h3>
                         <div id="admin-card">
                             <form action="/administrador/usuarios/<%= element.id %>?_method=PUT" method="post">

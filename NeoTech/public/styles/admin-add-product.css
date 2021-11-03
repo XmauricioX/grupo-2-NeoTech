@@ -80,7 +80,7 @@
     font-size: 20px;
     color: var(--white);
     background-color: var(--color-Dark);
-    border-color: var(--color-Green);
+    border:solid 2px var(--color-Green);
     width: 99%;
     margin: 10px 0;
 }
@@ -100,7 +100,7 @@
     margin: 5px 0;
     background-color: var(--color-Dark);
     border-radius: 8px;
-    border: 1px solid black;
+    border: 2px solid #464646;
     color: white;
     outline: none;
 }

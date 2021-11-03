@@ -44,11 +44,13 @@ module.exports = (sequelize, dataTypes) => {
     Product.associate = models => {
         Product.belongsTo(models.Categories, {
             as: "category",
-            foreignKey: "categoryId"
+            foreignKey: "categoryId",
+            onDelete: 'cascade'
         })
         Product.belongsTo(models.Brands, {
             as: "brand",
-            foreignKey: "brand_id"
+            foreignKey: "brand_id",
+            onDelete: 'cascade'
         })
     }
 

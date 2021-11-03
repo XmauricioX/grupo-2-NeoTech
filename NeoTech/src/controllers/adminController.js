@@ -1,7 +1,6 @@
 let db = require('../database/models')
-const {
-    validationResult
-} = require('express-validator')
+const {validationResult} = require('express-validator')
+const {Op} = require("sequelize");
 
 module.exports = {
 
@@ -357,4 +356,82 @@ module.exports = {
             .catch(err => console.log(err))
     },
     editUser: (req, res) => {},
+    searchProducts: (req, res) => {
+        db.Products.findAll({
+                include: [{
+                    association: "brand"
+                }, {
+                    association: "category"
+                }],
+                where: {
+                    [Op.or]: [{
+                            product_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            description: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            color: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            price: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(products => {
+                // res.send(product)
+                res.render('admin/adminResults', {
+                    title: 'NeoTech - Resultado de busqueda',
+                    products,
+                    session: req.session
+                })
+            })
+    },
+    searchUsers: (req, res) => {
+        db.Users.findAll({
+                include: [{
+                    association: "addresses"
+                }],
+                where: {
+                    [Op.or]: [{
+                            id: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            first_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            last_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            email: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(users => {
+                // res.send(users)
+                res.render('admin/admin-users', {
+                    title: 'NeoTech - Resultado de busqueda',
+                    users,
+                    session: req.session
+                })
+            })
+    },
 }

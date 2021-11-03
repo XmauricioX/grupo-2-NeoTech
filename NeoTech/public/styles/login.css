@@ -41,7 +41,7 @@
 .login .form-container .container-contact .email,
 .login .form-container .container-contact .password {
     background-color: var(--grey);
-    border: black;
+    border: solid 2px #464646;
     border-radius: 10px;
     font-size: 15px;
     margin: 15px 0;

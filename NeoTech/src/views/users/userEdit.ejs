@@ -11,7 +11,8 @@
             <div class="user__update">
                 <h1 class="user__update__title">Editar Usuario</h1>
                 <div class="user__update__form">
-                <form class="" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                  <form class="" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <!-- <form id="formProfile" class="user__update__form" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> -->
 
                     <nav class="user__update__container">
 
@@ -19,6 +20,10 @@
                         <div class="avatar">
                             <img src="/images/imgs-users/<%= user.image %>" alt="img-user">
                         </div>
+
+                        <div class="img-container" id="img-preview"></div>
+
+
                         <!-- select image -->
                         <div class="input-file">
                             <button class="btn__update__image">
@@ -26,69 +31,82 @@
                                 <input type="file" name="user-image" multiple>
                             </button>
                         </div>
+
                         <!-- name -->
                         <label for="first_name"></label>
                         <input class="text" type="text" name="first_name" id="first_name" placeholder="Nombre" value="<%= locals.old ? old.first_name : user.first_name %>">
+                        <span id="firstNameErrors"></span>
                         <% if (locals.errors && errors.first_name) { %>
                             <small class="text-error"><%= errors.first_name.msg %></small>
                         <% } %>
+
                         <!-- lastname -->
                         <label for="last_name"></label>
                         <input class="text" type="text" name="last_name" id="last_name" placeholder="Apellido" value="<%= locals.old ? old.last_name : user.last_name %>">
+                        <span id="lastNameErrors"></span>
                         <% if (locals.errors && errors.last_name) { %>
                             <small class="text-error"><%= errors.last_name.msg %></small>
                         <% } %>
+
                         <!-- email -->
                         <label for="email"></label>
                         <input class="email" type="email" name="email" id="email" placeholder="Email" value="<%= user.email %>" readonly>
                         
-                        <input class="text" type="text" name="phone" placeholder="Ingresá tu teléfono" value="<%= locals.old ? old.phone : user.phone %>">
+                        <!-- phone -->
+                        <input class="text" type="text" name="phone" id="phone" placeholder="Ingresá tu teléfono" value="<%= locals.old ? old.phone : user.phone %>">
+                        <span id="phoneErrors"></span>
                         <% if (locals.errors && errors.phone) { %>
                             <small class="text-error"><%= errors.phone.msg %> </small>
                         <% } %>
+
                         <!-- address -->
-                        <input class="text" type="text" name="address" placeholder="Domicilio" value="<%= address !== null && address.address ? address.address : "" %>">
+                        <input class="text" type="text" name="address" id="address" placeholder="Domicilio" value="<%= address !== null && address.address ? address.address : "" %>">
+                        <span id="addressErrors"></span>
                         <% if (locals.errors && errors.address) { %>
                             <small class="text-error"><%= errors.address.msg %> </small>
                         <% } %>
+
                         <!-- post code -->
-                        <input class="text" type="text" name="pc" placeholder="Código postal" value="<%= address !== null && address.pc ? address.pc : "" %>">
+                        <input class="text" type="text" name="pc" id="pc" placeholder="Código postal" value="<%= address !== null && address.pc ? address.pc : "" %>">
                         <% if (locals.errors && errors.pc) { %>
                             <small class="text-error"><%= errors.pc.msg %> </small>
                         <% } %>
+
                         <!-- country -->
-                        <input class="text" type="text" name="country" placeholder="País" value="<%= address !== null && address.country ? address.country : "" %>">
-                        <% if (locals.errors && errors.country) { %>
-                            <small class="text-error"><%= errors.country.msg %> </small>
-                        <% } %>
+                        <input class="text" type="text" name="country" id="country" placeholder="País" value="Argentina" readonly>
+
                         <!-- province -->
-                            <select class="update__select__province" name="province" id="provinceslist">
-                               <!--  <option value="">Provincia</option> -->
-                            </select> 
+                        <select class="update__select__province" name="province" id="provinceslist"></select> 
+                        <span id="provinceslistErrors"></span>
+                        
                         <!-- city -->
-                        <select class="update__select__city" name="city" id="citieslist">
-                            
-                        </select>
+                        <select class="update__select__city" name="city" id="citieslist"></select>
+                        <span id="citieslistErrors"></span>
                         <!-- button edit -->
                         <button class="button__update__user" type="submit">Guardar</button>                    
                     </nav>
-                </form>
+                  </form>
 
-                <!-- formulario para eliminar cuenta -->
-                <form name="formularioEliminar" action="/cuenta/editar-usuario/<%= user.id %>?_method=DELETE" method="POST">
-                    <button id="FORM_DELETE" class="button__delete__user" type="submit">
-                        Eliminar cuenta
-                    </button>    
-                </form>
+                    <!-- formulario para eliminar cuenta -->
+                    <form name="formularioEliminar" action="/cuenta/editar-usuario/<%= user.id %>?_method=DELETE" method="POST">
+                        <button id="FORM_DELETE" class="button__delete__user" type="submit">
+                            Eliminar cuenta
+                        </button>    
+                    </form>
                 <script src="/js/confirm/userEditConfirm.js"></script>
 
-            </div>
+              </div>
             </div>
             
         <%- include('../partials/footer.ejs') %>
 
         <%- include('../partials/scripts.ejs') %>
+
+        <!-- api -->
         <script src="/js/apiProvincias.js"></script>
+        <!-- validation user edit -->
+        <script src="/js/validationProfile.js"></script>
+
     </body>
 
 </html>

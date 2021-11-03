@@ -55,6 +55,8 @@
 
 }
 .main__home #container-3 .h2_home{
+    color: var(--white);
+    text-align: center;
     position: relative;
     font-size: 37px;
     bottom: 300px; 

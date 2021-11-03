@@ -49,13 +49,32 @@
 }
 .footer-text{
 	width: 100%;
+	font-size: 15px;
 }
 .footer .footer-text p {
 	color: var(--white);
 	margin: 5px;
 	text-align: center;
 }
+.qr_img {
+	display: none;
+}
 
 
+@media (min-width:768px) {
+	.footer-text{
+		font-size: 20px;
+	}
+}
+
+@media (min-width:1024px) {
+	.qr_img {
+		display: block;
+		position: absolute;
+		bottom: 170px;
+		left: 70px;
+		width: 120px;
+	}
+}
 
 
