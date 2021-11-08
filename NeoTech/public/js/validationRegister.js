@@ -216,4 +216,5 @@ window.addEventListener("load", function () {
             $registerForm.submit()
         }
     })
+
 })

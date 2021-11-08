@@ -284,6 +284,31 @@ module.exports = {
                 .catch(err => console.log(err))
         }
     },
+    adminUsers:(req,res) => {
+        db.Users.findByPk(req.params.id)
+        .then(user =>  {
+            if(user.user_rol == 1){
+                // res.send("este es admin")
+                db.Users.update(
+                    {
+                        user_rol: 0
+                    },
+                    {
+                        where: {id: user.id}
+                    }).catch(er => console.log("ERROR ES : "+er))
+                    res.redirect('/administrador/usuarios')
+        }else{
+                // res.send("este no es admin")
+                    db.Users.update({
+                        user_rol : 1
+                    },
+                    {
+                        where: {id: user.id}
+                    }).catch(er => res.send("err="+er))
+                    res.redirect('/administrador/usuarios')
+        }
+    }).catch(err => console.log(err)) 
+    },
     deleteProduct: (req, res) => {
 
         db.Products.destroy({

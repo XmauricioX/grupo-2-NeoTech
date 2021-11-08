@@ -75,8 +75,22 @@
 
         <li class="menu__item container-submenu">
             <a href="#" class="menu__link submenu-btn">
-                <i class="far fa-user-circle"></i> Cuenta
+
+                <% if(session.user){ %>
+                    <img id="img__user" src="/images/imgs-users/<%=session.user.image %>" alt="foto_user">
+                    <%= session.user.first_name %>
+                <% }else{ %>
+                    <i class="far fa-user-circle"></i> 
+                    Cuenta 
+                <% }%>
             </a>
+            <style>
+                #img__user{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                }
+            </style>
             <ul class="submenu">
 
                 <% if (session.user != undefined && session.user.user_rol == 1) { %>

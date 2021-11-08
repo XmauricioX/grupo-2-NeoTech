@@ -10,7 +10,9 @@
             <!-- Editar usuario -->
             <div class="user__update">
                 <h1 class="user__update__title">Editar Usuario</h1>
-                <form id="formProfile" class="user__update__form" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="user__update__form">
+                  <form class="" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <!-- <form id="formProfile" class="user__update__form" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> -->
 
                     <nav class="user__update__container">
 
@@ -82,13 +84,20 @@
                         <span id="citieslistErrors"></span>
                         <!-- button edit -->
                         <button class="button__update__user" type="submit">Guardar</button>                    
-                          
                     </nav>
-                    
-                </form>
+                  </form>
+
+                    <!-- formulario para eliminar cuenta -->
+                    <form name="formularioEliminar" action="/cuenta/editar-usuario/<%= user.id %>?_method=DELETE" method="POST">
+                        <button id="FORM_DELETE" class="button__delete__user" type="submit">
+                            Eliminar cuenta
+                        </button>    
+                    </form>
+                <script src="/js/confirm/userEditConfirm.js"></script>
+
+              </div>
             </div>
-
-
+            
         <%- include('../partials/footer.ejs') %>
 
         <%- include('../partials/scripts.ejs') %>

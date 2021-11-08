@@ -31,12 +31,11 @@
                         <p class="userProfile_item">Provincia: <%= address !== null && address.province ? address.province : "---------" %></p>
                         <p class="userProfile_item">Localidad: <%= address !== null &&  address.city ? address.city : "---------" %></p>
                     </p>
-                        <!-- button log in -->
+                        <!-- button edit account -->
                         <a href="/cuenta/editar-usuario/<%= user.id %>" class="button__edit__user">Editar cuenta</a>
                     </nav>
                 </form>
             </div>
-
 
         <%- include('../partials/footer.ejs') %>
 
