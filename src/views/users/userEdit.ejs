@@ -10,25 +10,28 @@
             <!-- Editar usuario -->
             <div class="user__update">
                 <h1 class="user__update__title">Editar Usuario</h1>
-                <form id="formProfile" class="user__update__form" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                <div class="user__update__form">
+                  <form class="" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <!-- <form id="formProfile" class="user__update__form" action="/cuenta/editar-usuario/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> -->
 
                     <nav class="user__update__container">
 
                         <!-- image -->
-                        <div class="avatar">
+                        <div id="last-img" class="avatar">
                             <img src="/images/imgs-users/<%= user.image %>" alt="img-user">
                         </div>
 
-                        <div class="img-container" id="img-preview"></div>
+                        <div class="preview-img-container" id="img-preview"></div>
 
 
                         <!-- select image -->
                         <div class="input-file">
                             <button class="btn__update__image">
                                 <p class="userUpdate_subtitle">Cambiar foto de perfil</p>
-                                <input type="file" name="user-image" multiple>
+                                <input class="inputFile" type="file" name="user-image" multiple>
                             </button>
                         </div>
+                        <span class="inputFileErrors"></span>
 
                         <!-- name -->
                         <label for="first_name"></label>
@@ -82,13 +85,20 @@
                         <span id="citieslistErrors"></span>
                         <!-- button edit -->
                         <button class="button__update__user" type="submit">Guardar</button>                    
-                          
                     </nav>
-                    
-                </form>
+                  </form>
+
+                    <!-- formulario para eliminar cuenta -->
+                    <form name="formularioEliminar" action="/cuenta/editar-usuario/<%= user.id %>?_method=DELETE" method="POST">
+                        <button id="FORM_DELETE" class="button__delete__user" type="submit">
+                            Eliminar cuenta
+                        </button>    
+                    </form>
+                <script src="/js/confirm/userEditConfirm.js"></script>
+
+              </div>
             </div>
-
-
+            
         <%- include('../partials/footer.ejs') %>
 
         <%- include('../partials/scripts.ejs') %>

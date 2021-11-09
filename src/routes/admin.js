@@ -18,6 +18,7 @@ const {
     addBrand,
     deleteBrand,
     deleteCategory,
+    adminUsers,
     searchProducts,
     searchUsers
     } = require('../controllers/adminController');
@@ -69,6 +70,8 @@ router.get("/usuarios",userSession , users)
 // DELETE USER
 router.delete("/usuarios/:id", deleteUsers)
 
+// DAR O SACAR ADMNIN
+router.put('/usuarios/:id', adminUsers)
 
 router.delete("/eliminar-marca/:id", deleteBrand)
 router.delete("/eliminar-categoria/:id", deleteCategory)

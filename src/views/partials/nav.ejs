@@ -51,7 +51,6 @@
                 <!-- LOGITECH -->
                 <li class="menu__item"><a href="/producto/marca/HyperX" class="menu__link">HyperX</a></li>
                 <!-- HYPERX -->
-                <li class="menu__item"><a href="#" class="menu__link">EN REVISION</a></li>
             </ul>
         </li>
 
@@ -76,8 +75,23 @@
 
         <li class="menu__item container-submenu">
             <a href="#" class="menu__link submenu-btn">
-                <i class="far fa-user-circle"></i> Cuenta
+
+                <% if(session.user){ %>
+                    <img id="img__user" src="/images/imgs-users/<%= session.user.image %>" alt="foto_user">
+                    <%= session.user.first_name.slice(0,10) %>
+                <% }else{ %>
+                    <i class="far fa-user-circle"></i> 
+                    Cuenta 
+                <% }%>
             </a>
+
+            <style>
+                #img__user{
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 50%;
+                }
+            </style>
             <ul class="submenu">
 
                 <% if (session.user != undefined && session.user.user_rol == 1) { %>

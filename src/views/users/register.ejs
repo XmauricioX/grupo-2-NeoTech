@@ -1,3 +1,4 @@
+
 <!-- HEAD -->
 <%- include('../partials/head.ejs') %>
 
@@ -32,7 +33,7 @@
                             
                         <!-- email -->
                         <label for="email"></label>
-                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email" value="<%= locals.old && old.email %>">>
+                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email" value="<%= locals.old && old.email %>">
                             <span id="emailErrors"></span>
                             <% if (locals.errors && errors.email) { %>
                                 <small class="text-error"><%= errors.email.msg %></small>
