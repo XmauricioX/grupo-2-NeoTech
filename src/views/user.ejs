@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head") %>
+<%- include("./partials/nav") %>
+<body>
+    
+    <div style="height: 80vh; background-color: black; color: white; padding: 100px;">
+        <h2>
+            Esta logueado:
+        </h2>
+
+        <p style="color: white;text-align: center;">
+            <%= user.firstName + " " +user.lastName %>
+        </p>
+    </div>
+<!-- 
+    ESTA VISTA SOLO ESTA PARA PROBAR QUE ANDA
+    CAMBIEN LA VISTA A GUSTO Y CUALQUIER PARTE DEL CODIGO DE LOGIN QUE QUIERAN REFACTORIZAR 
+ -->
+    <%- include("./partials/footer") %>
+</body>
+</html>
