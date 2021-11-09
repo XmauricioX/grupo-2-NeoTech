@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 let {
     index,
-    contact
+    contact,
     } = require('../controllers/indexController');
 
 const notLoged = require("../middlewares/usersSession")

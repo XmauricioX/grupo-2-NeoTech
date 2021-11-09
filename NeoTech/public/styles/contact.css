@@ -28,6 +28,9 @@
     left: 10px;
     top: 20px;
 }
+#contact #arrow{
+    color: var(--green);
+}
 
 /* form */
 

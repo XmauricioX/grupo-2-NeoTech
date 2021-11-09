@@ -32,33 +32,34 @@ window.addEventListener("load", () => {
 
 
     // Image
-    // $inputFile.addEventListener('change', 
-    // function fileValidation(){        
-    //     let filePath = $inputFile.value, //Capturo el valor del input
-    //         allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
-    //     if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
-    //         $inputFileErrors.innerHTML = `${warning} Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)`;
-    //         $borderImg.style.borderColor = "#eb1010"
-    //         $inputFile.value = '';
-    //         $imgPreview.innerHTML = '';
-    //         return false;
-    //     }else{
-    //         // Image preview
-    //         console.log($inputFile.files);
-    //         if($inputFile.files && $inputFile.files[0]){
-    //             $lastImg.style.display = "none"
-    //             let reader = new FileReader();
-    //             reader.onload = function(e){
-    //                 $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
-    //             };
-    //             reader.readAsDataURL($inputFile.files[0]);
-    //             $inputFileErrors.innerHTML = '';
-    //             $inputFile.classList.remove('is-invalid')
-    //         }
-    //     }
-    // })
+    $inputFile.addEventListener('change', 
+    function fileValidation(){        
+        let filePath = $inputFile.value, //Capturo el valor del input
+            allowefExtensions = /(.jpg|.jpeg|.png|.gif|.web)$/i //Extensiones permitidas
+        if(!allowefExtensions.exec(filePath)){ //El método exec() ejecuta una busqueda sobre las coincidencias de una expresión regular en una cadena especifica. Devuelve el resultado como array, o null.
+            $inputFileErrors.innerHTML = `${warning} Carga un archivo de imagen válido, con las extensiones (.jpg - .jpeg - .png - .gif)`;
+            $borderImg.style.borderColor = "#eb1010"
+            $inputFile.value = '';
+            $imgPreview.innerHTML = '';
+            return false;
+        }else{
+            // Image preview
+            console.log($inputFile.files);
+            if($inputFile.files && $inputFile.files[0]){
+                $lastImg.style.display = "none"
+                let reader = new FileReader();
+                reader.onload = function(e){
+                    $imgPreview.innerHTML = '<img src="' + e.target.result +'"/>';
+                };
+                reader.readAsDataURL($inputFile.files[0]);
+                $inputFileErrors.innerHTML = '';
+                $inputFile.classList.remove('is-invalid')
+            }
+        }
+    })
 
 
+   
     //name
     $firstName.addEventListener("blur", function () {
         switch (true) {

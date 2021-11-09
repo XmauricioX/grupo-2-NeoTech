@@ -77,13 +77,14 @@
             <a href="#" class="menu__link submenu-btn">
 
                 <% if(session.user){ %>
-                    <img id="img__user" src="/images/imgs-users/<%=session.user.image %>" alt="foto_user">
-                    <%= session.user.first_name %>
+                    <img id="img__user" src="/images/imgs-users/<%= session.user.image %>" alt="foto_user">
+                    <%= session.user.first_name.slice(0,10) %>
                 <% }else{ %>
                     <i class="far fa-user-circle"></i> 
                     Cuenta 
                 <% }%>
             </a>
+
             <style>
                 #img__user{
                     width: 35px;

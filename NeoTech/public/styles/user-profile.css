@@ -54,6 +54,14 @@
     color: var(--green);   
 }
 
+/* image preview */
+.preview-img-container img {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    margin: 5px auto;
+}
+
 /* image */
 .user__edit .avatar {
     width: 9rem;
@@ -115,11 +123,16 @@
         font-weight: 600;
     }
 
+    /* image preview */
+    .preview-img-container img {
+        width: 13rem;
+        height: 13rem;
+    }
+
     .user__edit .avatar {
         width: 13rem;
         height: 13rem;
         border-radius: 50%;
-        /* background-color: blanchedalmond; */
         margin: 5px auto;
     }
 }
@@ -151,11 +164,16 @@
         max-width: 800px;
     }
 
+    /* image preview */
+    .preview-img-container img {
+        width: 16rem;
+        height: 16rem;
+    }
+
     .user__edit .avatar {
         width: 16rem;
         height: 16rem;
         border-radius: 50%;
-        /* background-color: blanchedalmond; */
         margin: 5px auto;
     }
     
