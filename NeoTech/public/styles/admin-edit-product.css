@@ -10,7 +10,10 @@
     position: absolute;
     top: 80px;
 } 
-
+::-webkit-scrollbar {
+    display: none;
+    /* esto esconde la scrollbar */
+}
 #container-admin{
     max-height: 100vh;
 }

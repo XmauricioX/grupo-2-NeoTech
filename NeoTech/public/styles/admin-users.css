@@ -9,27 +9,31 @@
 }
 .delete-user{
     position: absolute;
-    bottom: 340px;
     left: 230px;
     font-size: 40px;
     color: var(--color-Green-Old);
     cursor: pointer;
     background-color: transparent;
     border: none;
-    /* top: -50px; */
+    top: 0px;
 }
 #content{
+    z-index: 0;
     padding-top: 0px;
-    margin-top: 0px;
-    margin-bottom: 0;
+    margin-top: 0vh; /* espacio superior en las tarjetas */
+    margin-bottom: 0px;
     max-height: 100vh;
     display: flex;
     flex-direction: column;
 }
+::-webkit-scrollbar {
+    display: none;
+    /* esto esconde la scrollbar */
+}
 /* CONTENEDOR */
 #container{
     width: 100%;
-    margin-top: 30vh;
+    /* margin-top: 30vh; */
     height: 100vh;
     z-index: 0;
     display: grid;
@@ -78,7 +82,9 @@
     border-radius: 20px;
     box-shadow: 0px 0px 30px black;
     position: relative;
-    margin: 20px auto;
+    margin: 0px auto;
+    margin-top: -40%;
+    margin-bottom: 50%;
 }
 .img-container{
     width: 100%;
@@ -107,18 +113,40 @@ hr{
 .text-card{
     background-color: var(--color-Dark);
     border-radius: 0 0 20px 20px;
-    padding: 20px 10px;
+    padding: 0px 10px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    
+    flex-direction: column;
+    justify-content: stretch;
+    font-size: 15px;   
 }
 
 .description-card{
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: -10px;
     overflow: hidden;
+}
+#adminOff{
+    border: 1px solid var(--color-Green-Old);
+    background-color: var(--color-Dark);
+    color: white;
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+#adminOn{
+    border: 1px solid var(--color-Green-Old);
+    background-color: var(--color-Dark);
+    color: white;
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.btnAdmin{
+    /* width: 100%; */
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 .mas{
     display: block;
@@ -133,6 +161,7 @@ hr{
     display: none;
 } 
 #delete-product{
+    overflow: hidden;
     position: relative;
     top: -400px;
     right: -220px;

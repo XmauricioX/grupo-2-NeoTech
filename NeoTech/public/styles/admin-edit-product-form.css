@@ -9,11 +9,16 @@
     background-repeat:no-repeat;
     background-size:cover;
 }
+::-webkit-scrollbar {
+    display: none;
+    /* esto esconde la scrollbar */
+}
 #container-form{
     width: 90%;
     margin-top: 0;
 }
 #form-add{
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--color-Green);

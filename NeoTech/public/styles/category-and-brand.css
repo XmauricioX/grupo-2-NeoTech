@@ -5,8 +5,12 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+::-webkit-scrollbar {
+    display: none;
+    /* esto esconde la scrollbar */
+}
 #container-form{
-    /* width: 60%; */
+    padding-top: 90px;
     width: 90%;
     margin-top: 0;
     position: relative;
@@ -39,6 +43,7 @@
 }
 
 #form-add{
+    margin-top: 120px;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--color-Green);

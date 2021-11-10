@@ -7,12 +7,12 @@
 
     <div id="admin-info">
         <div id="picture-admin">
-            <img id="admin-pic" src="/images/home/bg-2.png" alt="admin-pic">
-            <a href="/administrador/editar-cuenta">
+            <img id="admin-pic" src="/images/imgs-users/<%= session.user.image %>" alt="admin-pic">
+            <a href="/cuenta/editar-usuario">
                 <i id="edit-admin" class="fas fa-pencil-alt"></i>
             </a>
         </div>
-        <p id="admin-name">Admin Nombre</p>
+        <p id="admin-name"> <%= session.user.first_name %> </p>
     </div>
 
     <div id="index">

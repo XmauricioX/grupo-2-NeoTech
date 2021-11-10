@@ -10,7 +10,10 @@
     background-position-x: 50%;
     background-position-y: 33%; */
 }
-
+::-webkit-scrollbar {
+    display: none;
+    /* esto esconde la scrollbar */
+}
 #admin-welcome{
     position: absolute;
     top: 105px;

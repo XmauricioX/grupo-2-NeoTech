@@ -36,11 +36,15 @@
                         <div id="admin-card">
                             <form action="/administrador/usuarios/<%= element.id %>?_method=PUT" method="post">
                                 <% if(element.user_rol == 1){ %>
-                                    <p> es admin </p>
-                                    <button>SACAR admin</button>
+                                    <div class="btnAdmin">
+                                        <p> es admin </p>
+                                        <button id="adminOff">SACAR admin</button>
+                                    </div>
                                 <% }else{ %>
-                                    <p> no es admin </p>
-                                    <button>DAR admin</button>
+                                    <div class="btnAdmin">
+                                        <p> no es admin </p>
+                                        <button id="adminOn">DAR admin</button>
+                                    </div>
                                     <% } %>
                             </form>              
                         </div>
