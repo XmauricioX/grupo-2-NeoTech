@@ -1,13 +1,8 @@
-
 .admin__add__category__brand{
     background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-::-webkit-scrollbar {
-    display: none;
-    /* esto esconde la scrollbar */
 }
 #container-form{
     padding-top: 90px;

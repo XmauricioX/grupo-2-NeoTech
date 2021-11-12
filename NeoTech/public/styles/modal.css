@@ -1,0 +1,37 @@
+@import url(/styles/styles.css);
+
+#modal{
+    background-color: var(--dark-grey);
+    position: fixed;
+    display: fixed;
+    z-index: 100;
+    top: 100px;
+    left: 550px;
+    height: auto;
+    width: 500px;
+    padding: 40px 20px;
+
+    border-radius: 30px;
+    border: 2px solid var(--color-Green);
+    color: white;
+}
+#opciones{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+}
+#borrar{
+    cursor: pointer; 
+    border: 2px solid #61ff01; 
+    padding: 10px; 
+    border-radius: 20px;
+}
+#noBorrar{
+    cursor: pointer; 
+    border: 2px solid red; 
+    padding: 10px; 
+    border-radius: 20px;
+}
+
+/* este css lo dejo por si despues se logra hacer andar al modal */
