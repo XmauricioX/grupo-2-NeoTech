@@ -1,5 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<%- include("../partials/head-admin") -%>
+<head>
+    <%- include("../partials/head-admin") -%>
+    <link rel="stylesheet" href="../../../styles/category-and-brand.css">
+</head>
 
 <body class="admin__add__category__brand">
 
@@ -10,9 +15,6 @@
         <%- include("../partials/aside-admin") -%>
 
         <main id="content">
-
-
-
 
             <div id="container-form">
 
@@ -35,14 +37,25 @@
                         <h3 class="title">Eliminar Categorias</h3>
 
                         <% categorias.forEach(element => { %>
-                        <%= element.category_name %>
-                        <form name="formularioEliminar" class="form__transparent" action="/administrador/categorias/<%= element.id %>?_method=DELETE" method="POST">
-                            <button id="delete-category" class="delete-btn" type="submit">
-                                <i class="fas fa-times"></i>
-                            </button>
-                        </form>
-                        <% }) %>
+                            <div class="option">
+                                <div>
+                                    <%= element.category_name %>
+                                </div>
+                                <div>
+
+                                    <form name="formularioEliminar"class="form__transparent"
+                    action="/administrador/marcas/<%= element.id %>?_method=DELETE"
+                                        method="POST">
+
+                                        <button id="delete-brand" class="delete-btn" type="submit">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                            <% }) %>
                     </div>
+
                 </form>
 
 
