@@ -21,19 +21,21 @@
                         <form id="form-add" action="/administrador/marcas" enctype="multipart/form-data" method="POST">
 
                             <input type="text" name="brandCategory" id="" value="<%= locals.old && old.brandCategory %>" placeholder="Agregar Marcas">
+
                             <% if (locals.errors && errors.brandCategory) { %>
                                 <small style="color: red;">
                                     <%= errors.brandCategory.msg %>   
                                 </small>
-                                <% } %>
+                            <% } %>
 
-                                    <input class="submit" type="submit" value="Agregar">
+                            <input class="submit" type="submit" value="Agregar">
 
                         </form>
                         
                         <form id="form-add-btm">
 
                             <div class="list">
+
                                 <h3 class="title">Eliminar Marcas</h3>
 
                                 <% marcas.forEach(element=> { %>
@@ -41,12 +43,9 @@
                                         <div>
                                             <%= element.brand_name %>
                                         </div>
+
                                         <div>
-
-                                            <form name="formularioEliminar"class="form__transparent"
-                            action="/administrador/marcas/<%= element.id %>?_method=DELETE"
-                                                method="POST">
-
+                                            <form name="formularioEliminar" class="form__transparent" action="/administrador/marcas/<%= element.id %>?_method=DELETE" method="POST">
                                                 <button id="delete-brand" class="delete-btn" type="submit">
                                                     <i class="fas fa-times"></i>
                                                 </button>
@@ -57,15 +56,16 @@
                             </div>
 
                         </form>
+
                     </div>
 
                 </main>
         </div>
         <script src="/js/confirm/adminDeleteBrandConfirm.js"></script>
 
-        <%- include("../partials/admin-links") -%>
+    <%- include("../partials/admin-links") -%>
 
-            <%- include('../partials/scripts.ejs') %>
+    <%- include('../partials/scripts.ejs') %>
 
 </body>
 
