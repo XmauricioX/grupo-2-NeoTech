@@ -1,45 +1,65 @@
-<%- include('../partials/head.ejs') %>
-<%- include("../partials/nav") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head.ejs') %>
+</head>
+
     <body class="product__body">
-        
+
+        <nav>
+            <%- include("../partials/nav") %>
+        </nav>
+<div class="arrow__container">
+                <a href="/producto/lista-de-productos">
+                    <i id="arrow" class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+
         <main class="product__main">
-            <a href="/producto/lista-de-productos">
-                <i id="arrow" class="fas fa-arrow-left"></i>
-            </a>
 
+            
             <section class="product__section">
-
-                <article>
-                    <img src="/images/imgs-product/<%- productID.images %>" alt="auricular">
-                </article>
-
-                <!-- <i class="fal fa-times"></i> -->
-
-                <div class="container-r">
-                        <div class="detail">
-                            <h2>
-                                <%= productID.product_name %> 
-                            </h2>
-                            <p>
-                                Precio: <br>
-                                $<%= productID.price %> <br> <br>
-                                Color: <br>
-                                <%= productID.color %> <br> <br>
-                                Categoria: <br>
-                                <%= productID.category.category_name %> <br> <br>
-                                Marca:
-                                <%= productID.brand.brand_name %> <br> <br>
-                                
-                                Descripción: <br>
-                                <%= productID.description %> 
-                            </p>
-                        </div>
-                        <div class="btn__detail">
-                            <a href="" class="a__detail">COMPRAR</a>
-                        </div>
-                    </div>
+                <img src="/images/imgs-product/<%- productID.images %>" alt="auricular">
+                <div class="btn__detail">
+                    <a href="" class="a__detail">COMPRAR</a>
+                </div>
             </section>
+
+            <article class="container-r">
+                <div class="product__detail__title">
+                    <h2>
+                        <%= productID.product_name %>
+                    </h2>
+                </div>
+                <div class="detail__container">
+                    <ul class="detail">
+                        <li> Precio : $ <%= productID.price %>
+                        </li>
+                        <li>Color : <%= productID.color %>
+                        </li>
+                        <li>Categoria : <%= productID.category.category_name %>
+                        </li>
+                        <li>Marca : <%= productID.brand.brand_name %>
+                        </li>
+                    </ul>
+
+                    <div class="description">
+                        <h4>
+                            Descripción:
+                        </h4>
+                        <p>
+                            <%= productID.description %>
+                        </p>
+
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- <i class="fal fa-times"></i> -->
+
         </main>
         <%- include("../partials/footer") %>
     </body>
+
     </html>
