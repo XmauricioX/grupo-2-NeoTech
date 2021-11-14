@@ -1,5 +1,7 @@
 .product__body {
     background-color: var(--black);
+    background-image: url(/images/imgs-bg/bg-product-detail.svg);
+    background-size: cover;
 }
 
 .product__main {
@@ -7,8 +9,6 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
-    background-image: url(/images/imgs-bg/bg-product-detail.svg);
-    background-size: cover;
 }
 
 .arrow__container {

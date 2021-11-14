@@ -36,7 +36,7 @@ module.exports = (sequelize, dataTypes) => {
     }
     let config = {
         tableName: "products",
-        timestamps: true
+        timestamps: true,
     }
 
     const Product = sequelize.define(alias, cols, config)
@@ -51,6 +51,20 @@ module.exports = (sequelize, dataTypes) => {
             as: "brand",
             foreignKey: "brand_id",
             onDelete: 'cascade'
+        })
+        Product.belongsToMany(models.Users, {
+            as: "cart",
+            through: 'carts',
+            foreignKey: "product_id",
+            otherKey: 'user_id',
+            timestamps: false
+        })
+        Product.belongsToMany(models.Purchases, {
+            as: "purchases",
+            through: 'purchase_id',
+            foreignKey: "product_id",
+            otherKey: 'purchase_id',
+            timestamps: false
         })
     }
 

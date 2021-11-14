@@ -35,7 +35,7 @@ CREATE TABLE `addresses` (
   `createdAt` timestamp NULL DEFAULT NULL,
   `updatedAt` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `addresses` (
 
 LOCK TABLES `addresses` WRITE;
 /*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
-INSERT INTO `addresses` VALUES (1,'manuel castro 5020','1824','Argentina','','',11,NULL,NULL),(2,'Osorio 3041','1825','Argentina','','',11,NULL,NULL),(3,'','','','','',11,NULL,NULL),(4,'Osorio 3050','1825','Argentina','','',11,NULL,NULL),(5,'Manuel Castro 4027','1825','Argentina','','',11,NULL,NULL),(6,'manuel castro 5020','1824','Argentina','','',11,NULL,NULL),(7,'av siempre viva 742','11245','EE.UU','','',14,'2021-09-25 20:29:23','2021-09-25 20:29:23'),(8,'av siempre viva 742','11245','EE.UU','','',14,'2021-09-25 20:30:03','2021-09-25 20:30:03'),(9,'','','','','',13,'2021-09-30 18:54:26','2021-09-30 18:54:26'),(10,'','','','','',15,'2021-09-30 19:11:56','2021-09-30 19:11:56');
+INSERT INTO `addresses` VALUES (23,'ninguno','1111','Argentina','','',24,'2021-10-02 00:53:51','2021-10-02 00:53:51'),(24,'ninguno','1110','Argentina','','',24,'2021-10-02 00:54:23','2021-10-02 00:54:23'),(25,'ningunoo','1111','Argentina','','',24,'2021-10-02 00:54:38','2021-10-02 00:54:38'),(26,'casa 123','1234','Argentina','Córdoba','ALTA GRACIA',17,'2021-10-15 12:28:39','2021-10-25 14:34:25'),(27,'casa 123','1234','Argentina','Córdoba','ALTA GRACIA',17,'2021-10-15 12:28:58','2021-10-25 14:34:25'),(28,'casa 123','1234','Argentina','Córdoba','ALTA GRACIA',17,'2021-10-15 12:30:41','2021-10-25 14:34:25'),(29,'0','0','0','','',18,'2021-10-15 14:11:43','2021-10-15 20:34:32'),(30,'0','0','0','','',18,'2021-10-15 14:11:52','2021-10-15 20:34:32'),(31,'0','0','0','','',18,'2021-10-15 14:12:13','2021-10-15 20:34:32'),(32,'0','0','0','','',18,'2021-10-15 14:12:29','2021-10-15 20:34:32'),(33,'00000000000','000000000','0000000000000','','',25,'2021-10-15 20:35:17','2021-10-15 20:44:24'),(34,'','222222222222222222222222','Argentina','Neuquén','CUTRAL CO',29,'2021-11-08 15:42:27','2021-11-09 00:29:32'),(35,'calle 123','1234','Argentina','Tierra del Fuego, Antártida e Islas del ','RIO GRANDE',30,'2021-11-09 12:50:34','2021-11-09 12:50:34');
 /*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -59,7 +59,7 @@ CREATE TABLE `brands` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `brand_name` varchar(40) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -68,21 +68,22 @@ CREATE TABLE `brands` (
 
 LOCK TABLES `brands` WRITE;
 /*!40000 ALTER TABLE `brands` DISABLE KEYS */;
-INSERT INTO `brands` VALUES (1,'Sony'),(2,'HyperX'),(3,'Gigabyte'),(4,'Logitech'),(5,'Nintendo');
+INSERT INTO `brands` VALUES (10,'HyperX'),(11,'LG'),(12,'Gigabyte'),(13,'Genius'),(14,'Reddragon'),(15,'Sony'),(16,'Nintendo'),(17,'Logitech'),(18,'Samsung');
 /*!40000 ALTER TABLE `brands` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Table structure for table `cart`
+-- Table structure for table `carts`
 --
 
-DROP TABLE IF EXISTS `cart`;
+DROP TABLE IF EXISTS `carts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cart` (
+CREATE TABLE `carts` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) unsigned NOT NULL,
-  `amount` decimal(10,0) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id`),
   KEY `fkIdx_50` (`user_id`),
   CONSTRAINT `FK_48` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
@@ -90,38 +91,12 @@ CREATE TABLE `cart` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `cart`
+-- Dumping data for table `carts`
 --
 
-LOCK TABLES `cart` WRITE;
-/*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cart` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `cart_products`
---
-
-DROP TABLE IF EXISTS `cart_products`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `cart_products` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cart_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `order_item_price` decimal(10,0) NOT NULL,
-  `order_item_quantity` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cart_products`
---
-
-LOCK TABLES `cart_products` WRITE;
-/*!40000 ALTER TABLE `cart_products` DISABLE KEYS */;
-/*!40000 ALTER TABLE `cart_products` ENABLE KEYS */;
+LOCK TABLES `carts` WRITE;
+/*!40000 ALTER TABLE `carts` DISABLE KEYS */;
+/*!40000 ALTER TABLE `carts` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -135,7 +110,7 @@ CREATE TABLE `categories` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `category_name` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,7 +119,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,'Audio'),(2,'Teclado'),(3,'Mouse'),(4,'Monitores'),(5,'Gaming');
+INSERT INTO `categories` VALUES (15,'Teclados'),(16,'Mouse'),(17,'Gpus'),(18,'Motherboards'),(19,'Monitores'),(20,'Otros'),(21,'Audio'),(22,'Gaming');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -171,7 +146,7 @@ CREATE TABLE `products` (
   KEY `fkIdx_90` (`categoryId`),
   CONSTRAINT `FK_88` FOREIGN KEY (`categoryId`) REFERENCES `categories` (`id`),
   CONSTRAINT `FK_98` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -180,8 +155,57 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'AU-MDRZ150','Auriculares sony con alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.','Negro y Rojo','default-image.png',9500,1,2,'2020-10-11 07:47:30','2021-09-30 19:57:57'),(2,'TC-RGB-100','HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore','RGB','default-image.png',8000,2,2,'2020-11-22 09:27:28','2021-05-14 22:19:10'),(3,'TCM-G413',' El teclado mecánico para gaming G413 ofrece rendimiento sin igual con tecnologías y funciones avanzadas. Con interruptores Romer-G™ Tactile, usados por los Profesionales de eSports en todo el mundo, el G413 Proporciona velocidad, respuesta y resistencia únicas en su género.','RGB','default-image.png',8700,3,3,'2020-10-02 15:28:38','2021-05-07 02:24:52'),(4,'Playstation 1','asdadasdasddfgdhdhfghh','black','default-image.png',165151,1,1,'2021-09-29 03:11:12','2021-09-29 03:11:12'),(5,'Playstation 1','asdadasdasddfgdhdhfghh','black','default-image.png',165151,1,1,'2021-09-29 03:11:18','2021-09-29 03:11:18'),(7,'Playstation 1','weffjlkgkjkgghkgkkkkggggggggggggggg','rynsryn','default-image.png',574252,1,1,'2021-09-29 14:21:22','2021-09-29 14:21:22'),(8,'Playstation 1','weffjlkgkjkgghkgkkkkggggggggggggggg','black','default-image.png',1651,1,1,'2021-09-29 14:22:41','2021-09-29 14:22:41'),(9,'AU-MDZ-150','weffjlkgkjkgghkgkkkkggggggggggggggg','rojo','default-image.png',125151,1,1,'2021-09-29 14:26:42','2021-09-29 19:46:07'),(11,'Mouse','mouseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee','RGB','1632941544805_img_.png',9000,3,3,'2021-09-29 15:06:41','2021-09-29 20:14:58');
+INSERT INTO `products` VALUES (20,'Monitor-24\"','El monitor es compatible con todos los sistemas operativos incluido Windows 10. Es importante tener en cuenta que el sistema operativo no esta relacionado al monitor, ya que el Windows es instalado en la CPU','Blanco','1633137305465_img_.png',10000,19,11,'2021-10-02 01:15:05','2021-10-02 01:15:05'),(21,'AU-MDRZ150','Auriculares sony con alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.','Negro','1633137380236_img_.png',8500,21,15,'2021-10-02 01:16:20','2021-11-03 21:13:37'),(23,'Pad','Pad comodo y sencillo con hermosas figuras gatunas','Blanco','1633137582631_img_.png',3000,20,12,'2021-10-02 01:19:42','2021-11-03 20:44:43'),(24,'AX370M-GAM','CPU Zócalo AMD AM4 para AMD Ryzen ™ serie 5000/4000 serie G / 3ra / 2da / 1ra generación AMD Ryzen ™ / 2da y 1ra generación AMD Ryzen ™ con gráficos Radeon ™ Vega / Athlon ™ con procesadores gráficos Radeon ™ Vega Procesadores','Naranja','1633137677778_img_.png',8750,18,12,'2021-10-02 01:21:17','2021-10-02 01:21:17'),(25,'TC-RGB-100','El teclado mecánico para gaming G413 ofrece rendimiento sin igual con tecnologías y funciones avanzadas. Con interruptores Romer-G™ Tactile, usados por los Profesionales de eSports en todo el mundo, el G413 Proporciona velocidad, respuesta y resistencia únicas en su género.','Multicolor','1633137787800_img_.png',7510,15,14,'2021-10-02 01:23:07','2021-10-02 01:23:07'),(26,'S.E.O HpX','HyperX sin lugar a dudas es una de las marcas más reconocidas en el mundo por la fabricación de dispositivos de audio. Su gama de auriculares se caracteriza por brindar siempre una gran experencia de uso en sus usuarios y ofrecer una alta calidad en todos los componentes de sus reproductore','Multi RGb','1633137895865_img_.png',3500,16,17,'2021-10-02 01:24:42','2021-11-03 21:45:18'),(27,'Gpu-RX580','Adaptada a tus necesidades. Guardá tus apps, fotos, videos y mucho más en el disco duro, que cuenta con una capacidad de 1 TB.Al contar con un procesador de 8 núcleos y uno gráfico, brinda una experiencia dinámica, respuestas ágiles, y transiciones fluidas de imágenes en alta definición.Por otro lado, tiene puerto USB y salida HDMI','Negro','1633138003438_img_.png',10000,17,15,'2021-10-02 01:26:43','2021-10-02 01:26:43'),(28,'AUR-520','Auriculares Reddragon con alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos.','Negro','1633138683633_img_.png',7900,20,14,'2021-10-02 01:37:12','2021-11-03 20:47:17'),(29,'Monitor-30\"','El monitor es compatible con todos los sistemas operativos incluido Windows 10. Es importante tener en cuenta que el sistema operativo no esta relacionado al monitor, ya que el Windows es instalado en la CPU','Rojo y negro','1633138823172_img_.png',9500,19,11,'2021-10-02 01:40:23','2021-10-02 01:40:23'),(32,'Mother-LH27','un mother con muchos colores y entradas de usb','Violeta','1633826854683_img_.png',6820,18,17,'2021-10-10 00:47:34','2021-10-10 00:47:34'),(33,'Mon-Log20\"','El monitor es compatible con todos los sistemas operativos incluido Windows 10. Es importante tener en cuenta que el sistema operativo no esta relacionado al monitor, ya que el Windows es instalado en la CPU','Negro','1634906927235_img_.png',95,19,10,'2021-10-10 00:49:21','2021-11-03 20:45:07'),(34,'Au-LogRX','Auriculares Logitech con alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos','Verde','1633827094900_img_.png',3200,21,12,'2021-10-10 00:51:34','2021-11-03 21:14:19'),(48,'Joystick PS4','Con tu Joystick PlayStation 4 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos','Rojo','1635973000919_img_.png',9899,22,15,'2021-11-03 20:53:35','2021-11-03 20:59:19'),(50,'Playstation 4','Con tu Joystick PlayStation 4 tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos','Negro','1635973222156_img_.png',10500,22,15,'2021-11-03 21:00:22','2021-11-03 21:00:22'),(51,'Playstation 1','Con tu consola PlayStation Classic tendrás entretenimiento asegurado todos los días. Su tecnología fue creada para poner nuevos retos tanto a jugadores principiantes como expertos.','Gris','1635973275086_img_.png',5700,22,15,'2021-11-03 21:01:15','2021-11-03 21:01:15'),(52,'Ninte-Switch','Switch se convirtió en una de las consolas más versátiles del mercado gracias a su uso portátil y de sobremesa. Nintendo desarrolló este modelo con el objetivo de tener todas las comodidades de la tecnología de elite en un aparato portátil con el que podrás jugar y disfrutar de diverso contenido online.','RGB','1635973513326_img_.png',11600,22,16,'2021-11-03 21:04:44','2021-11-03 21:05:13'),(53,'Nintendo 3DS','Nintendo 3DS se convirtió en una de las consolas más versátiles del mercado gracias a su uso portátil y de sobremesa. Nintendo desarrolló este modelo con el objetivo de tener todas las comodidades de la tecnología de elite en un aparato portátil con el que podrás jugar y disfrutar de diverso contenido online.','Negro','1635973762898_img_.png',7600,22,16,'2021-11-03 21:09:22','2021-11-03 21:09:22'),(54,'Nintendo Gamecube','Nintendo Gamecube se convirtió en una de las consolas más versátiles del mercado gracias a su uso portátil y de sobremesa. Nintendo desarrolló este modelo con el objetivo de tener todas las comodidades de la tecnología de elite en un aparato portátil con el que podrás jugar y disfrutar de diverso contenido online.','Violeta','1635973828980_img_.png',13500,22,16,'2021-11-03 21:10:29','2021-11-03 21:12:33'),(55,'Nintendo Wii','Nintendo WII se convirtió en una de las consolas más versátiles del mercado gracias a su uso portátil y de sobremesa. Nintendo desarrolló este modelo con el objetivo de tener todas las comodidades de la tecnología de elite en un aparato portátil con el que podrás jugar y disfrutar de diverso contenido online.','blanco','1635973884386_img_.png',25000,22,16,'2021-11-03 21:11:24','2021-11-03 21:11:24'),(56,'Au-LogRX','Auriculares Logitech con alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos','Azul y Negro','1635974177000_img_.png',9600,21,17,'2021-11-03 21:16:17','2021-11-03 21:16:17'),(57,'Micrófono ZW-850','El Micrófono condensador QuadCast de HyperX ZW-850 es unos de los mejores micrófonos gamer en el área y perfectamente compatible con PC, Mac y PS4. Tiene una calidad inmensa tanto de especificaciones como de construcción.','Gris','1635974464480_img_.png',27500,21,10,'2021-11-03 21:21:04','2021-11-03 21:21:04'),(58,'AU-Beats 220','Auriculares Reddragon con alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos','Rojo','1635974585248_img_.png',13050,21,14,'2021-11-03 21:23:05','2021-11-03 21:23:05'),(59,'Monitor HyperX24\"','El monitor es compatible con todos los sistemas operativos incluido Windows 10. Es importante tener en cuenta que el sistema operativo no esta relacionado al monitor, ya que el Windows es instalado en la CPU','RGB','1635974841760_img_.png',15070,19,10,'2021-11-03 21:27:21','2021-11-03 21:28:12'),(60,'Tec-540rx','El teclado mecánico para gaming Tec-540rx ofrece rendimiento sin igual con tecnologías y funciones avanzadas. Con interruptores Romer-G™ Tactile, usados por los Profesionales de eSports en todo el mundo, el G413 Proporciona velocidad, respuesta y resistencia únicas en su género.','RGB','1635975223914_img_.png',13200,15,14,'2021-11-03 21:33:13','2021-11-03 21:33:43'),(61,'Teclado Genius DG-850','El teclado mecánico para gaming DG-850 ofrece rendimiento sin igual con tecnologías y funciones avanzadas. Con interruptores Romer-G™ Tactile, usados por los Profesionales de eSports en todo el mundo, el G413 Proporciona velocidad, respuesta y resistencia únicas en su género.','RGB','1635975390930_img_.png',10500,15,13,'2021-11-03 21:36:30','2021-11-03 21:36:30'),(62,'Teclado DZ-150','El teclado mecánico para gaming DZ-150 ofrece rendimiento sin igual con tecnologías y funciones avanzadas. Con interruptores Romer-G™ Tactile, usados por los Profesionales de eSports en todo el mundo, el G413 Proporciona velocidad, respuesta y resistencia únicas en su género.','Negro','1635975620866_img_.png',45000,15,17,'2021-11-03 21:40:20','2021-11-03 21:40:20'),(63,'Mouse RGB-Cougar','MOUSE INALÁMBRICO G305 K/DA LIGHTSPEED PARA JUEGOS Logitech G305 K/DA LIGHTSPEED Ratón inalámbrico para Gaming • Juega a tope: el ratón para gaming G305 K/DA está diseñado con el arte oficial del universo alternativo de League of Legends K/DA para una experiencia de juego completa y envolvente. • La marca de accesorios inalámbricos para gaming más vendida del mundo - Basado en datos de ventas agregados independientes (febr. 2019 - febr. 2020) de teclados, ratones y auriculares para PC gaming inalámbricos en unidades en: US, CA, CN, JP, KR, TW, TH, IN, DE, FR, RU, UK, SE, TR.','Verde','1635975825434_img_.png',9800,16,12,'2021-11-03 21:43:45','2021-11-03 21:43:45'),(64,'Mouse RedGXT','MOUSE INALÁMBRICO RedGXT /DA LIGHTSPEED PARA JUEGOS Logitech G305 K/DA LIGHTSPEED Ratón inalámbrico para Gaming • Juega a tope: el ratón para gaming G305 K/DA está diseñado con el arte oficial del universo alternativo de League of Legends K/DA para una experiencia de juego completa y envolvente. • La marca de accesorios inalámbricos para gaming más vendida del mundo - Basado en datos de ventas agregados independientes (febr. 2019 - febr. 2020) de teclados, ratones y auriculares para PC gaming inalámbricos en unidades en: US, CA, CN, JP, KR, TW, TH, IN, DE, FR, RU, UK, SE, TR.','RGB','1635975984878_img_.png',8000,16,10,'2021-11-03 21:46:24','2021-11-03 21:46:24'),(65,'Auriculares','Auriculares Reddragon con alcance inalámbrico de 10 m. La batería dura 35 h. Modo manos libres incluido. Con micrófono incorporado. Sonido superior y sin límites. Cómodos y prácticos','Negro','1636766572010_img_.png',2000,21,14,'2021-11-09 12:29:46','2021-11-13 01:22:52');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `purchase_products`
+--
+
+DROP TABLE IF EXISTS `purchase_products`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `purchase_products` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `purchase_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `purchase_products_FK` (`purchase_id`),
+  CONSTRAINT `purchase_products_FK` FOREIGN KEY (`purchase_id`) REFERENCES `purchases` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `purchase_products`
+--
+
+LOCK TABLES `purchase_products` WRITE;
+/*!40000 ALTER TABLE `purchase_products` DISABLE KEYS */;
+/*!40000 ALTER TABLE `purchase_products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `purchases`
+--
+
+DROP TABLE IF EXISTS `purchases`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `purchases` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `purchases`
+--
+
+LOCK TABLES `purchases` WRITE;
+/*!40000 ALTER TABLE `purchases` DISABLE KEYS */;
+/*!40000 ALTER TABLE `purchases` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -204,7 +228,7 @@ CREATE TABLE `users` (
   `phone` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_un` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,7 +237,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (4,'Gale','Meneghelli','gmeneghelli3@weibo.com','G4gsl9UEi','default.png','2021-03-23 07:40:01','2021-07-15 19:33:22',0,'+86 189 929 3571'),(5,'Leesa','Halfhyde','lhalfhyde4@over-blog.com','SMnerTo','default.png','2021-06-21 01:31:43','2020-11-21 16:31:19',0,'+86 481 126 2813'),(6,'Danya','Duckels','dduckels5@forbes.com','Y0gZxB','default.png','2021-03-27 12:54:59','2021-03-23 10:51:30',0,'+86 427 216 8059'),(7,'Jaime','Posselow','jposselow6@barnesandnoble.com','yW03z34Bzd','default.png','2020-10-10 16:38:09','2021-04-10 05:30:31',0,'+234 116 825 7865'),(8,'Roda','Hawsby','rhawsby7@live.com','XVMOnAnNG','default.png','2021-03-14 02:59:18','2020-10-26 13:33:42',0,'+95 420 718 3181'),(9,'Paulie','Roads','proads8@mysql.com','Dl1IWOl','default.png','2020-11-25 19:53:24','2021-09-04 16:49:14',0,'+30 352 248 5208'),(10,'Francesco','Kuhl','fkuhl9@tuttocitta.it','eEVeVtEw8bOt','default.png','2021-09-13 07:43:39','2021-01-14 05:49:56',0,'+93 522 905 4341'),(12,'fran','fernandez','homer_JS@gmail.com','$2a$10$0Ov9gZNd8cbNF3vkqIF5x.PiWmE2YCVBa60y7spxMANQLGo1chcLG','default.png','2021-09-24 03:27:30','2021-09-24 03:27:30',0,''),(15,'Franco','Fernandez','admin@admin.com','$2a$10$sQIO7DUiCAo1m6M9dkGzK.w.uO6YgVfjaimvcNj9UqENPmgqKmZ9q','1633029116038_img_.jpg','2021-09-30 18:58:12','2021-09-30 19:11:56',1,'');
+INSERT INTO `users` VALUES (17,'admin','admin','admin@admin.com','$2a$10$8L0HiA.TFCBznAWA73w02.53QDG/g/Qu93M.rmVSKEfMb246X8Tfa','default.png','2021-10-02 00:43:15','2021-11-08 14:58:35',1,'123456789'),(18,'francodel4to','Fernandez','francofernandez@gmail.com','$2a$10$7rA0x6konIL/Lg4EDdkRr.WU3utg0irv/mgJfktm0J.H0uJqnpbG6','default.png','2021-10-02 00:44:47','2021-10-15 20:34:32',0,'0'),(19,'Ariel','Handrade','arielhandrade@gmail.com','$2a$10$N9bBdYmgkvCP7s6cvznvXuiGRTXxbtzven/Qg7y4MBp3NoNmQjnPC','default.png','2021-10-02 00:46:15','2021-10-02 00:46:15',0,''),(20,'Mauricio','Maneyro','mauriciomaneyro@gmail.com','$2a$10$0cf2t03g.K9.Wh/gEV21f.aV6zO7Vt.8x03fhkRLabBFjODG5gXL6','default.png','2021-10-02 00:47:24','2021-10-02 00:47:24',0,''),(21,'Jonathan','Cespedes','jonathancespedes@gmail.com','$2a$10$zbijMrJT44PsRMfS6ReKm.wIFdZhD13oMe1Awl4UqgbmxZQFc2MES','default.png','2021-10-02 00:48:03','2021-10-02 00:48:03',0,''),(22,'Matias','Lopez','matiaslopez@gmail.com','$2a$10$7Xahul276OOUZCIWOslsfOUZY.U9A.uMk1/uA7okFevN4eLi6LT5C','default.png','2021-10-02 00:49:56','2021-10-02 00:49:56',0,''),(23,'comision7','formar','comision7@gmail.com','$2a$10$Puz/n/xqPauevFPVNDLepO/Sn6YfR3crAIRLLjJ89g.PFRl9gJl/i','default.png','2021-10-02 00:51:04','2021-10-02 00:51:04',0,''),(24,'password','123456','password123456@admin.com','$2a$10$jZjHMe3GsnOGSI98fqNcguaQQ6RtWQgAfqA3/xiZCE4blRNChIEs6','1633136031433_img_.gif','2021-10-02 00:51:57','2021-10-02 00:54:38',1,'12345678910'),(25,'Franco','Fernandez','francodel4to@gmail.com','$2a$10$QgW9g2oKRmEetMkpvwOaIe8jInyLtwib6tHpAUq8JvqJXEDHiyHXq','1634330664517_img_.jpg','2021-10-15 20:34:54','2021-10-15 20:44:24',0,'000000'),(26,'fran','eeaaa','aaaa@gmail.com','$2a$10$RbP7acfMHmpYRCWzdUfc3uaiDiQ1JHRFiJxU3NA6El4KTnCTY2P1i','default.png','2021-10-18 16:24:08','2021-10-18 16:24:08',0,''),(27,'grgerg','fernandez','aaaaa@gmail.com','$2a$10$YmMMWoXwpxugedKZmN9Suu6fqdxvsCr137/sg96kKNjtOjdgkrOva','default.png','2021-10-18 16:27:20','2021-10-18 16:27:20',0,''),(28,'ak','ad','azulhdhdh@gmail.com','$2a$10$FFFuSyTsEyIV8RIcOBlzPudIQyYj9clRjZntMNjceZvo8jGQ0Sw2y','default.png','2021-10-23 00:38:41','2021-10-23 00:38:41',0,''),(29,'Franco','Fernandez','superadmin@gmail.com','$2a$10$QlfV1gU9BdEZTF6uJPXwAu7.Hz8p7IY.BplZrdAZtw3Ao28tOXPU6','1636417772258_img_.jpg','2021-11-03 20:40:55','2021-11-09 00:29:32',1,''),(30,'ailu','cicardi','ailu@mail.com','$2a$10$13DwHB6xq54uHD6pmG2hM.SSoHpo8t3tmhgH3BAKAjUAKjeEGftTm','1636462234907_img_.png','2021-11-09 12:46:42','2021-11-09 12:50:34',0,'1512341234');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -230,4 +254,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-30 17:06:29
+-- Dump completed on 2021-11-14  1:16:21
