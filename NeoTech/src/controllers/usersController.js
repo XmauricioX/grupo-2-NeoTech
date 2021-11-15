@@ -204,6 +204,22 @@ module.exports = {
             })   
         }
     },
+    deleteUser: (req, res) => {
+            db.Users.destroy({
+                    where: {
+                        id: +req.params.id
+                    }
+                })
+                .then(user => {
+                    req.session.destroy();
+                    if(req.cookies.cookieUser){
+                        res.cookie('cookieUser','',{maxAge:-1})
+                    }
+                    
+                    res.redirect('/')
+                })
+                // primero borra el usuario, despues cierra la sesion y por ultimo redirecciona al home
+},
     buyProduct: (req, res) => {
         res.render('users/buy', {
             title: 'NeoTech - Compra',

@@ -2,7 +2,7 @@
 
 /* CONTENEDOR */
 #product-list {
-    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-image: url(/images/imgs-bg/bg-products.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed; 
@@ -59,6 +59,7 @@
     position: relative;
     padding-bottom: 20px;
 }
+
 .container__product .card .img-container{
     width: 100%;
     padding: 0;
@@ -103,13 +104,13 @@
 }
 
 .name__card {
-    font-size: 28px;
+    font-size: 23px;
     font-weight: 600;
     margin-top: -5px;
 }
 
 .number__card {
-    font-size: 28px;
+    font-size: 23px;
     font-weight: 600;
     margin-top: -5px;
 

@@ -3,55 +3,65 @@
 
 <head>
     <%- include("../partials/head-admin") -%>
-    <link rel="stylesheet" href="../../../styles/category-and-brand.css">
+        <link rel="stylesheet" href="../../../styles/category-and-brand.css">
 </head>
 
 <body class="admin__add__category__brand">
 
     <%- include("../admin/admi-nav") -%>
 
-    <div id="container-admin">
+        <div id="container-admin">
 
-        <%- include("../partials/aside-admin") -%>
+            <%- include("../partials/aside-admin") -%>
 
-        <main id="content">
+                <main id="content">
 
-            <div id="container-form">
+                    <div id="container-form">
 
-                <form id="form-add" action="/administrador/marcas" enctype="multipart/form-data" method="POST">
+                        <form id="form-add" action="/administrador/marcas" enctype="multipart/form-data" method="POST">
 
-                    <input type="text" name="brandCategory" id="" value="<%= locals.old && old.brandCategory %>" placeholder="Agregar Marcas">
-                        <% if (locals.errors && errors.brandCategory) { %>
-                            <small style="color: red;">
-                                <%= errors.brandCategory.msg %>
-                            </small>
-                        <% } %>
+                            <input type="text" name="brandCategory" id="" value="<%= locals.old && old.brandCategory %>" placeholder="Agregar Marcas">
 
-                    <input class="submit" type="submit" value="Agregar">
+                            <% if (locals.errors && errors.brandCategory) { %>
+                                <small style="color: red;">
+                                    <%= errors.brandCategory.msg %>   
+                                </small>
+                            <% } %>
 
-                </form>
-                <form id="form-add-btm">
+                            <input class="submit" type="submit" value="Agregar">
 
-                    <div class="list">
-                        <h3 class="title">Eliminar Marcas</h3>
-
-                        <% marcas.forEach(element => { %>
-                        <%= element.brand_name %>
-                        <form class="form__transparent" action="/administrador/marcas/<%= element.id %>?_method=DELETE"
-                            method="POST">
-                            <button class="delete-btn" type="submit">
-                                <i class="fas fa-times"></i>
-                            </button>
                         </form>
-                        <% }) %>
+                        
+                        <form id="form-add-btm">
+
+                            <div class="list">
+
+                                <h3 class="title">Eliminar Marcas</h3>
+
+                                <% marcas.forEach(element=> { %>
+                                    <div class="option">
+                                        <div>
+                                            <%= element.brand_name %>
+                                        </div>
+
+                                        <div>
+                                            <form name="formularioEliminar" class="form__transparent" action="/administrador/marcas/<%= element.id %>?_method=DELETE" method="POST">
+                                                <button id="delete-brand" class="delete-btn" type="submit">
+                                                    <i class="fas fa-times"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <% }) %>
+                            </div>
+
+                        </form>
+
                     </div>
 
-                </form>
-            </div>
-
-        </main>
-
-    </div>
+                </main>
+        </div>
+        <script src="/js/confirm/adminDeleteBrandConfirm.js"></script>
 
     <%- include("../partials/admin-links") -%>
 

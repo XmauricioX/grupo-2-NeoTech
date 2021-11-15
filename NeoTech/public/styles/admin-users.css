@@ -78,7 +78,7 @@
     border-radius: 20px;
     box-shadow: 0px 0px 30px black;
     position: relative;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 .img-container{
     width: 100%;
@@ -160,7 +160,7 @@ hr{
 } 
 @media (min-width: 1086px){
     #container{
-        margin-top: 60vh;
+        margin-top: 10vh;
     }
     #admin-welcome{
         top: 120px;
@@ -174,7 +174,7 @@ hr{
         width: 50%;
     }
     #container{
-        margin-top: 470px;
+        margin-top: 200px;
         grid-template-columns: repeat(3,1fr);
     }
     

@@ -41,7 +41,7 @@ span{
 
 @media (min-width: 768px){
     span{
-        font-size: 16px;
+        font-size: 15px;
     }
     
     .inputFileErrors {

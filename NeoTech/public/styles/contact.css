@@ -4,10 +4,10 @@
 /* Background body */
 
 .body__contact {
-    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-image: url(/images/imgs-bg/bg-main.jpg);
     background-repeat: no-repeat;
     background-position-x: 50%;
-    background-position-y: 10%;
+    background-size: cover;
     font-family:var(--font-Quicksand);
     text-align: center;
 }
@@ -27,6 +27,9 @@
     position: absolute;
     left: 10px;
     top: 20px;
+}
+#contact #arrow{
+    color: var(--green);
 }
 
 /* form */

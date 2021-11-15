@@ -14,15 +14,23 @@
                     <!-- fatlta poner el action! -->
                     <nav class="register__container">
                         <!-- CARD NUMBER -->
-                        <input class="email" type="number" id="" name="numero_tarjeta" placeholder="Número de targeta">
+                        <input class="email" type="number" id="number" name="number" placeholder="Número de targeta">
+                        <small class="text-error" id="numberErr"></small>
                         <!-- CARD CODE -->
-                        <input class="email" type="number" id="" name="codigo_tarjeta" placeholder="Código de seguridad">
-                        <!-- LAST DATE -->
-                        <input class="email" type="number" id="" name="vencimiento_tarjeta" placeholder="vencimiento">
+                        <input class="email" type="number" id="code" name="code" placeholder="Código de seguridad">
+                        <small class="text-error" id="codeErr"></small>
+                        <!-- LAST DATE YEAR -->
+                        <input class="email" type="number" id="vencimientoAño" name="vencimientoAño" placeholder="año de vencimiento Ej: 2028">
+                        <small class="text-error" id="vencimientoAñoErr"></small>
+                        <!-- LAST DATE MONTH -->
+                        <input class="email" type="number" id="vencimientoMes" name="vencimientoMes" placeholder="mes de vencimiento Ej: 02 04 05">
+                        <small class="text-error" id="vencimientoMesErr"></small>
                         <!-- NAME -->
-                        <input class="email" type="text" id="" name="titular_tarjeta" placeholder="Nombre del titular">
+                        <input class="email" type="text" id="titular" name="titular" placeholder="Nombre del titular">
+                        <small class="text-error" id="titularErr"></small>
                         <!-- BUTTON BUY -->
-                        <button class="button-register" type="submit" value="log-in">COMPRAR</button>
+                        <!-- <button class="button-register" >COMPRAR</button> -->
+                        <a href="/" id="buy" class="button-register">COMPRAR</a>
                     </nav>
                 </form>
                 <!-- MORE -->
@@ -35,6 +43,8 @@
         <%- include('../partials/footer.ejs') %>
         
         <%- include('../partials/scripts.ejs') %>
+
+        <script src="/js/validationBuy.js"></script>
     </body>
     
     </html>

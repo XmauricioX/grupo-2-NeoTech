@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
     <%- include("../partials/head-admin") -%>
-
     <link rel="stylesheet" href="../../../styles/admin-edit-product.css">
 </head>
 <body class="body__edit__product">
@@ -14,7 +12,7 @@
     <div id="container-admin">
 
         <%- include("../partials/aside-admin") -%>
-
+        
         <main id="content">
             <p id="admin-welcome">
                 Editar Producto
@@ -31,9 +29,10 @@
                             <!-- IMAGEN DEL PRODUCTO -->
                         </figure>
                         <hr>
-
+                        
+                        
                         <div class="text-card">
-                            <h2 class="name-card"><%= element.product_name %></h2>
+                            <h2 class="name-card"><%= element.product_name.slice(0,13) %></h2>
                             <h2 class="number-card">$<%= element.price %></h2>
                             <p class="description-card"> 
                                 Marca: <%= element.brand.brand_name %> <br> 
@@ -42,21 +41,25 @@
                             </p>
                             
                             
+                            
                             <a class="mas" href="/administrador/formulario-editar-producto/<%= element.id %>"> <i class="fas fa-pencil-alt"></i> </a>
                             
-                            <form class="form__transparent" action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
+                            <form name="formularioEliminar" class="form__transparent" action="/administrador/eliminar-producto/<%= element.id %>?_method=DELETE" method="POST">
                                 <button id="delete-product" type="submit">
-                                    <i  class="fas fa-times"></i>
+                                    <i class="fas fa-times"></i>
                                 </button>    
                             </form>
                         </div>
                     </div>               
-                <% }) %>
+                    <% }) %>
+                    <script src="/js/confirm/adminDeleteProductConfirm.js"></script>
             </main>
 
         </main>
 
     </div>
+
+
     <%- include("../partials/admin-links") -%>
 
     <%- include('../partials/scripts.ejs') %>

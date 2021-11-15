@@ -1,0 +1,183 @@
+@import url(./general.css);
+.body__edit__product {
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: transparent;
+}
+#admin-welcome{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+} 
+
+#container-admin{
+    max-height: 100vh;
+}
+#content_result{
+    padding-top: 80px;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#container_result {
+    width: 100%;
+    margin-top: 2vh;
+    z-index: 50;
+    display: grid;
+}
+
+/*PARTE SUPERIOR */
+.card{
+    margin: 10px auto;
+    background-color: var(--color-Dark);
+    width: 285px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px black;
+    position: relative;
+}
+.img-container{
+    width: 100%;
+    height: 320px;
+    z-index: 0;
+    position: relative;
+}
+.img-0{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+}
+.img-1{
+    height: inherit;
+    position: absolute;
+    z-index: 2;
+    width: 90%;
+    left: 10px;
+    height: 85%;
+    bottom: 10px;
+}
+hr{
+    width: 100%;
+    border-color: var(--color-Green-Old);
+}
+.text-card{
+    background-color: var(--color-Dark);
+    border-radius: 0 0 20px 20px;
+    padding: 13px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    /* margin-top: 52px; */
+}
+
+.description-card{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.name-card {
+    font-size: 20px;
+    margin-top: -15px;
+}
+.number-card {
+    font-size: 20px;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+ .mas{
+    display: block;
+    font-size: 30px;
+    text-decoration: none;
+    color:var(--color-Green-Old);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+} 
+ #masp{
+    display: none;
+}
+
+#delete-product{
+    position:relative;
+    bottom: 467px;
+    left: 230px;
+    font-size: 40px;
+    color: var(--color-Green-Old);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    /* top: -50px; */
+}
+.form__transparent {
+    margin-bottom: -52px;
+}
+
+.product-not {
+    color: var(--color-Green);
+    text-align: center;
+    font-weight: 600;
+    font-size: 29px;
+    margin-top: 80px;
+}
+
+@media (min-width: 768px){
+    #admin-welcome{
+        font-size: 25px;
+    } 
+    #container_result {
+        margin-top: 4vh;
+    }
+    #container_result {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px 40px;
+    }
+    .product-not {
+        position: absolute;
+        font-size: 40px;
+    }
+}
+@media (min-width: 1024px){
+    #admin-welcome{
+        top: 80px;
+        font-size: 30px;
+    } 
+    #container_result {
+        gap: 20px 50px;
+        width: auto;
+    }
+    #admin-welcome{
+        top:20px
+    }
+    #container-admin #content_result {
+        position: absolute;
+        width: 75.4%;
+        right: 0;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+} 
+@media (min-width: 1320px){
+    #admin-welcome{
+        font-size: 24px;
+    } 
+    
+    #container_result {
+        position: absolute;
+        display: grid;
+        padding-top: 0;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px 60px;
+    } 
+    .product-not {
+        position: fixed;
+        font-size: 60px;   
+        margin: 10%;
+        margin-top: 250px;
+    }
+    
+}  

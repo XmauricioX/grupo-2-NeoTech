@@ -23,7 +23,9 @@ module.exports = (sequelize, dataTypes) => {
     Brand.associate = models => {
         Brand.hasMany(models.Products, {
             as: "products",
-            foreignKey: "brand_id"
+            foreignKey: "brand_id",
+            onDelete: 'cascade',
+            hooks: true
         })
     }
 
