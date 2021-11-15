@@ -195,41 +195,27 @@ module.exports = {
     formEditProduct: (req, res) => {
         const category = db.Categories.findAll()
         const brand = db.Brands.findAll()
-
-        Promise.all([category, brand])
-            .then(([categories, brands]) => {
-                db.Products.findByPk(req.params.id)
-                    .then(product => {
-                        res.render("admin/admin-edit-product-form", {
-                            title: 'NeoTech - Editar Producto',
-                            session: req.session,
-                            product,
-                            categories,
-                            brands
-                        })
-                    })
+        const product = db.Products.findByPk((req.params.id), {
+            include: [{
+                association: 'category'
+            }, {
+                association: 'brand'
+            }]
+        })
+    
+        Promise.all([category, brand, product])
+            .then(([categories, brands, product]) => {
+                // res.send(product)
+                res.render("admin/admin-edit-product-form", {
+                    title: 'NeoTech - Editar Producto',
+                    session: req.session,
+                    product,
+                    categories,
+                    brands,
+                })
             })
             .catch(err => console.log(err))
     },
-    // formEditProduct: (req, res) => {
-        
-    //     db.Products.findByPk((req.params.id), {
-    //         include: [{
-    //             association: 'category'
-    //         }, {
-    //             association: 'brand'
-    //         }]
-    //     })
-    //         .then(product => {
-    //             // res.send(product)
-    //             res.render("admin/admin-edit-product-form", {
-    //                 title: 'NeoTech - Editar Producto',
-    //                 session: req.session,
-    //                 product
-    //             })
-    //         })
-    //         .catch(err => console.log(err))
-    // },
     logicEditProduct: (req, res) => {
         let errors = validationResult(req)
 
@@ -455,3 +441,7 @@ module.exports = {
             })
     },
 }
+
+
+
+
