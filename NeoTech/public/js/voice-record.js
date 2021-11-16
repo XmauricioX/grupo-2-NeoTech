@@ -25,7 +25,7 @@ window.addEventListener("load", () => {
     })
 
     $btnVoiceRecord.addEventListener('mouseup', () => {
-        recognition.onend()
+        recognition.stop()
     })
 
 

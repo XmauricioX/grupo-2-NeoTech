@@ -55,7 +55,7 @@
 	height: 50%;
 	justify-content: space-between;
 	padding: 10px;
-	width: 65%;
+	width: 64%;
 }
 
 .btn__voice__record{
@@ -98,7 +98,7 @@
 .header__admin__info {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	margin: 10px;
 }
 .header__admin__img {

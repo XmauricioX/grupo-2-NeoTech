@@ -19,7 +19,7 @@
             </form>
             
         </div>  
-        <% if (session.user !=undefined && session.user.user_rol==1) { %>
+        <% if (session.user !=undefined ) { %>
             <div class="header__admin__info">
                 
                 <img class="header__admin__img" src="/images/imgs-users/<%= session.user.image %> " alt="">
