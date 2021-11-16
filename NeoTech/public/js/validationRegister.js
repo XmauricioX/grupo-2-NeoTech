@@ -1,3 +1,4 @@
+
 function qs(element) {
     return document.querySelector(element)
 }
@@ -211,7 +212,14 @@ window.addEventListener("load", function () {
         }
 
         if (!error && !validationsErrors) {
-            alert('Se a registrado correctamente. ¡Bienvenido!');
+            
+            Swal.fire({
+                icon: 'success',
+                text: 'Se a registrado correctamente',
+                title: '¡Bienvenido!',
+                showConfirmButton: false,
+                timer: 1500
+            })
             console.log('Formulario cargado con exito!');
             $registerForm.submit()
         }
