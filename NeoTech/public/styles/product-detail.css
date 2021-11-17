@@ -9,6 +9,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .arrow__container {
@@ -27,6 +28,7 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .product__section img {
@@ -60,8 +62,23 @@
 .description {
     margin-top: 10px;
 }
+
+
+@media (min-width: 768px) {
+    .product__section img {
+        height: 380px;
+        width: 380px;
+    }
+}
 @media (min-width: 1024px) {
     .arrow__container {
         margin-top: 75px;
+    }
+    .product__section img {
+        height: 500px;
+        width: 500px;
+    }
+    .container-r {
+        font-size: 20px;
     }
 }
