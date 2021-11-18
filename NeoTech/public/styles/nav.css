@@ -90,7 +90,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 30px;
   position: relative;
 }
 
@@ -116,6 +116,7 @@
   transition: 0.5s;
   width: 300px;
   z-index: 1000;
+  margin-top: 170px;
 }
 
 /* btn cerrar carrito */
@@ -186,10 +187,14 @@ ul {
 
 @media(min-width:1024px) {
 /* .nav-container */
-
-/*   .nav-container  {
+/* 
+  .nav-container  {
     display: none;
   } */
+#hamburguer-admin{
+  display: none;
+}
+
   .menu-container {
     margin-left: 0;
     width: 100%;
@@ -249,6 +254,6 @@ ul {
     margin-left: 70%;
   }
   .cart-container {
-    margin-top: 80px;
+    margin-top: 170px;
   }
 }

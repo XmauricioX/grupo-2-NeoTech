@@ -8,6 +8,7 @@
     overflow: hidden;
     padding: 0;
     margin: 0;
+    margin-top: 0px;
     width: 100%;
     background-color: var(--black);
 }
@@ -157,7 +158,9 @@
     }
 }
 @media (min-width: 1024px){
-    
+    .main__home{
+        margin-top: -70px;
+    }
     #carouselExampleControls{
         margin-top: 80px;
     }

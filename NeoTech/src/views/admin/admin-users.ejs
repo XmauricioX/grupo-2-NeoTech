@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-    <head>
-        <%- include("../partials/head-admin") -%>
-        <link rel="stylesheet" href="../../styles/admin-users.css">
-    </head>
+<head>
+    <%- include("../partials/head-admin") -%>
+    <link rel="stylesheet" href="../../styles/admin-users.css"> 
+</head>
+
     <body class="admin_user">
     
     <%- include("../admin/search-nav-users") -%>
@@ -23,32 +22,35 @@
                 <div class="card">
                     
                     <figure class="img-container">
-                        <!-- <img class="img-0" src="/images/product-list/" alt="background-product"> -->
-                        <img class="img-1" src="/images/imgs-users/<%- element.image %> " alt="product">
-                    </figure>
-                    <hr>
-                    
-                    <div class="text-card">
-                        <h2 class="name-card"><%= element.first_name.slice(0,15) %> </h2>
-                        <h2 class="name-card"><%= element.last_name.slice(0,15) %> </h2>
-                        <h2 class="name-card"><%= element.email.slice(0,15) %> </h2>
-                        <h3>ID: <%= element.id %></h3>
-                        <div id="admin-card">
-                            <form action="/administrador/usuarios/<%= element.id %>?_method=PUT" method="post">
-                                <% if(element.user_rol == 1){ %>
-                                    <p> es admin </p>
-                                    <button>SACAR admin</button>
-                                <% }else{ %>
-                                    <p> no es admin </p>
-                                    <button>DAR admin</button>
-                                    <% } %>
-                            </form>              
-                        </div>
-                         <form name="formularioEliminar" class="delete-content"  action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST" >
+
+                        <div class="cross-delete-user-container">
+                            <form name="formularioEliminar" class="delete-content"  action="/administrador/usuarios/<%= element.id %>?_method=DELETE" method="POST" >
                             <button id="delete_user" class="delete-user" type="submit">
                                 <i class="fas fa-times"></i>
                             </button>    
                         </form>
+                        </div>
+                        <!-- <img class="img-0" src="/images/product-list/" alt="background-product"> -->
+                        <img class="img-1" src="/images/imgs-users/<%- element.image %> " alt="product">
+                    </figure>
+                    <hr>
+                    <div id="admin-card">
+                        <form action="/administrador/usuarios/<%= element.id %>?_method=PUT" method="post">
+                            <% if(element.user_rol == 1){ %>
+                                <p class="user__rol">Rol: administrador</p>
+                                <button class="btn-admin__rol">X</button>
+                            <% }else{ %>
+                                <p class="user__rol"> rol: usuario </p>
+                                <button class="btn-user__rol">V</button>
+                                <% } %>
+                        </form>              
+                    </div>
+                    <div class="text-card">
+                        <h2 class="name-card"><%= element.first_name.slice(0,15) %> <%= element.last_name.slice(0,15) %></h2>
+                        <h2 class="name-card"> </h2>
+                        <h2 class="name-card"><%= element.email.slice(0,15) %> </h2>
+                        <h3>ID: <%= element.id %></h3>
+                        
                     </div>
                     
                 </div>         
