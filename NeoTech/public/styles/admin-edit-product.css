@@ -132,7 +132,7 @@ hr{
         top:20px
     }
 } 
-@media (min-width: 1320px){
+@media (min-width: 1024px){
     
     #container{
         position: absolute;
@@ -140,6 +140,13 @@ hr{
         padding-top: 0;
         grid-template-columns: repeat(3,1fr);
         gap: 20px 60px;
+    } 
+    
+}  
+@media (min-width: 1440px){
+    
+    #container{
+        grid-template-columns: repeat(4,1fr);
     } 
     
 }  

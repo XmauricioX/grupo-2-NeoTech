@@ -173,9 +173,10 @@
         text-decoration: underline
     }
     #container-admin #content #admin-welcome{
-        font-size: 30px;
+        font-size: 37px;
         color: var(--white);
         margin-bottom: 65px;
+        font-weight: 500;
     }
 }
 

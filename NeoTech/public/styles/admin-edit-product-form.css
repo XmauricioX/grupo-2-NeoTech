@@ -190,6 +190,7 @@
         border-color: var(--color-Green);
         width: 99%;
         margin: 10px 0;
+        height: 55px;
     }
 
     input #description{

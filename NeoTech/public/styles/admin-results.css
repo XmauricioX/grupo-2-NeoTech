@@ -172,6 +172,7 @@ hr{
         padding-top: 0;
         grid-template-columns: repeat(4,1fr);
         gap: 20px 60px;
+        margin-left: 25px;
     } 
     .product-not {
         position: fixed;
