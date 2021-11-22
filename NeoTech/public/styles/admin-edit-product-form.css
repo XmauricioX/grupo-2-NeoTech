@@ -5,9 +5,11 @@
 }
 .admin__add__product{
     background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-size: cover;
     background-position: center;
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-attachment: fixed;
+    background-color: transparent;
+    
 }
 #container-form{
     width: 90%;
