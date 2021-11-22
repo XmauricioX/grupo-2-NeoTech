@@ -194,13 +194,13 @@ hr{
         margin-top: 120px;
     }
 }
-@media (min-width: 1320px){
+@media (min-width: 1440px){
     form{
         width: 50%;
     }
     #container{
         margin-top: 200px;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(4,1fr);
     }
     
 }
