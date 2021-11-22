@@ -10,7 +10,7 @@ const notLoged = require("../middlewares/usersSession")
 /* GET home page. */
 router.get('/', index)
 /* GET contact page */
-router.get('/contacto', notLoged , contact)
+router.get('/contacto', contact)
 
 
 module.exports = router;

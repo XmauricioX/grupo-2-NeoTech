@@ -2,6 +2,7 @@
 <head>
 
     <%- include('./partials/head.ejs') %>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
     <body class="body__contact"> 
@@ -28,6 +29,9 @@
                     <!-- Message -->
                     <label for="message"></label>
                     <textarea class="message" name="message" id="message" placeholder="Escriba su mensaje"></textarea>
+                    <!-- CAPTCHA -->
+                    <div style="margin-bottom: 20px;" class="g-recaptcha" data-sitekey="6LeR2E4dAAAAAM9CQJoYo3ub9VhIh6NWAfTAqJgL"></div>
+  
                     <!-- button log in -->
                     <button class="button-send" type="submit" value="log-in">Enviar</button>
                 
