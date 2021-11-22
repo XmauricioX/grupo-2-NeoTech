@@ -1,7 +1,6 @@
 let db = require('../database/models')
-const {
-    validationResult
-} = require('express-validator')
+const {validationResult} = require('express-validator')
+const {Op} = require("sequelize");
 
 module.exports = {
 
@@ -196,19 +195,24 @@ module.exports = {
     formEditProduct: (req, res) => {
         const category = db.Categories.findAll()
         const brand = db.Brands.findAll()
-
-        Promise.all([category, brand])
-            .then(([categories, brands]) => {
-                db.Products.findByPk(req.params.id)
-                    .then(product => {
-                        res.render("admin/admin-edit-product-form", {
-                            title: 'NeoTech - Editar Producto',
-                            session: req.session,
-                            product,
-                            categories,
-                            brands
-                        })
-                    })
+        const product = db.Products.findByPk((req.params.id), {
+            include: [{
+                association: 'category'
+            }, {
+                association: 'brand'
+            }]
+        })
+    
+        Promise.all([category, brand, product])
+            .then(([categories, brands, product]) => {
+                // res.send(product)
+                res.render("admin/admin-edit-product-form", {
+                    title: 'NeoTech - Editar Producto',
+                    session: req.session,
+                    product,
+                    categories,
+                    brands,
+                })
             })
             .catch(err => console.log(err))
     },
@@ -266,6 +270,31 @@ module.exports = {
                 .catch(err => console.log(err))
         }
     },
+    adminUsers:(req,res) => {
+        db.Users.findByPk(req.params.id)
+        .then(user =>  {
+            if(user.user_rol == 1){
+                // res.send("este es admin")
+                db.Users.update(
+                    {
+                        user_rol: 0
+                    },
+                    {
+                        where: {id: user.id}
+                    }).catch(er => console.log("ERROR ES : "+er))
+                    res.redirect('/administrador/usuarios')
+        }else{
+                // res.send("este no es admin")
+                    db.Users.update({
+                        user_rol : 1
+                    },
+                    {
+                        where: {id: user.id}
+                    }).catch(er => res.send("err="+er))
+                    res.redirect('/administrador/usuarios')
+        }
+    }).catch(err => console.log(err)) 
+    },
     deleteProduct: (req, res) => {
 
         db.Products.destroy({
@@ -313,7 +342,7 @@ module.exports = {
         })
     },
     deleteBrand: (req, res) => {
-
+        db.Products.destroy({ where : { brand_id : req.params.id }})
         db.Brands.destroy({
                 where: {
                     id: req.params.id
@@ -323,6 +352,7 @@ module.exports = {
             .catch(err => console.log(err))
     },
     deleteCategory: (req, res) => {
+        db.Products.destroy({ where : { categoryId : req.params.id }})
         db.Categories.destroy({
                 where: {
                     id: req.params.id
@@ -332,4 +362,86 @@ module.exports = {
             .catch(err => console.log(err))
     },
     editUser: (req, res) => {},
+    searchProducts: (req, res) => {
+        db.Products.findAll({
+                include: [{
+                    association: "brand"
+                }, {
+                    association: "category"
+                }],
+                where: {
+                    [Op.or]: [{
+                            product_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            description: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            color: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            price: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(products => {
+                // res.send(product)
+                res.render('admin/adminResults', {
+                    title: 'NeoTech - Resultado de busqueda',
+                    products,
+                    session: req.session
+                })
+            })
+    },
+    searchUsers: (req, res) => {
+        db.Users.findAll({
+                include: [{
+                    association: "addresses"
+                }],
+                where: {
+                    [Op.or]: [{
+                            id: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            first_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            last_name: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                        {
+                            email: {
+                                [Op.like]: `%${req.query.keywords.toLowerCase().trim()}%`
+                            }
+                        },
+                    ]
+                },
+            })
+            .then(users => {
+                // res.send(users)
+                res.render('admin/admin-users', {
+                    title: 'NeoTech - Resultado de busqueda',
+                    users,
+                    session: req.session
+                })
+            })
+    },
 }
+
+
+
+

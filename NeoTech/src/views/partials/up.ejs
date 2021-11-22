@@ -1,0 +1,39 @@
+<head>
+    <%- include('./head.ejs') %>
+</head>
+<div id="container__up">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<style>
+    @import url(/stylesheets/general.css);
+#container__up{
+    position: fixed;
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 8px;
+    right: 40px;
+    bottom: 40px;
+    
+    border: 1px solid var(--green);
+    font-size: 35px;
+    font-family: var(--font-Quicksand);
+    color: var(--green);
+    background-color: var(--color-Dark-Gray);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+</style>
+
+<script>
+
+    let up = document.querySelector("#container__up")
+
+    up.addEventListener('click',function(){
+        window.scroll({top})
+    })
+    
+
+</script>

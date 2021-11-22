@@ -3,10 +3,11 @@
 
 /* Background body */
 .body__login {
-    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-image: url(/images/imgs-bg/bg-main.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position-x: 50%;
-    background-position-y: 33%;
+
     font-family: var(--font-Quicksand);
     text-align: center;
 }
@@ -41,7 +42,7 @@
 .login .form-container .container-contact .email,
 .login .form-container .container-contact .password {
     background-color: var(--grey);
-    border: black;
+    border: solid 2px #464646;
     border-radius: 10px;
     font-size: 15px;
     margin: 15px 0;
@@ -230,7 +231,7 @@ color: white;
 
 @media (min-width:1024px) {
     .body__login{
-        background-position-x:55%;
+        background-position-x:50%;
         background-size: cover;
     }
 

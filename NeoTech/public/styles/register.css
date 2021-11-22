@@ -4,10 +4,10 @@
 
 /* Background body */
 .body__register {
-    background-image: url(/images/imgs-bg/teclado-original.jpg);
+    background-image: url(/images/imgs-bg/bg-main.jpg);
+    background-position-x:50%;
     background-repeat: no-repeat;
-    background-position-x: 50%;
-    background-position-y: 33%;
+    background-size: cover;
     font-family:var(--font-Quicksand);
     text-align: center;
 }
@@ -42,7 +42,7 @@
 #registro .register__form .register__container .text, 
 #registro .register__form .register__container .email, 
 #registro .register__form .register__container .password {
-    border: black;
+    border: solid 2px #464646;
     border-radius: 10px;
     font-size: 15px;
     margin-bottom: 14px;
@@ -235,7 +235,7 @@
 
 @media (min-width:1024px) {
     .body__register {
-        background-position-x:55%;
+        background-position-x:50%;
         background-size: cover;
     }
 

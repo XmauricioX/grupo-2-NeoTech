@@ -9,7 +9,8 @@ let {
     userProfile,
     userEdit,
     userUpdate,
-    buyProduct
+    buyProduct,
+    deleteUser
     } = require('../controllers/usersController')
 let registerValidator = require('../validations/registerValidator');
 let loginValidator = require('../validations/loginValidator');
@@ -35,6 +36,8 @@ router.get('/editar-usuario', userSession, userProfile)
 /* EDIT USER FORM */
 router.get('/editar-usuario/:id', userEdit)
 router.put('/editar-usuario/:id', uploadAvatarUser.single('user-image'),userSession, userUpdate)
+// RUTA DELETE PARA PODER ELIMINAR CUETNA DE USUARIO
+router.delete('/editar-usuario/:id', deleteUser)
 
 // BUY FORM (poner middleware de inicio de sesion)
 router.get('/buy', buyProduct)

@@ -1,11 +1,15 @@
+
 <!-- HEAD -->
-<%- include('../partials/head.ejs') %>
+<head>
+
+    <%- include('../partials/head.ejs') %>
+</head>
 
     <body class="body__register">
 
         
 
-        <%- include('../partials/nav.ejs') %>
+        <%- include('../partials/header.ejs') %>
 
             <!-- Registro -->
             <div id="registro">
@@ -32,7 +36,7 @@
                             
                         <!-- email -->
                         <label for="email"></label>
-                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email">
+                        <input class="email" type="email" name="email" id="email" placeholder="Ingrese su email" value="<%= locals.old && old.email %>">
                             <span id="emailErrors"></span>
                             <% if (locals.errors && errors.email) { %>
                                 <small class="text-error"><%= errors.email.msg %></small>
@@ -86,6 +90,9 @@
         <%- include('../partials/footer.ejs') %>
 
         <%- include('../partials/scripts.ejs') %>
+        
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         <script src="/js/validationRegister.js"></script>
     </body>
 

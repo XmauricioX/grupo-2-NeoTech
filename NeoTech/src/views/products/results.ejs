@@ -1,12 +1,17 @@
+<!-- boton para subir a lo alto de la pagina -->
+<% if(product.length > 0) {%>
+<%- include('../partials/up.ejs') %>
+<% } %>
 <!-- HEAD -->
-<%- include('../partials/head.ejs') %>
+<head>
+    <%- include('../partials/head.ejs') %>
+</head>
 
-<!-- NAV -->
-<%- include('../partials/nav.ejs') %>
+<%- include('../partials/header.ejs') %>>
 <body id="product-list">
-
+    
     <main class="container__product">
-
+        
         <% if(product.length > 0) { %> 
             <% product.forEach(element => { %>
         <div class="card">

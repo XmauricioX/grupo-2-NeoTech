@@ -1,20 +1,19 @@
+
 #admin-welcome{
     position: absolute;
-    top: 0px;
-    color: white;
+    top: 105px;
 }
-#content{
-    background-image: url(/images/registro/teclado-original.jpg);
-    background-size: cover;
+.admin__add__product{
+    background-image: url(/images/imgs-bg/teclado-original.jpg);
     background-position: center;
+    background-repeat:no-repeat;
+    background-size:cover;
 }
-#top-name{
-    text-align: center;
-    font-size: 30px;
-    font-weight: bold;
+#container-form{
+    width: 90%;
+    margin-top: 0;
 }
 #form-add{
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     border: 1px solid var(--color-Green);
@@ -22,12 +21,75 @@
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.582);
 }
+
+/* previev image */
+.img-container {
+    text-align: center;
+}
+.img-container img {
+    max-width: 30%;
+    max-height: 30%;
+}
+
+/* last image */
+.container_last_img {
+    text-align: center;
+}
+.container_last_img img {
+    max-width: 30%;
+    max-height: 30%;
+}
+
+
+/* button update image */
+.userUpdate_subtitle {
+    color: var(--green);
+    margin: 0;
+}
+
+.input-file {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .25);
+    color: var(--primary);
+    padding: 0 1rem;
+    border-radius: .5rem;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+}
+
+.input-file input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.btn__update__image {
+    background-color: var(--dark-grey);
+    border: solid 2px var(--green);
+    border-radius: 12px;
+    font-size:14px;
+    margin-bottom: 10px;
+    margin-bottom: 0px;
+    padding: 5px 0px;
+    width: 96%;
+    text-align: center;
+
+}
+
 #form-add input{
     padding: 10px 10px;
     margin: 5px 0;
     background-color: var(--color-Dark);
     border-radius: 8px;
-    border: 1px solid black;
+    border: 2px solid #464646;
     color: white;
     outline: none;
 }
@@ -47,16 +109,93 @@
     border: 1px solid var(--color-Green);
 }
 
+#description{
+    height: 80px;
+}
+#form-add ::placeholder{
+    font-size: 20px;
+}
+#label-categoria{
+    color: var(--white);
+    padding-left: 3px;
+}
+#marcas,
+#categorias{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.brand-select,
+.categories-select {
+    font-size: 30px;
+    color: var(--white);
+    background-color: var(--color-Dark);
+    border: 2px solid #464646;
+    width: 99%;
+    margin: 10px 0;
+}
+
 @media (min-width: 768px){
-    #content{
-        background-image: url(/images/registro/teclado-original.jpg);
+    .admin__add__product{
+        background-image: url(/images/imgs-bg/teclado-original.jpg);
+        background-repeat: no-repeat;
+    }
+    #container-form{
+        width: 60%;
+        margin-top: 0;
+    }
+
+    /* last image */
+    .container_last_img img {
+        max-width: 20%;
+        max-height: 20%;
+    }
+    #admin-welcome{
+        top: 110px;       
     }
 }
 @media (min-width: 1024px){
-    #content{
+    .admin__add__product{
         background-repeat: no-repeat;
         background-position: 70px;
         background-size: 85%;
+        background-size: cover;
         
+    }
+    #container-form{
+        width: 60%;
+        margin-top: 0;
+    }
+    /* last image */
+    .container_last_img img {
+        max-width: 30%;
+        max-height: 30%;
+    }
+    #form-add ::placeholder{
+        font-size: 30px;
+    }
+    #form-add input{
+        height: 60px;
+    }
+    #label-categoria{
+        font-size: 30px
+    }
+
+    .brand-select,
+    .categories-select {
+        font-size: 30px;
+        color: var(--white);
+        background-color: var(--color-Dark);
+        border-color: var(--color-Green);
+        width: 99%;
+        margin: 10px 0;
+    }
+
+    input #description{
+        height: 1000px;
+    }
+    #admin-welcome{
+        top: 5px;
     }
 }

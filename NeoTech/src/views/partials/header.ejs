@@ -1,25 +1,139 @@
 <header class="header">
-    <!-- logo -->
-    <div class="logo-container">
-        <img class="logo" src="/images/imgs-logo/LOGO NeoTech.png" alt="">
-    </div>
-
-    <div class="container">
-
-        <div class="icon-bank">
-            <img class="icon_header" src="/images/icons/iconBank-visa.svg" alt="">
-            <img class="icon_header" src="/images/icons/iconBank-mastercard.svg" alt="">
-            <img class="icon_header" src="/images/icons/iconBank-mercado-pago.svg" alt="">
-            <img class="icon_header" src="/images/icons/iconBank-santander.svg" alt="">
+    <div class="header__container">
+        
+        <!-- logo -->
+        <div class="logo-container">
+            <a href="/"><img class="logo" src="/images/imgs-logo/LOGO NeoTech.png" alt=""></a> 
         </div>
-
-        <div class="icon-social">
-            <img class="icon_header" src="/images/icons/icon-a-whatsapp.gif" alt="">
-            <img class="icon_header" src="/images/icons/icon-a-twitter.gif" alt="">
-            <img class="icon_header" src="/images/icons/icon-a-facebook.gif" alt="">
-            <img class="icon_header" src="/images/icons/icon-a-instagram.gif" alt="">
+        
+        <!-- BARRA DE BUSQUEDA -->
+        <div class="search__bar">
+            <button class="btn__voice__record" id="btn__voice__record">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <form action="/producto/resultado-de-busqueda" method="GET" class="search">
+                <input type="text" name="keywords" class="input__search" id="text__search" placeholder="busqueda">
+                <button class="btn-search" type="search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            
+        </div>  
+        <% if (session.user !=undefined ) { %>
+            <div class="header__admin__info">
+                
+                <img class="header__admin__img" src="/images/imgs-users/<%= session.user.image %> " alt="">
+                <h5><%= session.user.first_name %> <%- session.user.last_name %> </h5>
+                
+            </div>
+            <% } %> 
+            
         </div>
+            
+            <nav>
+            <div class="nav-container">
+        
+                <!-- MENU HAMBURGUESA -->
+                <span class="burguer-menu" id="btnMenu"><i class="fas fa-bars"></i></span>
+        
+                <!-- BOTON DE CARRITO -->
+                <button class="btn-open-cart" id="open-cart">
+                    <img class="icon-chest" src="/images/icons/Icon-chest.svg" alt="">
+                </button>
+                
+        
+            </div> <!-- cierre nav-container -->
+             <!-- MENU DESPLEGABLE MOBILE -->
+        <div class="menu-container" id="menu">
+            <ul class="menu">
+        
+                <li class="menu__item container-submenu">
+                    <a href="#" class="menu__link submenu-btn"> <i class="far fa-folder"></i>
+                        Marcas </a>
+                    <ul class="submenu">
+                        <li class="menu__item"><a href="/producto/marca/Sony" class="menu__link">Sony</a></li>
+                        <!-- SONY -->
+                        <li class="menu__item"><a href="/producto/marca/Nintendo" class="menu__link">Nintendo</a></li>
+                        <!-- NINTENDO -->
+                        <li class="menu__item"><a href="/producto/marca/Gigabyte" class="menu__link">Gigabyte</a></li>
+                        <!-- GIGABYTE -->
+                        <li class="menu__item"><a href="/producto/marca/Logitech" class="menu__link">Logitech</a></li>
+                        <!-- LOGITECH -->
+                        <li class="menu__item"><a href="/producto/marca/HyperX" class="menu__link">HyperX</a></li>
+                        <!-- HYPERX -->
+                    </ul>
+                </li>
+        
+                <li class="menu__item container-submenu">
+                    <a href="#" class="menu__link submenu-btn">
+                        <i class="fas fa-boxes"></i> Productos
+                    </a>
+                    <ul class="submenu">
+                        <li class="menu__item"><a href="/producto/categoria/Teclados" class="menu__link"><i class="far fa-keyboard"></i></a></li>
+                        <!-- TECLADO -->
+                        <li class="menu__item"><a href="/producto/categoria/Mouse" class="menu__link"><i class="fas fa-mouse"></i></a></li>
+                        <!-- MOUSE -->
+                        <li class="menu__item"><a href="/producto/categoria/Monitores" class="menu__link"><i class="fas fa-tv"></i></a></li>
+                        <!-- MONITORES -->
+                        <li class="menu__item"><a href="/producto/categoria/Gaming" class="menu__link"><i class="fas fa-gamepad"></i></a></li>
+                        <!-- GAMING -->
+                        <li class="menu__item"><a href="/producto/categoria/Audio" class="menu__link"><i class="fas fa-headphones"></i></a></li>
+                        <!-- AUDIO -->
+                        <li class="menu__item"><a href="/producto/lista-de-productos" class="menu__link">Ver todos</a></li>
+                    </ul>
+                </li>
 
-    </div>
+                <li class="menu__item"><a href="/contacto" class="menu__link">
+                    <i class="far fa-envelope"></i>
+                    Contacto
+                </a></li>
+        
+                <li class="menu__item container-submenu">
+                    <a href="#" class="menu__link submenu-btn">
+                        <i class="far fa-user-circle"></i> Cuenta
+                    </a>
+                    <ul class="submenu">
+        
+                        <% if (session.user != undefined && session.user.user_rol == 1) { %>
+                            <li class="menu__item"><a href="/cuenta/editar-usuario" class="menu__link">Mi cuenta</a></li>
+                            <li class="menu__item"><a href="/administrador/panel-general" class="menu__link">Panel Admin</a>
+                            </li>
+                            <li class="menu__item"><a href="/cuenta/cerrar-sesion" class="menu__link">Cerrar sesion</a></li>
+                            <% } else if (session.user !== undefined) {%>
+                                <li class="menu__item"><a href="/cuenta/editar-usuario" class="menu__link">Mi cuenta</a></li>
+                                <li class="menu__item"><a href="/cuenta/cerrar-sesion" class="menu__link">Cerrar sesion</a></li>
+                            <% } else { %>
+                                <li class="menu__item"><a href="/cuenta/iniciar-sesion" class="menu__link">Iniciar sesion</a>
+                                </li>
+                                <li class="menu__item"><a href="/cuenta/registro" class="menu__link">Registrarse</a></li>
+                            <% } %>
+        
+                    </ul>
+                </li>
+        
+            </ul>
+        </div>
+        </nav>
+        
+       
+        
+        <!-- CARRITO DE COMPRAS -->
+        <div class="cart-container" id="cart-container">
+            <button class="btn-close-cart" id="close-cart">
+                <i class="fas fa-angle-double-right"></i>
+            </button>
+            <p>
+            <h4 class="cdc">CARRITO DE COMPRAS</h4>
+            </p>
+        
+            <div class="ldc">LISTA DE COMPRAS</div>
+        
+            <div class="product-container">
+                <p class="empty">vacío</p>
+            </div>
+        
+            <a href="/producto/lista-de-productos"><input type="button" class="btn-add" value="Agregar Producto"></a>
+        </div>
+    
 
 </header>

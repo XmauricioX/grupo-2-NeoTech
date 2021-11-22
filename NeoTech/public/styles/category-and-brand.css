@@ -6,11 +6,11 @@
     background-repeat: no-repeat;
 }
 #container-form{
-    /* width: 60%; */
+    margin: 120px;
     width: 90%;
-    margin-top: 0;
-    position: relative;
-    bottom: 60px;
+    height: 90%;
+   
+    
 }
 .title {
     color: var(--color-Green);
@@ -45,7 +45,7 @@
     border-radius: 20px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.582);
-    position: relative;
+    
     /* bottom: 160px; */
     margin-bottom: 25px;
 }
@@ -58,6 +58,13 @@
     background-color: rgba(0, 0, 0, 0.582);
     position: relative;
     /* bottom: 140px; */
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px var(--green) ;
 }
 #form-add input{
     padding: 10px 10px;

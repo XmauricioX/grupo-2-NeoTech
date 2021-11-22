@@ -23,7 +23,9 @@ module.exports = (sequelize, dataTypes) => {
     Category.associate = models => {
         Category.hasMany(models.Products, {
             as: "products",
-            foreignKey: "categoryId"
+            foreignKey: "categoryId",
+            onDelete: 'cascade',
+            hooks: true
         })
     }
 
